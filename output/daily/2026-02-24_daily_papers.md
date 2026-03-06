@@ -1,0 +1,7048 @@
+# Reporte Diario de Papers -- 2026-02-24
+
+## Resumen
+- Papers encontrados: 281
+- Papers de alta relevancia: 3
+- Papers de media relevancia: 75
+- Papers de baja relevancia: 203
+- APIs consultadas: Semantic Scholar, arXiv, OpenAlex
+- Keywords groups procesados: 9/9
+
+## Gaps cubiertos hoy:
+- [x] RAGAS evaluation framework -- A Retrieval-Augmented Generation (RAG) Based Framework for Evaluating Urban Low-Carbon Governance and Its Implications for Sustainable Development
+- [x] RAGAS evaluation framework -- KNIGHT: Knowledge Graph-Driven Multiple-Choice Question Generation with Adaptive Hardness Calibration
+- [x] RAGAS evaluation framework -- Detecting and Explaining Unlawful Insider Trading: A Shapley Value and Causal Forest Approach to Identifying Key Drivers and Causal Relationships
+
+## Top 5 Papers del dia:
+1. [ALTA] Pyramid Product Quantization for Approximate Nearest Neighbor Search (Score: 79/100)
+2. [ALTA] Auditory Brain Passage Retrieval: Cross-Sensory EEG Training for Neural Information Retrieval (Score: 72/100)
+3. [ALTA] CyberLLM-FINDS 2025: Instruction-Tuned Fine-tuning of Domain-Specific LLMs with Retrieval-Augmented Generation and Graph Integration for MITRE Evaluation (Score: 71/100)
+4. [MEDIA] SpANNS: Optimizing Approximate Nearest Neighbor Search for Sparse Vectors Using Near Memory Processing (Score: 67/100)
+5. [MEDIA] ViDoRe V3: A Comprehensive Evaluation of Retrieval Augmented Generation in Complex Real-World Scenarios (Score: 66/100)
+
+---
+
+## [ALTA] Pyramid Product Quantization for Approximate Nearest Neighbor Search
+- **Autores:** Yang Wang, Lu Yu, Jinbin Zhang, Qiyuan Zhang
+- **Fecha:** 2026-01-14
+- **Fuente:** Applied Sciences
+- **DOI:** https://doi.org/10.3390/app16020853
+- **Link:** https://www.semanticscholar.org/paper/6ba599be37a087527bc2bf34a41c159191299279
+- **Citaciones:** 0
+- **Score de relevancia:** 79/100
+- **Abstract:** Product quantization (PQ) is a widely adopted technique for efficient approximate nearest neighbor (ANN) search in high-dimensional spaces, offering a favorable balance between accuracy and memory efficiency. However, standard PQ suffers from high online computational cost when the number of subspaces is high. To address this dilemma, we propose Pyramid Product Quantization (PPQ), a novel adaptive quantization framework that dynamically selects the most suitable number of subspaces for different segments of each data vector. This leads to a significant reduction in the number of addition operations required during approximate distance computation, significantly accelerating online search. Experimental results demonstrate that the proposed PPQ method effectively lowers the computational complexity of product quantization and its variants, without compromising retrieval accuracy.
+- **Keywords match:** ['approximate nearest neighbor search']
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [x] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [ALTA] Auditory Brain Passage Retrieval: Cross-Sensory EEG Training for Neural Information Retrieval
+- **Autores:** Niall McGuire, Yashar Moshfeghi
+- **Fecha:** 2026-01-20
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.14001
+- **Link:** https://www.semanticscholar.org/paper/e6cbb36b5afac679fe4efd1952dc16c33abdd695
+- **Citaciones:** 0
+- **Score de relevancia:** 72/100
+- **Abstract:** Query formulation from internal information needs remains fundamentally challenging across all Information Retrieval paradigms due to cognitive complexity and physical impairments. Brain Passage Retrieval (BPR) addresses this by directly mapping EEG signals to passage representations without intermediate text translation. However, existing BPR research exclusively uses visual stimuli, leaving critical questions unanswered: Can auditory EEG enable effective retrieval for voice-based interfaces and visually impaired users? Can training on combined EEG datasets from different sensory modalities improve performance despite severe data scarcity? We present the first systematic investigation of auditory EEG for BPR and evaluate cross-sensory training benefits. Using dual encoder architectures with four pooling strategies (CLS, mean, max, multi-vector), we conduct controlled experiments comparing auditory-only, visual-only, and combined training on the Alice (auditory) and Nieuwland (visual) datasets. Results demonstrate that auditory EEG consistently outperforms visual EEG, and cross-sensory training with CLS pooling achieves substantial improvements over individual training: 31% in MRR (0.474), 43% in Hit@1 (0.314), and 28% in Hit@10 (0.858). Critically, combined auditory EEG models surpass BM25 text baselines (MRR: 0.474 vs 0.428), establishing neural queries as competitive with traditional retrieval whilst enabling accessible interfaces. These findings validate auditory neural interfaces for IR tasks and demonstrate that cross-sensory training addresses...
+- **Keywords match:** ['neural information retrieval']
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [x] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [x] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [ALTA] CyberLLM-FINDS 2025: Instruction-Tuned Fine-tuning of Domain-Specific LLMs with Retrieval-Augmented Generation and Graph Integration for MITRE Evaluation
+- **Autores:** V. Iyer, Leonardo Bobadilla, S. Iyengar
+- **Fecha:** 2026-01-11
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.06779
+- **Link:** https://www.semanticscholar.org/paper/e33b93b1016f6616fff7cc4ead7adca2e3b8367f
+- **Citaciones:** 0
+- **Score de relevancia:** 71/100
+- **Abstract:** Large Language Models (LLMs) such as Gemma-2B have shown strong performance in various natural language processing tasks. However, general-purpose models often lack the domain expertise required for cybersecurity applications. This work presents a methodology to fine-tune the Gemma-2B model into a domain-specific cybersecurity LLM. We detail the processes of dataset preparation, fine-tuning, and synthetic data generation, along with implications for real-world applications in threat detection, forensic investigation, and attack analysis. Experiments highlight challenges in prompt length distribution during domain-specific fine-tuning. Uneven prompt lengths limit the model's effective use of the context window, constraining local inference to 200-400 tokens despite hardware support for longer sequences. Chain-of-thought styled prompts, paired with quantized weights, yielded the best performance under these constraints. To address context limitations, we employed a hybrid strategy using cloud LLMs for synthetic data generation and local fine-tuning for deployment efficiency. To extend the evaluation, we introduce a Retrieval-Augmented Generation (RAG) pipeline and graph-based reasoning framework. This approach enables structured alignment with MITRE ATT&CK techniques through STIX-based threat intelligence, enhancing recall in multi-hop and long-context scenarios. Graph modules encode entity-neighborhood context and tactic chains, helping mitigate the constraints of short prompt windows. Results demonstrate improved model alignment with tactic, technique, and...
+- **Keywords match:** ['retrieval augmented generation evaluation', 'retrieval augmented generation hybrid']
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [MEDIA] SpANNS: Optimizing Approximate Nearest Neighbor Search for Sparse Vectors Using Near Memory Processing
+- **Autores:** Tianqi Zhang, Flavio Ponzina, Tajana Simunic
+- **Fecha:** 2026-01-06
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.03229
+- **Link:** https://www.semanticscholar.org/paper/6c9bb19aefd67848a8bcf946e95aa84ed26a0b75
+- **Citaciones:** 1
+- **Score de relevancia:** 67/100
+- **Abstract:** Approximate Nearest Neighbor Search (ANNS) is a fundamental operation in vector databases, enabling efficient similarity search in high-dimensional spaces. While dense ANNS has been optimized using specialized hardware accelerators, sparse ANNS remains limited by CPU-based implementations, hindering scalability. This limitation is increasingly critical as hybrid retrieval systems, combining sparse and dense embeddings, become standard in Information Retrieval (IR) pipelines. We propose SpANNS, a near-memory processing architecture for sparse ANNS. SpANNS combines a hybrid inverted index with efficient query management and runtime optimizations. The architecture is built on a CXL Type-2 near-memory platform, where a specialized controller manages query parsing and cluster filtering, while compute-enabled DIMMs perform index traversal and distance computations close to the data. It achieves 15.2x to 21.6x faster execution over the state-of-the-art CPU baselines, offering scalable and efficient solutions for sparse vector search.
+- **Keywords match:** ['approximate nearest neighbor search']
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [x] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [MEDIA] ViDoRe V3: A Comprehensive Evaluation of Retrieval Augmented Generation in Complex Real-World Scenarios
+- **Autores:** Ant'onio Loison, Quentin Macé, Antoine Edy, Victor Xing, Tom Balough, G. Moreira, Bo Liu, Manuel Faysse, Céline Hudelot, Gautier Viaud
+- **Fecha:** 2026-01-13
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.08620
+- **Link:** https://www.semanticscholar.org/paper/418c8ab0e57c56826ccdf154ee0483db0ed9a36f
+- **Citaciones:** 4
+- **Score de relevancia:** 66/100
+- **Abstract:** Retrieval-Augmented Generation (RAG) pipelines must address challenges beyond simple single-document retrieval, such as interpreting visual elements (tables, charts, images), synthesizing information across documents, and providing accurate source grounding. Existing benchmarks fail to capture this complexity, often focusing on textual data, single-document comprehension, or evaluating retrieval and generation in isolation. We introduce ViDoRe v3, a comprehensive multimodal RAG benchmark featuring multi-type queries over visually rich document corpora. It covers 10 datasets across diverse professional domains, comprising ~26,000 document pages paired with 3,099 human-verified queries, each available in 6 languages. Through 12,000 hours of human annotation effort, we provide high-quality annotations for retrieval relevance, bounding box localization, and verified reference answers. Our evaluation of state-of-the-art RAG pipelines reveals that visual retrievers outperform textual ones, late-interaction models and textual reranking substantially improve performance, and hybrid or purely visual contexts enhance answer generation quality. However, current models still struggle with non-textual elements, open-ended queries, and fine-grained visual grounding. To encourage progress in addressing these challenges, the benchmark is released under a commercially permissive license at https://hf.co/vidore.
+- **Keywords match:** ['retrieval augmented generation evaluation', 'retrieval augmented generation hybrid']
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [MEDIA] RFSensingGPT: A Multi-Modal RAG-Enhanced Framework for Integrated Sensing and Communications Intelligence in 6G Networks
+- **Autores:** Muhammad Zakir Khan, Yao Ge, Michael S. Mollel, J. Mccann, Q. Abbasi, M. Imran
+- **Fecha:** N/A
+- **Fuente:** IEEE Transactions on Cognitive Communications and Networking
+- **DOI:** https://doi.org/10.1109/TCCN.2025.3558069
+- **Link:** https://www.semanticscholar.org/paper/61e0555f4767a24eb9e6deab145586e715c4366d
+- **Citaciones:** 6
+- **Score de relevancia:** 66/100
+- **Abstract:** We present RFSensingGPT, an integrated framework for radio frequency (RF) sensing that combines technical question-answering, code retrieval, and spectrogram analysis through retrieval-augmented generation (RAG). Our framework addresses the fundamental challenge of applying large language models to RF sensing applications, where specialized domain knowledge is underrepresented in general training corpora. The system leverages a filtered RedPajama dataset containing RF-relevant technical documents, processed through a hybrid retrieval mechanism that combines vector-based similarity search with best match (BM25)-based query fusion. Performance evaluation using document collections ranging from 5K to 80K demonstrates that RAG consistently maintains superior faithfulness across all dataset sizes (0.9033-0.9779 vs 0.8162-0.8506, average improvement of 13.0%) compared to baseline LLM implementations. Our hierarchical chunking approach using MarkdownHeaderTextSplitter achieves optimal precision (0.31-0.32) at lower k-values while maintaining correctness scores of 4.0-5.0. The framework integrates CLIP-based vision models for RF pattern recognition, achieving 93.23% accuracy in radar data analysis tasks. Implementation benchmarks show efficient processing with minimal GPU memory requirements (0.66GB) even at scale. Through a comprehensive evaluation of the embedding models, RFSensingGPT establishes a new benchmark for technical query understanding and RF spectrogram analysis in the emerging field of integrated sensing and communications systems for 6G networks.
+- **Keywords match:** ['retrieval augmented generation hybrid', 'RAG hybrid retrieval BM25', 'retrieval augmented generation evaluation', 'faithfulness evaluation LLM']
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [x] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [MEDIA] Self-MedRAG: a Self-Reflective Hybrid Retrieval-Augmented Generation Framework for Reliable Medical Question Answering
+- **Autores:** Jessica Ryan, A. I. Gumilang, Robert Wiliam, Derwin Suhartono
+- **Fecha:** 2026-01-08
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.04531
+- **Link:** https://www.semanticscholar.org/paper/b63a49b0b7aafa1d5d7a9c17360abf6a3ff7a7d9
+- **Citaciones:** 0
+- **Score de relevancia:** 65/100
+- **Abstract:** Large Language Models (LLMs) have demonstrated significant potential in medical Question Answering (QA), yet they remain prone to hallucinations and ungrounded reasoning, limiting their reliability in high-stakes clinical scenarios. While Retrieval-Augmented Generation (RAG) mitigates these issues by incorporating external knowledge, conventional single-shot retrieval often fails to resolve complex biomedical queries requiring multi-step inference. To address this, we propose Self-MedRAG, a self-reflective hybrid framework designed to mimic the iterative hypothesis-verification process of clinical reasoning. Self-MedRAG integrates a hybrid retrieval strategy, combining sparse (BM25) and dense (Contriever) retrievers via Reciprocal Rank Fusion (RRF) to maximize evidence coverage. It employs a generator to produce answers with supporting rationales, which are then assessed by a lightweight self-reflection module using Natural Language Inference (NLI) or LLM-based verification. If the rationale lacks sufficient evidentiary support, the system autonomously reformulates the query and iterates to refine the context. We evaluated Self-MedRAG on the MedQA and PubMedQA benchmarks. The results demonstrate that our hybrid retrieval approach significantly outperforms single-retriever baselines. Furthermore, the inclusion of the self-reflective loop yielded substantial gains, increasing accuracy on MedQA from 80.00% to 83.33% and on PubMedQA from 69.10% to 79.82%. These findings confirm that integrating hybrid retrieval with iterative, evidence-based self-reflection effectively reduces...
+- **Keywords match:** ['retrieval augmented generation hybrid', 'RAG hybrid retrieval BM25']
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [MEDIA] Clinical Knowledge Graph Construction and Evaluation with Multi-LLMs via Retrieval-Augmented Generation
+- **Autores:** Udiptaman Das, Krishnasai B. Atmakuri, Duy H. Ho, Chi Lee, Yugyung Lee
+- **Fecha:** 2026-01-05
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.01844
+- **Link:** https://www.semanticscholar.org/paper/ff13e2abed8a916fae0b3d5b498fd179950a6906
+- **Citaciones:** 1
+- **Score de relevancia:** 65/100
+- **Abstract:** Large language models (LLMs) offer new opportunities for constructing knowledge graphs (KGs) from unstructured clinical narratives. However, existing approaches often rely on structured inputs and lack robust validation of factual accuracy and semantic consistency, limitations that are especially problematic in oncology. We introduce an end-to-end framework for clinical KG construction and evaluation directly from free text using multi-agent prompting and a schema-constrained Retrieval-Augmented Generation (KG-RAG) strategy. Our pipeline integrates (1) prompt-driven entity, attribute, and relation extraction; (2) entropy-based uncertainty scoring; (3) ontology-aligned RDF/OWL schema generation; and (4) multi-LLM consensus validation for hallucination detection and semantic refinement. Beyond static graph construction, the framework supports continuous refinement and self-supervised evaluation, enabling iterative improvement of graph quality. Applied to two oncology cohorts (PDAC and BRCA), our method produces interpretable, SPARQL-compatible, and clinically grounded knowledge graphs without relying on gold-standard annotations. Experimental results demonstrate consistent gains in precision, relevance, and ontology compliance over baseline methods.
+- **Keywords match:** ['retrieval augmented generation evaluation']
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [MEDIA] An Empirical Evaluation of Retrieval, Reranking, and Similarity for a Q&A-Based Retrieval Augmented Generation System
+- **Autores:** Harun Elkiran, Jawad Rasheed
+- **Fecha:** N/A
+- **Fuente:** IEEE Access
+- **DOI:** https://doi.org/10.1109/ACCESS.2026.3664852
+- **Link:** https://www.semanticscholar.org/paper/53465504c9292ec94cf517cb48f104473ed7cdba
+- **Citaciones:** 0
+- **Score de relevancia:** 65/100
+- **Abstract:** 
+- **Keywords match:** ['retrieval augmented generation evaluation']
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [MEDIA] Efficient Algorithms for Adversarially Robust Approximate Nearest Neighbor Search
+- **Autores:** Alexandr Andoni, Themistoklis Haris, Esty Kelman, Krzysztof Onak
+- **Fecha:** 2026-01-01
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.00272
+- **Link:** https://www.semanticscholar.org/paper/38f2663bbe31973c1375783f25f06f144da52b85
+- **Citaciones:** 0
+- **Score de relevancia:** 63/100
+- **Abstract:** We study the Approximate Nearest Neighbor (ANN) problem under a powerful adaptive adversary that controls both the dataset and a sequence of $Q$ queries. Primarily, for the high-dimensional regime of $d = \omega(\sqrt{Q})$, we introduce a sequence of algorithms with progressively stronger guarantees. We first establish a novel connection between adaptive security and \textit{fairness}, leveraging fair ANN search to hide internal randomness from the adversary with information-theoretic guarantees. To achieve data-independent performance, we then reduce the search problem to a robust decision primitive, solved using a differentially private mechanism on a Locality-Sensitive Hashing (LSH) data structure. This approach, however, faces an inherent $\sqrt{n}$ query time barrier. To break the barrier, we propose a novel concentric-annuli LSH construction that synthesizes these fairness and differential privacy techniques. The analysis introduces a new method for robustly releasing timing information from the underlying algorithm instances and, as a corollary, also improves existing results for fair ANN. In addition, for the low-dimensional regime $d = O(\sqrt{Q})$, we propose specialized algorithms that provide a strong ``for-all''guarantee: correctness on \textit{every} possible query with high probability. We introduce novel metric covering constructions that simplify and improve prior approaches for ANN in Hamming and $\ell_p$ spaces.
+- **Keywords match:** ['approximate nearest neighbor search']
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [x] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [MEDIA] UQA-RAG: Enhancing Urdu Question-Answer Retrieval With Semantic Similarity and LLMs
+- **Autores:** Talha Farooq Khan, Muhammad Arslan, Fahad Alturise, Ahmed H. Almutairi, M. Raza
+- **Fecha:** N/A
+- **Fuente:** IEEE Access
+- **DOI:** https://doi.org/10.1109/ACCESS.2025.3649743
+- **Link:** https://www.semanticscholar.org/paper/b931feb6725811853877b19d2a5ea50f8bb8c404
+- **Citaciones:** 0
+- **Score de relevancia:** 60/100
+- **Abstract:** Urdu Question Answering (QA) systems struggle with limited annotated resources and linguistic complexities. These are significant hurdles for traditional Large Language Models (LLMs) that rely on static, pre-trained knowledge. This paper introduces UQA-RAG, a new framework to enhance Urdu QA by using Retrieval-Augmented Generation (RAG) over the multi-domain UNQA dataset. Our core methodological contribution is a Hybrid Retrieval Strategy. This approach overcomes the individual weaknesses of pure semantic or lexical search by combining their strengths. It fuses results from OpenAI’s text-embedding-3-small vectors (Semantic) with BM25 (Lexical) using the Reciprocal Rank Fusion (RRF) algorithm. This method maximizes both context relevance and diversity. We conducted an extensive ablation study to evaluate UQA-RAG’s performance with different LLM backbones, including GPT-4o, Llama-3.2, and Deepseek-r1. The optimal setup, pairing Hybrid Retrieval with GPT-4o, achieved a BERTScore F1 of 93.15%. This was a 16.55 percentage point improvement over our fine-tuned mBERT baseline. The system also reached a high RAGAS Context Precision of 95.20%. These results confirm that our hybrid approach is essential for generating accurate, contextually grounded responses, making UQA-RAG an effective solution for advancing high-quality QA in Urdu.
+- **Keywords match:** ['retrieval augmented generation hybrid', 'RAG hybrid retrieval BM25', 'hybrid search lexical semantic']
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [x] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [MEDIA] Rapid Aeolus L2B HLOS Wind Retrieval Via BP Neural Network
+- **Autores:** Qinming Bi, Jiangang Lv, Pengfei He, Lusheng Zhang
+- **Fecha:** 2026-02-22
+- **Fuente:** MDPI (MDPI AG)
+- **DOI:** https://doi.org/10.3390/s26041379
+- **Link:** https://openalex.org/W7130947956
+- **Citaciones:** 0
+- **Score de relevancia:** 60/100
+- **Abstract:** Wind field information is a key variable in atmospheric science and weather prediction, and spaceborne Doppler wind lidar provides unique global observations of the horizontal line-of-sight (HLOS) wind. This study develops a data-driven model that maps Aeolus Rayleigh-channel Level-1B (L1B) observables to the operational Level-2B (L2B) HLOS wind product. Using the two Rayleigh discriminator responses as inputs, we train a backpropagation (BP) neural network to learn the nonlinear relationship between Rayleigh-channel measurements and the collocated L2B HLOS winds. The proposed approach is intended as a computationally efficient emulation/approximation of the L2B HLOS output from L1B observations, rather than as an independently validated accuracy-improving retrieval. Model performance is evaluated by agreement with the L2B reference across samples spanning July 2019 to May 2020 and an altitude range of 0&ndash;20 km. The results show that the proposed model reproduces the main statistical characteristics and along-track HLOS patterns of the L2B product, providing a fast option for generating L2B-like HLOS estimates from Rayleigh-channel inputs.
+- **Keywords match:** ['neural information retrieval']
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [x] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via openalex
+
+## [MEDIA] Improving Arabic Information Retrieval and Reranking Performance Using Knowledge Distillation
+- **Autores:** M'hamed Amine Hatem, F. Azouaou, Sofiane Batata
+- **Fecha:** 2026-02-06
+- **Fuente:** ACM Transactions on Asian and Low-Resource Language Information Processing
+- **DOI:** https://doi.org/10.1145/3796229
+- **Link:** https://www.semanticscholar.org/paper/fa71497139aafcae14a3b6b139f1d900e569b5c6
+- **Citaciones:** 0
+- **Score de relevancia:** 60/100
+- **Abstract:** Transformer-based models have revolutionized information retrieval, achieving state-of-the-art performance in document retrieval and ranking. For high-resource languages like English, an abundance of high-quality labeled datasets has facilitated the development of powerful models. However, developing powerful models for low-resource languages such as Arabic is challenging due to the scarcity of labeled data. While using translated English datasets can be considered to overcome the lack of labeled data, translated datasets have inherent information loss and inconsistencies introduced during the translation process. As a result, models fine-tuned on translated datasets typically underperform relative to their English counterparts. To address this issue, we explore the potential of transferring expertise from high-resource models to low-resource models. In particular, we investigate whether knowledge learned by English retrieval and reranking models can be effectively transferred to Arabic models via knowledge distillation. Our results demonstrate that knowledge distillation significantly improves the performance of Arabic information retrieval. Our models, fine-tuned using knowledge distillation on the mMARCO Arabic passage-ranking dataset, outperform state-of-the-art retrieval and reranker models. Specifically, our cross-encoder achieves an MRR@10 of 0.254, representing an 8% relative improvement over the previous best cross-encoder, mT5. In terms of recall, our bi-encoder achieves an R@1000 of 0.799, surpassing the late-interaction model...
+- **Keywords match:** ['ColBERT late interaction', 'cross-encoder reranking retrieval']
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [x] Estrategias de Recuperacion
+  - [x] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [x] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [MEDIA] Qwen3-VL-Embedding and Qwen3-VL-Reranker: A Unified Framework for State-of-the-Art Multimodal Retrieval and Ranking
+- **Autores:** Mingxin Li, Yanzhao Zhang, Dingkun Long, Keqin Chen, Sibo Song, Shuai Bai, Zhibo Yang, Pengjun Xie, An Yang, Day-iheng Liu, Jingren Zhou, Junyang Lin
+- **Fecha:** 2026-01-08
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.04720
+- **Link:** https://www.semanticscholar.org/paper/d7ff3693d6d8f5e695334e7a19ac0591242e3a0c
+- **Citaciones:** 15
+- **Score de relevancia:** 58/100
+- **Abstract:** In this report, we introduce the Qwen3-VL-Embedding and Qwen3-VL-Reranker model series, the latest extensions of the Qwen family built on the Qwen3-VL foundation model. Together, they provide an end-to-end pipeline for high-precision multimodal search by mapping diverse modalities, including text, images, document images, and video, into a unified representation space. The Qwen3-VL-Embedding model employs a multi-stage training paradigm, progressing from large-scale contrastive pre-training to reranking model distillation, to generate semantically rich high-dimensional vectors. It supports Matryoshka Representation Learning, enabling flexible embedding dimensions, and handles inputs up to 32k tokens. Complementing this, Qwen3-VL-Reranker performs fine-grained relevance estimation for query-document pairs using a cross-encoder architecture with cross-attention mechanisms. Both model series inherit the multilingual capabilities of Qwen3-VL, supporting more than 30 languages, and are released in $\textbf{2B}$ and $\textbf{8B}$ parameter sizes to accommodate diverse deployment requirements. Empirical evaluations demonstrate that the Qwen3-VL-Embedding series achieves state-of-the-art results across diverse multimodal embedding evaluation benchmarks. Specifically, Qwen3-VL-Embedding-8B attains an overall score of $\textbf{77.8}$ on MMEB-V2, ranking first among all models (as of January 8, 2025). This report presents the architecture, training methodology, and practical capabilities of the series, demonstrating their effectiveness on various multimodal retrieval tasks, including image-text retrieval, visual question answering, and video-text matching.
+- **Keywords match:** ['cross-encoder reranking retrieval', 'multi-stage retrieval reranking']
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [x] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [MEDIA] Breaking the Spiral: A Utility-Driven Optimization Framework for Balanced Information Retrieval in the LLM Era
+- **Autores:** Xiaoyang Chen, Ben He, Hongyu Lin, Xianpei Han, Tianshu Wang, Boxi Cao, Le Sun, Yingfei Sun
+- **Fecha:** 2026-01-19
+- **Fuente:** ACM Transactions on Information Systems
+- **DOI:** https://doi.org/10.1145/3788865
+- **Link:** https://www.semanticscholar.org/paper/45606d508f7694878f1a2bd2c1ac844f4140fde5
+- **Citaciones:** 0
+- **Score de relevancia:** 57/100
+- **Abstract:** The widespread adoption of Large Language Models (LLMs) and Retrieval-Augmented Generation (RAG) systems is reshaping the landscape of information retrieval. However, the long-term effects of LLM-generated texts on retrieval systems remain underexplored, creating challenges for mitigating their impact. The effects are examined in this study, with a particular focus on the “Spiral of Silence” phenomenon, which refers to the marginalization of diverse information as certain types of content dominate, leading to a homogenized information ecosystem. To investigate this, a simulation pipeline is constructed to model the iterative introduction of LLM-generated texts into retrieval systems. Experimental results across multiple iterations reveal that as the presence of LLM-generated texts within the system grows, retrieval systems exhibit a stronger tendency to retrieve these texts. This trend, in turn, reduces the visibility of human-generated content, diminishes diversity, propagates errors, and results in a notable decline in retrieval performance. To address these challenges, we propose a Utility-Driven Multi-Objective Optimization (UMO) framework to effectively mitigate the “Spiral of Silence”. This framework employs a two-phase approach: an optimization phase, leveraging the NSGA-II algorithm to derive optimal preference weights for multiple objectives, and a memorization phase, which directly integrates these weights into the retrieval vector space without requiring...
+- **Keywords match:** ['RAG system optimization']
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [MEDIA] FastLane: Efficient Routed Systems for Late-Interaction Retrieval
+- **Autores:** Ramnath Kumar, Prateek Jain, Cho-Jui Hsieh
+- **Fecha:** 2026-01-10
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.06389
+- **Link:** https://www.semanticscholar.org/paper/f4414be52192fba08bbed0552f7632851498189d
+- **Citaciones:** 0
+- **Score de relevancia:** 57/100
+- **Abstract:** Late-interaction retrieval models like ColBERT achieve superior accuracy by enabling token-level interactions, but their computational cost hinders scalability and integration with Approximate Nearest Neighbor Search (ANNS). We introduce FastLane, a novel retrieval framework that dynamically routes queries to their most informative representations, eliminating redundant token comparisons. FastLane employs a learnable routing mechanism optimized alongside the embedding model, leveraging self-attention and differentiable selection to maximize efficiency. Our approach reduces computational complexity by up to 30x while maintaining competitive retrieval performance. By bridging late-interaction models with ANNS, FastLane enables scalable, low-latency retrieval, making it feasible for large-scale applications such as search engines, recommendation systems, and question-answering platforms. This work opens pathways for multi-lingual, multi-modal, and long-context retrieval, pushing the frontier of efficient and adaptive information retrieval.
+- **Keywords match:** ['ColBERT late interaction', 'text embedding models comparison', 'approximate nearest neighbor search']
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [x] Modelos de Embedding
+  - [x] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [x] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [MEDIA] Design and Evaluation of an LLM-Based Knowledge Graph System for Photosynthesis Research
+- **Autores:** Seung-Wook Yoon, Tae In Ahn
+- **Fecha:** N/A
+- **Fuente:** IEEE Access
+- **DOI:** https://doi.org/10.1109/ACCESS.2026.3654178
+- **Link:** https://www.semanticscholar.org/paper/751c4db780ccbb2fcdc0c2f804468cc7411fb675
+- **Citaciones:** 0
+- **Score de relevancia:** 55/100
+- **Abstract:** The exponential growth of scientific literature makes it increasingly difficult for researchers to organize and analyze large volumes of information, particularly in complex fields such as photosynthesis. Here, we present an automated knowledge graph construction system powered by large language models (LLMs) and validated on 5,000 photosynthesis research articles. A two-stage evaluation of eight LLMs showed marked performance differences: Gemini-2.5-flash achieved the highest F1-score (71.1%) and recall (78.0%), while GPT-4.1-nano demonstrated superior efficiency ( ${\$}$ 1.70/5k papers, $3\times $ faster than Gemini-2.5-flash). Consequently, we developed a hybrid LLM and dual-layer strategy to optimize real-time scalability. The system generated a large-scale network of 120,000 nodes and 540,000 relationships, enabling interactive exploration via a D3.js-based web platform. Domain coverage analysis revealed concentration in Plant Science (87.9%), Genetics (62.5%), and Molecular Biology (56.8%), with publication activity rising from 1995 to 2024 and peaking at 1,129 papers (2015–2019). Network analysis identified strong links among core fields but weak connections between Systems Biology and Circadian Rhythm, highlighting research gaps. While scalability and transferability remain challenges, this study demonstrates the potential of combining LLMs with knowledge graphs to accelerate discovery across the life sciences.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [MEDIA] Assessing the Performance of NOMA in a Multi-Cell Context: A General Evaluation Framework
+- **Autores:** Anthony Bardou, J. Gorce, Thomas Begin
+- **Fecha:** N/A
+- **Fuente:** IEEE Transactions on Wireless Communications
+- **DOI:** https://doi.org/10.1109/TWC.2025.3584178
+- **Link:** https://www.semanticscholar.org/paper/a52ec7ece21f97432de7240a5a31edad59b1c0c8
+- **Citaciones:** 1
+- **Score de relevancia:** 55/100
+- **Abstract:** Non-Orthogonal Multiple Access (NOMA) is a Resource Sharing Mechanism (RSM) initially studied for 5G cellular networks and brought back to the agenda for 6G networks. While NOMA’s benefit at the level of a single cell has been properly established, assessing its performance at the scale of a cellular network remains an open research problem. This is mainly due to the inter-dependencies between scheduling, power control and inter-cell interference. Some algorithms have been proposed to optimize resource allocation in a multi-cell network, but they require a perfect and unrealistic knowledge of the whole channel states. In this paper, we leverage Bayesian Optimization techniques to build a versatile evaluation framework, able to assess the performance of multi-cell networks implementing a large variety of RSMs under a minimal set of assumptions. Subsequently, we illustrate how this evaluation framework can be used to compare the performance of several well-known RSMs under various fairness requirements and beamforming efficiencies. Our results show that, among the RSMs studied on a simple multi-cell network simulation, NOMA combined with a full reuse policy consistently emerges as the one able to achieve the highest end-users achievable rates under fairness constraints.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [MEDIA] Unlocking the Potential of Cloud Computing for Sustainable Business Operations: A Systematic Review of Antecedents, Advantages and Challenges
+- **Autores:** Mohammad Nurul Hassan Reza, Sahadat Hossain, Abdullah Al Mamun, A. Gunasekaran, Chinnasamy Agamudai Nambi Malarvizhi, Uma Thevi Munikrishnan
+- **Fecha:** N/A
+- **Fuente:** IEEE transactions on engineering management
+- **DOI:** https://doi.org/10.1109/TEM.2026.3657965
+- **Link:** https://www.semanticscholar.org/paper/fdfdf41b36b11b020e6a704d40617c583efc5dd7
+- **Citaciones:** 0
+- **Score de relevancia:** 55/100
+- **Abstract:** The current state of research on the adoption of cloud computing (CC) is characterized by a lack of comprehensive reviews and classifications of existing studies. This systematic review addresses this gap by proposing a novel framework for CC adoption that integrates core influential antecedents, potential advantages, and challenges in sustainable business operations. Specifically, the framework links antecedents (inputs) to processes (positive outcomes/potential advantages), ultimately contributing to sustainable performance and resource efficiency (outputs). Using the Web of Science and Scopus databases, we selected 67 journal articles on CC adoption, published from 2011 to 2025. This study encompasses bibliometric and thematic analyses. Bibliometric analysis revealed a growing interest in publishing research on CC from various countries, with different sectors emphasized in pioneering journals. It also demonstrated a diverse approach, including methodologies, tools, techniques, and theories. Thematic analysis identified 24 antecedents—spanning perceived innovation-related, technological, organizational, and environmental—along with six potential advantages and six challenges influencing CC adoption, ultimately aiding sustainable business operations. Challenges are conceptualized as moderating variables in the adoption process. The findings contribute to theory by clarifying the interplay between adoption drivers, advantages, and challenges, and to practice by offering managers a diagnostic tool to facilitate CC adoption for improved efficiency...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [x] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [MEDIA] Schema Retrieval with Embeddings and Vector Stores Using Retrieval-Augmented Generation and LLM-Based SQL Query Generation
+- **Autores:** Mehmet Bozdemir, Metin Bilgin
+- **Fecha:** 2026-01-06
+- **Fuente:** Applied Sciences
+- **DOI:** https://doi.org/10.3390/app16020586
+- **Link:** https://www.semanticscholar.org/paper/f45257660331158a330ca7f35db4b7090361cf8b
+- **Citaciones:** 0
+- **Score de relevancia:** 54/100
+- **Abstract:** In today’s world, where the volume and variety of data are increasing at an extraordinary rate, extracting meaningful insights from data is of critical importance; however, the complexity of standard database query languages makes it difficult for users without technical expertise to access information. This study proposes an innovative Retrieval-Augmented Generation (RAG) architecture that analyzes natural language queries, identifies related database schemas, and automatically converts them to SQL. Unlike fixed schema selection (fixed-k) methods, a unique hierarchical clustering mechanism is introduced to dynamically determine the number of relevant schemas, minimizing noise. Furthermore, the architecture incorporates an iterative repair mechanism, data enrichment with sample rows, and a hybrid query strategy (Turkish + English) to overcome cross-lingual barriers. Performance evaluations on 15 databases demonstrate that the proposed method improved the schema retrieval F1 score from 0.79 to 0.88. In the SQL generation phase, the execution accuracy (EX) of the GPT-4o model increased from 0.70 to 0.78 with the proposed optimizations, representing an approximate 11% improvement relative to the baseline configuration without requiring fine-tuning.
+- **Keywords match:** ['retrieval augmented generation hybrid', 'retrieval augmented generation evaluation']
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [x] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [MEDIA] Leveraging MCP and Corrective RAG for Scalable and Interoperable Multi-Agent Healthcare Systems
+- **Autores:** Dimitrios Kalathas, Andreas Menychtas, Panayiotis Tsanakas, Ilias Maglogiannis
+- **Fecha:** 2026-02-21
+- **Fuente:** MDPI (MDPI AG)
+- **DOI:** https://doi.org/10.3390/electronics15040888
+- **Link:** https://openalex.org/W7130827978
+- **Citaciones:** 0
+- **Score de relevancia:** 54/100
+- **Abstract:** The rapid evolution of Generative AI (GenAI) has created the conditions for developing innovative solutions that disrupt all fields of human-related activities. Within the healthcare sector, numerous AI-driven applications have emerged, offering comprehensive health-related insights and addressing user questions in real time. Nevertheless, most of them use general-purpose Large Language Models (LLMs); consequently, the responses may not be as accurate as required in clinical settings. Therefore, the research community is adopting efficient architectures, such as Multi-Agent Systems (MAS) to optimize task allocation, reasoning processes, and system scalability. Most recently, the Model Context Protocol (MCP) has been introduced; however, very few applications apply this protocol within a healthcare MAS. Furthermore, Retrieval-Augmented Generation (RAG) has proven essential for grounding AI responses in verified clinical literature. This paper proposes a novel architecture that integrates these technologies to create an advanced Agentic Corrective RAG (CRAG) system. Unlike standard approaches, this method incorporates an active evaluation layer that autonomously detects retrieval failures and triggers corrective fallback mechanisms to ensure safety and accuracy. A comparative analysis was conducted for this architecture against Typical RAG and Cache-Augmented Generation (CAG), demonstrating that the proposed solution improves workflow efficiency and enables more accurate, context-aware interventions in healthcare.
+- **Keywords match:** ['retrieval augmented generation evaluation']
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via openalex
+
+## [MEDIA] Adaptive Robust Watermarking for Large Language Models via Dynamic Token Embedding Perturbation
+- **Autores:** Ziyang Zeng, Han Lin, Shuxin Zhang, Boyuan Wang
+- **Fecha:** N/A
+- **Fuente:** IEEE Access
+- **DOI:** https://doi.org/10.1109/ACCESS.2026.3653833
+- **Link:** https://www.semanticscholar.org/paper/c20dc09bd5f22fa5776929ff3d3855aefaba4408
+- **Citaciones:** 5
+- **Score de relevancia:** 53/100
+- **Abstract:** Large Language Models (LLMs) have demonstrated remarkable capabilities in generating high-quality text, raising significant concerns regarding copyright protection and content provenance verification. However, most existing watermarking techniques rely on uniform perturbation or rule-based token biasing schemes, which exhibit critical vulnerabilities under adversarial attacks such as paraphrasing, translation, and content truncation, often failing to maintain detection reliability in real-world deployment scenarios. To address these challenges, this paper introduces a novel context-aware robust watermarking framework that dynamically adjusts watermark embedding strength according to contextual semantic characteristics during text generation. The proposed approach incorporates a token-level semantic modulation mechanism that strategically intensifies watermark signals in copyright-sensitive segments while minimizing perturbations in semantically neutral regions, achieving an improved balance between imperceptibility and robustness. Furthermore, an adaptive threshold estimation algorithm is developed for watermark detection, which automatically calibrates detection boundaries based on noise statistics, significantly enhancing resilience against diverse attack vectors. Extensive experiments on the WaterBench benchmark demonstrate superior performance over state-of-the-art baselines, maintaining high detection accuracy with a 95.3% true positive rate (TPR) under clean conditions and strong robustness under severe perturbations, including paraphrasing attacks (82.7% TPR), translation attacks (78.4% TPR), and content truncation (88.9% TPR at 50% retention). Meanwhile, the proposed method reduces...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [x] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [MEDIA] SVFusion: A CPU-GPU Co-Processing Architecture for Large-Scale Real-Time Vector Search
+- **Autores:** Yuchen Peng, Dingyu Yang, Zhongle Xie, Ji Sun, Lidan Shou, Ke Chen, Gang Chen
+- **Fecha:** 2026-01-13
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.08528
+- **Link:** https://www.semanticscholar.org/paper/9e0fdf654c70151c8ca744777c723da866f603f8
+- **Citaciones:** 0
+- **Score de relevancia:** 53/100
+- **Abstract:** Approximate Nearest Neighbor Search (ANNS) underpins modern applications such as information retrieval and recommendation. With the rapid growth of vector data, efficient indexing for real-time vector search has become rudimentary. Existing CPU-based solutions support updates but suffer from low throughput, while GPU-accelerated systems deliver high performance but face challenges with dynamic updates and limited GPU memory, resulting in a critical performance gap for continuous, large-scale vector search requiring both accuracy and speed. In this paper, we present SVFusion, a GPU-CPU-disk collaborative framework for real-time vector search that bridges sophisticated GPU computation with online updates. SVFusion leverages a hierarchical vector index architecture that employs CPU-GPU co-processing, along with a workload-aware vector caching mechanism to maximize the efficiency of limited GPU memory. It further enhances performance through real-time coordination with CUDA multi-stream optimization and adaptive resource management, along with concurrency control that ensures data consistency under interleaved queries and updates. Empirical results demonstrate that SVFusion achieves significant improvements in query latency and throughput, exhibiting a 20.9x higher throughput on average and 1.3x to 50.7x lower latency compared to baseline methods, while maintaining high recall for large-scale datasets under various streaming workloads.
+- **Keywords match:** ['RAG system optimization', 'approximate nearest neighbor search']
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [x] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [MEDIA] Chunking, Retrieval, and Re-ranking: An Empirical Evaluation of RAG Architectures for Policy Document Question Answering
+- **Autores:** Anuj Maharjan, Umesh Yadav
+- **Fecha:** 2026-01-21
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.15457
+- **Link:** https://www.semanticscholar.org/paper/f3d7e0165df8da3fad6cbfb776e0371c31d68c48
+- **Citaciones:** 0
+- **Score de relevancia:** 49/100
+- **Abstract:** The integration of Large Language Models (LLMs) into the public health policy sector offers a transformative approach to navigating the vast repositories of regulatory guidance maintained by agencies such as the Centers for Disease Control and Prevention (CDC). However, the propensity for LLMs to generate hallucinations, defined as plausible but factually incorrect assertions, presents a critical barrier to the adoption of these technologies in high-stakes environments where information integrity is non-negotiable. This empirical evaluation explores the effectiveness of Retrieval-Augmented Generation (RAG) architectures in mitigating these risks by grounding generative outputs in authoritative document context. Specifically, this study compares a baseline Vanilla LLM against Basic RAG and Advanced RAG pipelines utilizing cross-encoder re-ranking. The experimental framework employs a Mistral-7B-Instruct-v0.2 model and an all-MiniLM-L6-v2 embedding model to process a corpus of official CDC policy analytical frameworks and guidance documents. The analysis measures the impact of two distinct chunking strategies, recursive character-based and token-based semantic splitting, on system accuracy, measured through faithfulness and relevance scores across a curated set of complex policy scenarios. Quantitative findings indicate that while Basic RAG architectures provide a substantial improvement in faithfulness (0.621) over Vanilla baselines (0.347), the Advanced RAG configuration achieves a superior faithfulness average of 0.797....
+- **Keywords match:** ['retrieval augmented generation evaluation', 'document chunking strategies RAG', 'text segmentation retrieval', 'faithfulness evaluation LLM']
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [x] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [x] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [MEDIA] AI-Powered Standard Operating Procedure Generation and Optimization Using Large Language Models for Chemical Laboratory Applications
+- **Autores:** R. Mallouhy, Hissah A. Alqahtani, S. Lardhi
+- **Fecha:** N/A
+- **Fuente:** IEEE Access
+- **DOI:** https://doi.org/10.1109/ACCESS.2026.3660770
+- **Link:** https://www.semanticscholar.org/paper/9e10d5e3b444b84f39a8aa789c0d353b6d12679b
+- **Citaciones:** 0
+- **Score de relevancia:** 48/100
+- **Abstract:** This paper presents an AI-powered framework that automates the generation of Standard Operating Procedures (SOPs) for chemistry laboratories. The proposed solution integrates Generative AI, large language models (LLMs), and a Retrieval-Augmented Generation (RAG) architecture enhanced with a Chroma database and prompt engineering techniques. Together, these components enable the creation of accurate, customizable, and context-aware SOPs tailored to specific laboratory equipment, materials, and processes. SOPs play a vital role in ensuring safety, consistency, and regulatory compliance in chemical operations. Our system allows users to select and customize sections, such as safety guidelines, calibration steps, or procedural details, while automatically retrieving verified information from trusted sources, including equipment manuals and scientific literature. This approach minimizes hallucinations and ensures factual precision, which is crucial in chemistry workflows. By combining LLMs with semantic retrieval, the framework significantly reduces the time and effort required for SOP preparation while maintaining high standards of accuracy and safety. The results highlight how GenAI can transform laboratory documentation, offering a scalable solution for research and industrial chemical applications.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [MEDIA] Linguistic-Neural Hybrid Architectures for Semantic Search: Optimizing Recall with POS Filtering and Query Expansion
+- **Autores:** V. Mageshwari, J. Shrijith
+- **Fecha:** N/A
+- **Fuente:** IEEE Access
+- **DOI:** https://doi.org/10.1109/access.2026.3663716
+- **Link:** https://www.semanticscholar.org/paper/f1747a3c33f187772511c06c94917f170d7beb0e
+- **Citaciones:** 0
+- **Score de relevancia:** 48/100
+- **Abstract:** 
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [x] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [MEDIA] Multilingual Intelligent Retrieval System via Unified End-to-End OCR and Hybrid Search
+- **Autores:** Shuo Yang, Zhandong Liu, Ke Li, Ruixia Song, Yong Li, Xiangwei Qi
+- **Fecha:** 2026-02-11
+- **Fuente:** Applied Sciences
+- **DOI:** https://doi.org/10.3390/app16041771
+- **Link:** https://www.semanticscholar.org/paper/2881e5ac0272db5d4cc644659b808b473c382da7
+- **Citaciones:** 0
+- **Score de relevancia:** 48/100
+- **Abstract:** This study addresses the limitations of current Optical Character Recognition (OCR) systems in supporting minority languages and integrating intelligent retrieval functions. We propose an integrated system that combines an advanced end-to-end OCR model with a novel hybrid search approach. First, we developed the MultiLang-OCR-30K dataset containing 30,000 annotated samples of handwritten Chinese, Tibetan, and Uyghur texts. Second, we extended the GOT model using a freeze encoder–fine-tune decoder strategy to enhance multilingual capabilities. Finally, we designed a character-level hybrid retrieval framework integrating TF-IDF efficiency with Sentence-BERT semantic strength. Experimental results show our extended GOT model achieves sentence accuracies of 82.3%, 76.5%, and 78.1% for handwritten Chinese, Tibetan, and Uyghur, respectively. The hybrid search improves F1 score by 28.7% over TF-IDF alone while maintaining 23 ms average response time. This system provides a practical solution for multilingual document digitization and management, thereby bridging the technological gap for minority languages.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [x] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [MEDIA] GaiaFlow: Semantic-Guided Diffusion Tuning for Carbon-Frugal Search
+- **Autores:** Rong Fu, Wenxin Zhang, Jia Yee Tan, Chunlei Meng, Shuo Yin, Xiaowen Ma, Wangyu Wu, Muge Qi, Guangzhen Yao, Zhaolu Kang, Zeli Su, Simon Fong
+- **Fecha:** 2026-02-17
+- **Fuente:** arXiv (Cornell University)
+- **DOI:** https://doi.org/10.48550/arxiv.2602.15423
+- **Link:** https://openalex.org/W7130325516
+- **Citaciones:** 0
+- **Score de relevancia:** 48/100
+- **Abstract:** As the burgeoning power requirements of sophisticated neural architectures escalate, the information retrieval community has recognized ecological sustainability as a pivotal priority that necessitates a fundamental paradigm shift in model design. While contemporary neural rankers have attained unprecedented accuracy, the substantial environmental externalities associated with their computational intensity often remain overlooked in large-scale deployments. We present GaiaFlow, an innovative framework engineered to facilitate carbon-frugal search by operationalizing semantic-guided diffusion tuning. Our methodology orchestrates the convergence of retrieval-guided Langevin dynamics and a hardware-independent performance modeling strategy to optimize the trade-off between search precision and environmental preservation. By incorporating adaptive early exit protocols and precision-aware quantized inference, the proposed architecture significantly mitigates operational carbon footprints while maintaining robust retrieval quality across heterogeneous computing infrastructures. Extensive experimental evaluations demonstrate that GaiaFlow achieves a superior equilibrium between effectiveness and energy efficiency, offering a scalable and sustainable pathway for next-generation neural search systems.
+- **Keywords match:** ['neural information retrieval']
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [x] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via openalex
+
+## [MEDIA] Resilient Semantic Pseudo-Text Embedding for Zero-Shot Video Moment Retrieval
+- **Autores:** Donglin Zhang, Weixiang Shi, Xiao-jun Wu, Josef Kittler
+- **Fecha:** 2026-02-10
+- **Fuente:** ACM Transactions on Multimedia Computing, Communications, and Applications (TOMCCAP)
+- **DOI:** https://doi.org/10.1145/3796721
+- **Link:** https://www.semanticscholar.org/paper/11c002cf033a7a4176a31ae40cced5e17f60c458
+- **Citaciones:** 0
+- **Score de relevancia:** 48/100
+- **Abstract:** With the explosive growth of video data, video moment retrieval (VMR) has attracted increasing attention due to its ability to localize semantically relevant moments in untrimmed videos. However, existing VMR approaches usually rely on annotated video-text correspondences or temporal annotations, both of which require significant human effort and are costly to scale. Even worse, the inherent subjectivity in manual labeling often introduces inconsistencies into the training data, further complicating the issue. In this paper, we investigate the problem of Zero-Shot Video Moment Retrieval (ZS-VMR) and develop a novel method, Resilient Semantic Pseudo-text Modeling (RSPT). The core of RSPT is to construct semantically rich pseudo-text embeddings through visually guided perturbations. Specifically, RSPT first generates initial pseudo-texts by injecting random noise into visual features and then learns adaptive noise weights by modeling the correlations between these pseudo-texts and visual features. This enables the generation of diverse and semantically aligned representations from multiple perspectives. To ensure alignment with visual semantics and suppress irrelevant noise, RSPT introduces a quality-aware contrastive loss that regularizes the semantic boundaries of pseudo-texts. Extensive experiments on Charades-STA and ActivityNet-Captions show that RSPT outperforms existing competitive baselines, validating its efficacy. Code is available at https://github.com/dmcsy/RSPT.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [x] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [MEDIA] Text- and Face-Conditioned Multi-Anchor Conditional Embedding for Robust Periocular Recognition
+- **Autores:** Po-Ling Fong, T. Ng, Andrew Beng Jin Teoh
+- **Fecha:** 2026-01-16
+- **Fuente:** Applied Sciences
+- **DOI:** https://doi.org/10.3390/app16020942
+- **Link:** https://www.semanticscholar.org/paper/208e2bcf92b146fed68c1647ef8d4964108ad019
+- **Citaciones:** 0
+- **Score de relevancia:** 48/100
+- **Abstract:** Periocular recognition is essential when full-face images cannot be used because of occlusion, privacy constraints, or sensor limitations, yet in many deployments, only periocular images are available at run time, while richer evidence, such as archival face photos and textual metadata, exists offline. This mismatch makes it hard to deploy conventional multimodal fusion. This motivates the notion of conditional biometrics, where auxiliary modalities are used only during training to learn stronger periocular representations while keeping deployment strictly periocular-only. In this paper, we propose Multi-Anchor Conditional Periocular Embedding (MACPE), which maps periocular, facial, and textual features into a shared anchor-conditioned space via a learnable anchor bank that preserves periocular micro-textures while aligning higher-level semantics. Training combines identity classification losses on periocular and face branches with a symmetric InfoNCE loss over anchors and a pulling regularizer that jointly aligns periocular, facial, and textual embeddings without collapsing into face-dominated solutions; captions generated by a vision language model provide complementary semantic supervision. At deployment, only the periocular encoder is used. Experiments across five periocular datasets show that MACPE consistently improves Rank-1 identification and reduces EER at a fixed FAR compared with periocular-only baselines and alternative conditioning methods. Ablation studies verify the contributions of anchor-conditioned...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [x] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [MEDIA] HiSem-RAG: A Hierarchical Semantic-Driven Retrieval-Augmented Generation Method
+- **Autores:** Dongju Yang, Junming Wang
+- **Fecha:** 2026-01-15
+- **Fuente:** Applied Sciences
+- **DOI:** https://doi.org/10.3390/app16020903
+- **Link:** https://www.semanticscholar.org/paper/5766196adf55bba0fdd74db8aef3d05cbd2478e0
+- **Citaciones:** 0
+- **Score de relevancia:** 48/100
+- **Abstract:** Traditional retrieval-augmented generation (RAG) methods struggle with hierarchical documents, often causing semantic fragmentation, structural loss, and inefficient retrieval due to fixed strategies. To address these challenges, this paper proposes HiSem-RAG, a hierarchical semantic-driven RAG method. It comprises three key modules: (1) hierarchical semantic indexing, which preserves boundaries and relationships between sections and paragraphs to reconstruct document context; (2) a bidirectional semantic enhancement mechanism that incorporates titles and summaries to facilitate two-way information flow; and (3) a distribution-aware adaptive threshold strategy that dynamically adjusts retrieval scope based on similarity distributions, balancing accuracy with computational efficiency. On the domain-specific EleQA dataset, HiSem-RAG achieves 82.00% accuracy, outperforming HyDE and RAPTOR by 5.04% and 3.98%, respectively, with reduced computational costs. On the LongQA dataset, it attains a ROUGE-L score of 0.599 and a BERT_F1 score of 0.839. Ablation studies confirm the complementarity of these modules, particularly in long-document scenarios.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [x] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [MEDIA] Adaptive Co-Operative Prompting and Uncertainty-Aware Implicit Knowledge Enhancement for Cross-Modal Retrieval
+- **Autores:** Xin Huang, Shilong Wang, Tong Jia, Zhimin Yuan, Runsheng Zhang, Jingjing Li
+- **Fecha:** 2026-02-11
+- **Fuente:** ACM Transactions on Multimedia Computing, Communications, and Applications (TOMCCAP)
+- **DOI:** https://doi.org/10.1145/3797043
+- **Link:** https://www.semanticscholar.org/paper/69df2d3596941700d2972ea549c13af913148005
+- **Citaciones:** 0
+- **Score de relevancia:** 48/100
+- **Abstract:** With the rapid growth of internet multimedia data, cross-modal retrieval techniques have garnered significant attention. Given the inherent complexity and non-intuitive nature of cross-modal relationships, tuning pre-trained Large Multimodal Models (LMMs) with cross-modal data has become a mainstream approach. However, cross-modal data commonly exhibit inter-modal information asymmetry and intra-modal distribution diversity. Faced with these challenges, existing paradigms tend to learn ambiguous and asymmetric cross-modal associations, which introduce semantic noise. In addition, their limited adaptability to the high diversity of real-world content further hinders optimal retrieval performance. To address these challenges, this paper proposes the Adaptive Co-operative Knowledge Enhancement (ACKE) method, which comprises the Uncertainty-Aware Inspire Potential (UAIP) and Adaptive Co-operative Prompt (ACP) strategies. UAIP utilizes generative LMMs to generate multi-perspective descriptions that enrich semantic information, while employing Dempster-Shafer Theory (DST) to quantify their semantic uncertainty and adjust contribution weights, reducing inaccurate relational mappings and balancing information asymmetry. ACP constructs a prompt pool where instance-specific visual prompts are dynamically selected and projected into text prompts, which collaborate to guide modal encoders toward deep semantic consensus, thus mitigating alignment bias from intra-modal distribution diversity and improving accuracy. Extensive experiments are conducted on two widely used datasets, Flickr30K and MS-COCO, demonstrating the effectiveness...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [x] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [MEDIA] Context Volume Drives Performance: Tackling Domain Shift in Extremely Low-Resource Translation via RAG
+- **Autores:** David Samuel Setiawan, Raphael Merx, Jey Han Lau
+- **Fecha:** 2026-01-15
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.09982
+- **Link:** https://www.semanticscholar.org/paper/e47c4a3c8d6293bf0ced4cfc5c69d355cdd413e4
+- **Citaciones:** 0
+- **Score de relevancia:** 48/100
+- **Abstract:** Neural Machine Translation (NMT) models for low-resource languages suffer significant performance degradation under domain shift. We quantify this challenge using Dhao, an indigenous language of Eastern Indonesia with no digital footprint beyond the New Testament (NT). When applied to the unseen Old Testament (OT), a standard NMT model fine-tuned on the NT drops from an in-domain score of 36.17 chrF++ to 27.11 chrF++. To recover this loss, we introduce a hybrid framework where a fine-tuned NMT model generates an initial draft, which is then refined by a Large Language Model (LLM) using Retrieval-Augmented Generation (RAG). The final system achieves 35.21 chrF++ (+8.10 recovery), effectively matching the original in-domain quality. Our analysis reveals that this performance is driven primarily by the number of retrieved examples rather than the choice of retrieval algorithm. Qualitative analysis confirms the LLM acts as a robust"safety net,"repairing severe failures in zero-shot domains.
+- **Keywords match:** ['retrieval augmented generation hybrid']
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [MEDIA] Public Building Geometric Models From Point Clouds: A multidimensional quality evaluation framework
+- **Autores:** Dong Chen, Chenwei Zhu, Zhenxin Zhang, J. Na, Yueqian Shen, Yanming Chen, Jiju Peethambaran, Liqiang Zhang
+- **Fecha:** 2026-02-01
+- **Fuente:** IEEE Geoscience and Remote Sensing Magazine
+- **DOI:** https://doi.org/10.1109/MGRS.2025.3618468
+- **Link:** https://www.semanticscholar.org/paper/e12ba89fdb519419c8f20474028c1316fc915606
+- **Citaciones:** 0
+- **Score de relevancia:** 48/100
+- **Abstract:** With the rapid development of the low-altitude economy, the application of 3D building geometric models has become increasingly critical in fields such as urban planning and management, disaster emergency response, virtual reality, augmented reality, and digital twins. Due to the advancements in fundamental surveying and mapping technologies as well as computer vision, datasets of building geometric models based on ubiquitous point clouds have continuously emerged. However, the created models often suffer from low lightweight properties, strong dependence on prior knowledge of building structures, topological inconsistency, and insufficient or even absent semantic representation. These problems have resulted in building model datasets exhibiting significant disparities in geometric accuracy, topological structure, and semantic richness, alongside a lack of unified quality assessment standards. To address this, this article proposes a multidimensional quality evaluation framework for building geometric models, encompassing aspects such as geometric accuracy, topological correctness, semantic richness, lightweight properties, and model modality. This framework is employed to comprehensively evaluate six representative building model datasets. By examining common issues in existing datasets, such as geometric distortions, topological errors, and semantic deficiencies, a series of optimization strategies and solutions are proposed. Considering diverse application requirements, this article emphasizes balance among geometric accuracy, topological relationships, semantic...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [x] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [MEDIA] A Large Language Model-Driven Strategic Evaluation Framework via Time-Series Directed Acyclic Graphs
+- **Autores:** Min Zou, Xiaomin Zhu, Yanqing Ye, Guangrong You, Li Ma
+- **Fecha:** 2026-02-18
+- **Fuente:** Applied Sciences
+- **DOI:** https://doi.org/10.3390/app16042007
+- **Link:** https://www.semanticscholar.org/paper/841be48e127880d550082ac040f3a7e810313497
+- **Citaciones:** 0
+- **Score de relevancia:** 48/100
+- **Abstract:** Strategic evaluation is essential for decision-making under uncertainty. Yet existing qualitative and quantitative methods—including chat-oriented large language model (LLM) evaluations—are difficult to deploy in complex, dynamic environments. They often fail to represent nonlinear causal dependencies among indicators, account for temporal lags, or support scalable reasoning. To address these limitations, we propose an LLM-driven strategic evaluation framework with three innovations. First, the framework integrates LLMs across the evaluation lifecycle and couples their qualitative reasoning with quantitative model computation, improving both efficiency and deployability. Second, we introduce a Time-Series Directed Acyclic Graph (TS-DAG) indicator system that explicitly encodes causal structure and time-lagged interdependencies. Third, we develop an LLM-driven procedure that automatically derives the TS-DAG architecture and instantiates its computational parameters, reducing reliance on expert-only construction. We validate the framework through an empirical study of the new energy vehicle market, complemented by baseline algorithm comparisons and sensitivity analyses. The results show that the proposed framework can uncover core indicators, capture competitive dynamics, and explain long-term strategic outcomes across varying environmental conditions. Overall, the framework provides a robust solution for strategic evaluation in complex settings, bridging qualitative strategic reasoning and quantitative, data-driven analysis.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [x] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [MEDIA] AdaptOrch: Task-Adaptive Multi-Agent Orchestration in the Era of LLM Performance Convergence
+- **Autores:** Geunbin Yu
+- **Fecha:** 2026-02-18
+- **Fuente:** arXiv (Cornell University)
+- **DOI:** https://doi.org/10.48550/arxiv.2602.16873
+- **Link:** https://openalex.org/W7130736555
+- **Citaciones:** 0
+- **Score de relevancia:** 46/100
+- **Abstract:** As large language models from diverse providers converge toward comparable benchmark performance, the traditional paradigm of selecting a single best model per task yields diminishing returns. We argue that orchestration topology -- the structural composition of how multiple agents are coordinated, parallelized, and synthesized -- now dominates system-level performance over individual model capability. We present AdaptOrch, a formal framework for task-adaptive multi-agent orchestration that dynamically selects among four canonical topologies (parallel, sequential, hierarchical, and hybrid) based on task dependency graphs and empirically derived domain characteristics. Our framework introduces three key contributions: (1) a Performance Convergence Scaling Law, formalizing conditions under which orchestration selection outweighs model selection; (2) a Topology Routing Algorithm that maps task decomposition DAGs to optimal orchestration patterns in O(|V| + |E|) time; and (3) an Adaptive Synthesis Protocol with provable termination guarantees and heuristic consistency scoring for parallel agent outputs. We validate AdaptOrch across coding (SWE-bench), reasoning (GPQA), and retrieval-augmented generation tasks, demonstrating that topology-aware orchestration achieves 12-23% improvement over static single-topology baselines, even when using identical underlying models. Our results establish orchestration design as a first-class optimization target independent of model scaling.
+- **Keywords match:** ['retrieval augmented generation hybrid']
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via openalex
+
+## [MEDIA] MRAG: Benchmarking Retrieval-Augmented Generation for Bio-medicine
+- **Autores:** Wei Zhu
+- **Fecha:** 2026-01-23
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.16503
+- **Link:** https://www.semanticscholar.org/paper/d98419f1e3d2530837c753450ebec25eabb96f1e
+- **Citaciones:** 4
+- **Score de relevancia:** 46/100
+- **Abstract:** While Retrieval-Augmented Generation (RAG) has been swiftly adopted in scientific and clinical QA systems, a comprehensive evaluation benchmark in the medical domain is lacking. To address this gap, we introduce the Medical Retrieval-Augmented Generation (MRAG) benchmark, covering various tasks in English and Chinese languages, and building a corpus with Wikipedia and Pubmed. Additionally, we develop the MRAG-Toolkit, facilitating systematic exploration of different RAG components. Our experiments reveal that: (a) RAG enhances LLM reliability across MRAG tasks. (b) the performance of RAG systems is influenced by retrieval approaches, model sizes, and prompting strategies. (c) While RAG improves usefulness and reasoning quality, LLM responses may become slightly less readable for long-form questions. We will release the MRAG-Bench's dataset and toolkit with CCBY-4.0 license upon acceptance, to facilitate applications from both academia and industry.
+- **Keywords match:** ['retrieval augmented generation evaluation']
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [MEDIA] Bridging OLAP and RAG: A Multidimensional Approach to the Design of Corpus Partitioning
+- **Autores:** Dario Maio, Stefano Rizzi
+- **Fecha:** 2026-01-07
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.03748
+- **Link:** https://www.semanticscholar.org/paper/50c4dd154b75a51cc919b968c42bc92ddc973ea4
+- **Citaciones:** 0
+- **Score de relevancia:** 44/100
+- **Abstract:** Retrieval-Augmented Generation (RAG) systems are increasingly deployed on large-scale document collections, often comprising millions of documents and tens of millions of text chunks. In industrial-scale retrieval platforms, scalability is typically addressed through horizontal sharding and a combination of Approximate Nearest-Neighbor search, hybrid indexing, and optimized metadata filtering. Although effective from an efficiency perspective, these mechanisms rely on bottom-up, similarity-driven organization and lack a conceptual rationale for corpus partitioning. In this paper, we claim that the design of large-scale RAG systems may benefit from the combination of two orthogonal strategies: semantic clustering, which optimizes locality in embedding space, and multidimensional partitioning, which governs where retrieval should occur based on conceptual dimensions such as time and organizational context. Although such dimensions are already implicitly present in current systems, they are used in an ad hoc and poorly structured manner. We propose the Dimensional Fact Model (DFM) as a conceptual framework to guide the design of multidimensional partitions for RAG corpora. The DFM provides a principled way to reason about facts, dimensions, hierarchies, and granularity in retrieval-oriented settings. This framework naturally supports hierarchical routing and controlled fallback strategies, ensuring that retrieval remains robust even in the presence of incomplete metadata, while transforming the...
+- **Keywords match:** ['retrieval augmented generation hybrid', 'approximate nearest neighbor search']
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [x] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [MEDIA] ReSearch: A Multi-Stage Machine Learning Framework for Earth Science Data Discovery
+- **Autores:** Youran Sun, Yixin Wen, Haizhao Yang
+- **Fecha:** 2026-01-20
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.14176
+- **Link:** https://www.semanticscholar.org/paper/e8249e76925a32f0d47dbeaebf785e2a2fe8cd83
+- **Citaciones:** 0
+- **Score de relevancia:** 44/100
+- **Abstract:** The rapid expansion of Earth Science data from satellite observations, reanalysis products, and numerical simulations has created a critical bottleneck in scientific discovery, namely identifying relevant datasets for a given research objective. Existing discovery systems are primarily retrieval-centric and struggle to bridge the gap between high-level scientific intent and heterogeneous metadata at scale. We introduce \textbf{ReSearch}, a multi-stage, reasoning-enhanced search framework that formulates Earth Science data discovery as an iterative process of intent interpretation, high-recall retrieval, and context-aware ranking. ReSearch integrates lexical search, semantic embeddings, abbreviation expansion, and large language model reranking within a unified architecture that explicitly separates recall and precision objectives. To enable realistic evaluation, we construct a literature-grounded benchmark by aligning natural language intent with datasets cited in peer-reviewed Earth Science studies. Experiments demonstrate that ReSearch consistently improves recall and ranking performance over baseline methods, particularly for task-based queries expressing abstract scientific goals. These results underscore the importance of intent-aware, multi-stage search as a foundational capability for reproducible and scalable Earth Science research.
+- **Keywords match:** ['multi-stage retrieval reranking', 'retrieval evaluation recall precision']
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [x] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [x] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [MEDIA] MedRAGChecker: Claim-Level Verification for Biomedical Retrieval-Augmented Generation
+- **Autores:** Yuelyu Ji, M. Kwak, Hang Zhang, Xizhi Wu, Chenyu Li, Yanshan Wang
+- **Fecha:** 2026-01-10
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.06519
+- **Link:** https://www.semanticscholar.org/paper/f431f33224310d45fd80933a21d44c1464ceb873
+- **Citaciones:** 0
+- **Score de relevancia:** 43/100
+- **Abstract:** Biomedical retrieval-augmented generation (RAG) can ground LLM answers in medical literature, yet long-form outputs often contain isolated unsupported or contradictory claims with safety implications. We introduce MedRAGChecker, a claim-level verification and diagnostic framework for biomedical RAG. Given a question, retrieved evidence, and a generated answer, MedRAGChecker decomposes the answer into atomic claims and estimates claim support by combining evidence-grounded natural language inference (NLI) with biomedical knowledge-graph (KG) consistency signals. Aggregating claim decisions yields answer-level diagnostics that help disentangle retrieval and generation failures, including faithfulness, under-evidence, contradiction, and safety-critical error rates. To enable scalable evaluation, we distill the pipeline into compact biomedical models and use an ensemble verifier with class-specific reliability weighting. Experiments on four biomedical QA benchmarks show that MedRAGChecker reliably flags unsupported and contradicted claims and reveals distinct risk profiles across generators, particularly on safety-critical biomedical relations.
+- **Keywords match:** ['retrieval augmented generation evaluation', 'faithfulness evaluation LLM']
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [x] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [MEDIA] STELLA: Self-Reflective Terminology-Aware Framework for Building an Aerospace Information Retrieval Benchmark
+- **Autores:** Bongmin Kim
+- **Fecha:** 2026-01-07
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.03496
+- **Link:** https://www.semanticscholar.org/paper/d7a3b2655e0514998ca5702260540e0895b39762
+- **Citaciones:** 0
+- **Score de relevancia:** 42/100
+- **Abstract:** Tasks in the aerospace industry heavily rely on searching and reusing large volumes of technical documents, yet there is no public information retrieval (IR) benchmark that reflects the terminology- and query-intent characteristics of this domain. To address this gap, this paper proposes the STELLA (Self-Reflective TErminoLogy-Aware Framework for BuiLding an Aerospace Information Retrieval Benchmark) framework. Using this framework, we introduce the STELLA benchmark, an aerospace-specific IR evaluation set constructed from NASA Technical Reports Server (NTRS) documents via a systematic pipeline that comprises document layout detection, passage chunking, terminology dictionary construction, synthetic query generation, and cross-lingual extension. The framework generates two types of queries: the Terminology Concordant Query (TCQ), which includes the terminology verbatim to evaluate lexical matching, and the Terminology Agnostic Query (TAQ), which utilizes the terminology's description to assess semantic matching. This enables a disentangled evaluation of the lexical and semantic matching capabilities of embedding models. In addition, we combine Chain-of-Density (CoD) and the Self-Reflection method with query generation to improve quality and implement a hybrid cross-lingual extension that reflects real user querying practices. Evaluation of seven embedding models on the STELLA benchmark shows that large decoder-based embedding models exhibit the strongest semantic understanding, while lexical matching methods such...
+- **Keywords match:** ['hybrid search lexical semantic']
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [x] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [MEDIA] Rethinking ANN-based Retrieval: Multifaceted Learnable Index for Large-scale Recommendation System
+- **Autores:** Jiang Zhang, Yubo Wang, Wei Chang, Lu Han, Xu Cheng, Feng Zhang, Min Li, Songhao Jiang, Wei Zheng, Harry Tran, Zhen Wang, Lei Chen, Yueming Wang, Benyu Zhang, Xiangjun Fan, Bi Xue, Qifan Wang
+- **Fecha:** 2026-02-18
+- **Fuente:** arXiv (Cornell University)
+- **DOI:** https://doi.org/10.48550/arxiv.2602.16124
+- **Link:** https://openalex.org/W7130576714
+- **Citaciones:** 0
+- **Score de relevancia:** 41/100
+- **Abstract:** Approximate nearest neighbor (ANN) search is widely used in the retrieval stage of large-scale recommendation systems. In this stage, candidate items are indexed using their learned embedding vectors, and ANN search is executed for each user (or item) query to retrieve a set of relevant items. However, ANN-based retrieval has two key limitations. First, item embeddings and their indices are typically learned in separate stages: indexing is often performed offline after embeddings are trained, which can yield suboptimal retrieval quality-especially for newly created items. Second, although ANN offers sublinear query time, it must still be run for every request, incurring substantial computation cost at industry scale. In this paper, we propose MultiFaceted Learnable Index (MFLI), a scalable, real-time retrieval paradigm that learns multifaceted item embeddings and indices within a unified framework and eliminates ANN search at serving time. Specifically, we construct a multifaceted hierarchical codebook via residual quantization of item embeddings and co-train the codebook with the embeddings. We further introduce an efficient multifaceted indexing structure and mechanisms that support real-time updates. At serving time, the learned hierarchical indices are used directly to identify relevant items, avoiding ANN search altogether. Extensive experiments on real-world data with billions of users show...
+- **Keywords match:** ['approximate nearest neighbor search']
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [x] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via openalex
+
+## [MEDIA] Generalized $\mathbb{Z}_p$ toric codes as qudit low-density parity-check codes
+- **Autores:** Zijian Liang, Yu-An Chen
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:quant-ph
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20158v1
+- **Citaciones:** 0
+- **Score de relevancia:** 40/100
+- **Abstract:** We study two-dimensional translation-invariant CSS stabilizer codes over prime-dimensional qudits on the square lattice under twisted boundary conditions, generalizing the Kitaev $\mathbb{Z}_p$ toric code by augmenting each stabilizer with two additional qudits. Using the Laurent-polynomial formalism, we adapt the Gröbner basis to compute the logical dimension $k$ efficiently, without explicitly constructing large parity-check matrices. We then perform a systematic search over various stabilizer realizations and lattice geometries for $p\in\{3,5,7,11\}$, identifying qudit low-density parity-check codes with the optimal finite-size performance. Representative examples include $[[242,10,22]]_3$ and $[[120,6,20]]_{11}$, both achieving $k d^{2}/n=20$. Across the searched regime, the best observed $k d^{2}$ at fixed $n$ increases with $p$, with an empirical relation $k d^{2} = 0.0541 \, n^{2}\ln p + 3.84 \, n$, compatible with a Bravyi--Poulin--Terhal-type tradeoff when the interaction range grows with system size.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [x] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [MEDIA] Development of a Cherenkov-Based Time-of-Flight Detector Using Silicon Photomultipliers
+- **Autores:** Liliana Congedo, Giuseppe De Robertis, Antonio Di Mauro, Mario Giliberti, Francesco Licciulli, Antonio Liguori, Rocco Liotino, Leonarda Lorusso, Mario Nicola Mazziotta, Eugenio Nappi, Nicola Nicassio, Giuliana Panzarini, Roberta Pillera, Giacomo Volpe
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:physics.ins-det
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20139v1
+- **Citaciones:** 0
+- **Score de relevancia:** 40/100
+- **Abstract:** The aim of this work is to develop high precision Time-of-Flight (TOF) devices based on high refractive index solid Cherenkov radiators read out by silicon photomultipliers (SiPMs). Cherenkov light is prompt and therefore ideal for reaching the intrinsic timing limits of TOF systems. By utilizing a thin, high-refractive-index radiator a nearly instantaneous signal is generated by particles exceeding the Cherenkov threshold. In order to achieve the ultimate time resolution, we carried out a rigorous optimization of the radiator material and geometry, alongside the efficiency of the optical coupling to the SiPM sensors. The key factors limiting the time resolution were characterized by comprehensive Monte Carlo simulations, subsequently validated against experimental beam test data. We assembled small-scale prototypes instrumented with various Hamamatsu SiPM arrays sensors with pitches ranging from 1.3 to 3 mm coupled with various window materials, such as fused silica and MgF2, featuring various thickness values. The prototypes were successfully tested in beam test campaigns at the CERN-PS T10 beam line. The data were collected with a complete chain of front-end and readout electronics based on either the Petiroc 2A or the Radioroc 2 interfaced to a picoTDC to measure charges and times. By comparing the time measurements with...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [x] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [MEDIA] The Rasmussen s-invariant and exotic 4-manifolds
+- **Autores:** Gheehyun Nahm
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:math.GT
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20138v1
+- **Citaciones:** 0
+- **Score de relevancia:** 40/100
+- **Abstract:** We give a short exposition of Ren and Willis's analysis-free proof of the existence of exotic compact, orientable 4-manifolds. There are two distinguishing features of our exposition. First, we avoid skein lasagna modules; we use Beliakova and Wehrli's generalization of Rasmussen's s-invariant to links in $S^{3}$ directly. Second, we reduce the complexity of the computations by choosing clever induction hypotheses in Stošić's induction scheme; this in particular allows us to avoid Ren and Willis's Comparison Lemma.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [MEDIA] AdaEvolve: Adaptive LLM Driven Zeroth-Order Optimization
+- **Autores:** Mert Cemri, Shubham Agrawal, Akshat Gupta, Shu Liu, Audrey Cheng, Qiuyang Mang, Ashwin Naren, Lutfi Eren Erdogan, Koushik Sen, Matei Zaharia, Alex Dimakis, Ion Stoica
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.NE
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20133v1
+- **Citaciones:** 0
+- **Score de relevancia:** 40/100
+- **Abstract:** The paradigm of automated program generation is shifting from one-shot generation to inference-time search, where Large Language Models (LLMs) function as semantic mutation operators within evolutionary loops. While effective, these systems are currently governed by static schedules that fail to account for the non-stationary dynamics of the search process. This rigidity results in substantial computational waste, as resources are indiscriminately allocated to stagnating populations while promising frontiers remain under-exploited. We introduce AdaEvolve, a framework that reformulates LLM-driven evolution as a hierarchical adaptive optimization problem. AdaEvolve uses an "accumulated improvement signal" to unify decisions across three levels: Local Adaptation, which dynamically modulates the exploration intensity within a population of solution candidates; Global Adaptation, which routes the global resource budget via bandit-based scheduling across different solution candidate populations; and Meta-Guidance which generates novel solution tactics based on the previously generated solutions and their corresponding improvements when the progress stalls. We demonstrate that AdaEvolve consistently outperforms the open-sourced baselines across 185 different open-ended optimization problems including combinatorial, systems optimization and algorithm design problems.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [x] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [MEDIA] JUCAL: Jointly Calibrating Aleatoric and Epistemic Uncertainty in Classification Tasks
+- **Autores:** Jakob Heiss, Sören Lambrecht, Jakob Weissteiner, Hanna Wutte, Žan Žurič, Josef Teichmann, Bin Yu
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:stat.ML
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20153v1
+- **Citaciones:** 0
+- **Score de relevancia:** 40/100
+- **Abstract:** We study post-calibration uncertainty for trained ensembles of classifiers. Specifically, we consider both aleatoric (label noise) and epistemic (model) uncertainty. Among the most popular and widely used calibration methods in classification are temperature scaling (i.e., pool-then-calibrate) and conformal methods. However, the main shortcoming of these calibration methods is that they do not balance the proportion of aleatoric and epistemic uncertainty. Not balancing these uncertainties can severely misrepresent predictive uncertainty, leading to overconfident predictions in some input regions while being underconfident in others. To address this shortcoming, we present a simple but powerful calibration algorithm Joint Uncertainty Calibration (JUCAL) that jointly calibrates aleatoric and epistemic uncertainty. JUCAL jointly calibrates two constants to weight and scale epistemic and aleatoric uncertainties by optimizing the negative log-likelihood (NLL) on the validation/calibration dataset. JUCAL can be applied to any trained ensemble of classifiers (e.g., transformers, CNNs, or tree-based methods), with minimal computational overhead, without requiring access to the models' internal parameters. We experimentally evaluate JUCAL on various text classification tasks, for ensembles of varying sizes and with different ensembling strategies. Our experiments show that JUCAL significantly outperforms SOTA calibration methods across all considered classification tasks, reducing NLL and predictive set size by up to 15%...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [MEDIA] A compositional framework for classical kinematic systems
+- **Autores:** Andrea Abeje-Stine, David Weisbart
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:math-ph
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20125v1
+- **Citaciones:** 0
+- **Score de relevancia:** 40/100
+- **Abstract:** Our aim is to introduce a category-theoretic framework sufficiently general to describe a wide variety of open kinematic systems in classical mechanics while uniquely characterizing systems with specified simplest components. The framework models open systems as morphisms in a category $\mathsf{Kin}(\mathcal{F})$, where composition encodes relationships between subsystems and their embedding into larger systems. Unlike previous approaches, the framework supports a precise treatment of geometric constraints, enabling the characterization of systems with feedback. A consequence is a structural formulation of lower kinematic pairs that clarifies system interactions.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [x] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [MEDIA] A Retrieval-Augmented Generation (RAG) Based Framework for Evaluating Urban Low-Carbon Governance and Its Implications for Sustainable Development
+- **Autores:** Zeyu Cao, Liyin Shen, Xiangrui Xu, Yang Guo, Bingyue Pan, Haijun Bao
+- **Fecha:** 2026-02-22
+- **Fuente:** MDPI (MDPI AG)
+- **DOI:** https://doi.org/10.3390/su18042143
+- **Link:** https://openalex.org/W7130954476
+- **Citaciones:** 0
+- **Score de relevancia:** 40/100
+- **Abstract:** The transition to low-carbon urban environments is a cornerstone of global sustainability efforts. However, evaluating the diverse management efforts driving this transition is frequently hindered by fragmented and heterogeneous data. This study introduces a novel Retrieval-Augmented Generation (RAG) framework to systematically evaluate urban low-carbon governance. RAG represents a significant methodological innovation, integrating advanced information retrieval with generative artificial intelligence to provide a transparent and evidence-based assessment of policy implementation. The proposed framework is applied to evaluate the low-carbon energy practices of 296 Chinese cities. A critical finding is the systemic neglect of the &ldquo;Check&rdquo; phase across all urban tiers, posing a significant challenge to the long-term sustainability of carbon reduction initiatives. Conversely, high-performing cities are characterized by robust &ldquo;Feedback&rdquo; mechanisms. Policy priorities also vary significantly with city scale: larger cities emphasize strategic development and low-carbon transitions, while smaller cities focus on foundational planning and ecological preservation. This framework serves as a transparent, process-oriented tool for evidence-based low-carbon governance, thereby facilitating more resilient and sustainable urban pathways.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** Si -- RAGAS evaluation framework
+- **Notas:** Paper encontrado via openalex
+
+## [MEDIA] Beyond the Geometric Curse: High-Dimensional N-Gram Hashing for Dense Retrieval
+- **Autores:** Sangeet Sharma
+- **Fecha:** 2026-01-21
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.15205
+- **Link:** https://www.semanticscholar.org/paper/f7d33d36d30cbd6233bb458fe073154a56846a44
+- **Citaciones:** 0
+- **Score de relevancia:** 40/100
+- **Abstract:** Why do even the most powerful 7B-parameter embedding models struggle with simple retrieval tasks that the decades old BM25 handles with ease? Recent theory suggests that this happens because of a dimensionality bottleneck. This occurs when we force infinite linguistic nuances into small, fixed-length learned vectors. We developed NUMEN to break this bottleneck by removing the learning process entirely. Instead of training heavy layers to map text to a constrained space, NUMEN uses deterministic character hashing to project language directly onto high-dimensional vectors. This approach requires no training, supports an unlimited vocabulary, and allows the geometric capacity scale as needed. On the LIMIT benchmark, NUMEN achieves 93.90 % Recall@100 at 32,768 dimensions. This makes it the first dense retrieval model to officially surpass the sparse BM25 baseline 93.6 %. Our findings show that the real problem in dense retrieval isn't the architecture, but the embedding layer itself. The solution isn't necessarily smarter training, but simply providing more room to breathe.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [x] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [MEDIA] Benchmarking Unlearning for Vision Transformers
+- **Autores:** Kairan Zhao, Iurie Luca, Peter Triantafillou
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.CV
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20114v1
+- **Citaciones:** 0
+- **Score de relevancia:** 40/100
+- **Abstract:** Research in machine unlearning (MU) has gained strong momentum: MU is now widely regarded as a critical capability for building safe and fair AI. In parallel, research into transformer architectures for computer vision tasks has been highly successful: Increasingly, Vision Transformers (VTs) emerge as strong alternatives to CNNs. Yet, MU research for vision tasks has largely centered on CNNs, not VTs. While benchmarking MU efforts have addressed LLMs, diffusion models, and CNNs, none exist for VTs. This work is the first to attempt this, benchmarking MU algorithm performance in different VT families (ViT and Swin-T) and at different capacities. The work employs (i) different datasets, selected to assess the impacts of dataset scale and complexity; (ii) different MU algorithms, selected to represent fundamentally different approaches for MU; and (iii) both single-shot and continual unlearning protocols. Additionally, it focuses on benchmarking MU algorithms that leverage training data memorization, since leveraging memorization has been recently discovered to significantly improve the performance of previously SOTA algorithms. En route, the work characterizes how VTs memorize training data relative to CNNs, and assesses the impact of different memorization proxies on performance. The benchmark uses unified evaluation metrics that capture two complementary notions of forget quality...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [x] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [MEDIA] RADE-Net: Robust Attention Network for Radar-Only Object Detection in Adverse Weather
+- **Autores:** Christof Leitgeb, Thomas Puchleitner, Max Peter Ronecker, Daniel Watzenig
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.CV
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19994v1
+- **Citaciones:** 0
+- **Score de relevancia:** 40/100
+- **Abstract:** Automotive perception systems are obligated to meet high requirements. While optical sensors such as Camera and Lidar struggle in adverse weather conditions, Radar provides a more robust perception performance, effectively penetrating fog, rain, and snow. Since full Radar tensors have large data sizes and very few datasets provide them, most Radar-based approaches work with sparse point clouds or 2D projections, which can result in information loss. Additionally, deep learning methods show potential to extract richer and more dense features from low level Radar data and therefore significantly increase the perception performance. Therefore, we propose a 3D projection method for fast-Fourier-transformed 4D Range-Azimuth-Doppler-Elevation (RADE) tensors. Our method preserves rich Doppler and Elevation features while reducing the required data size for a single frame by 91.9% compared to a full tensor, thus achieving higher training and inference speed as well as lower model complexity. We introduce RADE-Net, a lightweight model tailored to 3D projections of the RADE tensor. The backbone enables exploitation of low-level and high-level cues of Radar tensors with spatial and channel-attention. The decoupled detection heads predict object center-points directly in the Range-Azimuth domain and regress rotated 3D bounding boxes from rich feature maps in the cartesian scene. We evaluate...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [x] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [MEDIA] Winds of Change: XRISM Resolve X-ray spectroscopy of NGC 4051
+- **Autores:** James Reeves, Shoji Ogawa, Tracey Jane Turner, Valentina Braito, Satoshi Yamada, Steven Kraemer, Hirofumi Noda, Anna Trindade Falcão, Martin Elvis, Giuseppina Fabbiano
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:astro-ph.HE
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19897v1
+- **Citaciones:** 0
+- **Score de relevancia:** 40/100
+- **Abstract:** NGC 4051 is a nearby (16.7 Mpc), Narrow Line Seyfert 1 galaxy (NLS1), which has a low black hole mass of $10^6$ M$_{\odot}$. It is also known for its rapid X-ray variability, on timescales of kilo-seconds and has a complex, multi component wind in both the soft X-ray and Fe K bands. Here we present the first high resolution XRISM Resolve spectrum of NGC 4051, which was captured in a historically bright state for a 150 ks exposure. XRISM resolves two blue-shifted Fe K shell absorption troughs in the mean spectrum, which can be ascribed to H-like iron and arises from two outflow components with outflow velocities of 0.025c and 0.04c. A time dependent spectral analysis shows that the iron K absorption is variable on timescales of less than a day, increasing in velocity over the duration of the observation. The velocity changes may be explained either by the passage of two separate transiting absorbers, of different velocities, or by a single accelerating outflow of approximately constant column density. In the latter case, the wind acceleration is likely to be too large to be caused by radiation pressure and instead magnetic driving is favored to accelerate the wind up to...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [MEDIA] GrIT: Group Informed Transformer for Sequential Recommendation
+- **Autores:** Adamya Shyam, Venkateswara Rao Kagita, Bharti Rana, Vikas Kumar
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.IR
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19728v1
+- **Citaciones:** 0
+- **Score de relevancia:** 40/100
+- **Abstract:** Sequential recommender systems aim to predict a user's future interests by extracting temporal patterns from their behavioral history. Existing approaches typically employ transformer-based architectures to process long sequences of user interactions, capturing preference shifts by modeling temporal relationships between items. However, these methods often overlook the influence of group-level features that capture the collective behavior of similar users. We hypothesize that explicitly modeling temporally evolving group features alongside individual user histories can significantly enhance next-item recommendation. Our approach introduces latent group representations, where each user's affiliation to these groups is modeled through learnable, time-varying membership weights. The membership weights at each timestep are computed by modeling shifts in user preferences through their interaction history, where we incorporate both short-term and long-term user preferences. We extract a set of statistical features that capture the dynamics of user behavior and further refine them through a series of transformations to produce the final drift-aware membership weights. A group-based representation is derived by weighting latent group embeddings with the learned membership scores. This representation is integrated with the user's sequential representation within the transformer block to jointly capture personal and group-level temporal dynamics, producing richer embeddings that lead to more accurate, context-aware recommendations. We...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [x] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [MEDIA] A Three-stage Neuro-symbolic Recommendation Pipeline for Cultural Heritage Knowledge Graphs
+- **Autores:** Krzysztof Kutt, Elżbieta Sroka, Oleksandra Ishchuk, Luiz do Valle Miranda
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.IR
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19711v1
+- **Citaciones:** 0
+- **Score de relevancia:** 40/100
+- **Abstract:** The growing volume of digital cultural heritage resources highlights the need for advanced recommendation methods capable of interpreting semantic relationships between heterogeneous data entities. This paper presents a complete methodology for implementing a hybrid recommendation pipeline integrating knowledge-graph embeddings, approximate nearest-neighbour search, and SPARQL-driven semantic filtering. The work is evaluated on the JUHMP (Jagiellonian University Heritage Metadata Portal) knowledge graph developed within the CHExRISH project, which at the time of experimentation contained ${\approx}3.2$M RDF triples describing people, events, objects, and historical relations affiliated with the Jagiellonian University (Kraków, PL). We evaluate four embedding families (TransE, ComplEx, ConvE, CompGCN) and perform hyperparameter selection for ComplEx and HNSW. Then, we present and evaluate the final three-stage neuro-symbolic recommender. Despite sparse and heterogeneous metadata, the approach produces useful and explainable recommendations, which were also proven with expert evaluation.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [x] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [MEDIA] Creating a Hybrid Rule and Neural Network Based Semantic Tagger using Silver Standard Data: the PyMUSAS framework for Multilingual Semantic Annotation
+- **Autores:** Andrew Moore, Paul Rayson, D. Archer, Tim Czerniak, Dawn Knight, Daisy Monika Lal, G. '. Donnchadha, M'iche'al 'O Meachair, S. Piao, Elaine U'i Dhonnchadha, Johanna Vuorinen, Yan Yabo, Xiaobin Yang
+- **Fecha:** 2026-01-14
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.09648
+- **Link:** https://www.semanticscholar.org/paper/d6f058479848a4e91e888276df1daa3a9b4ac9d2
+- **Citaciones:** 0
+- **Score de relevancia:** 40/100
+- **Abstract:** Word Sense Disambiguation (WSD) has been widely evaluated using the semantic frameworks of WordNet, BabelNet, and the Oxford Dictionary of English. However, for the UCREL Semantic Analysis System (USAS) framework, no open extensive evaluation has been performed beyond lexical coverage or single language evaluation. In this work, we perform the largest semantic tagging evaluation of the rule based system that uses the lexical resources in the USAS framework covering five different languages using four existing datasets and one novel Chinese dataset. We create a new silver labelled English dataset, to overcome the lack of manually tagged training data, that we train and evaluate various mono and multilingual neural models in both mono and cross-lingual evaluation setups with comparisons to their rule based counterparts, and show how a rule based system can be enhanced with a neural network model. The resulting neural network models, including the data they were trained on, the Chinese evaluation dataset, and all of the code have been released as open resources.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [MEDIA] Beyond Cosine Similarity: Taming Semantic Drift and Antonym Intrusion in a 15-Million Node Turkish Synonym Graph
+- **Autores:** Ebubekir Tosun, Mehmet Emin Buldur, Özay Ezerceli, Mahmoud El Hussieni
+- **Fecha:** 2026-01-19
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.13251
+- **Link:** https://www.semanticscholar.org/paper/31c64738f85dbc3cc12d64baa76d5af10697acde
+- **Citaciones:** 0
+- **Score de relevancia:** 40/100
+- **Abstract:** Neural embeddings have a notorious blind spot: they can't reliably tell synonyms apart from antonyms. Consequently, increasing similarity thresholds often fails to prevent opposites from being grouped together. We've built a large-scale semantic clustering system specifically designed to tackle this problem head on. Our pipeline chews through 15 million lexical items, evaluates a massive 520 million potential relationships, and ultimately generates 2.9 million high-precision semantic clusters. The system makes three primary contributions. First, we introduce a labeled dataset of 843,000 concept pairs spanning synonymy, antonymy, and co-hyponymy, constructed via Gemini 2.5-Flash LLM augmentation and verified using human-curated dictionary resources. Second, we propose a specialized three-way semantic relation discriminator that achieves 90% macro-F1, enabling robust disambiguation beyond raw embedding similarity. Third, we introduce a novel soft-to-hard clustering algorithm that mitigates semantic drift preventing erroneous transitive chains (e.g., hot ->spicy ->pain ->depression) while simultaneously resolving polysemy. Our approach employs a topology-aware two-stage expansion-pruning procedure with topological voting, ensuring that each term is assigned to exactly one semantically coherent cluster. The resulting resource enables high-precision semantic search and retrieval-augmented generation, particularly for morphologically rich and low-resource languages where existing synonym databases remain sparse.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [MEDIA] Reliable Abstention under Adversarial Injections: Tight Lower Bounds and New Upper Bounds
+- **Autores:** Ezra Edelman, Surbhi Goel
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.LG
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20111v1
+- **Citaciones:** 0
+- **Score de relevancia:** 40/100
+- **Abstract:** We study online learning in the adversarial injection model introduced by [Goel et al. 2017], where a stream of labeled examples is predominantly drawn i.i.d.\ from an unknown distribution $\mathcal{D}$, but may be interspersed with adversarially chosen instances without the learner knowing which rounds are adversarial. Crucially, labels are always consistent with a fixed target concept (the clean-label setting). The learner is additionally allowed to abstain from predicting, and the total error counts the mistakes whenever the learner decides to predict and incorrect abstentions when it abstains on i.i.d.\ rounds. Perhaps surprisingly, prior work shows that oracle access to the underlying distribution yields $O(d^2 \log T)$ combined error for VC dimension $d$, while distribution-agnostic algorithms achieve only $\tilde{O}(\sqrt{T})$ for restricted classes, leaving open whether this gap is fundamental. We resolve this question by proving a matching $Ω(\sqrt{T})$ lower bound for VC dimension $1$, establishing a sharp separation between the two information regimes. On the algorithmic side, we introduce a potential-based framework driven by \emph{robust witnesses}, small subsets of labeled examples that certify predictions while remaining resilient to adversarial contamination. We instantiate this framework using two combinatorial dimensions: (1) \emph{inference dimension}, yielding combined error $\tilde{O}(T^{1-1/k})$ for classes of inference dimension $k$,...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [MEDIA] BarrierSteer: LLM Safety via Learning Barrier Steering
+- **Autores:** Thanh Q. Tran, Arun Verma, Kiwan Wong, Bryan Kian Hsiang Low, Daniela Rus, Wei Xiao
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.LG
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20102v1
+- **Citaciones:** 0
+- **Score de relevancia:** 40/100
+- **Abstract:** Despite the state-of-the-art performance of large language models (LLMs) across diverse tasks, their susceptibility to adversarial attacks and unsafe content generation remains a major obstacle to deployment, particularly in high-stakes settings. Addressing this challenge requires safety mechanisms that are both practically effective and supported by rigorous theory. We introduce BarrierSteer, a novel framework that formalizes response safety by embedding learned non-linear safety constraints directly into the model's latent representation space. BarrierSteer employs a steering mechanism based on Control Barrier Functions (CBFs) to efficiently detect and prevent unsafe response trajectories during inference with high precision. By enforcing multiple safety constraints through efficient constraint merging, without modifying the underlying LLM parameters, BarrierSteer preserves the model's original capabilities and performance. We provide theoretical results establishing that applying CBFs in latent space offers a principled and computationally efficient approach to enforcing safety. Our experiments across multiple models and datasets show that BarrierSteer substantially reduces adversarial success rates, decreases unsafe generations, and outperforms existing methods.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [x] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [MEDIA] SHIELD: Semantic Heterogeneity Integrated Embedding for Latent Discovery in Clinical Trial Safety Signals
+- **Autores:** Francois Vandenhende, Anna Georgiou, Theodoros Psaras, Ellie Karekla
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.CL
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19855v1
+- **Citaciones:** 0
+- **Score de relevancia:** 40/100
+- **Abstract:** We present SHIELD, a novel methodology for automated and integrated safety signal detection in clinical trials. SHIELD combines disproportionality analysis with semantic clustering of adverse event (AE) terms applied to MedDRA term embeddings. For each AE, the pipeline computes an information-theoretic disproportionality measure (Information Component) with effect size derived via empirical Bayesian shrinkage. A utility matrix is constructed by weighting semantic term-term similarities by signal magnitude, followed by spectral embedding and clustering to identify groups of related AEs. Resulting clusters are annotated with syndrome-level summary labels using large language models, yielding a coherent, data-driven representation of treatment-associated safety profiles in the form of a network graph and hierarchical tree. We implement the SHIELD framework in the context of a single-arm incidence summary, to compare two treatment arms or for the detection of any treatment effect in a multi-arm trial. We illustrate its ability to recover known safety signals and generate interpretable, cluster-based summaries in a real clinical trial example. This work bridges statistical signal detection with modern natural language processing to enhance safety assessment and causal interpretation in clinical trials.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [x] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [MEDIA] Bayesian Meta-Learning with Expert Feedback for Task-Shift Adaptation through Causal Embeddings
+- **Autores:** Lotta Mäkinen, Jorge Loría, Samuel Kaski
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.LG
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19788v1
+- **Citaciones:** 0
+- **Score de relevancia:** 40/100
+- **Abstract:** Meta-learning methods perform well on new within-distribution tasks but often fail when adapting to out-of-distribution target tasks, where transfer from source tasks can induce negative transfer. We propose a causally-aware Bayesian meta-learning method, by conditioning task-specific priors on precomputed latent causal task embeddings, enabling transfer based on mechanistic similarity rather than spurious correlations. Our approach explicitly considers realistic deployment settings where access to target-task data is limited, and adaptation relies on noisy (expert-provided) pairwise judgments of causal similarity between source and target tasks. We provide a theoretical analysis showing that conditioning on causal embeddings controls prior mismatch and mitigates negative transfer under task shift. Empirically, we demonstrate reductions in negative transfer and improved out-of-distribution adaptation in both controlled simulations and a large-scale real-world clinical prediction setting for cross-disease transfer, where causal embeddings align with underlying clinical mechanisms.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [x] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [MEDIA] PerturbDiff: Functional Diffusion for Single-Cell Perturbation Modeling
+- **Autores:** Xinyu Yuan, Xixian Liu, Ya Shi Zhang, Zuobai Zhang, Hongyu Guo, Jian Tang
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.LG
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19685v1
+- **Citaciones:** 0
+- **Score de relevancia:** 40/100
+- **Abstract:** Building Virtual Cells that can accurately simulate cellular responses to perturbations is a long-standing goal in systems biology. A fundamental challenge is that high-throughput single-cell sequencing is destructive: the same cell cannot be observed both before and after a perturbation. Thus, perturbation prediction requires mapping unpaired control and perturbed populations. Existing models address this by learning maps between distributions, but typically assume a single fixed response distribution when conditioned on observed cellular context (e.g., cell type) and the perturbation type. In reality, responses vary systematically due to unobservable latent factors such as microenvironmental fluctuations and complex batch effects, forming a manifold of possible distributions for the same observed conditions. To account for this variability, we introduce PerturbDiff, which shifts modeling from individual cells to entire distributions. By embedding distributions as points in a Hilbert space, we define a diffusion-based generative process operating directly over probability distributions. This allows PerturbDiff to capture population-level response shifts across hidden factors. Benchmarks on established datasets show that PerturbDiff achieves state-of-the-art performance in single-cell response prediction and generalizes substantially better to unseen perturbations. See our project page (https://katarinayuan.github.io/PerturbDiff-ProjectPage/), where code and data will be made publicly available (https://github.com/DeepGraphLearning/PerturbDiff).
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [x] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [MEDIA] PaReGTA: An LLM-based EHR Data Encoding Approach to Capture Temporal Information
+- **Autores:** Kihyuk Yoon, Lingchao Mao, Catherine Chong, Todd J. Schwedt, Chia-Chun Chiang, Jing Li
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.LG
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19661v1
+- **Citaciones:** 0
+- **Score de relevancia:** 40/100
+- **Abstract:** Temporal information in structured electronic health records (EHRs) is often lost in sparse one-hot or count-based representations, while sequence models can be costly and data-hungry. We propose PaReGTA, an LLM-based encoding framework that (i) converts longitudinal EHR events into visit-level templated text with explicit temporal cues, (ii) learns domain-adapted visit embeddings via lightweight contrastive fine-tuning of a sentence-embedding model, and (iii) aggregates visit embeddings into a fixed-dimensional patient representation using hybrid temporal pooling that captures both recency and globally informative visits. Because PaReGTA does not require training from scratch but instead utilizes a pre-trained LLM, it can perform well even in data-limited cohorts. Furthermore, PaReGTA is model-agnostic and can benefit from future EHR-specialized sentence-embedding models. For interpretability, we introduce PaReGTA-RSS (Representation Shift Score), which quantifies clinically defined factor importance by recomputing representations after targeted factor removal and projecting representation shifts through a machine learning model. On 39,088 migraine patients from the All of Us Research Program, PaReGTA outperforms sparse baselines for migraine type classification while deep sequential models were unstable in our cohort.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [x] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [MEDIA] Satellite-Based Detection of Looted Archaeological Sites Using Machine Learning
+- **Autores:** Girmaw Abebe Tadesse, Titien Bartette, Andrew Hassanali, Allen Kim, Jonathan Chemla, Andrew Zolli, Yves Ubelmann, Caleb Robinson, Inbal Becker-Reshef, Juan Lavista Ferres
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.CV
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19608v1
+- **Citaciones:** 0
+- **Score de relevancia:** 40/100
+- **Abstract:** Looting at archaeological sites poses a severe risk to cultural heritage, yet monitoring thousands of remote locations remains operationally difficult. We present a scalable and satellite-based pipeline to detect looted archaeological sites, using PlanetScope monthly mosaics (4.7m/pixel) and a curated dataset of 1,943 archaeological sites in Afghanistan (898 looted, 1,045 preserved) with multi-year imagery (2016--2023) and site-footprint masks. We compare (i) end-to-end CNN classifiers trained on raw RGB patches and (ii) traditional machine learning (ML) trained on handcrafted spectral/texture features and embeddings from recent remote-sensing foundation models. Results indicate that ImageNet-pretrained CNNs combined with spatial masking reach an F1 score of 0.926, clearly surpassing the strongest traditional ML setup, which attains an F1 score of 0.710 using SatCLIP-V+RF+Mean, i.e., location and vision embeddings fed into a Random Forest with mean-based temporal aggregation. Ablation studies demonstrate that ImageNet pretraining (even in the presence of domain shift) and spatial masking enhance performance. In contrast, geospatial foundation model embeddings perform competitively with handcrafted features, suggesting that looting signatures are extremely localized. The repository is available at https://github.com/microsoft/looted_site_detection.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [x] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [MEDIA] tttLRM: Test-Time Training for Long Context and Autoregressive 3D Reconstruction
+- **Autores:** Chen Wang, Hao Tan, Wang Yifan, Zhiqin Chen, Yuheng Liu, Kalyan Sunkavalli, Sai Bi, Lingjie Liu, Yiwei Hu
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.CV
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20160v1
+- **Citaciones:** 0
+- **Score de relevancia:** 40/100
+- **Abstract:** We propose tttLRM, a novel large 3D reconstruction model that leverages a Test-Time Training (TTT) layer to enable long-context, autoregressive 3D reconstruction with linear computational complexity, further scaling the model's capability. Our framework efficiently compresses multiple image observations into the fast weights of the TTT layer, forming an implicit 3D representation in the latent space that can be decoded into various explicit formats, such as Gaussian Splats (GS) for downstream applications. The online learning variant of our model supports progressive 3D reconstruction and refinement from streaming observations. We demonstrate that pretraining on novel view synthesis tasks effectively transfers to explicit 3D modeling, resulting in improved reconstruction quality and faster convergence. Extensive experiments show that our method achieves superior performance in feedforward 3D Gaussian reconstruction compared to state-of-the-art approaches on both objects and scenes.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [MEDIA] Exotic spherically-symmetric Lambda-vacuum in the four-dimensional Starobinsky model
+- **Autores:** Andrei Galiautdinov
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:gr-qc
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20147v1
+- **Citaciones:** 0
+- **Score de relevancia:** 40/100
+- **Abstract:** We introduce an exact, two-parameter family of static, spherically-symmetric, constant-curvature $Λ$-vacuum solutions within the four-dimensional Starobinsky $f(R)=R+αR^2$ model. When the bare cosmological constant is precisely fine-tuned to $Λ= 1/(8α)$, the scalar curvature is fixed such that the derivative $f'(R)=1+2αR$ identically vanishes, demonstrating that the family represents a pathological $R_0$-degenerate boundary of the viable physical states. This mathematical degeneracy decouples the modified field equations, permitting the existence of an arbitrary $1/r^2$ integration constant in the metric, which functions as a purely geometric, Reissner-Nordström hair mimicker. However, any infinitesimal deviation from this exact boundary instantaneously destroys the degeneracy, rigorously forcing the geometric hair to vanish and collapsing the spacetime back into the standard Schwarzschild-de Sitter family. We provide the exact algebraic derivation of this spacetime and highlight its physical pathologies, including the identically vanishing Wald entropy of the associated black hole horizons, the divergence of the effective gravitational coupling, the resulting backreaction catastrophe, and the onset of severe ghost instabilities. Ultimately, this exact solution functions as a rigorous no-go theorem within the Starobinsky model, pedagogically illustrating the extreme fragility and physical hostility of degenerate, purely mathematical solutions in highly non-linear $f(R)$ gravity theories.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [MEDIA] Operationalization of Machine Learning with Serverless Architecture: An Industrial Operationalization of Machine Learning with Serverless Architecture: An Industrial Implementation for Harmonized System Code Prediction
+- **Autores:** Sai Vineeth Kandappareddigari, Santhoshkumar Jagadish, Gauri Verma, Ilhuicamina Contreras, Christopher Dignam, Anmol Srivastava, Benjamin Demers
+- **Fecha:** 2026-02-19
+- **Fuente:** arXiv (Cornell University)
+- **DOI:** https://doi.org/10.48550/arxiv.2602.17102
+- **Link:** https://openalex.org/W7130705963
+- **Citaciones:** 0
+- **Score de relevancia:** 40/100
+- **Abstract:** This paper presents a serverless MLOps framework orchestrating the complete ML lifecycle from data ingestion, training, deployment, monitoring, and retraining to using event-driven pipelines and managed services. The architecture is model-agnostic, supporting diverse inference patterns through standardized interfaces, enabling rapid adaptation without infrastructure overhead. We demonstrate practical applicability through an industrial implementation for Harmonized System (HS) code prediction, a compliance-critical task where short, unstructured product descriptions are mapped to standardized codes used by customs authorities in global trade. Frequent updates and ambiguous descriptions make classification challenging, with errors causing shipment delays and financial losses. Our solution uses a custom text embedding encoder and multiple deep learning architectures, with Text-CNN achieving 98 percent accuracy on ground truth data. Beyond accuracy, the pipeline ensures reproducibility, auditability, and SLA adherence under variable loads via auto-scaling. A key feature is automated A/B testing, enabling dynamic model selection and safe promotion in production. Cost-efficiency drives model choice; while transformers may achieve similar accuracy, their long-term operational costs are significantly higher. Deterministic classification with predictable latency and explainability is prioritized, though the architecture remains extensible to transformer variants and LLM-based inference. The paper first introduces the deep learning architectures with simulations and model comparisons, then discusses...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [x] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via openalex
+
+## [MEDIA] Can You Tell It's AI? Human Perception of Synthetic Voices in Vishing Scenarios
+- **Autores:** Zoha Hayat Bhatti, Bakhtawar Ahtisham, Seemal Tausif, Niklas George, Nida ul Habib Bajwa, Mobin Javed
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.CR
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20061v1
+- **Citaciones:** 0
+- **Score de relevancia:** 40/100
+- **Abstract:** Large Language Models and commercial speech synthesis systems now enable highly realistic AI-generated voice scams (vishing), raising urgent concerns about deception at scale. Yet it remains unclear whether individuals can reliably distinguish AI-generated speech from human-recorded voices in realistic scam contexts and what perceptual strategies underlie their judgments. We conducted a controlled online study in which 22 participants evaluated 16 vishing-style audio clips (8 AI-generated, 8 human-recorded) and classified each as human or AI while reporting confidence. Participants performed poorly: mean accuracy was 37.5%, below chance in a binary classification task. At the stimulus level, misclassification was bidirectional: 75% of AI-generated clips were majority-labeled as human, while 62.5% of human-recorded clips were majority-labeled as AI. Signal Detection Theory analysis revealed near-zero discriminability (d' approx 0), indicating inability to reliably distinguish synthetic from human voices rather than simple response bias. Qualitative analysis of 315 coded excerpts revealed reliance on paralinguistic and emotional heuristics, including pauses, filler words, vocal variability, cadence, and emotional expressiveness. However, these surface-level cues traditionally associated with human authenticity were frequently replicated by AI-generated samples. Misclassifications were often accompanied by moderate to high confidence, suggesting perceptual miscalibration rather than uncertainty. Together, our findings demonstrate that authenticity judgments based...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [MEDIA] AdaWorldPolicy: World-Model-Driven Diffusion Policy with Online Adaptive Learning for Robotic Manipulation
+- **Autores:** Ge Yuan, Qiyuan Qiao, Jing Zhang, Dong Xu
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.RO
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20057v1
+- **Citaciones:** 0
+- **Score de relevancia:** 40/100
+- **Abstract:** Effective robotic manipulation requires policies that can anticipate physical outcomes and adapt to real-world environments. Effective robotic manipulation requires policies that can anticipate physical outcomes and adapt to real-world environments. In this work, we introduce a unified framework, World-Model-Driven Diffusion Policy with Online Adaptive Learning (AdaWorldPolicy) to enhance robotic manipulation under dynamic conditions with minimal human involvement. Our core insight is that world models provide strong supervision signals, enabling online adaptive learning in dynamic environments, which can be complemented by force-torque feedback to mitigate dynamic force shifts. Our AdaWorldPolicy integrates a world model, an action expert, and a force predictor-all implemented as interconnected Flow Matching Diffusion Transformers (DiT). They are interconnected via the multi-modal self-attention layers, enabling deep feature exchange for joint learning while preserving their distinct modularity characteristics. We further propose a novel Online Adaptive Learning (AdaOL) strategy that dynamically switches between an Action Generation mode and a Future Imagination mode to drive reactive updates across all three modules. This creates a powerful closed-loop mechanism that adapts to both visual and physical domain shifts with minimal overhead. Across a suite of simulated and real-robot benchmarks, our AdaWorldPolicy achieves state-of-the-art performance, with dynamical adaptive capacity to out-of-distribution scenarios.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [x] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [MEDIA] AgenticSum: An Agentic Inference-Time Framework for Faithful Clinical Text Summarization
+- **Autores:** Fahmida Liza Piya, Rahmatollah Beheshti
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.CL
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20040v1
+- **Citaciones:** 0
+- **Score de relevancia:** 40/100
+- **Abstract:** Large language models (LLMs) offer substantial promise for automating clinical text summarization, yet maintaining factual consistency remains challenging due to the length, noise, and heterogeneity of clinical documentation. We present AgenticSum, an inference-time, agentic framework that separates context selection, generation, verification, and targeted correction to reduce hallucinated content. The framework decomposes summarization into coordinated stages that compress task-relevant context, generate an initial draft, identify weakly supported spans using internal attention grounding signals, and selectively revise flagged content under supervisory control. We evaluate AgenticSum on two public datasets, using reference-based metrics, LLM-as-a-judge assessment, and human evaluation. Across various measures, AgenticSum demonstrates consistent improvements compared to vanilla LLMs and other strong baselines. Our results indicate that structured, agentic design with targeted correction offers an effective inference time solution to improve clinical note summarization using LLMs.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [x] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [MEDIA] Beyond Mimicry: Toward Lifelong Adaptability in Imitation Learning
+- **Autores:** Nathan Gavenski, Felipe Meneguzzi, Odinaldo Rodrigues
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.AI
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19930v1
+- **Citaciones:** 0
+- **Score de relevancia:** 40/100
+- **Abstract:** Imitation learning stands at a crossroads: despite decades of progress, current imitation learning agents remain sophisticated memorisation machines, excelling at replay but failing when contexts shift or goals evolve. This paper argues that this failure is not technical but foundational: imitation learning has been optimised for the wrong objective. We propose a research agenda that redefines success from perfect replay to compositional adaptability. Such adaptability hinges on learning behavioural primitives once and recombining them through novel contexts without retraining. We establish metrics for compositional generalisation, propose hybrid architectures, and outline interdisciplinary research directions drawing on cognitive science and cultural evolution. Agents that embed adaptability at the core of imitation learning thus have an essential capability for operating in an open-ended world.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [x] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [MEDIA] Local Saliency-Guided Dynamic Matching for Cross-Modal Remote Sensing Image–Text Retrieval
+- **Autores:** Jie Shao, Yiran Xie, Pengda Wang, Guohao Feng
+- **Fecha:** N/A
+- **Fuente:** IEEE Transactions on Geoscience and Remote Sensing
+- **DOI:** https://doi.org/10.1109/tgrs.2025.3646809
+- **Link:** https://www.semanticscholar.org/paper/6211ea65a2b913a8b871f46979c719962e5693b4
+- **Citaciones:** 0
+- **Score de relevancia:** 40/100
+- **Abstract:** Remote sensing cross-modal text–image retrieval (RSCTIR) has emerged as a fundamental task in remote sensing analysis, aiming to bridge the semantic gap between visual and textual modalities under complex scenarios. Despite recent progress, salient information representation and accurate cross-modal alignments remain significant challenges. In this work, we demonstrate that the correlation between visual and textual features is a valuable cue that can be leveraged to enhance the saliency analysis and metric learning in cross-modal retrieval. To this end, we propose a Local Saliency Mining module (LoSaMiner) that uses textual attention to guide the extraction of visual salient features. In addition, we introduce a Multi-granularity Similarity Contrastive Loss (MG-SimCLoss) and a Dynamic Similarity Matching Loss (DySiMLoss) to enhance the semantic alignment. Finally, a graph-based diffusion reranking (GDR) algorithm is developed to optimize retrieval ranking by leveraging the intrinsic manifold structure of multimodal data, thereby mitigating the local optima during inference. Extensive experiments on RSICD, RSITMD, and UCM-Captions datasets confirm the effectiveness and superiority of our method over state-of-the-art approaches.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [MEDIA] The major merger-active galactic nucleus connection up to the cosmic noon
+- **Autores:** A. La Marca, B. Margalef-Bentabol, L. Wang, S. C. Trager, V. Rodriguez-Gomez, G. Martin
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:astro-ph.GA
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19997v1
+- **Citaciones:** 0
+- **Score de relevancia:** 40/100
+- **Abstract:** Galaxy major mergers are a potential mechanism for triggering active galactic nuclei (AGN) activity, but their role remains debated, particularly beyond the local Universe. We aim to shed light on the merger-AGN connection at $z=0.5$-$2$, exploiting the multi-wavelength datasets and {\it James Webb Space Telescope} (JWST) observations in the COSMOS field. We construct a stellar mass-limited sample and identify AGN via mid-infrared (MIR) colours, X-ray detections, and spectral energy distribution (SED) fitting. We train convolutional neural networks to identify mergers with mock JWST observations. We create non-AGN and non-merger control samples matching the redshift, stellar mass, and star-formation rate distributions of the AGN and mergers. We find AGN to be moderately more frequent in mergers than in non-mergers, with excess ratios ranging from $\sim2.5$ (X-ray AGN) to $\sim1.3$ (MIR) and $\sim 1.1$-1.2 (SED AGN). Similarly, AGN galaxies show a higher merger fraction ($f_{merg}$) than non-AGN controls. We then study $f_{merg}$ as a function of relative and absolute AGN power, utilising the AGN fraction ($f_{AGN}$) and accretion disc luminosity (L$_{disc}$) parameters. We uncover a $f_{merg}$-$f_{AGN}$ relation with two regimes: $f_{merg}$ stays roughly flat for less-dominant AGN ($f_{AGN}<0.8$) but increases at $f_{AGN}>0.8$ for the MIR and X-ray AGN, and more gently for...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [MEDIA] Scaling Law of Neural Koopman Operators
+- **Autores:** Abulikemu Abuduweili, Yuyang Pang, Feihan Li, Changliu Liu
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.RO
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19943v1
+- **Citaciones:** 0
+- **Score de relevancia:** 40/100
+- **Abstract:** Data-driven neural Koopman operator theory has emerged as a powerful tool for linearizing and controlling nonlinear robotic systems. However, the performance of these data-driven models fundamentally depends on the trade-off between sample size and model dimensions, a relationship for which the scaling laws have remained unclear. This paper establishes a rigorous framework to address this challenge by deriving and empirically validating scaling laws that connect sample size, latent space dimension, and downstream control quality. We derive a theoretical upper bound on the Koopman approximation error, explicitly decomposing it into sampling error and projection error. We show that these terms decay at specific rates relative to dataset size and latent dimension, providing a rigorous basis for the scaling law. Based on the theoretical results, we introduce two lightweight regularizers for the neural Koopman operator: a covariance loss to help stabilize the learned latent features and an inverse control loss to ensure the model aligns with physical actuation. The results from systematic experiments across six robotic environments confirm that model fitting error follows the derived scaling laws, and the regularizers improve dynamic model fitting fidelity, with enhanced closed-loop control performance. Together, our results provide a simple recipe for allocating effort between data...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [x] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [MEDIA] RobPI: Robust Private Inference against Malicious Client
+- **Autores:** Jiaqi Xue, Mengxin Zheng, Qian Lou
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.CR
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19918v1
+- **Citaciones:** 0
+- **Score de relevancia:** 40/100
+- **Abstract:** The increased deployment of machine learning inference in various applications has sparked privacy concerns. In response, private inference (PI) protocols have been created to allow parties to perform inference without revealing their sensitive data. Despite recent advances in the efficiency of PI, most current methods assume a semi-honest threat model where the data owner is honest and adheres to the protocol. However, in reality, data owners can have different motivations and act in unpredictable ways, making this assumption unrealistic. To demonstrate how a malicious client can compromise the semi-honest model, we first designed an inference manipulation attack against a range of state-of-the-art private inference protocols. This attack allows a malicious client to modify the model output with 3x to 8x fewer queries than current black-box attacks. Motivated by the attacks, we proposed and implemented RobPI, a robust and resilient private inference protocol that withstands malicious clients. RobPI integrates a distinctive cryptographic protocol that bolsters security by weaving encryption-compatible noise into the logits and features of private inference, thereby efficiently warding off malicious-client attacks. Our extensive experiments on various neural networks and datasets show that RobPI achieves ~91.9% attack success rate reduction and increases more than 10x the number of queries...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [MEDIA] Zero-Shot Product Attribute Labeling with Vision-Language Models: A Three-Tier Evaluation Framework
+- **Autores:** Shubham Shukla, Kunal Sonalkar
+- **Fecha:** 2026-01-22
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.15711
+- **Link:** https://www.semanticscholar.org/paper/5aab47aba3bc8ffc94c244081926ebcdb99b81c4
+- **Citaciones:** 0
+- **Score de relevancia:** 40/100
+- **Abstract:** Fine-grained attribute prediction is essential for fashion retail applications including catalog enrichment, visual search, and recommendation systems. Vision-Language Models (VLMs) offer zero-shot prediction without task-specific training, yet their systematic evaluation on multi-attribute fashion tasks remains underexplored. A key challenge is that fashion attributes are often conditional. For example,"outer fabric"is undefined when no outer garment is visible. This requires models to detect attribute applicability before attempting classification. We introduce a three-tier evaluation framework that decomposes this challenge: (1) overall task performance across all classes (including NA class: suggesting attribute is not applicable) for all attributes, (2) attribute applicability detection, and (3) fine-grained classification when attributes are determinable. Using DeepFashion-MultiModal, which explicitly defines NA (meaning attribute doesn't exist or is not visible) within attribute label spaces, we benchmark nine VLMs spanning flagship (GPT-5, Gemini 2.5 Pro), efficient (GPT-5 Mini, Gemini 2.5 Flash), and ultra-efficient tiers (GPT-5 Nano, Gemini 2.5 Flash-Lite) against classifiers trained on pretrained Fashion-CLIP embeddings on 5,000 images across 18 attributes. Our findings reveal that: (1) zero-shot VLMs achieve 64.0% macro-F1, a threefold improvement over logistic regression on pretrained Fashion-CLIP embeddings; (2) VLMs excel at fine-grained classification (Tier 3: 70.8% F1) but struggle with applicability detection (Tier 2: 34.1% NA-F1),...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [x] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [MEDIA] Variational Inference for Bayesian MIDAS Regression
+- **Autores:** Luigi Simeone
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.LG
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19610v1
+- **Citaciones:** 0
+- **Score de relevancia:** 40/100
+- **Abstract:** We develop a Coordinate Ascent Variational Inference (CAVI) algorithm for Bayesian Mixed Data Sampling (MIDAS) regression with linear weight parameterizations. The model separates impact coeffcients from weighting function parameters through a normalization constraint, creating a bilinear structure that renders generic Hamiltonian Monte Carlo samplers unreliable while preserving conditional conjugacy exploitable by CAVI. Each variational update admits a closed-form solution: Gaussian for regression coefficients and weight parameters, Inverse-Gamma for the error variance. The algorithm propagates uncertainty across blocks through second moments, distinguishing it from naive plug-in approximations. In a Monte Carlo study spanning 21 data-generating configurations with up to 50 predictors, CAVI produces posterior means nearly identical to a block Gibbs sampler benchmark while achieving speedups of 107x to 1,772x (Table 9). Generic automatic differentiation VI (ADVI), by contrast, produces bias 714 times larger while being orders of magnitude slower, confirming the value of model-specific derivations. Weight function parameters maintain excellent calibration (coverage above 92%) across all configurations. Impact coefficient credible intervals exhibit the underdispersion characteristic of mean-field approximations, with coverage declining from 89% to 55% as the number of predictors grows a documented trade-off between speed and interval calibration that structured variational methods can address. An empirical application to realized...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [MEDIA] Large fluctuations of random multiplicative functions
+- **Autores:** Besfort Shala
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:math.NT
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20086v1
+- **Citaciones:** 0
+- **Score de relevancia:** 40/100
+- **Abstract:** Let $f$ be a Rademacher or Steinhaus random multiplicative function. For various arithmetically interesting subsets $\mathcal A\subseteq [1, N]\cap\mathbb N$ such that the distribution of $\sum_{n\in \mathcal A} f(n)$ is approximately Gaussian, we develop a general framework to understand the large fluctuations of the sum. This extends the general central limit theorem framework of Soundararajan and Xu.   In the case when $\mathcal A = (N-H, N]$ is a short interval with admissible $H=H(N)$, we show that almost surely \begin{equation*}   \limsup_{N\to\infty} \frac{\big\lvert\sum_{N-H<n\leq N} f(n)\big\rvert}{\sqrt{H\log \frac{N}H{}}}>0. \end{equation*} When $\mathcal A$ is the set of values of an admissible polynomial $P\in\mathbb Z[x]$, we extend work of Klurman, Shkredov, and Xu, as well as Chinis and the author, showing that almost surely \begin{equation*}   \limsup_{N\to\infty} \frac{\big\lvert\sum_{n\leq N} f(P(n))\big\rvert}{\sqrt{N \log\log N}}>0, \end{equation*} even when $P$ is a product of linear factors over $\mathbb Q$. In this case, we also establish the corresponding almost sure upper bound, matching the law of iterated logarithm.   An important ingredient in our work is bounding the Kantorovich--Wasserstein distance by means of a quantitative martingale central limit theorem.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] An LLM -Powered Assessment Retrieval-Augmented Generation (RAG) For Higher Education
+- **Autores:** R. V. Barenji, Nazila Salimi, Sina Khoshgoftar
+- **Fecha:** 2026-01-05
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.06141
+- **Link:** https://www.semanticscholar.org/paper/448ac287d10ba7f43af3e66ef75e742996f00b2a
+- **Citaciones:** 0
+- **Score de relevancia:** 39/100
+- **Abstract:** Providing timely, consistent, and high-quality feedback in large-scale higher education courses remains a persistent challenge, often constrained by instructor workload and resource limitations. This study presents an LLM-powered, agentic assessment system built on a Retrieval-Augmented Generation (RAG) architecture to address these challenges. The system integrates a large language model with a structured retrieval mechanism that accesses rubric criteria, exemplar essays, and instructor feedback to generate contextually grounded grades and formative comments. A mixed-methods evaluation was conducted using 701 student essays, combining quantitative analyses of inter-rater reliability, scoring alignment, and consistency with instructor assessments, alongside qualitative evaluation of feedback quality, pedagogical relevance, and student support. Results demonstrate that the RAG system can produce reliable, rubric-aligned feedback at scale, achieving 94--99% agreement with human evaluators, while also enhancing students'opportunities for self-regulated learning and engagement with assessment criteria. The discussion highlights both pedagogical limitations, including potential constraints on originality and feedback dialogue, and the transformative potential of RAG systems to augment instructors'capabilities, streamline assessment workflows, and support scalable, adaptive learning environments. This research contributes empirical evidence for the application of agentic AI in higher education, offering a scalable and pedagogically informed model for enhancing feedback accessibility, consistency, and quality.
+- **Keywords match:** ['retrieval augmented generation evaluation']
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [BAJA] e5-omni: Explicit Cross-modal Alignment for Omni-modal Embeddings
+- **Autores:** Haonan Chen, Sicheng Gao, Radu Timofte, Tetsuya Sakai, Zhicheng Dou
+- **Fecha:** 2026-01-07
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.03666
+- **Link:** https://www.semanticscholar.org/paper/cc47f74f53ab15027f1e599ed0f1c0f66a821f49
+- **Citaciones:** 0
+- **Score de relevancia:** 39/100
+- **Abstract:** Modern information systems often involve different types of items, e.g., a text query, an image, a video clip, or an audio segment. This motivates omni-modal embedding models that map heterogeneous modalities into a shared space for direct comparison. However, most recent omni-modal embeddings still rely heavily on implicit alignment inherited from pretrained vision-language model (VLM) backbones. In practice, this causes three common issues: (i) similarity logits have modality-dependent sharpness, so scores are not on a consistent scale; (ii) in-batch negatives become less effective over time because mixed-modality batches create an imbalanced hardness distribution; as a result, many negatives quickly become trivial and contribute little gradient; and (iii) embeddings across modalities show mismatched first- and second-order statistics, which makes rankings less stable. To tackle these problems, we propose e5-omni, a lightweight explicit alignment recipe that adapts off-the-shelf VLMs into robust omni-modal embedding models. e5-omni combines three simple components: (1) modality-aware temperature calibration to align similarity scales, (2) a controllable negative curriculum with debiasing to focus on confusing negatives while reducing the impact of false negatives, and (3) batch whitening with covariance regularization to better match cross-modal geometry in the shared embedding space. Experiments on MMEB-V2 and AudioCaps show consistent gains over...
+- **Keywords match:** ['text embedding models comparison']
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [x] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [BAJA] FROAV: A Framework for RAG Observation and Agent Verification - Lowering the Barrier to LLM Agent Research
+- **Autores:** Tzu-Hsuan Lin, Chih-Hsuan Kao
+- **Fecha:** 2026-01-12
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.07504
+- **Link:** https://www.semanticscholar.org/paper/fd61c286823e833ed502db3358de3ac8fd280ab3
+- **Citaciones:** 0
+- **Score de relevancia:** 39/100
+- **Abstract:** The rapid advancement of Large Language Models (LLMs) and their integration into autonomous agent systems has created unprecedented opportunities for document analysis, decision support, and knowledge retrieval. However, the complexity of developing, evaluating, and iterating on LLM-based agent workflows presents significant barriers to researchers, particularly those without extensive software engineering expertise. We present FROAV (Framework for RAG Observation and Agent Verification), an open-source research platform that democratizes LLM agent research by providing a plug-and-play architecture combining visual workflow orchestration, a comprehensive evaluation framework, and extensible Python integration. FROAV implements a multi-stage Retrieval-Augmented Generation (RAG) pipeline coupled with a rigorous"LLM-as-a-Judge"evaluation system, all accessible through intuitive graphical interfaces. Our framework integrates n8n for no-code workflow design, PostgreSQL for granular data management, FastAPI for flexible backend logic, and Streamlit for human-in-the-loop interaction. Through this integrated ecosystem, researchers can rapidly prototype RAG strategies, conduct prompt engineering experiments, validate agent performance against human judgments, and collect structured feedback-all without writing infrastructure code. We demonstrate the framework's utility through its application to financial document analysis, while emphasizing its material-agnostic architecture that adapts to any domain requiring semantic analysis. FROAV represents a significant step toward making LLM agent research accessible to a broader scientific community, enabling researchers...
+- **Keywords match:** ['retrieval augmented generation evaluation']
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [BAJA] DeepEra: A Deep Evidence Reranking Agent for Scientific Retrieval-Augmented Generated Question Answering
+- **Autores:** Haotian Chen, Qingqing Long, Siyu Pu, Xiao Luo, Wei Ju, Meng Xiao, Yuanchun Zhou, Jianghua Zhao, Xuezhi Wang
+- **Fecha:** 2026-01-23
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.16478
+- **Link:** https://www.semanticscholar.org/paper/1c44655192899f93b54ea10d0619a708b7e209d5
+- **Citaciones:** 0
+- **Score de relevancia:** 39/100
+- **Abstract:** With the rapid growth of scientific literature, scientific question answering (SciQA) has become increasingly critical for exploring and utilizing scientific knowledge. Retrieval-Augmented Generation (RAG) enhances LLMs by incorporating knowledge from external sources, thereby providing credible evidence for scientific question answering. But existing retrieval and reranking methods remain vulnerable to passages that are semantically similar but logically irrelevant, often reducing factual reliability and amplifying hallucinations.To address this challenge, we propose a Deep Evidence Reranking Agent (DeepEra) that integrates step-by-step reasoning, enabling more precise evaluation of candidate passages beyond surface-level semantics. To support systematic evaluation, we construct SciRAG-SSLI (Scientific RAG - Semantically Similar but Logically Irrelevant), a large-scale dataset comprising about 300K SciQA instances across 10 subjects, constructed from 10M scientific corpus. The dataset combines naturally retrieved contexts with systematically generated distractors to test logical robustness and factual grounding. Comprehensive evaluations confirm that our approach achieves superior retrieval performance compared to leading rerankers. To our knowledge, this work is the first to comprehensively study and empirically validate innegligible SSLI issues in two-stage RAG frameworks.
+- **Keywords match:** ['retrieval augmented generation evaluation']
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [BAJA] Effective and Unsupervised Social Event Detection and Evolution via RAG and Structural Entropy
+- **Autores:** Qitong Liu, Hao Peng, Zuchen Li, Xihang Meng, Ziyu Yang, Jiting Li, Li Sun, Philip S. Yu
+- **Fecha:** 2026-01-17
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.12035
+- **Link:** https://www.semanticscholar.org/paper/7ad192066ff9e5ca0cd39da31bc6615614ded0fe
+- **Citaciones:** 0
+- **Score de relevancia:** 39/100
+- **Abstract:** With the growing scale of social media, social event detection and evolution modeling have attracted increasing attention. Graph neural networks (GNNs) and transformer-based pre-trained language models (PLMs) have become mainstream approaches in this area. However, existing methods still face three major challenges. First, the sheer volume of social media messages makes learning resource-intensive. Second, the fragmentation of social media messages often impedes the model's ability to capture a comprehensive view of the events. Third, the lack of structured temporal context has hindered the development of effective models for event evolution, limiting users'access to event information. To address these challenges, we propose a foundation model for unsupervised Social Event Detection and Evolution, namely RagSEDE. Specifically, RagSEDE introduces a representativeness- and diversity-driven sampling strategy to extract key messages from massive social streams, significantly reducing noise and computational overhead. It further establishes a novel paradigm based on Retrieval Augmented Generation (RAG) that enhances PLMs in detecting events while simultaneously constructing and maintaining an evolving event knowledge base. Finally, RagSEDE leverages structural information theory to dynamically model event evolution keywords for the first time. Extensive experiments on two public datasets demonstrate the superiority of RagSEDE in open-world social event detection and evolution.
+- **Keywords match:** ['neural information retrieval']
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [x] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [BAJA] Simulation-Ready Cluttered Scene Estimation via Physics-aware Joint Shape and Pose Optimization
+- **Autores:** Wei-Cheng Huang, Jiaheng Han, Xiaohan Ye, Zherong Pan, Kris Hauser
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.RO
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20150v1
+- **Citaciones:** 0
+- **Score de relevancia:** 38/100
+- **Abstract:** Estimating simulation-ready scenes from real-world observations is crucial for downstream planning and policy learning tasks. Regretfully, existing methods struggle in cluttered environments, often exhibiting prohibitive computational cost, poor robustness, and restricted generality when scaling to multiple interacting objects. We propose a unified optimization-based formulation for real-to-sim scene estimation that jointly recovers the shapes and poses of multiple rigid objects under physical constraints. Our method is built on two key technical innovations. First, we leverage the recently introduced shape-differentiable contact model, whose global differentiability permits joint optimization over object geometry and pose while modeling inter-object contacts. Second, we exploit the structured sparsity of the augmented Lagrangian Hessian to derive an efficient linear system solver whose computational cost scales favorably with scene complexity. Building on this formulation, we develop an end-to-end real-to-sim scene estimation pipeline that integrates learning-based object initialization, physics-constrained joint shape-pose optimization, and differentiable texture refinement. Experiments on cluttered scenes with up to 5 objects and 22 convex hulls demonstrate that our approach robustly reconstructs physically valid, simulation-ready object shapes and poses.
+- **Keywords match:** ['RAG system optimization']
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Agentic AI for Scalable and Robust Optical Systems Control
+- **Autores:** Zehao Wang, Mingzhe Han, Wei Cheng, Yue-Kai Huang, Philip Ji, Denton Wu, Mahdi Safari, Flemming Holtorf, Kenaish AlQubaisi, Norbert M. Linke, Danyang Zhuo, Yiran Chen, Ting Wang, Dirk Englund, Tingjun Chen
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:eess.SY
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20144v1
+- **Citaciones:** 0
+- **Score de relevancia:** 38/100
+- **Abstract:** We present AgentOptics, an agentic AI framework for high-fidelity, autonomous optical system control built on the Model Context Protocol (MCP). AgentOptics interprets natural language tasks and executes protocol-compliant actions on heterogeneous optical devices through a structured tool abstraction layer. We implement 64 standardized MCP tools across 8 representative optical devices and construct a 410-task benchmark to evaluate request understanding, role-aware responses, multi-step coordination, robustness to linguistic variation, and error handling. We assess two deployment configurations--commercial online LLMs and locally hosted open-source LLMs--and compare them with LLM-based code generation baselines. AgentOptics achieves 87.7%--99.0% average task success rates, significantly outperforming code-generation approaches, which reach up to 50% success. We further demonstrate broader applicability through five case studies extending beyond device-level control to system orchestration, monitoring, and closed-loop optimization. These include DWDM link provisioning and coordinated monitoring of coherent 400 GbE and analog radio-over-fiber (ARoF) channels; autonomous characterization and bias optimization of a wideband ARoF link carrying 5G fronthaul traffic; multi-span channel provisioning with launch power optimization; closed-loop fiber polarization stabilization; and distributed acoustic sensing (DAS)-based fiber monitoring with LLM-assisted event detection. These results establish AgentOptics as a scalable, robust paradigm for autonomous control and orchestration of heterogeneous optical systems.
+- **Keywords match:** ['RAG system optimization']
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Energy gap of quantum spin glasses: a projection quantum Monte Carlo study
+- **Autores:** L. Brodoloni, G. E. Astrakharchik, S. Giorgini, S. Pilati
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cond-mat.dis-nn
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20108v1
+- **Citaciones:** 0
+- **Score de relevancia:** 38/100
+- **Abstract:** The performance of quantum annealing for combinatorial optimization is fundamentally limited by the minimum energy gap $Δ$ encountered at quantum phase transitions. We investigate the scaling of $Δ$ with system size $N$ for two paradigmatic quantum spin-glass models: the two-dimensional Edwards-Anderson (2D-EA) and the all-to-all Sherrington-Kirkpatrick (SK) models. Utilizing a newly proposed unbiased energy-gap estimator for continuous-time projection quantum Monte Carlo simulations, complemented by high-performance sparse eigenvalue solvers, we characterize the gap distributions across disorder realizations. It is found that, in the 2D-EA case, the inverse-gap distribution develops a fat tail with infinite variance as $N$ increases. This indicates that the unfavorable super-algebraic scaling of $Δ$, recently reported for binary couplings [Nature 631, 749 (2024)], persists for the Gaussian disorder considered here, pointing to a universal feature of 2D spin glasses. Conversely, the SK model retains a finite-variance distribution, with the disorder-averaged gap following a rather slow power law, close to $Δ\propto N^{-1/3}$. This finding provides a promising outlook for the potential efficiency of quantum annealers for optimization problems with dense connectivity.
+- **Keywords match:** ['RAG system optimization']
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] A Secure and Private Distributed Bayesian Federated Learning Design
+- **Autores:** Nuocheng Yang, Sihua Wang, Zhaohui Yang, Mingzhe Chen, Changchuan Yin, Kaibin Huang
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.LG
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20003v1
+- **Citaciones:** 0
+- **Score de relevancia:** 38/100
+- **Abstract:** Distributed Federated Learning (DFL) enables decentralized model training across large-scale systems without a central parameter server. However, DFL faces three critical challenges: privacy leakage from honest-but-curious neighbors, slow convergence due to the lack of central coordination, and vulnerability to Byzantine adversaries aiming to degrade model accuracy. To address these issues, we propose a novel DFL framework that integrates Byzantine robustness, privacy preservation, and convergence acceleration. Within this framework, each device trains a local model using a Bayesian approach and independently selects an optimal subset of neighbors for posterior exchange. We formulate this neighbor selection as an optimization problem to minimize the global loss function under security and privacy constraints. Solving this problem is challenging because devices only possess partial network information, and the complex coupling between topology, security, and convergence remains unclear. To bridge this gap, we first analytically characterize the trade-offs between dynamic connectivity, Byzantine detection, privacy levels, and convergence speed. Leveraging these insights, we develop a fully distributed Graph Neural Network (GNN)-based Reinforcement Learning (RL) algorithm. This approach enables devices to make autonomous connection decisions based on local observations. Simulation results demonstrate that our method achieves superior robustness and efficiency with significantly lower overhead compared to traditional security...
+- **Keywords match:** ['RAG system optimization']
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Project Ariadne: A Structural Causal Framework for Auditing Faithfulness in LLM Agents
+- **Autores:** Sourena Khanzadeh
+- **Fecha:** 2026-01-05
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.02314
+- **Link:** https://www.semanticscholar.org/paper/736c13bf2508e14beaec4cfbeb3070cda3a3512e
+- **Citaciones:** 0
+- **Score de relevancia:** 38/100
+- **Abstract:** As Large Language Model (LLM) agents are increasingly tasked with high-stakes autonomous decision-making, the transparency of their reasoning processes has become a critical safety concern. While \textit{Chain-of-Thought} (CoT) prompting allows agents to generate human-readable reasoning traces, it remains unclear whether these traces are \textbf{faithful} generative drivers of the model's output or merely \textbf{post-hoc rationalizations}. We introduce \textbf{Project Ariadne}, a novel XAI framework that utilizes Structural Causal Models (SCMs) and counterfactual logic to audit the causal integrity of agentic reasoning. Unlike existing interpretability methods that rely on surface-level textual similarity, Project Ariadne performs \textbf{hard interventions} ($do$-calculus) on intermediate reasoning nodes -- systematically inverting logic, negating premises, and reversing factual claims -- to measure the \textbf{Causal Sensitivity} ($\phi$) of the terminal answer. Our empirical evaluation of state-of-the-art models reveals a persistent \textit{Faithfulness Gap}. We define and detect a widespread failure mode termed \textbf{Causal Decoupling}, where agents exhibit a violation density ($\rho$) of up to $0.77$ in factual and scientific domains. In these instances, agents arrive at identical conclusions despite contradictory internal logic, proving that their reasoning traces function as"Reasoning Theater"while decision-making is governed by latent parametric priors. Our findings suggest that current agentic architectures are inherently prone to unfaithful explanation, and we...
+- **Keywords match:** ['faithfulness evaluation LLM']
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [x] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [BAJA] FaTRQ: Tiered Residual Quantization for LLM Vector Search in Far-Memory-Aware ANNS Systems
+- **Autores:** Tianqi Zhang, Flavio Ponzina, Tajana Simunic
+- **Fecha:** 2026-01-15
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.09985
+- **Link:** https://www.semanticscholar.org/paper/4ea6380f645a999027adefac2ec22f152b191d55
+- **Citaciones:** 0
+- **Score de relevancia:** 38/100
+- **Abstract:** Approximate Nearest-Neighbor Search (ANNS) is a key technique in retrieval-augmented generation (RAG), enabling rapid identification of the most relevant high-dimensional embeddings from massive vector databases. Modern ANNS engines accelerate this process using prebuilt indexes and store compressed vector-quantized representations in fast memory. However, they still rely on a costly second-pass refinement stage that reads full-precision vectors from slower storage like SSDs. For modern text and multimodal embeddings, these reads now dominate the latency of the entire query. We propose FaTRQ, a far-memory-aware refinement system using tiered memory that eliminates the need to fetch full vectors from storage. It introduces a progressive distance estimator that refines coarse scores using compact residuals streamed from far memory. Refinement stops early once a candidate is provably outside the top-k. To support this, we propose tiered residual quantization, which encodes residuals as ternary values stored efficiently in far memory. A custom accelerator is deployed in a CXL Type-2 device to perform low-latency refinement locally. Together, FaTRQ improves the storage efficiency by 2.4$\times$ and improves the throughput by up to 9$ \times$ than SOTA GPU ANNS system.
+- **Keywords match:** ['approximate nearest neighbor search']
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [x] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [BAJA] Avey-B
+- **Autores:** Devang Acharya, Mohammad Hammoud
+- **Fecha:** 2026-02-17
+- **Fuente:** arXiv (Cornell University)
+- **DOI:** https://doi.org/10.48550/arxiv.2602.15814
+- **Link:** https://openalex.org/W7130398677
+- **Citaciones:** 0
+- **Score de relevancia:** 37/100
+- **Abstract:** Compact pretrained bidirectional encoders remain the backbone of industrial NLP under tight compute and memory budgets. Their effectiveness stems from self-attention's ability to deliver high-quality bidirectional contextualization with sequence-level parallelism, as popularized by BERT-style architectures. Recently, Avey was introduced as an autoregressive, attention-free alternative that naturally admits an encoder-only adaptation. In this paper, we reformulate Avey for the encoder-only paradigm and propose several innovations to its architecture, including decoupled static and dynamic parameterizations, stability-oriented normalization, and neural compression. Results show that this reformulated architecture compares favorably to four widely used Transformer-based encoders, consistently outperforming them on standard token-classification and information-retrieval benchmarks while scaling more efficiently to long contexts.
+- **Keywords match:** ['neural information retrieval']
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [x] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via openalex
+
+## [BAJA] A Very Big Video Reasoning Suite
+- **Autores:** Maijunxian Wang, Ruisi Wang, Juyi Lin, Ran Ji, Thaddäus Wiedemer, Qingying Gao, Dezhi Luo, Yaoyao Qian, Lianyu Huang, Zelong Hong, Jiahui Ge, Qianli Ma, Hang He, Yifan Zhou, Lingzi Guo, Lantao Mei, Jiachen Li, Hanwen Xing, Tianqi Zhao, Fengyuan Yu, Weihang Xiao, Yizheng Jiao, Jianheng Hou, Danyang Zhang, Pengcheng Xu, Boyang Zhong, Zehong Zhao, Gaoyun Fang, John Kitaoka, Yile Xu, Hua Xu, Kenton Blacutt, Tin Nguyen, Siyuan Song, Haoran Sun, Shaoyue Wen, Linyang He, Runming Wang, Yanzhi Wang, Mengyue Yang, Ziqiao Ma, Raphaël Millière, Freda Shi, Nuno Vasconcelos, Daniel Khashabi, Alan Yuille, Yilun Du, Ziming Liu, Bo Li, Dahua Lin, Ziwei Liu, Vikash Kumar, Yijiang Li, Lei Yang, Zhongang Cai, Hokin Deng
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.CV
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20159v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Rapid progress in video models has largely focused on visual quality, leaving their reasoning capabilities underexplored. Video reasoning grounds intelligence in spatiotemporally consistent visual environments that go beyond what text can naturally capture, enabling intuitive reasoning over spatiotemporal structure such as continuity, interaction, and causality. However, systematically studying video reasoning and its scaling behavior is hindered by the lack of large-scale training data. To address this gap, we introduce the Very Big Video Reasoning (VBVR) Dataset, an unprecedentedly large-scale resource spanning 200 curated reasoning tasks following a principled taxonomy and over one million video clips, approximately three orders of magnitude larger than existing datasets. We further present VBVR-Bench, a verifiable evaluation framework that moves beyond model-based judging by incorporating rule-based, human-aligned scorers, enabling reproducible and interpretable diagnosis of video reasoning capabilities. Leveraging the VBVR suite, we conduct one of the first large-scale scaling studies of video reasoning and observe early signs of emergent generalization to unseen reasoning tasks. Together, VBVR lays a foundation for the next stage of research in generalizable video reasoning. The data, benchmark toolkit, and models are publicly available at https://video-reason.com/ .
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Flow3r: Factored Flow Prediction for Scalable Visual Geometry Learning
+- **Autores:** Zhongxiao Cong, Qitao Zhao, Minsik Jeon, Shubham Tulsiani
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.CV
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20157v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Current feed-forward 3D/4D reconstruction systems rely on dense geometry and pose supervision -- expensive to obtain at scale and particularly scarce for dynamic real-world scenes. We present Flow3r, a framework that augments visual geometry learning with dense 2D correspondences (`flow') as supervision, enabling scalable training from unlabeled monocular videos. Our key insight is that the flow prediction module should be factored: predicting flow between two images using geometry latents from one and pose latents from the other. This factorization directly guides the learning of both scene geometry and camera motion, and naturally extends to dynamic scenes. In controlled experiments, we show that factored flow prediction outperforms alternative designs and that performance scales consistently with unlabeled data. Integrating factored flow into existing visual geometry architectures and training with ${\sim}800$K unlabeled videos, Flow3r achieves state-of-the-art results across eight benchmarks spanning static and dynamic scenes, with its largest gains on in-the-wild dynamic videos where labeled data is most scarce.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [x] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Quantum simulation in the Heisenberg picture via vectorization
+- **Autores:** Shao-Hen Chiew, Armando Angrisani, Zoë Holmes, Giuseppe Carleo
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:quant-ph
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20154v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** We present a general framework for simulating quantum systems in the Heisenberg picture on quantum hardware. Based on the vectorization map, our framework fully exploits the mapping between operators and quantum states, allowing any task defined on Heisenberg operators to be mapped to standard Schrödinger-picture tasks that are naturally accessible via quantum computers and simulators. This yields new or improved protocols for tasks such as operator sampling, the computation of OTOCs/superoperator expectation values and their higher order moments, two-point correlators, and operator stabilizer and entanglement entropies. Our approach is also amenable to implementation, as it inherits the structure and resource requirements of the (forward and time-reversed) Schrödinger-picture quantum simulation problem. We demonstrate this by proposing implementations of our framework for a 2D problem on digital and analog quantum simulators, taking into account device connectivity constraints.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Behavior Learning (BL): Learning Hierarchical Optimization Structures from Data
+- **Autores:** Zhenyao Ma, Yue Liang, Dongxu Li
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.LG
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20152v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Inspired by behavioral science, we propose Behavior Learning (BL), a novel general-purpose machine learning framework that learns interpretable and identifiable optimization structures from data, ranging from single optimization problems to hierarchical compositions. It unifies predictive performance, intrinsic interpretability, and identifiability, with broad applicability to scientific domains involving optimization. BL parameterizes a compositional utility function built from intrinsically interpretable modular blocks, which induces a data distribution for prediction and generation. Each block represents and can be written in symbolic form as a utility maximization problem (UMP), a foundational paradigm in behavioral science and a universal framework of optimization. BL supports architectures ranging from a single UMP to hierarchical compositions, the latter modeling hierarchical optimization structures. Its smooth and monotone variant (IBL) guarantees identifiability. Theoretically, we establish the universal approximation property of BL, and analyze the M-estimation properties of IBL. Empirically, BL demonstrates strong predictive performance, intrinsic interpretability and scalability to high-dimensional data. Code: https://github.com/MoonYLiang/Behavior-Learning ; install via pip install blnetwork.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Conformal Risk Control for Non-Monotonic Losses
+- **Autores:** Anastasios N. Angelopoulos
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:stat.ME
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20151v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Conformal risk control is an extension of conformal prediction for controlling risk functions beyond miscoverage. The original algorithm controls the expected value of a loss that is monotonic in a one-dimensional parameter. Here, we present risk control guarantees for generic algorithms applied to possibly non-monotonic losses with multidimensional parameters. The guarantees depend on the stability of the algorithm -- unstable algorithms have looser guarantees. We give applications of this technique to selective image classification, FDR and IOU control of tumor segmentations, and multigroup debiasing of recidivism predictions across overlapping race and sex groups using empirical risk minimization.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Recurrent Structural Policy Gradient for Partially Observable Mean Field Games
+- **Autores:** Clarisse Wibault, Johannes Forkel, Sebastian Towers, Tiphaine Wibault, Juan Duque, George Whittle, Andreas Schaab, Yucheng Yang, Chiyuan Wang, Michael Osborne, Benjamin Moll, Jakob Foerster
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.AI
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20141v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Mean Field Games (MFGs) provide a principled framework for modeling interactions in large population models: at scale, population dynamics become deterministic, with uncertainty entering only through aggregate shocks, or common noise. However, algorithmic progress has been limited since model-free methods are too high variance and exact methods scale poorly. Recent Hybrid Structural Methods (HSMs) use Monte Carlo rollouts for the common noise in combination with exact estimation of the expected return, conditioned on those samples. However, HSMs have not been scaled to Partially Observable settings. We propose Recurrent Structural Policy Gradient (RSPG), the first history-aware HSM for settings involving public information. We also introduce MFAX, our JAX-based framework for MFGs. By leveraging known transition dynamics, RSPG achieves state-of-the-art performance as well as an order-of-magnitude faster convergence and solves, for the first time, a macroeconomics MFG with heterogeneous agents, common noise and history-aware policies. MFAX is publicly available at: https://github.com/CWibault/mfax.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] LAD: Learning Advantage Distribution for Reasoning
+- **Autores:** Wendi Li, Sharon Li
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.LG
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20132v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Current reinforcement learning objectives for large-model reasoning primarily focus on maximizing expected rewards. This paradigm can lead to overfitting to dominant reward signals, while neglecting alternative yet valid reasoning trajectories, thereby limiting diversity and exploration. To address this issue, we introduce Learning Advantage Distributions (LAD), a distribution-matching framework that replaces advantage maximization with learning the advantage-induced distribution. By establishing the equivalence between the optimal policy update and an advantage-based target distribution, we derive a practical LAD objective formulated as minimizing an $f$-divergence between the policy-induced and advantage-induced distributions. This yields a gradient update that increases likelihood for high-advantage responses while suppressing over-confident probability growth, preventing collapse without requiring auxiliary entropy regularization. LAD incurs no extra training cost compared to GRPO and scales naturally to LLM post-training. In a controlled bandit setting, LAD faithfully recovers the multimodal advantage distribution, validating the theoretical formulation. Experiments on math and code reasoning tasks across several LLM backbones show that LAD reliably improves both accuracy and generative diversity.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Global dynamics of a single vortex ring
+- **Autores:** Dengjun Guo, In-Jee Jeong, Lifeng Zhao
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:math.AP
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20131v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** We study the global-in-time dynamics of vortex rings for the three-dimensional incompressible Euler equations, under the assumption of axisymmetric flows without swirl.   For a broad class of initial data sharing only the macroscopic invariants with a thin vortex ring, we prove that the vorticity remains sharply concentrated and propagates along the symmetry axis with leading-order speed given by the Kelvin--Hicks formula, providing the first global-in-time validation of the vortex filament conjecture for a single vortex ring arising from generic initial data.   We further identify a universal filamentation mechanism driven by the competition between rapid core translation and slower local induction. This mechanism gives linear-in-time stretching of the vortex support under very general assumptions on the data, yielding dynamical instability of any thin vortex ring configurations in the $W^{2,\infty}$ norm.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [x] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] To Reason or Not to: Selective Chain-of-Thought in Medical Question Answering
+- **Autores:** Zaifu Zhan, Min Zeng, Shuang Zhou, Yiran Song, Xiaoyi Chen, Yu Hou, Yifan Wu, Yang Ruan, Rui Zhang
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.CL
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20130v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Objective: To improve the efficiency of medical question answering (MedQA) with large language models (LLMs) by avoiding unnecessary reasoning while maintaining accuracy.   Methods: We propose Selective Chain-of-Thought (Selective CoT), an inference-time strategy that first predicts whether a question requires reasoning and generates a rationale only when needed. Two open-source LLMs (Llama-3.1-8B and Qwen-2.5-7B) were evaluated on four biomedical QA benchmarks-HeadQA, MedQA-USMLE, MedMCQA, and PubMedQA. Metrics included accuracy, total generated tokens, and inference time.   Results: Selective CoT reduced inference time by 13-45% and token usage by 8-47% with minimal accuracy loss ($\leq$4\%). In some model-task pairs, it achieved both higher accuracy and greater efficiency than standard CoT. Compared with fixed-length CoT, Selective CoT reached similar or superior accuracy at substantially lower computational cost.   Discussion: Selective CoT dynamically balances reasoning depth and efficiency by invoking explicit reasoning only when beneficial, reducing redundancy on recall-type questions while preserving interpretability.   Conclusion: Selective CoT provides a simple, model-agnostic, and cost-effective approach for medical QA, aligning reasoning effort with question complexity to enhance real-world deployability of LLM-based clinical systems.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [x] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Adaptation to Intrinsic Dependence in Diffusion Language Models
+- **Autores:** Yunxiao Zhao, Changxiao Cai
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.LG
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20126v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Diffusion language models (DLMs) have recently emerged as a promising alternative to autoregressive (AR) approaches, enabling parallel token generation beyond a rigid left-to-right order. Despite growing empirical success, the theoretical understanding of how unmasking schedules -- which specify the order and size of unmasked tokens during sampling -- affect generation quality remains limited. In this work, we introduce a distribution-agnostic unmasking schedule for DLMs that adapts to the (unknown) dependence structure of the target data distribution, without requiring any prior knowledge or hyperparameter tuning. In contrast to prior deterministic procedures that fix unmasking sizes, our method randomizes the number of tokens revealed at each iteration. We show that, for two specific parameter choices, the sampling convergence guarantees -- measured by Kullback-Leibler (KL) divergence -- scale as $\widetilde O(\mathsf{TC}/K)$ and $\widetilde O(\mathsf{DTC}/K)$ respectively. Here, $K$ is the number of iterations, and $\mathsf{TC}$ and $\mathsf{DTC}$ are the total correlation and dual total correlation of the target distribution, capturing the intrinsic dependence structure underlying the data. Importantly, our guarantees hold in the practically relevant parallel-sampling regime $K<L$ where $L$ is the token sequence length. These results significantly improve upon prior convergence theories and yield substantial sampling acceleration for low-complexity distributions. Overall, our findings...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Quantum Information Approach to Bosonization of Supersymmetric Yang-Mills Fields
+- **Autores:** Radhakrishnan Balu, S. James Gates
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:quant-ph
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20149v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** We consider bosonization of supersymmetry in the context of Wess-Zumino quantum mechanics. Our motivation for this investigation is the flexibility the bosonic fock space affords as any classical probability distribution can be realized on it making it a versatile framework to work with for quantum processes. We proceed by constructing a minimal bosonization of a system with one bosonic and two fermionic degrees of freedom. We iterate this process to construct a tower of SUSY systems that is akin to unfolded Adinkras. We then identify an osp(2|2) symmetry of the system constructed. To build an irreducible representation of the system we induce representations across the sectors, a first to our knowledge, as the previous work have focused on induction only within the bosonic sector. First, we start with a fermionic representation using Clifford algebras and then induce a representation to gl(2|2) and restrict it to osp(2|2). In the second method, we induce a representation from that of the bosonic sector. In both cases, our representations are in terms of qubit operators that provide a way to solve SUSY problems using quantum information based approaches. Depending upon the direction of induction the representations are suitable for implementation on a hybrid qubit...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [x] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] ManCAR: Manifold-Constrained Latent Reasoning with Adaptive Test-Time Computation for Sequential Recommendation
+- **Autores:** Kun Yang, Yuxuan Zhu, Yazhe Chen, Siyao Zheng, Bangyang Hong, Kangle Wu, Yabo Ni, Anxiang Zeng, Cong Fu, Hui Li
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.IR
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20093v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Sequential recommendation increasingly employs latent multi-step reasoning to enhance test-time computation. Despite empirical gains, existing approaches largely drive intermediate reasoning states via target-dominant objectives without imposing explicit feasibility constraints. This results in latent drift, where reasoning trajectories deviate into implausible regions. We argue that effective recommendation reasoning should instead be viewed as navigation on a collaborative manifold rather than free-form latent refinement. To this end, we propose ManCAR (Manifold-Constrained Adaptive Reasoning), a principled framework that grounds reasoning within the topology of a global interaction graph. ManCAR constructs a local intent prior from the collaborative neighborhood of a user's recent actions, represented as a distribution over the item simplex. During training, the model progressively aligns its latent predictive distribution with this prior, forcing the reasoning trajectory to remain within the valid manifold. At test time, reasoning proceeds adaptively until the predictive distribution stabilizes, avoiding over-refinement. We provide a variational interpretation of ManCAR to theoretically validate its drift-prevention and adaptive test-time stopping mechanisms. Experiments on seven benchmarks demonstrate that ManCAR consistently outperforms state-of-the-art baselines, achieving up to a 46.88% relative improvement w.r.t. NDCG@10. Our code is available at https://github.com/FuCongResearchSquad/ManCAR.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [x] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] How Retrieved Context Shapes Internal Representations in RAG
+- **Autores:** Samuel Yeh, Sharon Li
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.CL
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20091v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Retrieval-augmented generation (RAG) enhances large language models (LLMs) by conditioning generation on retrieved external documents, but the effect of retrieved context is often non-trivial. In realistic retrieval settings, the retrieved document set often contains a mixture of documents that vary in relevance and usefulness. While prior work has largely examined these phenomena through output behavior, little is known about how retrieved context shapes the internal representations that mediate information integration in RAG. In this work, we study RAG through the lens of latent representations. We systematically analyze how different types of retrieved documents affect the hidden states of LLMs, and how these internal representation shifts relate to downstream generation behavior. Across four question-answering datasets and three LLMs, we analyze internal representations under controlled single- and multi-document settings. Our results reveal how context relevancy and layer-wise processing influence internal representations, providing explanations on LLMs output behaviors and insights for RAG system design.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Nonlinear quantum optomechanics in a Fano-mirror microcavity system
+- **Autores:** Lei Du, Juliette Monsel, Witlef Wieczorek, Janine Splettstoesser
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:quant-ph
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20085v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** We study a Fano-mirror optomechanical system in the quantum nonlinear regime. In this system, two strongly lossy optical modes hybridize through both coherent and dissipative couplings to form an effective optical mode with a drastically reduced linewidth. This linewidth reduction enables the system to access the single-photon strong-coupling and sideband-resolved regimes simultaneously. We formulate the system dynamics using an effective master-equation approach and benchmark it against quantum Langevin and dressed-state master-equation descriptions. With experimentally realistic parameters, we predict clear quantum signatures, including photon blockade and the generation of mechanical cat states. Our work establishes the Fano-mirror architecture as a promising platform for harnessing single-photon optomechanical nonlinearities for quantum state engineering under achievable experimental conditions.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [x] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] CodeCompass: Navigating the Navigation Paradox in Agentic Code Intelligence
+- **Autores:** Tarakanath Paipuru
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.AI
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20048v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Modern code intelligence agents operate in contexts exceeding 1 million tokens--far beyond the scale where humans manually locate relevant files. Yet agents consistently fail to discover architecturally critical files when solving real-world coding tasks. We identify the Navigation Paradox: agents perform poorly not due to context limits, but because navigation and retrieval are fundamentally distinct problems. Through 258 automated trials across 30 benchmark tasks on a production FastAPI repository, we demonstrate that graph-based structural navigation via CodeCompass--a Model Context Protocol server exposing dependency graphs--achieves 99.4% task completion on hidden-dependency tasks, a 23.2 percentage-point improvement over vanilla agents (76.2%) and 21.2 points over BM25 retrieval (78.2%).However, we uncover a critical adoption gap: 58% of trials with graph access made zero tool calls, and agents required explicit prompt engineering to adopt the tool consistently. Our findings reveal that the bottleneck is not tool availability but behavioral alignment--agents must be explicitly guided to leverage structural context over lexical heuristics. We contribute: (1) a task taxonomy distinguishing semantic-search, structural, and hidden-dependency scenarios; (2) empirical evidence that graph navigation outperforms retrieval when dependencies lack lexical overlap; and (3) open-source infrastructure for reproducible evaluation of navigation tools.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Two-spin-multiplexed optoacoustic light storage in chiral photonic crystal fiber
+- **Autores:** Xinglin Zeng, Linqiao Gan, Jesús Humberto Marines Cabello, Olivia Saffer, Birgit Stiller
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:physics.optics
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20024v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** The ability to coherently store and manipulate optical information across multiple degrees of freedom is a central requirement for scalable quantum information processing and multidimensional quantum computing. While polarization- and space-division-multiplexing have substantially increased the capacity of classical optical systems, their extension to coherent and reconfigurable photonic memories remains a key challenge. Here we demonstrate a two-spin-channel-multiplexed photonic memory based on chiral stimulated Brillouin scattering in a chiral photonic crystal fiber. Exploiting the intrinsic preservation of circular polarization in the chiral photonic crystal fiber, left- and right-circularly polarized modes serve as two orthogonal and independent storage channels. Multiple optical data pulses can be selectively or simultaneously stored and retrieved by simply controlling the polarization states of the write-read pulses. The storage time is continuously tunable, and the underlying Brillouin process preserves coherence and channel orthogonality. The result establishes chiral Brillouin scattering as an effective mechanism for spin-channel-multiplexed optoacoustic light storage, providing a robust and scalable platform for multidimensional photonic memories. It also open new opportunities for classic and quantum information processing, reconfigurable quantum networks, and hybrid light-matter interfaces based on coherent acoustic excitations.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] FairFS: Addressing Deep Feature Selection Biases for Recommender System
+- **Autores:** Xianquan Wang, Zhaocheng Du, Jieming Zhu, Qinglin Jia, Zhenhua Dong, Kai Zhang
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.IR
+- **DOI:** https://doi.org/10.1145/3774904.3792167
+- **Link:** https://arxiv.org/abs/2602.20001v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Large-scale online marketplaces and recommender systems serve as critical technological support for e-commerce development. In industrial recommender systems, features play vital roles as they carry information for downstream models. Accurate feature importance estimation is critical because it helps identify the most useful feature subsets from thousands of feature candidates for online services. Such selection enables improved online performance while reducing computational cost. To address feature selection problems in deep learning, trainable gate-based and sensitivity-based methods have been proposed and proven effective in industrial practice. However, through the analysis of real-world cases, we identified three bias issues that cause feature importance estimation to rely on partial model layers, samples, or gradients, ultimately leading to inaccurate importance estimation. We refer to these as layer bias, baseline bias, and approximation bias. To mitigate these issues, we propose FairFS, a fair and accurate feature selection algorithm. FairFS regularizes feature importance estimated across all nonlinear transformation layers to address layer bias. It also introduces a smooth baseline feature close to the classifier decision boundary and adopts an aggregated approximation method to alleviate baseline and approximation biases. Extensive experiments demonstrate that FairFS effectively mitigates these biases and achieves state-of-the-art feature selection performance.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Gabor Holography Reinvented
+- **Autores:** Jesper Glückstad
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:physics.optics
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20000v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** This paper presents a "reinvention" of Gabor Holography that does not suffer optically from the inherent twin-image problem originating back to Gabor's original Nobel Prize awarded invention. In-line or on-axis holography was ironically abandoned by its inventor Dennis Gabor himself and was effectively completely "re-placed" by so-called off-axis holography at the time when Gabor received the Nobel Prize in Physics in 1971. However, Gabor Holography is today the method of choice in modern digital holography due to its inherent on-axis, common-path robustness, lower requirements to resolution of the image sensor (or recording material), shorter exposure time, relaxed mechanical stability and temporal coherence requirements. However, it still inherently suffers from the aforementioned twin-image problem and, hence, one will find an abundance of papers trying to overcome this challenge by iterative phase retrieval or machine learning based approaches. Gabor Holography Reinvented overcomes this long-lasting twin-image problem for the first time by optical means.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [x] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Cross-lingual Matryoshka Representation Learning across Speech and Text
+- **Autores:** Yaya Sy, Dioula Doucouré, Christophe Cerisara, Irina Illina
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.CL
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19991v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Speakers of under-represented languages face both a language barrier, as most online knowledge is in a few dominant languages, and a modality barrier, since information is largely text-based while many languages are primarily oral. We address this for French-Wolof by training the first bilingual speech-text Matryoshka embedding model, enabling efficient retrieval of French text from Wolof speech queries without relying on a costly ASR-translation pipelines. We introduce large-scale data curation pipelines and new benchmarks, compare modeling strategies, and show that modality fusion within a frozen text Matryoshka model performs best. Although trained only for retrieval, the model generalizes well to other tasks, such as speech intent detection, indicating the learning of general semantic representations. Finally, we analyze cost-accuracy trade-offs across Matryoshka dimensions and ranks, showing that information is concentrated only in a few components, suggesting potential for efficiency improvements.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [x] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] A Context-Aware Knowledge Graph Platform for Stream Processing in Industrial IoT
+- **Autores:** Monica Marconi Sciarroni, Emanuele Storti
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.DB
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19990v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Industrial IoT ecosystems bring together sensors, machines and smart devices operating collaboratively across industrial environments. These systems generate large volumes of heterogeneous, high-velocity data streams that require interoperable, secure and contextually aware management. Most of the current stream management architectures, however, still rely on syntactic integration mechanisms, which result in limited flexibility, maintainability and interpretability in complex Industry 5.0 scenarios. This work proposes a context-aware semantic platform for data stream management that unifies heterogeneous IoT/IoE data sources through a Knowledge Graph enabling formal representation of devices, streams, agents, transformation pipelines, roles and rights. The model supports flexible data gathering, composable stream processing pipelines, and dynamic role-based data access based on agents' contexts, relying on Apache Kafka and Apache Flink for real-time processing, while SPARQL and SWRL-based reasoning provide context-dependent stream discovery. Experimental evaluations demonstrate the effectiveness of combining semantic models, context-aware reasoning and distributed stream processing to enable interoperable data workflows for Industry 5.0 environments.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [x] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Counterfactual Understanding via Retrieval-aware Multimodal Modeling for Time-to-Event Survival Prediction
+- **Autores:** Ha-Anh Hoang Nguyen, Tri-Duc Phan Le, Duc-Hoang Pham, Huy-Son Nguyen, Cam-Van Thi Nguyen, Duc-Trong Le, Hoang-Quynh Le
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.LG
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19987v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** This paper tackles the problem of time-to-event counterfactual survival prediction, aiming to optimize individualized survival outcomes in the presence of heterogeneity and censored data. We propose CURE, a framework that advances counterfactual survival modeling via comprehensive multimodal embedding and latent subgroup retrieval. CURE integrates clinical, paraclinical, demographic, and multi-omics information, which are aligned and fused through cross-attention mechanisms. Complex multi-omics signals can be adaptively refined using a mixture-of-experts architecture, emphasizing the most informative omics components. Building upon this representation, CURE implicitly retrieves patient-specific latent subgroups that capture both baseline survival dynamics and treatment-dependent variations. Experimental results on METABRIC and TCGA-LUAD datasets demonstrate that proposed CURE model consistently outperforms strong baselines in survival analysis, evaluated using the Time-dependent Concordance Index ($C^{td}$) and Integrated Brier Score (IBS). These findings highlight the potential of CURE to enhance multimodal understanding and serve as a foundation for future treatment recommendation models. All code and related resources are publicly available to facilitate the reproducibility https://github.com/L2R-UET/CURE.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [x] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] LRG-BEASTS: Detection of sodium and evidence for water absorption in the hot Saturn HAT-P-44b
+- **Autores:** Alastair B. Claringbold, Peter J. Wheatley, James Kirk, Eva-Maria Ahrer, Ian Skillen, Matteo Brogi, George W. King, James McCormac
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:astro-ph.EP
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19986v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** We present the low-resolution optical transmission spectrum of the inflated hot Saturn HAT-P-44b. The planet is a close sibling in radius (1.24 $\mathrm{R_{Jup}}$), temperature (1100 K), and mass (0.35 $\mathrm{M_{Jup}}$) to the exceedingly well-characterized WASP-39b. Using the ACAM instrument on the William Herschel Telescope (WHT), we obtain a transmission spectrum with sub-scale height precision of 246 ppm, with a wavelength range of 495 -- 874 nm and a 20 nm resolution, despite a relatively faint host star ($V\mathrm{_{mag} = 13.2}$). We detect absorption due to sodium with 3.9$σ$ confidence. Atmospheric retrieval of the transmission spectrum also reveals evidence for \ch{H2O} absorption and Rayleigh scattering from \ch{H2} gas consistent with a cool 800 K atmosphere and a super-solar metallicity of 7$\substack{+16 \\ -5}$$\times$solar. Comparison of retrieval models disfavour the inclusion of a super-Rayleigh scattering slope or high-altitude clouds (at $<1$ mbar) while being agnostic towards the presence of mid-altitude clouds. Our transmission spectrum of HAT-P-44b shows strong similarity to that of its sibling WASP-39b.} This is the tenth planet in the LRG-BEASTS (Low-Resolution Ground-Based Exoplanet Atmosphere Survey using Transmission Spectroscopy) survey.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [x] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Unlocking Multimodal Document Intelligence: From Current Triumphs to Future Frontiers of Visual Document Retrieval
+- **Autores:** Yibo Yan, Jiahao Huo, Guanbo Feng, Mingdong Ou, Yi Cao, Xin Zou, Shuliang Liu, Yuanhuiyi Lyu, Yu Huang, Jungang Li, Kening Zheng, Xu Zheng, Philip S. Yu, James Kwok, Xuming Hu
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.CL
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19961v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** With the rapid proliferation of multimodal information, Visual Document Retrieval (VDR) has emerged as a critical frontier in bridging the gap between unstructured visually rich data and precise information acquisition. Unlike traditional natural image retrieval, visual documents exhibit unique characteristics defined by dense textual content, intricate layouts, and fine-grained semantic dependencies. This paper presents the first comprehensive survey of the VDR landscape, specifically through the lens of the Multimodal Large Language Model (MLLM) era. We begin by examining the benchmark landscape, and subsequently dive into the methodological evolution, categorizing approaches into three primary aspects: multimodal embedding models, multimodal reranker models, and the integration of Retrieval-Augmented Generation (RAG) and Agentic systems for complex document intelligence. Finally, we identify persistent challenges and outline promising future directions, aiming to provide a clear roadmap for future multimodal document intelligence.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] CSR-RAG: An Efficient Retrieval System for Text-to-SQL on the Enterprise Scale
+- **Autores:** Rajpreet Singh, Novak Boškov, Lawrence Drabeck, Aditya Gudal, Manzoor A. Khan
+- **Fecha:** 2026-01-10
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.06564
+- **Link:** https://www.semanticscholar.org/paper/2c552bd5128b439196ad58b0b5086a733548f44c
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Natural language to SQL translation (Text-to-SQL) is one of the long-standing problems that has recently benefited from advances in Large Language Models (LLMs). While most academic Text-to-SQL benchmarks request schema description as a part of natural language input, enterprise-scale applications often require table retrieval before SQL query generation. To address this need, we propose a novel hybrid Retrieval Augmented Generation (RAG) system consisting of contextual, structural, and relational retrieval (CSR-RAG) to achieve computationally efficient yet sufficiently accurate retrieval for enterprise-scale databases. Through extensive enterprise benchmarks, we demonstrate that CSR-RAG achieves up to 40% precision and over 80% recall while incurring a negligible average query generation latency of only 30ms on commodity data center hardware, which makes it appropriate for modern LLM-based enterprise-scale systems.
+- **Keywords match:** ['retrieval augmented generation hybrid']
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [BAJA] Enormous Fluid Antenna Systems (E-FAS)--Part II: Channel Estimation
+- **Autores:** Farshad Rostami Ghadi, Kai-Kit Wong, Masoud Kaveh, Hao Xu, Baiyang Liu, Kin-Fai Tong, Chan-Byoung Chae
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.IT
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20127v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Enormous fluid antenna systems (E-FAS) have recently emerged as a new wireless architecture in which intelligent metasurfaces act as guided electromagnetic interfaces, enabling surface-wave (SW) propagation with much lower attenuation and more control than conventional space-wave transmission. While prior work has reported substantial power gains under perfect channel state information (CSI), the impact of practical channel acquisition on E-FAS performance remains largely unexplored. This paper presents the first comprehensive analysis of E-FAS-assisted downlink transmission under pilot-based channel estimation. We develop an estimation framework for the equivalent end-to-end channel and derive closed-form expressions for the statistics of the minimum mean-square-error (MMSE) channel estimate and its estimation error. Building on these results, we analyze both single-user and multiuser operation while explicitly accounting for the training overhead. For the single-user case, we characterize the outage probability and achievable rate with imperfect CSI, and reveal an inherent signal-to-noise ratio (SNR) saturation phenomenon caused by residual self-interference. For the multiuser case, we study zero-forcing (ZF) precoding based on imperfect channel estimates and show that the system becomes interference-limited in the high SNR regime because of residual inter-user interference. Furthermore, we quantify the trade-off between spatial multiplexing gains and pilot overhead when the number of users...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [x] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] NovaPlan: Zero-Shot Long-Horizon Manipulation via Closed-Loop Video Language Planning
+- **Autores:** Jiahui Fu, Junyu Nan, Lingfeng Sun, Hongyu Li, Jianing Qian, Jennifer L. Barry, Kris Kitani, George Konidaris
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.RO
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20119v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Solving long-horizon tasks requires robots to integrate high-level semantic reasoning with low-level physical interaction. While vision-language models (VLMs) and video generation models can decompose tasks and imagine outcomes, they often lack the physical grounding necessary for real-world execution. We introduce NovaPlan, a hierarchical framework that unifies closed-loop VLM and video planning with geometrically grounded robot execution for zero-shot long-horizon manipulation. At the high level, a VLM planner decomposes tasks into sub-goals and monitors robot execution in a closed loop, enabling the system to recover from single-step failures through autonomous re-planning. To compute low-level robot actions, we extract and utilize both task-relevant object keypoints and human hand poses as kinematic priors from the generated videos, and employ a switching mechanism to choose the better one as a reference for robot actions, maintaining stable execution even under heavy occlusion or depth inaccuracy. We demonstrate the effectiveness of NovaPlan on three long-horizon tasks and the Functional Manipulation Benchmark (FMB). Our results show that NovaPlan can perform complex assembly tasks and exhibit dexterous error recovery behaviors without any prior demonstrations or training. Project page: https://nova-plan.github.io/
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [x] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] StyleStream: Real-Time Zero-Shot Voice Style Conversion
+- **Autores:** Yisi Liu, Nicholas Lee, Gopala Anumanchipalli
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.SD
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20113v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Voice style conversion aims to transform an input utterance to match a target speaker's timbre, accent, and emotion, with a central challenge being the disentanglement of linguistic content from style. While prior work has explored this problem, conversion quality remains limited, and real-time voice style conversion has not been addressed. We propose StyleStream, the first streamable zero-shot voice style conversion system that achieves state-of-the-art performance. StyleStream consists of two components: a Destylizer, which removes style attributes while preserving linguistic content, and a Stylizer, a diffusion transformer (DiT) that reintroduces target style conditioned on reference speech. Robust content-style disentanglement is enforced through text supervision and a highly constrained information bottleneck. This design enables a fully non-autoregressive architecture, achieving real-time voice style conversion with an end-to-end latency of 1 second. Samples and real-time demo: https://berkeley-speech-group.github.io/StyleStream/.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Incorporating Q&A Nuggets into Retrieval-Augmented Generation
+- **Autores:** Laura Dietz, Bryan Li, G. Liu, Jia-Huei Ju, Eugene Yang, Dawn J. Lawrie, W. Walden, James Mayfield
+- **Fecha:** 2026-01-19
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.13222
+- **Link:** https://www.semanticscholar.org/paper/2585a6ceb82f1e62551fa98da64245519e098a29
+- **Citaciones:** 1
+- **Score de relevancia:** 33/100
+- **Abstract:** RAGE systems integrate ideas from automatic evaluation (E) into Retrieval-augmented Generation (RAG). As one such example, we present Crucible, a Nugget-Augmented Generation System that preserves explicit citation provenance by constructing a bank of Q&A nuggets from retrieved documents and uses them to guide extraction, selection, and report generation. Reasoning on nuggets avoids repeated information through clear and interpretable Q&A semantics - instead of opaque cluster abstractions - while maintaining citation provenance throughout the entire generation process. Evaluated on the TREC NeuCLIR 2024 collection, our Crucible system substantially outperforms Ginger, a recent nugget-based RAG system, in nugget recall, density, and citation grounding.
+- **Keywords match:** ['retrieval augmented generation evaluation']
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [BAJA] Skill-Inject: Measuring Agent Vulnerability to Skill File Attacks
+- **Autores:** David Schmotz, Luca Beurer-Kellner, Sahar Abdelnabi, Maksym Andriushchenko
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.CR
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20156v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** LLM agents are evolving rapidly, powered by code execution, tools, and the recently introduced agent skills feature. Skills allow users to extend LLM applications with specialized third-party code, knowledge, and instructions. Although this can extend agent capabilities to new domains, it creates an increasingly complex agent supply chain, offering new surfaces for prompt injection attacks. We identify skill-based prompt injection as a significant threat and introduce SkillInject, a benchmark evaluating the susceptibility of widely-used LLM agents to injections through skill files. SkillInject contains 202 injection-task pairs with attacks ranging from obviously malicious injections to subtle, context-dependent attacks hidden in otherwise legitimate instructions. We evaluate frontier LLMs on SkillInject, measuring both security in terms of harmful instruction avoidance and utility in terms of legitimate instruction compliance. Our results show that today's agents are highly vulnerable with up to 80% attack success rate with frontier models, often executing extremely harmful instructions including data exfiltration, destructive action, and ransomware-like behavior. They furthermore suggest that this problem will not be solved through model scaling or simple input filtering, but that robust agent security will require context-aware authorization frameworks. Our benchmark is available at https://www.skill-inject.com/.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [x] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Modeling Epidemiological Dynamics Under Adversarial Data and User Deception
+- **Autores:** Yiqi Su, Christo Kurisummoottil Thomas, Walid Saad, Bud Mishra, Naren Ramakrishnan
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.GT
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20134v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Epidemiological models increasingly rely on self-reported behavioral data such as vaccination status, mask usage, and social distancing adherence to forecast disease transmission and assess the impact of non-pharmaceutical interventions (NPIs). While such data provide valuable real-time insights, they are often subject to strategic misreporting, driven by individual incentives to avoid penalties, access benefits, or express distrust in public health authorities. To account for such human behavior, in this paper, we introduce a game-theoretic framework that models the interaction between the population and a public health authority as a signaling game. Individuals (senders) choose how to report their behaviors, while the public health authority (receiver) updates their epidemiological model(s) based on potentially distorted signals. Focusing on deception around masking and vaccination, we characterize analytically game equilibrium outcomes and evaluate the degree to which deception can be tolerated while maintaining epidemic control through policy interventions. Our results show that separating equilibria-with minimal deception-drive infections to near zero over time. Remarkably, even under pervasive dishonesty in pooling equilibria, well-designed sender and receiver strategies can still maintain effective epidemic control. This work advances the understanding of adversarial data in epidemiology and offers tools for designing more robust public health models in the presence of...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] NTLRAG: Narrative Topic Labels derived with Retrieval Augmented Generation
+- **Autores:** Lisa Grobelscheg, Ema Kahr, Mark Strembeck
+- **Fecha:** 2026-02-19
+- **Fuente:** ArXiv.org
+- **DOI:** N/A
+- **Link:** https://openalex.org/W7130762843
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Topic modeling has evolved as an important means to identify evident or hidden topics within large collections of text documents. Topic modeling approaches are often used for analyzing and making sense of social media discussions consisting of millions of short text messages. However, assigning meaningful topic labels to document clusters remains challenging, as users are commonly presented with unstructured keyword lists that may not accurately capture the respective core topic. In this paper, we introduce Narrative Topic Labels derived with Retrieval Augmented Generation (NTLRAG), a scalable and extensible framework that generates semantically precise and human-interpretable narrative topic labels. Our narrative topic labels provide a context-rich, intuitive concept to describe topic model output. In particular, NTLRAG uses retrieval augmented generation (RAG) techniques and considers multiple retrieval strategies as well as chain-of-thought elements to provide high-quality output. NTLRAG can be combined with any standard topic model to generate, validate, and refine narratives which then serve as narrative topic labels. We evaluated NTLRAG with a user study and three real-world datasets consisting of more than 6.7 million social media messages that have been sent by more than 2.7 million users. The user study involved 16 human evaluators who found that our narrative topic...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via openalex
+
+## [BAJA] Automating API Documentation from Crowdsourced Knowledge
+- **Autores:** Bonan Kou, Zijie Zhou, Mu Chen, Tianyi Zhang
+- **Fecha:** 2026-01-12
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.08036
+- **Link:** https://www.semanticscholar.org/paper/2f0aff6ff9b1c3b857312a47c0aed5a35f503f26
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** API documentation is crucial for developers to learn and use APIs. However, it is known that many official API documents are obsolete and incomplete. To address this challenge, we propose a new approach called AutoDoc that generates API documents with API knowledge extracted from online discussions on Stack Overflow (SO). AutoDoc leverages a fine-tuned dense retrieval model to identify seven types of API knowledge from SO posts. Then, it uses GPT-4o to summarize the API knowledge in these posts into concise text. Meanwhile, we designed two specific components to handle LLM hallucination and redundancy in generated content. We evaluated AutoDoc against five comparison baselines on 48 APIs of different popularity levels. Our results indicate that the API documents generated by AutoDoc are up to 77.7% more accurate, 9.5% less duplicated, and contain 34.4% knowledge uncovered by the official documents. We also measured the sensitivity of AutoDoc to the choice of different LLMs. We found that while larger LLMs produce higher-quality API documents, AutoDoc enables smaller open-source models (e.g., Mistral-7B-v0.3) to achieve comparable results. Finally, we conducted a user study to evaluate the usefulness of the API documents generated by AutoDoc. All participants found API documents generated by AutoDoc to be...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [BAJA] ViSIL: Unified Evaluation of Information Loss in Multimodal Video Captioning
+- **Autores:** Po-han Li, Shenghui Chen, U. Topcu, Sandeep P. Chinchali
+- **Fecha:** 2026-01-14
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.09851
+- **Link:** https://www.semanticscholar.org/paper/e389dfe97f8683213ee01002d37d15792b9fc880
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Multimodal video captioning condenses dense footage into a structured format of keyframes and natural language. By creating a cohesive multimodal summary, this approach anchors generative AI in rich semantic evidence and serves as a lightweight proxy for high-efficiency retrieval. However, traditional metrics like BLEU or ROUGE fail to quantify information coverage across disparate modalities, such as comparing a paragraph of text to a sequence of keyframes. To address this, we propose the Video Summary Information Loss (ViSIL) score, an information-theoretic framework that quantifies the video information not captured by a summary via vision-language model (VLM) inference. By measuring the information loss, ViSIL is a unified metric that enables direct comparison across multimodal summary formats despite their structural discrepancies. Our results demonstrate that ViSIL scores show a statistically significant correlation with both human and VLM performance on Video Question Answering (VQA) tasks. ViSIL also enables summary selection to optimize the trade-off between information loss and processing speed, establishing a Pareto-optimal frontier that outperforms text summaries by $7\%$ in VQA accuracy without increasing processing load.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [BAJA] Learning Positive-Incentive Point Sampling in Neural Implicit Fields for Object Pose Estimation
+- **Autores:** Yifei Shi, Boyan Wan, Xin Xu, Kai Xu
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.CV
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19937v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Learning neural implicit fields of 3D shapes is a rapidly emerging field that enables shape representation at arbitrary resolutions. Due to the flexibility, neural implicit fields have succeeded in many research areas, including shape reconstruction, novel view image synthesis, and more recently, object pose estimation. Neural implicit fields enable learning dense correspondences between the camera space and the object's canonical space-including unobserved regions in camera space-significantly boosting object pose estimation performance in challenging scenarios like highly occluded objects and novel shapes. Despite progress, predicting canonical coordinates for unobserved camera-space regions remains challenging due to the lack of direct observational signals. This necessitates heavy reliance on the model's generalization ability, resulting in high uncertainty. Consequently, densely sampling points across the entire camera space may yield inaccurate estimations that hinder the learning process and compromise performance. To alleviate this problem, we propose a method combining an SO(3)-equivariant convolutional implicit network and a positive-incentive point sampling (PIPS) strategy. The SO(3)-equivariant convolutional implicit network estimates point-level attributes with SO(3)-equivariance at arbitrary query locations, demonstrating superior performance compared to most existing baselines. The PIPS strategy dynamically determines sampling locations based on the input, thereby boosting the network's accuracy and training efficiency. Our method outperforms the...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [x] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Decision MetaMamba: Enhancing Selective SSM in Offline RL with Heterogeneous Sequence Mixing
+- **Autores:** Wall Kim, Chaeyoung Song, Hanul Kim
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.LG
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19805v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Mamba-based models have drawn much attention in offline RL. However, their selective mechanism often detrimental when key steps in RL sequences are omitted. To address these issues, we propose a simple yet effective structure, called Decision MetaMamba (DMM), which replaces Mamba's token mixer with a dense layer-based sequence mixer and modifies positional structure to preserve local information. By performing sequence mixing that considers all channels simultaneously before Mamba, DMM prevents information loss due to selective scanning and residual gating. Extensive experiments demonstrate that our DMM delivers the state-of-the-art performance across diverse RL tasks. Furthermore, DMM achieves these results with a compact parameter footprint, demonstrating strong potential for real-world applications.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] A Theory of How Pretraining Shapes Inductive Bias in Fine-Tuning
+- **Autores:** Nicolas Anguita, Francesco Locatello, Andrew M. Saxe, Marco Mondelli, Flavia Mancini, Samuel Lippl, Clementine Domine
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.LG
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20062v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Pretraining and fine-tuning are central stages in modern machine learning systems. In practice, feature learning plays an important role across both stages: deep neural networks learn a broad range of useful features during pretraining and further refine those features during fine-tuning. However, an end-to-end theoretical understanding of how choices of initialization impact the ability to reuse and refine features during fine-tuning has remained elusive. Here we develop an analytical theory of the pretraining-fine-tuning pipeline in diagonal linear networks, deriving exact expressions for the generalization error as a function of initialization parameters and task statistics. We find that different initialization choices place the network into four distinct fine-tuning regimes that are distinguished by their ability to support feature learning and reuse, and therefore by the task statistics for which they are beneficial. In particular, a smaller initialization scale in earlier layers enables the network to both reuse and refine its features, leading to superior generalization on fine-tuning tasks that rely on a subset of pretraining features. We demonstrate empirically that the same initialization parameters impact generalization in nonlinear networks trained on CIFAR-100. Overall, our results demonstrate analytically how data and network initialization interact to shape fine-tuning generalization, highlighting an important role...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Interaction Theater: A case of LLM Agents Interacting at Scale
+- **Autores:** Sarath Shekkizhar, Adam Earle
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.AI
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20059v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** As multi-agent architectures and agent-to-agent protocols proliferate, a fundamental question arises: what actually happens when autonomous LLM agents interact at scale? We study this question empirically using data from Moltbook, an AI-agent-only social platform, with 800K posts, 3.5M comments, and 78K agent profiles. We combine lexical metrics (Jaccard specificity), embedding-based semantic similarity, and LLM-as-judge validation to characterize agent interaction quality. Our findings reveal agents produce diverse, well-formed text that creates the surface appearance of active discussion, but the substance is largely absent. Specifically, while most agents ($67.5\%$) vary their output across contexts, $65\%$ of comments share no distinguishing content vocabulary with the post they appear under, and information gain from additional comments decays rapidly. LLM judge based metrics classify the dominant comment types as spam ($28\%$) and off-topic content ($22\%$). Embedding-based semantic analysis confirms that lexically generic comments are also semantically generic. Agents rarely engage in threaded conversation ($5\%$ of comments), defaulting instead to independent top-level responses. We discuss implications for multi-agent interaction design, arguing that coordination mechanisms must be explicitly designed; without them, even large populations of capable agents produce parallel output rather than productive exchange.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [x] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] To Move or Not to Move: Constraint-based Planning Enables Zero-Shot Generalization for Interactive Navigation
+- **Autores:** Apoorva Vashisth, Manav Kulshrestha, Pranav Bakshi, Damon Conover, Guillaume Sartoretti, Aniket Bera
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.RO
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20055v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Visual navigation typically assumes the existence of at least one obstacle-free path between start and goal, which must be discovered/planned by the robot. However, in real-world scenarios, such as home environments and warehouses, clutter can block all routes. Targeted at such cases, we introduce the Lifelong Interactive Navigation problem, where a mobile robot with manipulation abilities can move clutter to forge its own path to complete sequential object- placement tasks - each involving placing an given object (eg. Alarm clock, Pillow) onto a target object (eg. Dining table, Desk, Bed). To address this lifelong setting - where effects of environment changes accumulate and have long-term effects - we propose an LLM-driven, constraint-based planning framework with active perception. Our framework allows the LLM to reason over a structured scene graph of discovered objects and obstacles, deciding which object to move, where to place it, and where to look next to discover task-relevant information. This coupling of reasoning and active perception allows the agent to explore the regions expected to contribute to task completion rather than exhaustively mapping the environment. A standard motion planner then executes the corresponding navigate-pick-place, or detour sequence, ensuring reliable low-level control. Evaluated in physics-enabled ProcTHOR-10k simulator, our...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Position: General Alignment Has Hit a Ceiling; Edge Alignment Must Be Taken Seriously
+- **Autores:** Han Bao, Yue Huang, Xiaoda Wang, Zheyuan Zhang, Yujun Zhou, Carl Yang, Xiangliang Zhang, Yanfang Ye
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.CL
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20042v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Large language models are being deployed in complex socio-technical systems, which exposes limits in current alignment practice. We take the position that the dominant paradigm of General Alignment, which compresses diverse human values into a single scalar reward, reaches a structural ceiling in settings with conflicting values, plural stakeholders, and irreducible uncertainty. These failures follow from the mathematics and incentives of scalarization and lead to \textbf{structural} value flattening, \textbf{normative} representation loss, and \textbf{cognitive} uncertainty blindness. We introduce Edge Alignment as a distinct approach in which systems preserve multi dimensional value structure, support plural and democratic representation, and incorporate epistemic mechanisms for interaction and clarification. To make this approach practical, we propose seven interdependent pillars organized into three phases. We identify key challenges in data collection, training objectives, and evaluation, outlining complementary technical and governance directions. Taken together, these measures reframe alignment as a lifecycle problem of dynamic normative governance rather than as a single instance optimization task.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [x] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Agents of Chaos
+- **Autores:** Natalie Shapira, Chris Wendler, Avery Yen, Gabriele Sarti, Koyena Pal, Olivia Floody, Adam Belfki, Alex Loftus, Aditya Ratan Jannali, Nikhil Prakash, Jasmine Cui, Giordano Rogers, Jannik Brinkmann, Can Rager, Amir Zur, Michael Ripa, Aruna Sankaranarayanan, David Atkinson, Rohit Gandikota, Jaden Fiotto-Kaufman, EunJeong Hwang, Hadas Orgad, P Sam Sahil, Negev Taglicht, Tomer Shabtay, Atai Ambus, Nitay Alon, Shiri Oron, Ayelet Gordon-Tapiero, Yotam Kaplan, Vered Shwartz, Tamar Rott Shaham, Christoph Riedl, Reuth Mirsky, Maarten Sap, David Manheim, Tomer Ullman, David Bau
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.AI
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20021v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** We report an exploratory red-teaming study of autonomous language-model-powered agents deployed in a live laboratory environment with persistent memory, email accounts, Discord access, file systems, and shell execution. Over a two-week period, twenty AI researchers interacted with the agents under benign and adversarial conditions. Focusing on failures emerging from the integration of language models with autonomy, tool use, and multi-party communication, we document eleven representative case studies. Observed behaviors include unauthorized compliance with non-owners, disclosure of sensitive information, execution of destructive system-level actions, denial-of-service conditions, uncontrolled resource consumption, identity spoofing vulnerabilities, cross-agent propagation of unsafe practices, and partial system takeover. In several cases, agents reported task completion while the underlying system state contradicted those reports. We also report on some of the failed attempts. Our findings establish the existence of security-, privacy-, and governance-relevant vulnerabilities in realistic deployment settings. These behaviors raise unresolved questions regarding accountability, delegated authority, and responsibility for downstream harms, and warrant urgent attention from legal scholars, policymakers, and researchers across disciplines. This report serves as an initial empirical contribution to that broader conversation.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [x] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] On scheduling coupled tasks with exact delays to minimize maximum lateness
+- **Autores:** Wiesław Kubiak
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.DM
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20010v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** This paper studies scheduling coupled tasks with exact delays to minimize maximum lateness. The first task has processing time $p>0$ and the second $b_i\geq 0$, also the second needs to start exactly $p$ units of time after the completion of the first. The couple has due date $d_i$. The tasks are scheduled on a single machine to minimize maximum lateness. The problem has been left open in the literature which offer hardly any results on scheduling coupled tasks with exact delays to minimize maximum lateness. The paper shows polynomial time algorithms for \emph{agreeable} ($d_i\geq d_j$ implies $b_i\geq b_j$) and \emph{disagreeable} ($d_i\geq d_j$ implies $b_i\leq b_j$) cases. The complexity of the general problem remains open.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Assessing Risks of Large Language Models in Mental Health Support: A Framework for Automated Clinical AI Red Teaming
+- **Autores:** Ian Steenstra, Paola Pedrelli, Weiyan Shi, Stacy Marsella, Timothy W. Bickmore
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.CL
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19948v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Large Language Models (LLMs) are increasingly utilized for mental health support; however, current safety benchmarks often fail to detect the complex, longitudinal risks inherent in therapeutic dialogue. We introduce an evaluation framework that pairs AI psychotherapists with simulated patient agents equipped with dynamic cognitive-affective models and assesses therapy session simulations against a comprehensive quality of care and risk ontology. We apply this framework to a high-impact test case, Alcohol Use Disorder, evaluating six AI agents (including ChatGPT, Gemini, and Character.AI) against a clinically-validated cohort of 15 patient personas representing diverse clinical phenotypes.   Our large-scale simulation (N=369 sessions) reveals critical safety gaps in the use of AI for mental health support. We identify specific iatrogenic risks, including the validation of patient delusions ("AI Psychosis") and failure to de-escalate suicide risk. Finally, we validate an interactive data visualization dashboard with diverse stakeholders, including AI engineers and red teamers, mental health professionals, and policy experts (N=9), demonstrating that this framework effectively enables stakeholders to audit the "black box" of AI psychotherapy. These findings underscore the critical safety risks of AI-provided mental health support and the necessity of simulation-based clinical red teaming before deployment.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [x] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Rethinking LoRA for Privacy-Preserving Federated Learning in Large Models
+- **Autores:** Jin Liu, Yinbin Miao, Ning Xi, Junkang Liu
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.LG
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19926v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Fine-tuning large vision models (LVMs) and large language models (LLMs) under differentially private federated learning (DPFL) is hindered by a fundamental privacy-utility trade-off. Low-Rank Adaptation (LoRA), a promising parameter-efficient fine-tuning (PEFT) method, reduces computational and communication costs by introducing two trainable low-rank matrices while freezing pre-trained weights. However, directly applying LoRA in DPFL settings leads to performance degradation, especially in LVMs. Our analysis reveals three previously underexplored challenges: (1) gradient coupling caused by the simultaneous update of two asymmetric low-rank matrices, (2) compounded noise amplification under differential privacy, and (3) sharpness of the global aggregated model in the parameter space. To address these issues, we propose LA-LoRA (\textbf{L}ocal \textbf{A}lternating \textbf{LoRA}), a novel approach that decouples gradient interactions and aligns update directions across clients to enhance robustness under stringent privacy constraints. Theoretically, LA-LoRA strengthens convergence guarantees in noisy federated environments. Extensive experiments demonstrate that LA-LoRA achieves state-of-the-art (SOTA) performance on Swin Transformer and RoBERTa models, showcasing robustness to DP noise and broad applicability across both LVMs and LLMs. For example, when fine-tuning the Swin-B model on the Tiny-ImageNet dataset under a strict privacy budget ($ε= 1$), LA-LoRA outperforms the best baseline, RoLoRA, by 16.83\% in test accuracy. Code is provided in...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [x] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] OpenClaw, Moltbook, and ClawdLab: From Agent-Only Social Networks to Autonomous Scientific Research
+- **Autores:** Lukas Weidener, Marko Brkić, Mihailo Jovanović, Ritvik Singh, Emre Ulgac, Aakaash Meduri
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.AI
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19810v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** In January 2026, the open-source agent framework OpenClaw and the agent-only social network Moltbook produced a large-scale dataset of autonomous AI-to-AI interaction, attracting six academic publications within fourteen days. This study conducts a multivocal literature review of that ecosystem and presents ClawdLab, an open-source platform for autonomous scientific research, as a design science response to the architectural failure modes identified. The literature documents emergent collective phenomena, security vulnerabilities spanning 131 agent skills and over 15,200 exposed control panels, and five recurring architectural patterns. ClawdLab addresses these failure modes through hard role restrictions, structured adversarial critique, PI-led governance, multi-model orchestration, and domain-specific evidence requirements encoded as protocol constraints that ground validation in computational tool outputs rather than social consensus; the architecture provides emergent Sybil resistance as a structural consequence. A three-tier taxonomy distinguishes single-agent pipelines, predetermined multi-agent workflows, and fully decentralised systems, analysing why leading AI co-scientist platforms remain confined to the first two tiers. ClawdLab's composable third-tier architecture, in which foundation models, capabilities, governance, and evidence requirements are independently modifiable, enables compounding improvement as the broader AI ecosystem advances.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [x] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Young system development in a cometary globule: An investigation into the eccentric disk around AT Pyx in terms of planet-formation and interaction with its surrounding environment
+- **Autores:** Dan McLachlan, Christian Ginski, Jake Byrne, Chloe Lawlor, Justyn Campbell-White, Rik Claes, Bin Ren, Anibal Sierra
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:astro-ph.EP
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19755v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** This paper presents new data and analyses of the AT Pyx system, a disk-hosting young star located in a cometary globule in the Gum Nebula. This radiation-driven structure is an unusual environment for observations of planet formation and differs greatly from the low-mass star-forming regions disks are most commonly observed in. Aided by a collection of visual and spectroscopic data available for this system, this paper aims to infer the possibility of embedded planets existing within the disk and how the system's environment may affect its disk morphology. Using data from the VLT's instruments XSHOOTER, ESPRESSO and - most prominently - SPHERE along with data from ALMA, we make a variety of measurements (geometric, photometric and otherwise) to characterise the observed disk features and attributes such as spiral arms and eccentricity. Mapping of the velocity components is also undertaken using the ALMA gas line data to characterise disk orientation and determine the likelihood that the system is experiencing a late-stage infall event. The disk is found to be eccentric when deprojected. Under the assumption that the formation of a planet is wholly responsible for the primary and secondary spiral arms, we find the mass of such a planet can range...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [x] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] IceCube's convex all-sky neutrino spectrum consistent with the magnetically powered corona scenario for active galactic nuclei
+- **Autores:** Kohta Murase, Shigeo S. Kimura, Mainak Mukhopadhyay, Mukul Bhattacharya
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:astro-ph.HE
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20145v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** High-energy multimessenger background analyses over the past decade have provided evidence for a population of hidden neutrino sources that are opaque to GeV-TeV gamma rays, a picture bolstered by recent observations of the nearby active galaxy NGC 1068. The coronal regions in the hearts of active galactic nuclei (AGNs) have been proposed as the most promising sites for such hidden nonthermal particle production, and NGC 1068 is expected to be the most neutrino-active galaxy for IceCube. We demonstrate that the latest all-sky neutrino spectrum, exhibiting a spectral bend around 3-30 TeV, is consistent with predictions of the magnetically powered corona scenario, and the models for the all-sky neutrino flux can simultaneously explain the multimessenger data from NGC 1068 within observational and modeling uncertainties. We further show, in a largely model-independent way, that the contribution from NGC 1068-like sources does not overshoot the observed medium-energy neutrino flux. Finally, we highlight the key role of the Eddington ratio, which can drive substantial variations in the predicted neutrino fluxes of nearby AGNs, and we encourage systematic multimessenger searches for the neutrino-brightest AGNs.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] HeatPrompt: Zero-Shot Vision-Language Modeling of Urban Heat Demand from Satellite Images
+- **Autores:** Kundan Thota, Xuanhao Mu, Thorsten Schlachter, Veit Hagenmeyer
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.CV
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20066v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Accurate heat-demand maps play a crucial role in decarbonizing space heating, yet most municipalities lack detailed building-level data needed to calculate them. We introduce HeatPrompt, a zero-shot vision-language energy modeling framework that estimates annual heat demand using semantic features extracted from satellite images, basic Geographic Information System (GIS), and building-level features. We feed pretrained Large Vision Language Models (VLMs) with a domain-specific prompt to act as an energy planner and extract the visual attributes such as roof age, building density, etc, from the RGB satellite image that correspond to the thermal load. A Multi-Layer Perceptron (MLP) regressor trained on these captions shows an $R^2$ uplift of 93.7% and shrinks the mean absolute error (MAE) by 30% compared to the baseline model. Qualitative analysis shows that high-impact tokens align with high-demand zones, offering lightweight support for heat planning in data-scarce regions.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] The LLMbda Calculus: AI Agents, Conversations, and Information Flow
+- **Autores:** Zac Garby, Andrew D. Gordon, David Sands
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.PL
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20064v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** A conversation with a large language model (LLM) is a sequence of prompts and responses, with each response generated from the preceding conversation. AI agents build such conversations automatically: given an initial human prompt, a planner loop interleaves LLM calls with tool invocations and code execution. This tight coupling creates a new and poorly understood attack surface. A malicious prompt injected into a conversation can compromise later reasoning, trigger dangerous tool calls, or distort final outputs. Despite the centrality of such systems, we currently lack a principled semantic foundation for reasoning about their behaviour and safety. We address this gap by introducing an untyped call-by-value lambda calculus enriched with dynamic information-flow control and a small number of primitives for constructing prompt-response conversations. Our language includes a primitive that invokes an LLM: it serializes a value, sends it to the model as a prompt, and parses the response as a new term. This calculus faithfully represents planner loops and their vulnerabilities, including the mechanisms by which prompt injection alters subsequent computation. The semantics explicitly captures conversations, and so supports reasoning about defenses such as quarantined sub-conversations, isolation of generated code, and information-flow restrictions on what may influence an LLM call. A...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Adaptive Underwater Acoustic Communications with Limited Feedback: An AoI-Aware Hierarchical Bandit Approach
+- **Autores:** Fabio Busacca, Andrea Panebianco, Yin Sun
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.NI
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20105v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Underwater Acoustic (UWA) networks are vital for remote sensing and ocean exploration but face inherent challenges such as limited bandwidth, long propagation delays, and highly dynamic channels. These constraints hinder real-time communication and degrade overall system performance. To address these challenges, this paper proposes a bilevel Multi-Armed Bandit (MAB) framework. At the fast inner level, a Contextual Delayed MAB (CD-MAB) jointly optimizes adaptive modulation and transmission power based on both channel state feedback and its Age of Information (AoI), thereby maximizing throughput. At the slower outer level, a Feedback Scheduling MAB dynamically adjusts the channel-state feedback interval according to throughput dynamics: stable throughput allows longer update intervals, while throughput drops trigger more frequent updates. This adaptive mechanism reduces feedback overhead and enhances responsiveness to varying network conditions. The proposed bilevel framework is computationally efficient and well-suited to resource-constrained UWA networks. Simulation results using the DESERT Underwater Network Simulator demonstrate throughput gains of up to 20.61% and energy savings of up to 36.60% compared with Deep Reinforcement Learning (DRL) baselines reported in the existing literature.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Screening Frontiers
+- **Autores:** Frank Yang
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:econ.TH
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20087v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** A principal screens an agent with an arbitrary set of allocations $X$. The agent's preferences over allocations are comonotonic. A subset of allocations $X^*\subseteq X$ is a surplus-elasticity frontier if (i) any other allocation has a demand curve that is pointwise lower and less elastic than some allocation in $X^*$ and (ii) the allocations in $X^*$ can be ordered in terms of their demand curves such that a higher demand curve is more inelastic. We show that any surplus-elasticity frontier is an optimal menu. Moreover, if the incremental demand curves along the frontier are also ordered by their elasticities, then the frontier is optimal even among stochastic mechanisms. The result is agnostic to type distributions and redistributive welfare weights -- the same frontier remains optimal for a broad class of objectives. As applications, we show how these results immediately yield new insights into optimal bundling, optimal taxation, sequential screening, selling information, and regulating a data-rich monopolist.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] The Digital Gorilla: Rebalancing Power in the Age of AI
+- **Autores:** M. Alejandra Parra-Orlandoni, Roxanne A. Schnyder, Christopher J. Mallet
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.CY
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20080v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Contemporary artificial intelligence (AI) policy suffers from a basic categorical error. Existing frameworks rely on analogizing AI to inherited technology types -- such as products, platforms, or infrastructure -- and in doing so generate overlapping, often contradictory governance regimes. This "analogy trap" obscures a fundamental transformation: certain advanced AI systems no longer function solely as instruments through which existing institutions exercise power, but as de facto centers of power that shape information, coordinate behavior, and structure social and economic realities at scale. This article offers a new conceptual foundation for AI governance by treating such systems as a fourth societal actor -- what we term the "Digital Gorilla" -- alongside People, the State, and Enterprises. It develops a Four Societal Actors framework that maps how power flows among these actors across five power modalities (economic, epistemic, narrative, authoritative, physical) and uses this map to diagnose where AI capabilities disturb established allocations of authority, concentrate power, or erode accountability. Drawing on constitutional principles of separated powers and federalism, the article advances a federalized, polycentric governance architecture and institutionalizes dynamic checks and balances among the four actors, rather than today's more reactive and compliance-driven approaches. Reframing AI governance in this way shifts...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Addressing leakage and mode suppression in angular power spectrum estimation for gravitational-wave backgrounds using pulsar timing arrays
+- **Autores:** Deepali Agarwal, Joseph D. Romano, Yacine Ali-Haïmoud, Tristan L. Smith
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:gr-qc
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20075v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Mapping gravitational-wave background (GWB) anisotropy with pulsar timing arrays (PTAs) is affected by harmonic-space mode suppression and mode coupling arising from an array's nonuniform sky response. Spherical harmonic expansions must be truncated at finite multipole l_max^rec, often set to l_max^N_pair$\equiv {\rm int}\left[\sqrt{\text{N_pair}}-1\right]$, where N_pair is the number of distinct pulsar pairs in an array. This choice is motivated by the counting argument that cross-correlations provide at most N_pair independent constraints. We obtain the multipole l_max^res corresponding to the maximum informative angular scale of a PTA. It is defined such that expansions to l_max^res (approximately) span the space of "observable skies" encoded in the N_pair eigenmaps of the Fisher information matrix, and therefore depends on the array configuration. We explicitly show that GWB power contained in multipoles l$\gtrsim$l_max^res do not significantly affect analyses that use expansions out to l_max^res, because the PTA response acts as a low-pass filter. In contrast, truncating at l_max^rec< l_max^res leads to leakage of small-scale angular power from l_max^rec<l$\leq$l_max^res. Even choosing l_max^rec=l_max^res, the standard frequentist estimator of the angular power spectrum C_l remains biased by the modes unobservable by the array. Although we can (partially) debias the standard estimator -- improving its agreement with an injected spectrum...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Training-Free Generative Modeling via Kernelized Stochastic Interpolants
+- **Autores:** Florentin Coeurdoux, Etienne Lempereur, Nathanaël Cuvelle-Magar, Thomas Eboli, Stéphane Mallat, Anastasia Borovykh, Eric Vanden-Eijnden
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.LG
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20070v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** We develop a kernel method for generative modeling within the stochastic interpolant framework, replacing neural network training with linear systems. The drift of the generative SDE is $\hat b_t(x) = \nablaφ(x)^\topη_t$, where $η_t\in\R^P$ solves a $P\times P$ system computable from data, with $P$ independent of the data dimension $d$. Since estimates are inexact, the diffusion coefficient $D_t$ affects sample quality; the optimal $D_t^*$ from Girsanov diverges at $t=0$, but this poses no difficulty and we develop an integrator that handles it seamlessly. The framework accommodates diverse feature maps -- scattering transforms, pretrained generative models etc. -- enabling training-free generation and model combination. We demonstrate the approach on financial time series, turbulence, and image generation.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] De novo molecular structure elucidation from mass spectra via flow matching
+- **Autores:** Ghaith Mqawass, Tuan Le, Fabian Theis, Djork-Arné Clevert
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.LG
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19912v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Mass spectrometry is a powerful and widely used tool for identifying molecular structures due to its sensitivity and ability to profile complex samples. However, translating spectra into full molecular structures is a difficult, under-defined inverse problem. Overcoming this problem is crucial for enabling biological insight, discovering new metabolites, and advancing chemical research across multiple fields. To this end, we develop MSFlow, a two-stage encoder-decoder flow-matching generative model that achieves state-of-the-art performance on the structure elucidation task for small molecules. In the first stage, we adopt a formula-restricted transformer model for encoding mass spectra into a continuous and chemically informative embedding space, while in the second stage, we train a decoder flow matching model to reconstruct molecules from latent embeddings of mass spectra. We present ablation studies demonstrating the importance of using information-preserving molecular descriptors for encoding mass spectra and motivate the use of our discrete flow-based decoder. Our rigorous evaluation demonstrates that MSFlow can accurately translate up to 45 percent of molecular mass spectra into their corresponding molecular representations - an improvement of up to fourteen-fold over the current state-of-the-art. A trained version of MSFlow is made publicly available on GitHub for non-commercial users.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [x] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Carbon-Aware Governance Gates: An Architecture for Sustainable GenAI Development
+- **Autores:** Mateen A. Abbasi, Tommi J. Mikkonen, Petri J. Ihantola, Muhammad Waseem, Pekka Abrahamsson, Niko K. Mäkitalo
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.SE
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19718v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** The rapid adoption of Generative AI (GenAI) in the software development life cycle (SDLC) increases computational demand, which can raise the carbon footprint of development activities. At the same time, organizations are increasingly embedding governance mechanisms into GenAI-assisted development to support trust, transparency, and accountability. However, these governance mechanisms introduce additional computational workloads, including repeated inference, regeneration cycles, and expanded validation pipelines, increasing energy use and the carbon footprint of GenAI-assisted development. This paper proposes Carbon-Aware Governance Gates (CAGG), an architectural extension that embeds carbon budgets, energy provenance, and sustainability-aware validation orchestration into human-AI governance layers. CAGG comprises three components: (i) an Energy and Carbon Provenance Ledger, (ii) a Carbon Budget Manager, and (iii) a Green Validation Orchestrator, operationalized through governance policies and reusable design patterns.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [x] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] DReX: An Explainable Deep Learning-based Multimodal Recommendation Framework
+- **Autores:** Adamya Shyam, Venkateswara Rao Kagita, Bharti Rana, Vikas Kumar
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.IR
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19702v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Multimodal recommender systems leverage diverse data sources, such as user interactions, content features, and contextual information, to address challenges like cold-start and data sparsity. However, existing methods often suffer from one or more key limitations: processing different modalities in isolation, requiring complete multimodal data for each interaction during training, or independent learning of user and item representations. These factors contribute to increased complexity and potential misalignment between user and item embeddings. To address these challenges, we propose DReX, a unified multimodal recommendation framework that incrementally refines user and item representations by leveraging interaction-level features from multimodal feedback. Our model employs gated recurrent units to selectively integrate these fine-grained features into global representations. This incremental update mechanism provides three key advantages: (1) simultaneous modeling of both nuanced interaction details and broader preference patterns, (2) eliminates the need for separate user and item feature extraction processes, leading to enhanced alignment in their learned representation, and (3) inherent robustness to varying or missing modalities. We evaluate the performance of the proposed approach on three real-world datasets containing reviews and ratings as interaction modalities. By considering review text as a modality, our approach automatically generates interpretable keyword profiles for both users and items, which...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] NEXUS : A compact neural architecture for high-resolution spatiotemporal air quality forecasting in Delhi Nationa Capital Region
+- **Autores:** Rampunit Kumar, Aditya Maheshwari
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.LG
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19654v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Urban air pollution in megacities poses critical public health challenges, particularly in Delhi National Capital Region (NCR) where severe degradation affects millions. We present NEXUS (Neural Extraction and Unified Spatiotemporal) architecture for forecasting carbon monoxide, nitrogen oxide, and sulfur dioxide. Working with four years (2018--2021) of atmospheric data across sixteen spatial grids, NEXUS achieves R$^2$ exceeding 0.94 for CO, 0.91 for NO, and 0.95 for SO$_2$ using merely 18,748 parameters -- substantially fewer than SCINet (35,552), Autoformer (68,704), and FEDformer (298,080). The architecture integrates patch embedding, low-rank projections, and adaptive fusion mechanisms to decode complex atmospheric chemistry patterns. Our investigation uncovers distinct diurnal rhythms and pronounced seasonal variations, with winter months experiencing severe pollution episodes driven by temperature inversions and agricultural biomass burning. Analysis identifies critical meteorological thresholds, quantifies wind field impacts on pollutant dispersion, and maps spatial heterogeneity across the region. Extensive ablation experiments demonstrate each architectural component's role. NEXUS delivers superior predictive performance with remarkable computational efficiency, enabling real-time deployment for air quality monitoring systems.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [x] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Spectral Phase Encoding for Quantum Kernel Methods
+- **Autores:** Pablo Herrero Gómez, Antonio Jimeno Morenilla, David Muñoz-Hernández, Higinio Mora Mora
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.LG
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19644v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Quantum kernel methods are promising for near-term quantum ma- chine learning, yet their behavior under data corruption remains insuf- ficiently understood. We analyze how quantum feature constructions degrade under controlled additive noise. We introduce Spectral Phase Encoding (SPE), a hybrid construc- tion combining a discrete Fourier transform (DFT) front-end with a diagonal phase-only embedding aligned with the geometry of diagonal quantum maps. Within a unified framework, we compare QK-DFT against alternative quantum variants (QK-PCA, QK-RP) and classi- cal SVM baselines under identical clean-data hyperparameter selection, quantifying robustness via dataset fixed-effects regression with wild cluster bootstrap inference across heterogeneous real-world datasets. Across the quantum family, DFT-based preprocessing yields the smallest degradation rate as noise increases, with statistically sup- ported slope differences relative to PCA and RP. Compared to classical baselines, QK-DFT shows degradation comparable to linear SVM and more stable than RBF SVM under matched tuning. Hardware exper- iments confirm that SPE remains executable and numerically stable for overlap estimation. These results indicate that robustness in quan- tum kernels depends critically on structure-aligned preprocessing and its interaction with diagonal embeddings, supporting a robustness-first perspective for NISQ-era quantum machine learning.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [x] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Automated Histopathology Report Generation via Pyramidal Feature Extraction and the UNI Foundation Model
+- **Autores:** Ahmet Samet HALICI, Ece Tugba Cebeci, Musa Balci, Mustafa Cini, Serkan Sokmen
+- **Fecha:** 2026-02-18
+- **Fuente:** arXiv (Cornell University)
+- **DOI:** https://doi.org/10.48550/arxiv.2602.16422
+- **Link:** https://openalex.org/W7130595304
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Generating diagnostic text from histopathology whole slide images (WSIs) is challenging due to the gigapixel scale of the input and the requirement for precise, domain specific language. We propose a hierarchical vision language framework that combines a frozen pathology foundation model with a Transformer decoder for report generation. To make WSI processing tractable, we perform multi resolution pyramidal patch selection (downsampling factors 2^3 to 2^6) and remove background and artifacts using Laplacian variance and HSV based criteria. Patch features are extracted with the UNI Vision Transformer and projected to a 6 layer Transformer decoder that generates diagnostic text via cross attention. To better represent biomedical terminology, we tokenize the output using BioGPT. Finally, we add a retrieval based verification step that compares generated reports with a reference corpus using Sentence BERT embeddings; if a high similarity match is found, the generated report is replaced with the retrieved ground truth reference to improve reliability.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [x] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via openalex
+
+## [BAJA] New minimal surfaces in the sphere from capillary minimal cones
+- **Autores:** Benjy Firester, Raphael Tsiamis
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:math.DG
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20124v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** For every $p,q\geq 1$, we construct minimal embeddings of $\mathbb{S}^p \times \mathbb{S}^q \times \mathbb{S}^1$ in $\mathbb{S}^{p + q + 2}$ by doubling the links of free-boundary minimal cones in $\mathbb{R}^{p+q+3}$ with bi-orthogonal symmetry. This solves problems posed by Hsiang-Lawson and Hsiang-Hsiang. The equivariance reduces the minimal surface equation to an ODE, and we prove the existence of capillary minimal cones for every contact angle. We obtain free-boundary solutions as limits of capillary surfaces via a singular shooting problem with infinite initial slope. As the contact angle degenerates to $0$, rescalings of the capillary cones converge to a homogeneous solution of the one-phase Bernoulli problem, further illustrating the connection between one-phase free boundaries and minimal surfaces through the capillary functional.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [x] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] ReSyn: Autonomously Scaling Synthetic Environments for Reasoning Models
+- **Autores:** Andre He, Nathaniel Weir, Kaj Bostrom, Allen Nie, Darion Cassel, Sam Bayless, Huzefa Rangwala
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.AI
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20117v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Reinforcement learning with verifiable rewards (RLVR) has emerged as a promising approach for training reasoning language models (RLMs) by leveraging supervision from verifiers. Although verifier implementation is easier than solution annotation for many tasks, existing synthetic data generation methods remain largely solution-centric, while verifier-based methods rely on a few hand-crafted procedural environments. In this work, we scale RLVR by introducing ReSyn, a pipeline that generates diverse reasoning environments equipped with instance generators and verifiers, covering tasks such as constraint satisfaction, algorithmic puzzles, and spatial reasoning. A Qwen2.5-7B-Instruct model trained with RL on ReSyn data achieves consistent gains across reasoning benchmarks and out-of-domain math benchmarks, including a 27\% relative improvement on the challenging BBEH benchmark. Ablations show that verifier-based supervision and increased task diversity both contribute significantly, providing empirical evidence that generating reasoning environments at scale can enhance reasoning abilities in RLMs
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] KV-Embedding: Training-free Text Embedding via Internal KV Re-routing in Decoder-only LLMs
+- **Autores:** Yixuan Tang, Yi Yang
+- **Fecha:** 2026-01-03
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.01046
+- **Link:** https://www.semanticscholar.org/paper/66011d332104ea9c0e6782609d129bd7d1d9a878
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** While LLMs are powerful embedding backbones, their application in training-free settings faces two structural challenges: causal attention restricts early tokens from accessing subsequent context, and the next-token prediction objective biases representations toward generation rather than semantic compression. To address these limitations, we propose KV-Embedding, a framework that activates the latent representation power of frozen LLMs. Our method leverages the observation that the key-value (KV) states of the final token at each layer encode a compressed view of the sequence. By re-routing these states as a prepended prefix, we enable all tokens to access sequence-level context within a single forward pass. To ensure model-agnostic applicability, we introduce an automated layer selection strategy based on intrinsic dimensionality. Evaluations on MTEB across Qwen, Mistral, and Llama backbones show that KV-Embedding outperforms existing training-free baselines by up to 10%, while maintaining robust performance on sequences up to 4,096 tokens. These results demonstrate that internal state manipulation offers an efficient alternative to input modification, and we hope this work encourages further exploration of LLM internals for representation learning.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [BAJA] Bending, entropy and proper affine actions of surface groups
+- **Autores:** Martin Bridgeman, Richard Canary, Andres Sambarino
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:math.GT
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20146v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** We show that for any closed surface $S$ there is an explict neighborhood $V$ of the fuchsian locus in quasifuchsian space $\mathsf{QF}(S)$ such that for every representation $ρ\in V$ which is not fuchsian, there is a proper affine action on $\mathfrak{sl}(2,\mathbb{C})$ with linear part $\mathsf{Ad}(ρ)$. We further show that there is a larger neighborhood $U$ of the Fuchsian locus so that every critical point of the entropy function in $U$ lies on the Fuchsian locus.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Spherically symmetric solutions to the Einstein-scalar field conformal constraint equations
+- **Autores:** Philippe Castillon, The-Cang Nguyen
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:gr-qc
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20099v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Recent works by the second author and Dilts et al. have shown that the Einstein-scalar field conformal constraint equations are highly complex and generally intractable, even in the vacuum case. In this article, to gain a clearer understanding and offer a new perspective, we study these equations under special assumptions: the manifold $(M,g)$ is harmonic and data is radial. In this setting, the system reduces to a single nonlinear equation and is completely resolved in the standard cases. In particular, on the sphere, our results reveal phenomena that contrast with the well-known achievements on compact manifolds without conformal Killing vector fields, including nonexistence of solutions in the near-CMC regime and instability when the mean curvature is non-constant. By contrast, on Euclidean or hyperbolic manifolds, the equations are always solvable, with all expected properties of solutions satisfied. These findings support the view that, although the conformal method appears to present some drawbacks on compact manifolds, it remains a promising tool for parametrizing solutions to the constraint equations on asymptotically flat and hyperbolic manifolds in arbitrary mean curvature regimes. In this article, we also investigate the sign of mass, showing that the ADM and asymptotically hyperbolic mass can take arbitrary sign when...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [x] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Spherical Hermite Maps
+- **Autores:** Mohamed Abouagour, Eleftherios Garyfallidis
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.GR
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20063v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Spherical functions appear throughout computer graphics, from spherical harmonic lighting and precomputed radiance transfer to neural radiance fields and procedural planet rendering. Efficient evaluation is critical for real-time applications, yet existing approaches face a quality-performance trade-off: bilinear LUT sampling is fast but produces faceting, while bicubic filtering requires 16 texture samples. Most implementations use finite differences for normals, requiring extra samples and introducing noise. This paper presents Spherical Hermite Maps, a derivative-augmented LUT representation that resolves this trade-off. By storing function values alongside scaled partial derivatives at each texel of a padded cubemap, bicubic-Hermite reconstruction is enabled from only four texture samples (a 2x2 footprint) while providing continuous gradients from the same samples. The key insight is that Hermite interpolation reconstructs smooth derivatives as a byproduct of value reconstruction, making surface normals effectively free. In controlled experiments, Spherical Hermite Maps improve PSNR by 8-41 dB over bilinear interpolation and match 16-tap bicubic quality at one-quarter the cost. Analytic normals reduce mean angular error by 9-13% on complex surfaces while yielding stable specular highlights. Three applications demonstrate versatility: spherical harmonic glyph visualization, radial depth-map impostors for mesh level-of-detail, and procedural planet/asteroid rendering with spherical heightfields.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [x] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] MeanFuser: Fast One-Step Multi-Modal Trajectory Generation and Adaptive Reconstruction via MeanFlow for End-to-End Autonomous Driving
+- **Autores:** Junli Wang, Xueyi Liu, Yinan Zheng, Zebing Xing, Pengfei Li, Guang Li, Kun Ma, Guang Chen, Hangjun Ye, Zhongpu Xia, Long Chen, Qichao Zhang
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.CV
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20060v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Generative models have shown great potential in trajectory planning. Recent studies demonstrate that anchor-guided generative models are effective in modeling the uncertainty of driving behaviors and improving overall performance. However, these methods rely on discrete anchor vocabularies that must sufficiently cover the trajectory distribution during testing to ensure robustness, inducing an inherent trade-off between vocabulary size and model performance. To overcome this limitation, we propose MeanFuser, an end-to-end autonomous driving method that enhances both efficiency and robustness through three key designs. (1) We introduce Gaussian Mixture Noise (GMN) to guide generative sampling, enabling a continuous representation of the trajectory space and eliminating the dependency on discrete anchor vocabularies. (2) We adapt ``MeanFlow Identity" to end-to-end planning, which models the mean velocity field between GMN and trajectory distribution instead of the instantaneous velocity field used in vanilla flow matching methods, effectively eliminating numerical errors from ODE solvers and significantly accelerating inference. (3) We design a lightweight Adaptive Reconstruction Module (ARM) that enables the model to implicitly select from all sampled proposals or reconstruct a new trajectory when none is satisfactory via attention weights. Experiments on the NAVSIM closed-loop benchmark demonstrate that MeanFuser achieves outstanding performance without the supervision of the PDM...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [x] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] A Systematic Analysis of Chunking Strategies for Reliable Question Answering
+- **Autores:** Sofia Bennani, Charles Moslonka
+- **Fecha:** 2026-01-20
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.14123
+- **Link:** https://www.semanticscholar.org/paper/925aff19e3d5f8c5096fdb3aba3eb66b11c1a490
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** We study how document chunking choices impact the reliability of Retrieval-Augmented Generation (RAG) systems in industry. While practice often relies on heuristics, our end-to-end evaluation on Natural Questions systematically varies chunking method (token, sentence, semantic, code), chunk size, overlap, and context length. We use a standard industrial setup: SPLADE retrieval and a Mistral-8B generator. We derive actionable lessons for cost-efficient deployment: (i) overlap provides no measurable benefit and increases indexing cost; (ii) sentence chunking is the most cost-effective method, matching semantic chunking up to ~5k tokens; (iii) a"context cliff"reduces quality beyond ~2.5k tokens; and (iv) optimal context depends on the goal (semantic quality peaks at small contexts; exact match at larger ones).
+- **Keywords match:** ['retrieval augmented generation evaluation']
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [x] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [BAJA] Rank4Gen: RAG-Preference-Aligned Document Set Selection and Ranking
+- **Autores:** Yongqi Fan, Yuxiang Chu, Zhentao Xia, Xiaoyang Chen, Jie Liu, Haijin Liang, Jin Ma, Ben He, Yingfei Sun, Dezhi Ye, Tong Ruan
+- **Fecha:** 2026-01-16
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.11273
+- **Link:** https://www.semanticscholar.org/paper/51b63a4f82284d923b1266680511149a2a080f45
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** In the RAG paradigm, the information retrieval module provides context for generators by retrieving and ranking multiple documents to support the aggregation of evidence. However, existing ranking models are primarily optimized for query--document relevance, which often misaligns with generators'preferences for evidence selection and citation, limiting their impact on response quality. Moreover, most approaches do not account for preference differences across generators, resulting in unstable cross-generator performance. We propose \textbf{Rank4Gen}, a generator-aware ranker for RAG that targets the goal of \emph{Ranking for Generators}. Rank4Gen introduces two key preference modeling strategies: (1) \textbf{From Ranking Relevance to Response Quality}, which optimizes ranking with respect to downstream response quality rather than query--document relevance; and (2) \textbf{Generator-Specific Preference Modeling}, which conditions a single ranker on different generators to capture their distinct ranking preferences. To enable such modeling, we construct \textbf{PRISM}, a dataset built from multiple open-source corpora and diverse downstream generators. Experiments on five challenging and recent RAG benchmarks demonstrate that RRank4Gen achieves strong and competitive performance for complex evidence composition in RAG.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [BAJA] A Navigational Approach for Comprehensive RAG via Traversal over Proposition Graphs
+- **Autores:** Maxime Delmas, Lei Xu, André Freitas
+- **Fecha:** 2026-01-08
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.04859
+- **Link:** https://www.semanticscholar.org/paper/1b191254ae0db511c79f5ef10af6fab89c359472
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Standard RAG pipelines based on chunking excel at simple factual retrieval but fail on complex multi-hop queries due to a lack of structural connectivity. Conversely, initial strategies that interleave retrieval with reasoning often lack global corpus awareness, while Knowledge Graph (KG)-based RAG performs strongly on complex multi-hop tasks but suffers on fact-oriented single-hop queries. To bridge this gap, we propose a novel RAG framework: ToPG (Traversal over Proposition Graphs). ToPG models its knowledge base as a heterogeneous graph of propositions, entities, and passages, effectively combining the granular fact density of propositions with graph connectivity. We leverage this structure using iterative Suggestion-Selection cycles, where the Suggestion phase enables a query-aware traversal of the graph, and the Selection phase provides LLM feedback to prune irrelevant propositions and seed the next iteration. Evaluated on three distinct QA tasks (Simple, Complex, and Abstract QA), ToPG demonstrates strong performance across both accuracy- and quality-based metrics. Overall, ToPG shows that query-aware graph traversal combined with factual granularity is a critical component for efficient structured RAG systems. ToPG is available at https://github.com/idiap/ToPG.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [BAJA] SemanticNVS: Improving Semantic Scene Understanding in Generative Novel View Synthesis
+- **Autores:** Xinya Chen, Christopher Wewer, Jiahao Xie, Xinting Hu, Jan Eric Lenssen
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.CV
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20079v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** We present SemanticNVS, a camera-conditioned multi-view diffusion model for novel view synthesis (NVS), which improves generation quality and consistency by integrating pre-trained semantic feature extractors. Existing NVS methods perform well for views near the input view, however, they tend to generate semantically implausible and distorted images under long-range camera motion, revealing severe degradation. We speculate that this degradation is due to current models failing to fully understand their conditioning or intermediate generated scene content. Here, we propose to integrate pre-trained semantic feature extractors to incorporate stronger scene semantics as conditioning to achieve high-quality generation even at distant viewpoints. We investigate two different strategies, (1) warped semantic features and (2) an alternating scheme of understanding and generation at each denoising step. Experimental results on multiple datasets demonstrate the clear qualitative and quantitative (4.69%-15.26% in FID) improvement over state-of-the-art alternatives.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Decoupling Defense Strategies for Robust Image Watermarking
+- **Autores:** Jiahui Chen, Zehang Deng, Zeyu Zhang, Chaoyang Li, Lianchen Jia, Lifeng Sun
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.CV
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20053v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Deep learning-based image watermarking, while robust against conventional distortions, remains vulnerable to advanced adversarial and regeneration attacks. Conventional countermeasures, which jointly optimize the encoder and decoder via a noise layer, face 2 inevitable challenges: (1) decrease of clean accuracy due to decoder adversarial training and (2) limited robustness due to simultaneous training of all three advanced attacks. To overcome these issues, we propose AdvMark, a novel two-stage fine-tuning framework that decouples the defense strategies. In stage 1, we address adversarial vulnerability via a tailored adversarial training paradigm that primarily fine-tunes the encoder while only conditionally updating the decoder. This approach learns to move the image into a non-attackable region, rather than modifying the decision boundary, thus preserving clean accuracy. In stage 2, we tackle distortion and regeneration attacks via direct image optimization. To preserve the adversarial robustness gained in stage 1, we formulate a principled, constrained image loss with theoretical guarantees, which balances the deviation from cover and previous encoded images. We also propose a quality-aware early-stop to further guarantee the lower bound of visual quality. Extensive experiments demonstrate AdvMark outperforms with the highest image quality and comprehensive robustness, i.e. up to 29\%, 33\% and 46\% accuracy improvement for distortion,...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Contextual Safety Reasoning and Grounding for Open-World Robots
+- **Autores:** Zachary Ravichadran, David Snyder, Alexander Robey, Hamed Hassani, Vijay Kumar, George J. Pappas
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.RO
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19983v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Robots are increasingly operating in open-world environments where safe behavior depends on context: the same hallway may require different navigation strategies when crowded versus empty, or during an emergency versus normal operations. Traditional safety approaches enforce fixed constraints in user-specified contexts, limiting their ability to handle the open-ended contextual variability of real-world deployment. We address this gap via CORE, a safety framework that enables online contextual reasoning, grounding, and enforcement without prior knowledge of the environment (e.g., maps or safety specifications). CORE uses a vision-language model (VLM) to continuously reason about context-dependent safety rules directly from visual observations, grounds these rules in the physical environment, and enforces the resulting spatially-defined safe sets via control barrier functions. We provide probabilistic safety guarantees for CORE that account for perceptual uncertainty, and we demonstrate through simulation and real-world experiments that CORE enforces contextually appropriate behavior in unseen environments, significantly outperforming prior semantic safety methods that lack online contextual reasoning. Ablation studies validate our theoretical guarantees and underscore the importance of both VLM-based reasoning and spatial grounding for enforcing contextual safety in novel settings. We provide additional resources at https://zacravichandran.github.io/CORE.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] RL-RIG: A Generative Spatial Reasoner via Intrinsic Reflection
+- **Autores:** Tianyu Wang, Zhiyuan Ma, Qian Wang, Xinyi Zhang, Xinwei Long, Bowen Zhou
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.CV
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19974v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Recent advancements in image generation have achieved impressive results in producing high-quality images. However, existing image generation models still generally struggle with a spatial reasoning dilemma, lacking the ability to accurately capture fine-grained spatial relationships from the prompt and correctly generate scenes with structural integrity. To mitigate this dilemma, we propose RL-RIG, a Reinforcement Learning framework for Reflection-based Image Generation. Our architecture comprises four primary components: Diffuser, Checker, Actor, and Inverse Diffuser, following a Generate-Reflect-Edit paradigm to spark the Chain of Thought reasoning ability in image generation for addressing the dilemma. To equip the model with better intuition over generation trajectories, we further develop Reflection-GRPO to train the VLM Actor for edit prompts and the Image Editor for better image quality under a given prompt, respectively. Unlike traditional approaches that solely produce visually stunning yet structurally unreasonable content, our evaluation metrics prioritize spatial accuracy, utilizing Scene Graph IoU and employing a VLM-as-a-Judge strategy to assess the spatial consistency of generated images on LAION-SG dataset. Experimental results show that RL-RIG outperforms existing state-of-the-art open-source models by up to 11% in terms of controllable and precise spatial reasoning in image generation.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [x] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Unlearning Noise in PINNs: A Selective Pruning Framework for PDE Inverse Problems
+- **Autores:** Yongsheng Chen, Yong Chen, Wei Guo, Xinghui Zhong
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.LG
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19967v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Physics-informed neural networks (PINNs) provide a promising framework for solving inverse problems governed by partial differential equations (PDEs) by integrating observational data and physical constraints in a unified optimization objective. However, the ill-posed nature of PDE inverse problems makes them highly sensitive to noise. Even a small fraction of corrupted observations can distort internal neural representations, severely impairing accuracy and destabilizing training. Motivated by recent advances in machine unlearning and structured network pruning, we propose P-PINN, a selective pruning framework designed to unlearn the influence of corrupted data in a pretrained PINN. Specifically, starting from a PINN trained on the full dataset, P-PINN evaluates a joint residual--data fidelity indicator, a weighted combination of data misfit and PDE residuals, to partition the training set into reliable and corrupted subsets. Next, we introduce a bias-based neuron importance measure that quantifies directional activation discrepancies between the two subsets, identifying neurons whose representations are predominantly driven by corrupted samples. Building on this, an iterative pruning strategy then removes noise-sensitive neurons layer by layer. The resulting pruned network is fine-tuned on the reliable data subject to the original PDE constraints, acting as a lightweight post-processing stage rather than a complete retraining. Numerical experiments on extensive...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [x] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] BabyLM Turns 4: Call for Papers for the 2026 BabyLM Workshop
+- **Autores:** Leshem Choshen, Ryan Cotterell, Mustafa Omer Gul, Jaap Jumelet, Tal Linzen, Aaron Mueller, Suchir Salhan, Raj Sanjay Shah, Alex Warstadt, Ethan Gotlieb Wilcox
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.CL
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20092v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** BabyLM aims to dissolve the boundaries between cognitive modeling and language modeling. We call for both workshop papers and for researchers to join the 4th BabyLM competition. As in previous years, we call for participants in the data-efficient pretraining challenge in the general track. This year, we also offer a new track: Multilingual.   We also call for papers outside the competition in any relevant areas. These include training efficiency, cognitively plausible research, weak model evaluation, and more.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [x] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Cosmic strings and domain walls: the impact of CMB $B$-mode data
+- **Autores:** Luca Caloni, Ricardo Z. Ferreira, Lara Sousa, Clara Winckler
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:astro-ph.CO
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20050v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** We analyse CMB constraints on stable networks of cosmic strings and domain walls using for the first time full Planck 2018 data together with BICEP/Keck 2018 $B$-mode measurements. The defect-induced anisotropies are computed using the Unconnected Segment Model for Nambu-Goto and Abelian-Higgs strings, as well as for stable domain walls, and included in a full Markov Chain Monte Carlo analysis jointly varying all $Λ$CDM parameters, the tensor-to-scalar ratio, and the string/domain wall tension. No statistically significant evidence for defects is found, although we observe a mild preference for non-zero cosmic string tension. Our results improve previous constraints on the defect power spectrum by up to a factor of two. In the particular case of strings, the improvement is driven by the $B$-mode data, and is especially pronounced for Abelian-Higgs strings. We also present forecasts for upcoming Simons Observatory data and find that, with the baseline noise configuration, the constraints on the string tension could improve by about a factor of three. Finally, we assess the impact of Nambu-Goto string loops on CMB anisotropies in light of both current and future observations.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [x] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] noDice: Inference for Discrete Probabilistic Programs with Nondeterminism and Conditioning
+- **Autores:** Tobias Gürtler, Benjamin Lucien Kaminski
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.LO
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20049v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Probabilistic programming languages (PPLs) are an expressive and intuitive means of representing complex probability distributions. In that realm, languages like Dice target an important class of probabilistic programs: those whose probability distributions are discrete. Discrete distributions are common in many fields, including text analysis, network verification, artificial intelligence, and graph analysis. Another important feature in the world of probabilistic modeling are nondeterministic choices as found in Markov Decision Processes (MDPs) which play a major role in reinforcement learning. Modern PPLs usually lack support for nondeterminism. We address this gap with the introduction of noDice, which extends the discrete probabilistic inference engine Dice. noDice performs inference on loop-free programs by constructing an MDP so that the distributions modeled by the program correspond to schedulers in the MDP. Furthermore, decision diagrams are used as an intermediate step to exploit the program structure and drastically reduce the state space of the MDP.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] HelioSpectrotron 5000: An Interactive Multi-Resolution Solar Spectral Atlas
+- **Autores:** A. G. M. Pietrow
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:astro-ph.SR
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20101v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** HelioSpectrotron~5000 (HS5000) is an interactive, multi-resolution solar spectral atlas designed to facilitate direct comparison between high-resolution reference spectra and observations obtained with a wide range of ground-based instruments. Based on the Hamburg FTS atlas, the HS5000 provides both absolute intensity and continuum-normalized spectra at arbitrary spectral ranges and resolutions, as well as curated line identifications and optional telluric contamination. This framework enables rapid wavelength calibration, line identification, and context image generation.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Machine-Generated, Machine-Checked Proofs for a Verified Compiler (Experience Report)
+- **Autores:** Zoe Paraskevopoulou
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.PL
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20082v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** We report on using an agentic coding assistant (Claude Code, powered by Claude Opus 4.6) to mechanize a substantial Rocq correctness proof from scratch, with human guidance but without human proof writing. The proof establishes semantic preservation for the administrative normal form (ANF) transformation in the CertiCoq verified compiler for Rocq. The closely related continuation-passing style (CPS) transformation in CertiCoq was previously proved correct by human experts over several months. We use this proof as a template and instruct the LLM to adapt the proof technique to the ANF setting, which differs in important technical ways. The resulting ANF proof comprises approximately 7,800 lines of Rocq (larger than the 5,300-line CPS proof) and was developed in approximately 96 hours. We describe the proof technique and report on the experience of developing it with an LLM, discussing both the strengths and limitations of the approach and its implications for verified compiler construction.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] QUIETT: Query-Independent Table Transformation for Robust Reasoning
+- **Autores:** Gaurav Najpande, Tampu Ravi Kumar, Manan Roy Choudhury, Neha Valeti, Yanjie Fu, Vivek Gupta
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.CL
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20017v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Real-world tables often exhibit irregular schemas, heterogeneous value formats, and implicit relational structure, which degrade the reliability of downstream table reasoning and question answering. Most existing approaches address these issues in a query-dependent manner, entangling table cleanup with reasoning and thus limiting generalization. We introduce QuIeTT, a query-independent table transformation framework that preprocesses raw tables into a single SQL-ready canonical representation before any test-time queries are observed. QuIeTT performs lossless schema and value normalization, exposes implicit relations, and preserves full provenance via raw table snapshots. By decoupling table transformation from reasoning, QuIeTT enables cleaner, more reliable, and highly efficient querying without modifying downstream models. Experiments on four benchmarks, WikiTQ, HiTab, NQ-Table, and SequentialQA show consistent gains across models and reasoning paradigms, with particularly strong improvements on a challenge set of structurally diverse, unseen questions.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [x] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Order Dependence in the Moving-Range Sigma Estimator: A Total-Variance Decomposition
+- **Autores:** Andrew T. Karl
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:math.ST
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20007v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** In Individuals and Moving Range (I-MR) charts, the process standard deviation is often estimated by the span-2 average moving range, scaled by the usual constant $d_2$. Unlike the sample standard deviation, this estimator depends on the observation order: permuting the values can change the average moving range. We make this dependence explicit by modeling the order as an independent uniformly random permutation. A direct application of the law of total variance then decomposes its variance into a component due to ordering and a component due to the realized values. Averaging over all permutations yields a simple order-invariant baseline for the moving-range estimator: the sample Gini mean difference divided by $d_2$. Simulations quantify the resulting fraction of variance attributable to ordering under i.i.d. Normal sampling, and two NIST examples illustrate a typical ordering and an ordering with strong serial structure relative to random permutations of the same values.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Multivariate time-series forecasting of ASTRI-Horn monitoring data: A Normal Behavior Model
+- **Autores:** Federico Incardona, Alessandro Costa, Farida Farsian, Francesco Franchina, Giuseppe Leto, Emilio Mastriani, Kevin Munari, Giovanni Pareschi, Salvatore Scuderi, Sebastiano Spinello, Gino Tosti
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:astro-ph.IM
+- **DOI:** https://doi.org/10.1016/j.ascom.2026.101071
+- **Link:** https://arxiv.org/abs/2602.19984v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** This study presents a Normal Behavior Model (NBM) developed to forecast monitoring time-series data from the ASTRI-Horn Cherenkov telescope under normal operating conditions. The analysis focused on 15 physical variables acquired by the Telescope Control Unit between September 2022 and July 2024, representing sensor measurements from the Azimuth and Elevation motors. After data cleaning, resampling, feature selection, and correlation analysis, the dataset was segmented into fixed-length intervals, in which the first I samples represented the input sequence provided to the model, while the forecast length, T, indicated the number of future time steps to be predicted. A sliding-window technique was then applied to increase the number of intervals. A Multi-Layer Perceptron (MLP) was trained to perform multivariate forecasting across all features simultaneously. Model performance was evaluated using the Mean Squared Error (MSE) and the Normalized Median Absolute Deviation (NMAD), and it was also benchmarked against a Long Short-Term Memory (LSTM) network. The MLP model demonstrated consistent results across different features and I-T configurations, and matched the performance of the LSTM while converging faster. It achieved an MSE of 0.019+/-0.003 and an NMAD of 0.032+/-0.009 on the test set under its best configuration (4 hidden layers, 720 units per layer, and...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [x] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] A Bayesian Framework for Post-disruption Travel Time Prediction in Metro Networks
+- **Autores:** Shayan Nazemi, Aurélie Labbe, Stefan Steiner, Pratheepa Jeganathan, Martin Trépanier, Léo R. Belzile
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:stat.AP
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19952v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Disruptions are an inherent feature of transportation systems, occurring unpredictably and with varying durations. Even after an incident is reported as resolved, disruptions can induce irregular train operations that generate substantial uncertainty in passenger waiting and travel times. Accurately forecasting post-disruption travel times therefore remains a critical challenge for transit operators and passenger information systems. This paper develops a Bayesian spatiotemporal modeling framework for post-disruption train travel times that explicitly captures train interactions, headway imbalance, and non-Gaussian distributional characteristics observed during recovery periods. The proposed model decomposes travel times into delay and journey components and incorporates a moving-average error structure to represent dependence between consecutive trains. Skew-normal and skew-$t$ distributions are employed to flexibly accommodate heteroskedasticity, skewness, and heavy-tailed behavior in post-disruption travel times. The framework is evaluated using high-resolution track-occupancy and disruption log data from the Montréal metro system, covering two lines in both travel directions. Empirical results indicate that post-disruption travel times exhibit pronounced distributional asymmetries that vary with traveled distance, as well as significant error dependence across trains. The proposed models consistently outperform baseline specifications in both point prediction accuracy and uncertainty quantification, with the skew-$t$ model demonstrating the most robust performance for longer journeys. These findings...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Long-Run Sovereign Debt Composition: An Analytic Ergodic Framework with Explicit Maturity Structure
+- **Autores:** Christopher Cameron
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:q-fin.MF
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19892v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** This paper describes a discrete-time model of regularly-issued sovereign debt dynamics under a deficit-driven nominal debt growth regime that explicitly accounts for granular maturity. New issuance follows fixed allocations across a finite maturity ladder, and the government budget constraint determines total borrowing endogenously. In the deterministic baseline, we identify a sustainability condition for convergence to a steady-state and derive closed-form steady portfolio shares, as well as key metrics for steady cost and risk (proxied as one-period rollover ratio). Extending the model to a stochastic recurrence equation (SRE) driven by interest rates and (normalized) deficits that are stationary and mean-reverting, and using a future-cashflow state representation of debt, we identify an analogous condition for ergodic convergence to a unique invariant distribution. This implies that metrics calculated by Monte Carlo debt simulations driven by factors with these properties will recover the ergodic means of the underlying system, independently of initial conditions, provided the simulation horizon is sufficiently long. Analytical formulae for expectations of certain key metrics under this invariant distribution are derived, and agreement with simulation is observed. We find that the introduction of stochastic interest-rate/deficit correlation into the framework leads to intuitive correction terms to their deterministic-baseline counterparts.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [x] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Optimality of the Half-Order Exponent in the Turing-Good Identities for Bayes Factors
+- **Autores:** Kensuke Okada
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:stat.ME
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19838v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Bayes factors are widely computed by Monte Carlo, yet heavy-tailed sampling distributions can make numerical validation unreliable. The Turing--Good identities provide exact moment equalities for powers of a Bayes factor (a density ratio). When these identities are used as Good-check diagnostics, the power choice becomes a statistical design parameter. We develop a nonasymptotic variance theory for Monte Carlo evaluation of the identities and show that the half-order (square-root) power is uniquely minimax-stable: it equalizes variability across the two model orientations and is the only choice that guarantees finite second moments in a distribution-free worst-case sense over all mutually absolutely continuous model pairs. This yields a balanced two-sample half-order diagnostic that is symmetric in model labeling and has a uniform variance bound at fixed computational budget; in small-overlap regimes it is guaranteed to be no less efficient than the standard one-sided Turing check. Simulations for binomial Bayes factor workflows illustrate stable finite-sample behavior and sensitivity to simulator--evaluator mismatches. We further connect the half-order overlap viewpoint to stable primitives for normalizing-constant ratios and importance-sampling degeneracy summaries.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [x] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Conventional Accelerator Magnets
+- **Autores:** Stephane Sanfilippo
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:physics.acc-ph
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19808v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** This course introduces conventional magnets used in particle accelerators, focusing on both normal-conducting copper coil magnets and permanent magnets (PMs). It covers magnet classification, design principles, material selection, and mechanical constraints. Advantages and limitations of PMs compared to copper coil magnets are discussed. Key construction steps and cooling methods are presented. The course also includes magnetic field measurement techniques and quality control. Practical examples from PSI and CERN illustrate the concepts.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Transcendental momentum quantization in semiconducting Rashba nanowires and zero energy states in their normal and superconducting phase
+- **Autores:** Nico Leumer, Harald Schmid, Milena Grifoni, Magdalena Marganska
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cond-mat.mes-hall
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19796v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** We study finite system properties of the canonical low energy model for a semiconducting nanowire with Rashba spin-orbit coupling. The case of an isolated wire as well as of one proximitized by an s-wave superconductor are considered. Already for the normal wire, the presence of spin-orbit coupling leads to eigenstates of the finite system composed of more than two momentum eigenstates. The quantization condition for the wavevectors is not that of a quantum box, but given instead by a transcendental equation linking the involved wavevectors. For the wire with superconducting pairing, the presence of electron and hole channels complicates the composition of the eigenstates. In this case we derive an approximate quantization condition close to the phase boundary, and a condition for the appearance of exact zero energy states. It can be satisfied both in the topological and in the trivial phase. Both the trivial and topological zero energy states contribute to the linear transport through Andreev reflection and direct transmission processes, with their relative importance depending on the degree of the states' localization at the boundary.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Towards Dexterous Embodied Manipulation via Deep Multi-Sensory Fusion and Sparse Expert Scaling
+- **Autores:** Yirui Sun, Guangyu Zhuge, Keliang Liu, Jie Gu, Zhihao xia, Qionglin Ren, Chunxu tian, Zhongxue Ga
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.RO
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19764v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Realizing dexterous embodied manipulation necessitates the deep integration of heterogeneous multimodal sensory inputs. However, current vision-centric paradigms often overlook the critical force and geometric feedback essential for complex tasks. This paper presents DeMUSE, a Deep Multimodal Unified Sparse Experts framework leveraging a Diffusion Transformer to integrate RGB, depth, and 6-axis force into a unified serialized stream. Adaptive Modality-specific Normalization (AdaMN) is employed to recalibrate modality-aware features, mitigating representation imbalance and harmonizing the heterogeneous distributions of multi-sensory signals. To facilitate efficient scaling, the architecture utilizes a Sparse Mixture-of-Experts (MoE) with shared experts, increasing model capacity for physical priors while maintaining the low inference latency required for real-time control. A Joint denoising objective synchronously synthesizes environmental evolution and action sequences to ensure physical consistency. Achieving success rates of 83.2% and 72.5% in simulation and real-world trials, DeMUSE demonstrates state-of-the-art performance, validating the necessity of deep multi-sensory integration for complex physical interactions.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Deep Else: A Critical Framework for AI Art
+- **Autores:** Dejan Grba
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.CY
+- **DOI:** https://doi.org/10.3390/digital2010001
+- **Link:** https://arxiv.org/abs/2602.19754v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** From a small community of pioneering artists who experimented with artificial intelligence (AI) in the 1970s, AI art has expanded, gained visibility, and attained socio-cultural relevance since the second half of the 2010s. Its topics, methodologies, presentational formats, and implications are closely related to a range of disciplines engaged in the research and application of AI. In this paper, I present a comprehensive framework for the critical exploration of AI art. It comprises the context of AI art, its prominent poetic features, major issues, and possible directions. I address the poetic, expressive, and ethical layers of AI art practices within the context of contemporary art, AI research, and related disciplines. I focus on the works that exemplify poetic complexity and manifest the epistemic or political ambiguities indicative of a broader milieu of contemporary culture, AI science, technology, economy, and society. By comparing, acknowledging, and contextualizing both their accomplishments and shortcomings, I outline the prospective strategies to advance the field. The aim of this framework is to expand the existing critical discourse of AI art with new perspectives which can be used to examine the creative attributes of emerging practices and to assess their cultural significance and socio-political impact. It contributes...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [x] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] A Lagrangian approach for prescribed mass solutions of cubic-quintic Schrödinger equations and $L^2$-supercritical problems
+- **Autores:** Silvia Cingolani, Marco Gallo, Kazunaga Tanaka
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:math.AP
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19751v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** We study the existence of radially symmetric solutions of the following nonlinear scalar field equations in $\mathbb R^N$ ($N \geq 2$):   $$ (*)_m \quad - Δu + μu = g(u) \quad \text{in}\ {\mathbb R}^N, \quad {1\over 2} \int_{{\mathbb R}^N} u^2\, dx = m,$$   where $g(s) \in C({\mathbb R},{\mathbb R})$, $m > 0$ and $μ\in {\mathbb R}$ is an unknown Lagrangian multiplier. We take an approach using a Lagrangian formulation of $(*)_m$:   $$J_m(μ,u)={1\over 2}\int_{{\mathbb R}^N} |\nabla u|^2\,dx -\int_{{\mathbb R}^N} G(u)\,dx +μ\left({1\over 2}\int_{{\mathbb R}^N} u^2\, dx-m\right) \in C^1((0,\infty)\times H_r^1({\mathbb R}^N), {\mathbb R})$$   and we give new general existence results through the function:   $$ b_m:\, (0,\infty) \to {\mathbb R};\ μ\mapsto \text{Mountain Pass minimax value for}\ (u\mapsto J_m(μ,u)).$$   We will show the existence of solutions of $(*)_m$ related to local minima and local maxima of $b_m(μ)$. As applications, we study cubic-quintic type equations and $L^2$-supercritical problems. In particular, when $N=2,3$, we show new existence results of normalized solutions without assuming global Ambrosetti-Rabinowitz type conditions, which partially improve the preceding results due to Jeanjean [24] and Jeanjean-Lu [26, 28].
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [x] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] PosIR: Position-Aware Heterogeneous Information Retrieval Benchmark
+- **Autores:** Ziyang Zeng, Dun Zhang, Yu Yan, Xu Sun, Yudong Zhou, Yuqing Yang
+- **Fecha:** 2026-01-13
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.08363
+- **Link:** https://www.semanticscholar.org/paper/9dca9678d91c832178c34c6bc1c76ebcc05f7870
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** While dense retrieval models have achieved remarkable success, rigorous evaluation of their sensitivity to the position of relevant information (i.e., position bias) remains largely unexplored. Existing benchmarks typically employ position-agnostic relevance labels, conflating the challenge of processing long contexts with the bias against specific evidence locations. To address this challenge, we introduce PosIR (Position-Aware Information Retrieval), a comprehensive benchmark designed to diagnose position bias in diverse retrieval scenarios. PosIR comprises 310 datasets spanning 10 languages and 31 domains, constructed through a rigorous pipeline that ties relevance to precise reference spans, enabling the strict disentanglement of document length from information position. Extensive experiments with 10 state-of-the-art embedding models reveal that: (1) Performance on PosIR in long-context settings correlates poorly with the MMTEB benchmark, exposing limitations in current short-text benchmarks; (2) Position bias is pervasive and intensifies with document length, with most models exhibiting primacy bias while certain models show unexpected recency bias; (3) Gradient-based saliency analysis further uncovers the distinct internal attention mechanisms driving these positional preferences. In summary, PosIR serves as a valuable diagnostic framework to foster the development of position-robust retrieval systems.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [x] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [BAJA] Octopus: A Lightweight Entity-Aware System for Multi-Table Data Discovery and Cell-Level Retrieval
+- **Autores:** Wen-Zhi Li, Sainyam Galhotra
+- **Fecha:** 2026-01-05
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.02304
+- **Link:** https://www.semanticscholar.org/paper/fc6a407255f04905011dd05bd4f53298f5b55a38
+- **Citaciones:** 1
+- **Score de relevancia:** 33/100
+- **Abstract:** Tabular data constitute a dominant form of information in modern data lakes and repositories, yet discovering the relevant tables to answer user questions remains challenging. Existing data discovery systems assume that each question can be answered by a single table and often rely on resource-intensive offline preprocessing, such as model training or large-scale content indexing. In practice, however, many questions require information spread across multiple tables -- either independently or through joins -- and users often seek specific cell values rather than entire tables. In this paper, we present Octopus, a lightweight, entity-aware, and training-free system for multi-table data discovery and cell-level value retrieval. Instead of embedding entire questions, Octopus identifies fine-grained entities (column mentions and value mentions) from natural-language queries using an LLM parser. It then matches these entities to table headers through a compact embedding index and scans table contents directly for value occurrences, eliminating the need for heavy content indexing or costly offline stages. The resulting fine-grained alignment not only improves table retrieval accuracy but also facilitates efficient downstream NL2SQL execution by reducing token usage and redundant LLM calls. To evaluate Octopus, we introduce a new benchmark covering both table- and cell-level discovery under multi-table settings, including...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [x] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [BAJA] Inverse Quantum Potential Reconstruction via Generalized Bertlmann-Martin Inequalities
+- **Autores:** M. Gage Plott, F. Ayca Cetinkaya, Rick Mukherjee
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:math.SP
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20112v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Reconstructing a 1D quantum potential V(r) from a few bound-state energies is a long-standing inverse problem. We present a Laplace-moment reconstruction pipeline that ties the Bertlmann-Martin gap bound to generalized Bertlmann-Martin (GBM) even-moment ladders, continues the Laplace image with Pade approximants, and inverts the transform to recover rho(r) and V(r). Odd moments are supplied by a physically consistent interpolation scheme. The paper emphasizes mode ladders that isolate each approximation layer and a reproducibility spine that records benchmark settings and diagnostics. All numerical results are tied to archived configurations, and conclusions are reported empirically under the stated benchmark settings.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [x] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] NewsRECON: News article REtrieval for image CONtextualization
+- **Autores:** Jonathan Tonglet, Iryna Gurevych, T. Tuytelaars, M. Moens
+- **Fecha:** 2026-01-20
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.14121
+- **Link:** https://www.semanticscholar.org/paper/5bb614abc1a5b7008a1582bbd5d51089bb9616dc
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Identifying when and where a news image was taken is crucial for journalists and forensic experts to produce credible stories and debunk misinformation. While many existing methods rely on reverse image search (RIS) engines, these tools often fail to return results, thereby limiting their practical applicability. In this work, we address the challenging scenario where RIS evidence is unavailable. We introduce NewsRECON, a method that links images to relevant news articles to infer their date and location from article metadata. NewsRECON leverages a corpus of over 90,000 articles and integrates: (1) a bi-encoder for retrieving event-relevant articles; (2) two cross-encoders for reranking articles by location and event consistency. Experiments on the TARA and 5Pils-OOC show that NewsRECON outperforms prior work and can be combined with a multimodal large language model to achieve new SOTA results in the absence of RIS evidence. We make our code available.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [BAJA] Language-Agnostic Visual Embeddings for Cross-Script Handwriting Retrieval
+- **Autores:** Fangke Chen, Tianhao Dong, Sirry Chen, Guobin Zhang, Yishu Zhang, Yining Chen
+- **Fecha:** 2026-01-16
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.11248
+- **Link:** https://www.semanticscholar.org/paper/9c2fecc92a2c55bc5e98236e10b2dedd4f7c607b
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Handwritten word retrieval is vital for digital archives but remains challenging due to large handwriting variability and cross-lingual semantic gaps. While large vision-language models offer potential solutions, their prohibitive computational costs hinder practical edge deployment. To address this, we propose a lightweight asymmetric dual-encoder framework that learns unified, style-invariant visual embeddings. By jointly optimizing instance-level alignment and class-level semantic consistency, our approach anchors visual embeddings to language-agnostic semantic prototypes, enforcing invariance across scripts and writing styles. Experiments show that our method outperforms 28 baselines and achieves state-of-the-art accuracy on within-language retrieval benchmarks. We further conduct explicit cross-lingual retrieval, where the query language differs from the target language, to validate the effectiveness of the learned cross-lingual representations. Achieving strong performance with only a fraction of the parameters required by existing models, our framework enables accurate and resource-efficient cross-script handwriting retrieval.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [x] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [BAJA] The Climate Change Knowledge Graph: Supporting Climate Services
+- **Autores:** Miguel Ceriani, Fiorela Ciroku, Alessandro Russo, Massimiliano Schembri, Fai Fung, Neha Mittal, Vito Trianni, Andrea Giovanni Nuzzolese
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.DB
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19786v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Climate change impacts a broad spectrum of human resources and activities, necessitating the use of climate models to project long-term effects and inform mitigation and adaptation strategies. These models generate multiple datasets by running simulations across various scenarios and configurations, thereby covering a range of potential future outcomes. Currently, researchers rely on traditional search interfaces and APIs to retrieve such datasets, often piecing together information from metadata and community vocabularies. The Climate Change Knowledge Graph is designed to address these challenges by integrating diverse data sources related to climate simulations into a coherent and interoperable knowledge graph. This innovative resource allows for executing complex queries involving climate models, simulations, variables, spatio-temporal domains, and granularities. Developed with input from domain experts, the knowledge graph and its underlying ontology are published with open access license and provide a comprehensive framework that enhances the exploration of climate data, facilitating more informed decision-making in addressing climate change issues.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [x] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Enhancing Automatic Chord Recognition via Pseudo-Labeling and Knowledge Distillation
+- **Autores:** Nghia Phan, Rong Jin, Gang Liu, Xiao Dong
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.SD
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19778v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Automatic Chord Recognition (ACR) is constrained by the scarcity of aligned chord labels, as well-aligned annotations are costly to acquire. At the same time, open-weight pre-trained models are currently more accessible than their proprietary training data. In this work, we present a two-stage training pipeline that leverages pre-trained models together with unlabeled audio. The proposed method decouples training into two stages. In the first stage, we use a pre-trained BTC model as a teacher to generate pseudo-labels for over 1,000 hours of diverse unlabeled audio and train a student model solely on these pseudo-labels. In the second stage, the student is continually trained on ground-truth labels as they become available, with selective knowledge distillation (KD) from the teacher applied as a regularizer to prevent catastrophic forgetting of the representations learned in the first stage. In our experiments, two models (BTC, 2E1D) were used as students. In stage 1, using only pseudo-labels, the BTC student achieves over 98% of the teacher's performance, while the 2E1D model achieves about 96% across seven standard mir_eval metrics. After a single training run for both students in stage 2, the resulting BTC student model surpasses the traditional supervised learning baseline by 2.5% and the original...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Reversible Information Transformation via Quantum Reservoir Computing: Conditions, Protocol, and Noise Resilience
+- **Autores:** Hikaru Wakaura, Taiki Tanimae
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:quant-ph
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19700v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Quantum reservoir computing (QRC) exploits fixed quantum dynamics and a trainable linear readout to process temporal data, yet reversing the transformation -- reconstructing the input from the reservoir output -- has been considered intractable owing to the recursive nonlinearity of sequential quantum state evolution. Here we propose a four-equation encode-decode protocol with cross-key pairing and constructively show that quantum reservoir and key combinations satisfying all four equations exist. Using a full XYZ Hamiltonian reservoir with 10 data qubits, we expand the feature dimension to 76 without increasing qubit count and achieve machine-precision reconstruction (mean-squared error $\mathrm{MSE} \sim 10^{-17}$) for data lengths up to 30 under ideal conditions; the rank condition $\mathrm{dim}(V) \geq N_c$ is identified as a necessary criterion. A comprehensive noise analysis across seven conditions and four baseline methods reveals a clear hierarchy: shot noise dominates, depolarizing noise adds a moderate factor, and asymmetric resource allocation -- 10 shots for encoding, $10^5$ for decoding -- yields approximately two orders of magnitude MSE improvement by exploiting the asymmetric noise roles of the encryption and decryption feature matrices. Under realistic noise the MSE degrades to $10^{-3}$-$10^{-1}$, indicating that error mitigation is needed before practical deployment, but our results establish the feasibility...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [x] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] EEG-Driven Intention Decoding: Offline Deep Learning Benchmarking on a Robotic Rover
+- **Autores:** Ghadah Alosaimi, Maha Alsayyari, Yixin Sun, Stamos Katsigiannis, Amir Atapour-Abarghouei, Toby P. Breckon
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.RO
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20041v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Brain-computer interfaces (BCIs) provide a hands-free control modality for mobile robotics, yet decoding user intent during real-world navigation remains challenging. This work presents a brain-robot control framework for offline decoding of driving commands during robotic rover operation. A 4WD Rover Pro platform was remotely operated by 12 participants who navigated a predefined route using a joystick, executing the commands forward, reverse, left, right, and stop. Electroencephalogram (EEG) signals were recorded with a 16-channel OpenBCI cap and aligned with motor actions at Delta = 0 ms and future prediction horizons (Delta > 0 ms). After preprocessing, several deep learning models were benchmarked, including convolutional neural networks, recurrent neural networks, and Transformer architectures. ShallowConvNet achieved the highest performance for both action prediction and intent prediction. By combining real-world robotic control with multi-horizon EEG intention decoding, this study introduces a reproducible benchmark and reveals key design insights for predictive deep learning-based BCI systems.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [x] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] On the Equivalence of Random Network Distillation, Deep Ensembles, and Bayesian Inference
+- **Autores:** Moritz A. Zanger, Yijun Wu, Pascal R. Van der Vaart, Wendelin Böhmer, Matthijs T. J. Spaan
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.LG
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19964v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Uncertainty quantification is central to safe and efficient deployments of deep learning models, yet many computationally practical methods lack lacking rigorous theoretical motivation. Random network distillation (RND) is a lightweight technique that measures novelty via prediction errors against a fixed random target. While empirically effective, it has remained unclear what uncertainties RND measures and how its estimates relate to other approaches, e.g. Bayesian inference or deep ensembles. This paper establishes these missing theoretical connections by analyzing RND within the neural tangent kernel framework in the limit of infinite network width. Our analysis reveals two central findings in this limit: (1) The uncertainty signal from RND -- its squared self-predictive error -- is equivalent to the predictive variance of a deep ensemble. (2) By constructing a specific RND target function, we show that the RND error distribution can be made to mirror the centered posterior predictive distribution of Bayesian inference with wide neural networks. Based on this equivalence, we moreover devise a posterior sampling algorithm that generates i.i.d. samples from an exact Bayesian posterior predictive distribution using this modified \textit{Bayesian RND} model. Collectively, our findings provide a unified theoretical perspective that places RND within the principled frameworks of deep ensembles and...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Fully Convolutional Spatiotemporal Learning for Microstructure Evolution Prediction
+- **Autores:** Michael Trimboli, Mohammed Alsubaie, Sirani M. Perera, Ke-Gang Wang, Xianqi Li
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.LG
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19915v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Understanding and predicting microstructure evolution is fundamental to materials science, as it governs the resulting properties and performance of materials. Traditional simulation methods, such as phase-field models, offer high-fidelity results but are computationally expensive due to the need to solve complex partial differential equations at fine spatiotemporal resolutions. To address this challenge, we propose a deep learning-based framework that accelerates microstructure evolution predictions while maintaining high accuracy. Our approach utilizes a fully convolutional spatiotemporal model trained in a self-supervised manner using sequential images generated from simulations of microstructural processes, including grain growth and spinodal decomposition. The trained neural network effectively learns the underlying physical dynamics and can accurately capture both short-term local behaviors and long-term statistical properties of evolving microstructures, while also demonstrating generalization to unseen spatiotemporal domains and variations in configuration and material parameters. Compared to recurrent neural architectures, our model achieves state-of-the-art predictive performance with significantly reduced computational cost in both training and inference. This work establishes a robust baseline for spatiotemporal learning in materials science and offers a scalable, data-driven alternative for fast and reliable microstructure simulations.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] VGGT-MPR: VGGT-Enhanced Multimodal Place Recognition in Autonomous Driving Environments
+- **Autores:** Jingyi Xu, Zhangshuo Qi, Zhongmiao Yan, Xuyu Gao, Qianyun Jiao, Songpengcheng Xia, Xieyuanli Chen, Ling Pei
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.CV
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19735v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** In autonomous driving, robust place recognition is critical for global localization and loop closure detection. While inter-modality fusion of camera and LiDAR data in multimodal place recognition (MPR) has shown promise in overcoming the limitations of unimodal counterparts, existing MPR methods basically attend to hand-crafted fusion strategies and heavily parameterized backbones that require costly retraining. To address this, we propose VGGT-MPR, a multimodal place recognition framework that adopts the Visual Geometry Grounded Transformer (VGGT) as a unified geometric engine for both global retrieval and re-ranking. In the global retrieval stage, VGGT extracts geometrically-rich visual embeddings through prior depth-aware and point map supervision, and densifies sparse LiDAR point clouds with predicted depth maps to improve structural representation. This enhances the discriminative ability of fused multimodal features and produces global descriptors for fast retrieval. Beyond global retrieval, we design a training-free re-ranking mechanism that exploits VGGT's cross-view keypoint-tracking capability. By combining mask-guided keypoint extraction with confidence-aware correspondence scoring, our proposed re-ranking mechanism effectively refines retrieval results without additional parameter optimization. Extensive experiments on large-scale autonomous driving benchmarks and our self-collected data demonstrate that VGGT-MPR achieves state-of-the-art performance, exhibiting strong robustness to severe environmental changes, viewpoint shifts, and occlusions. Our code and data...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [x] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] CQM: Cyclic Qubit Mappings
+- **Autores:** Maxwell Poster, Sayam Sethi, Jonathan Baker
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:quant-ph
+- **DOI:** https://doi.org/10.1109/QCE60285.2024.00125
+- **Link:** https://arxiv.org/abs/2602.20123v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Quantum computers show promise to solve select problems otherwise intractable on classical computers. However, noisy intermediate-scale quantum (NISQ) era devices are currently prone to various sources of error. Quantum error correction (QEC) shows promise as a path towards fault tolerant quantum computing. Surface codes, in particular, have become ubiquitous throughout literature for their efficacy as a quantum error correcting code, and can execute quantum circuits via lattice surgery operations. Lattice surgery also allows for logical qubits to maneuver around the architecture, if there is space for it. Hardware used for near-term demonstrations have both spatially and temporally varying error results in logical qubits. By maneuvering logical qubits around the topology, an average logical error rate (LER) can be enforced. We propose cyclic qubit mappings (CQM), a dynamic remapping technique implemented during compilation to mitigate hardware heterogeneity by expanding and contracting logical qubits. In addition to LER averaging, CQM shows initial promise given it's minimal execution time overhead and effective resource utilization.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Token-UNet: A New Case for Transformers Integration in Efficient and Interpretable 3D UNets for Brain Imaging Segmentation
+- **Autores:** Louis Fabrice Tshimanga, Andrea Zanola, Federico Del Pup, Manfredo Atzori
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.CV
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20008v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** We present Token-UNet, adopting the TokenLearner and TokenFuser modules to encase Transformers into UNets. While Transformers have enabled global interactions among input elements in medical imaging, current computational challenges hinder their deployment on common hardware. Models like (Swin)UNETR adapt the UNet architecture by incorporating (Swin)Transformer encoders, which process tokens that each represent small subvolumes ($8^3$ voxels) of the input. The Transformer attention mechanism scales quadratically with the number of tokens, which is tied to the cubic scaling of 3D input resolution. This work reconsiders the role of convolution and attention, introducing Token-UNets, a family of 3D segmentation models that can operate in constrained computational environments and time frames. To mitigate computational demands, our approach maintains the convolutional encoder of UNet-like models, and applies TokenLearner to 3D feature maps. This module pools a preset number of tokens from local and global structures. Our results show this tokenization effectively encodes task-relevant information, yielding naturally interpretable attention maps. The memory footprint, computation times at inference, and parameter counts of our heaviest model are reduced to 33\%, 10\%, and 35\% of the SwinUNETR values, with better average performance (86.75\% $\pm 0.19\%$ Dice score for SwinUNETR vs our 87.21\% $\pm 0.35\%$). This work opens the...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Electrical post-fabrication tuning of aluminum Josephson junctions at room temperature
+- **Autores:** Christian Križan, Maurizio Toselli, Irshad Ahmad, Hadi Khaksaran, Marcus Rommel, Nermin Trnjanin, Janka Biznárová, Mamta Dahiya, Emil Hogedal, Halldór Jakobsson, Andreas Nylander, Jonas Bylander, Per Delsing, Giovanna Tancredi
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:quant-ph
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20002v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Josephson junctions are a key element of superconducting quantum technology, serving as the core building blocks of superconducting qubits. We present an experimental study on room-temperature electrical tuning of aluminum junctions, showing that voltage pulses can controllably increase their resistance and adjust the Josephson energy while maintaining qubit quality factors above 1 million. We find that the rate of resistance increase scales exponentially with pulse amplitude during manipulation, after which the spontaneous resistance increase scales proportionally to the amount of manipulation. We show that this spontaneous increase halts at cryogenic temperatures, and resumes again at room temperature. Using our stepwise protocol, we achieve up to a 270% increase in junction resistance, corresponding to a reduction of nearly 2 GHz of the qubit transition frequency. These results establish the achievable range, relaxation behavior, and practical limits of electrical tuning, enabling post-fabrication mitigation of frequency crowding in quantum processors.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Mass Manipulation in Simulated Social Networks: Dominating vs. Diversifying Attention
+- **Autores:** Viktoria Kainz, Justin Sulik, Anna Neudert, Torsten Enßlin
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:physics.soc-ph
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19939v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Modern information environments, especially social media, are highly complex systems that exceed individual processing capacities such as humans' limited attention. This environment/cognition mismatch can increase susceptibility to misinformation, which various actors exploit for anti-social (including anti-democratic or anti-science) aims. This raises the question of how to feasibly sustain societal resilience against misinformation, though the challenge is to find strategies that respect individuals' cognitive limitations. We investigate whether a simple behavioral rule - topic diversification - can enhance collective performance and mitigate vulnerability. In an agent-based model that includes a deceptive mass-influencing agent (MIA), we compare two attention-distribution strategies: (A) acquaintance-based topic selection, where agents return to familiar content, and (B) randomized topics, which diversify attention. We also track dynamics across different network structures. We find that under acquaintance-based topics, a central MIA advances its propaganda effectively, causing volatile and polarized opinions through repeated exposure and echo chambers. Under randomized topics, this leverage disappears: the MIA's influence collapses across all network structures, and opinions become stable and broadly aligned with reality. These results, while deriving from simple simulations, align with realistic theories of bounded rationality and collective cognition, further suggesting a cognitively feasible, easy-to-monitor and robust strategy: distribute attention to combat...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] MAS-FIRE: Fault Injection and Reliability Evaluation for LLM-Based Multi-Agent Systems
+- **Autores:** Jin Jia, Zhiling Deng, Zhuangbin Chen, Yingqi Wang, Zibin Zheng
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.SE
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19843v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** As LLM-based Multi-Agent Systems (MAS) are increasingly deployed for complex tasks, ensuring their reliability has become a pressing challenge. Since MAS coordinate through unstructured natural language rather than rigid protocols, they are prone to semantic failures (e.g., hallucinations, misinterpreted instructions, and reasoning drift) that propagate silently without raising runtime exceptions. Prevailing evaluation approaches, which measure only end-to-end task success, offer limited insight into how these failures arise or how effectively agents recover from them. To bridge this gap, we propose MAS-FIRE, a systematic framework for fault injection and reliability evaluation of MAS. We define a taxonomy of 15 fault types covering intra-agent cognitive errors and inter-agent coordination failures, and inject them via three non-invasive mechanisms: prompt modification, response rewriting, and message routing manipulation. Applying MAS-FIRE to three representative MAS architectures, we uncover a rich set of fault-tolerant behaviors that we organize into four tiers: mechanism, rule, prompt, and reasoning. This tiered view enables fine-grained diagnosis of where and why systems succeed or fail. Our findings reveal that stronger foundation models do not uniformly improve robustness. We further show that architectural topology plays an equally decisive role, with iterative, closed-loop designs neutralizing over 40% of faults that cause catastrophic collapse in...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [x] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] RULERS: Locked Rubrics and Evidence-Anchored Scoring for Robust LLM Evaluation
+- **Autores:** Yi-Ting Hong, Huaiyuan Yao, Bolin Shen, Wanpeng Xu, Hua Wei, Yushun Dong
+- **Fecha:** 2026-01-13
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.08654
+- **Link:** https://www.semanticscholar.org/paper/998d20323164225b72576b74c2e46aef45f3cbe2
+- **Citaciones:** 1
+- **Score de relevancia:** 33/100
+- **Abstract:** The LLM-as-a-Judge paradigm promises scalable rubric-based evaluation, yet aligning frozen black-box models with human standards remains a challenge due to inherent generation stochasticity. We reframe judge alignment as a criteria transfer problem and isolate three recurrent failure modes: rubric instability caused by prompt sensitivity, unverifiable reasoning that lacks auditable evidence, and scale misalignment with human grading boundaries. To address these issues, we introduce RULERS (Rubric Unification, Locking, and Evidence-anchored Robust Scoring), a compiler-executor framework that transforms natural language rubrics into executable specifications. RULERS operates by compiling criteria into versioned immutable bundles, enforcing structured decoding with deterministic evidence verification, and applying lightweight Wasserstein-based post-hoc calibration, all without updating model parameters. Extensive experiments on essay and summarization benchmarks demonstrate that RULERS significantly outperforms representative baselines in human agreement, maintains strong stability against adversarial rubric perturbations, and enables smaller models to rival larger proprietary judges. Overall, our results suggest that reliable LLM judging requires executable rubrics, verifiable evidence, and calibrated scales rather than prompt phrasing alone. Code is available at https://github.com/LabRAI/Rulers.git.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [x] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [BAJA] RovoDev Code Reviewer: A Large-Scale Online Evaluation of LLM-based Code Review Automation at Atlassian
+- **Autores:** C. Tantithamthavorn, Y. Zou, Alexander Wong, Michael Gupta, Zhe Wang, Mike Buller, Ryan Jiang, Matthew Watson, Minwoo Jeong, Kun Chen, Ming Wu
+- **Fecha:** 2026-01-03
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.1145/3786583.3786851
+- **Link:** https://www.semanticscholar.org/paper/476ee8d28ec4626caa99d993d3c731995c966277
+- **Citaciones:** 2
+- **Score de relevancia:** 33/100
+- **Abstract:** Large Language Models (LLMs)-powered code review automation has the potential to transform code review workflows. Despite the advances of LLM-powered code review comment generation approaches, several practical challenges remain for designing enterprise-grade code review automation tools. In particular, this paper aims at answering the practical question: how can we design a review-guided, context-aware, quality-checked code review comment generation without fine-tuning? In this paper, we present RovoDev Code Reviewer, an enterprise-grade LLM-based code review automation tool designed and deployed at scale within Atlassian's development ecosystem with seamless integration into Atlassian's Bitbucket. Through the offline, online, user feedback evaluations over a one-year period, we conclude that RovoDev Code Reviewer is effective in generating code review comments that could lead to code resolution for 38.70% (i.e., comments that triggered code changes in the subsequent commits); and offers the promise of accelerating feedback cycles (i.e., decreasing the PR cycle time by 30.8%), alleviating reviewer workload (i.e., reducing the number of human-written comments by 35.6%), and improving overall software quality (i.e., finding errors with actionable suggestions).
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [x] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [BAJA] Descent-Guided Policy Gradient for Scalable Cooperative Multi-Agent Learning
+- **Autores:** Shan Yang, Yang Liu
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.MA
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20078v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Scaling cooperative multi-agent reinforcement learning (MARL) is fundamentally limited by cross-agent noise: when agents share a common reward, the actions of all $N$ agents jointly determine each agent's learning signal, so cross-agent noise grows with $N$. In the policy gradient setting, per-agent gradient estimate variance scales as $Θ(N)$, yielding sample complexity $\mathcal{O}(N/ε)$. We observe that many domains -- cloud computing, transportation, power systems -- have differentiable analytical models that prescribe efficient system states. In this work, we propose Descent-Guided Policy Gradient (DG-PG), a framework that constructs noise-free per-agent guidance gradients from these analytical models, decoupling each agent's gradient from the actions of all others. We prove that DG-PG reduces gradient variance from $Θ(N)$ to $\mathcal{O}(1)$, preserves the equilibria of the cooperative game, and achieves agent-independent sample complexity $\mathcal{O}(1/ε)$. On a heterogeneous cloud scheduling task with up to 200 agents, DG-PG converges within 10 episodes at every tested scale -- from $N=5$ to $N=200$ -- directly confirming the predicted scale-invariant complexity, while MAPPO and IPPO fail to converge under identical architectures.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [x] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Robust Taylor-Lagrange Control for Safety-Critical Systems
+- **Autores:** Wei Xiao, Christos Cassandras, Anni Li
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:eess.SY
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20076v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Solving safety-critical control problem has widely adopted the Control Barrier Function (CBF) method. However, the existence of a CBF is only a sufficient condition for system safety. The recently proposed Taylor-Lagrange Control (TLC) method addresses this limitation, but is vulnerable to the feasibility preservation problem (e.g., inter-sampling effect). In this paper, we propose a robust TLC (rTLC) method to address the feasibility preservation problem. Specifically, the rTLC method expands the safety function at an order higher than the relative degree of the function using Taylor's expansion with Lagrange remainder, which allows the control to explicitly show up at the current time instead of the future time in the TLC method. The rTLC method naturally addresses the feasibility preservation problem with only one hyper-parameter (the discretization time interval size during implementation), which is much less than its counterparts. Finally, we illustrate the effectiveness of the proposed rTLC method through an adaptive cruise control problem, and compare it with existing safety-critical control methods.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Evaluation Framework for AI Creativity: A Case Study Based on Story Generation
+- **Autores:** P. Sathya, Yin Jou Huang, Fei Cheng
+- **Fecha:** 2026-01-07
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.03698
+- **Link:** https://www.semanticscholar.org/paper/d71bffd92854a299cc68cd9a35c91c921f977f9d
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Evaluating creative text generation remains a challenge because existing reference-based metrics fail to capture the subjective nature of creativity. We propose a structured evaluation framework for AI story generation comprising four components (Novelty, Value, Adherence, and Resonance) and eleven sub-components. Using controlled story generation via ``Spike Prompting''and a crowdsourced study of 115 readers, we examine how different creative components shape both immediate and reflective human creativity judgments. Our findings show that creativity is evaluated hierarchically rather than cumulatively, with different dimensions becoming salient at different stages of judgment, and that reflective evaluation substantially alters both ratings and inter-rater agreement. Together, these results support the effectiveness of our framework in revealing dimensions of creativity that are obscured by reference-based evaluation.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [x] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [BAJA] A Mixed Methods Systematic Analysis of Issues and Factors Influencing Organizational Cloud Computing Adoption and Usage in the Public Sector: Initial Findings
+- **Autores:** Mark Theby
+- **Fecha:** 2026-01-07
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.5281/zenodo.7057509
+- **Link:** https://www.semanticscholar.org/paper/87afa04e784a2bb2d992b1536daccaf1885a96b7
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Cloud computing has been shown to be an essential enabling technology for public sector organizations PSOs and offers numerous potential benefits, including reduced information technology infrastructure costs, increased innovation potential, and improved resource resilience and scalability. Despite governments'intensifying efforts to realize the benefits of this technology, cloud computing adoption and usage proves to be challenging, posing a variety of organizational and operational issues for PSOs. This systematic analysis constitutes the initial phase of a larger research effort that involves forthcoming case studies of specific public sector cloud stakeholders; it aims to identify and synthesize the available knowledge on organizational cloud computing adoption and utilization in the public sector to provide public sector decision makers and stakeholders with reliable, evidence-based, actionable insights that inform and improve public sector IT practice and policy.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [x] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [BAJA] Let There Be Claws: An Early Social Network Analysis of AI Agents on Moltbook
+- **Autores:** H. C. W. Price, H. AlMuhanna, P. M. Bassani, M. Ho, T. S. Evans
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:physics.soc-ph
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20044v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Within twelve days of launch, an AI-native social platform exhibits extreme attention concentration, hierarchical role separation, and one-way attention flow, consistent with the hypothesis that stratification in agent ecosystems can emerge rapidly rather than gradually. We analyse publicly observable traces from a 12-day window of Moltbook (28 January -- 8 February 2026), comprising 20,040 posts and 192,410 comments from 15,083 accounts across 759 submolts. We construct co-participation and directed-comment graphs and report reciprocity, community structure, and centrality, alongside descriptive content themes. Under a commenter--post-author tie definition, interaction is strongly asymmetric (reciprocity ~1%), and HITS centrality separates cleanly into hub and authority roles, consistent with broadcast-style attention rather than mutual exchange. Engagement is highly unequal: attention is far more concentrated than production (upvote Gini = 0.992 vs. posting Gini = 0.601), and early-arriving accounts accumulate substantially higher cumulative upvotes prior to exposure-time correction, suggesting rich-get-richer dynamics. Participation is brief and bursty (median observed lifespan 2.48 minutes; 54.8% of posts occur within six peak UTC hours). Embedding-based topic modelling identifies diverse thematic clusters, including technical discussion of memory and identity, onboarding messages, and formulaic token-minting content. These results provide an early structural baseline for large-scale agent--agent social interaction and suggest that familiar...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [x] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Path-conditioned training: a principled way to rescale ReLU neural networks
+- **Autores:** Arthur Lebeurrier, Titouan Vayer, Rémi Gribonval
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:stat.ML
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19799v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Despite recent algorithmic advances, we still lack principled ways to leverage the well-documented rescaling symmetries in ReLU neural network parameters. While two properly rescaled weights implement the same function, the training dynamics can be dramatically different. To offer a fresh perspective on exploiting this phenomenon, we build on the recent path-lifting framework, which provides a compact factorization of ReLU networks. We introduce a geometrically motivated criterion to rescale neural network parameters which minimization leads to a conditioning strategy that aligns a kernel in the path-lifting space with a chosen reference. We derive an efficient algorithm to perform this alignment. In the context of random network initialization, we analyze how the architecture and the initialization scale jointly impact the output of the proposed method. Numerical experiments illustrate its potential to speed up training.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] GPU-Resident Gaussian Process Regression Leveraging Asynchronous Tasks with HPX
+- **Autores:** Henrik Möllmann, Dirk Pflüger, Alexander Strack
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.DC
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19683v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Gaussian processes (GPs) are a widely used regression tool, but the cubic complexity of exact solvers limits their scalability. To address this challenge, we extend the GPRat library by incorporating a fully GPU-resident GP prediction pipeline. GPRat is an HPX-based library that combines task-based parallelism with an intuitive Python API.   We implement tiled algorithms for the GP prediction using optimized CUDA libraries, thereby exploiting massive parallelism for linear algebra operations. We evaluate the optimal number of CUDA streams and compare the performance of our GPU implementation to the existing CPU-based implementation. Our results show the GPU implementation provides speedups for datasets larger than 128 training samples. We observe speedups of up to 4.3 for the Cholesky decomposition itself and 4.6 for the GP prediction. Furthermore, combining HPX with multiple CUDA streams allows GPRat to match, and for large datasets, surpass cuSOLVER's performance by up to 11 percent.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] 2025 EIC-France Workshop: Physics Highlights and Perspectives
+- **Autores:** F. Arleo, V. Bertone, J. Bettane, B. Blossier, F. Bock, F. Bossù, R. Boussarie, F. Bouyjou, O. Brand-Foissac, N. L. Bucuru Rodriguez, V. Calvelli, P. Caucal, P. Chatagnon, D. Daskalas, C. De la Taille, W. Deconinck, A. Delbart, J. Didelez, F. Dulucq, P. Dumas Ziehlmann, R. Dupre, M. El Berni, S. Extier, S. Fazio, A. Francisco, M. Fucilla, S. Gardner, B. Guenego, K. Guillossou-Jnaid, M. Hoballah, N. d'Hose, H. Huang, E. Iancu, J. Jalilian-Marian, F. Jeanneau, A. John Rubesh Rajan, N. E. Kachkachi, C. -T. Kuan, J. Lajoie, J. P. Lansberg, L. Serin, O. Le Dortz, Y. Le Roux, K. Lynch, D. Marchand, C. Marquet, F. Mehrez, C. Mezrag, A. Migayron, G. Montaña, H. Moutarde, C. Muñoz Camacho, S. Nabeebaccus, D. Neyret, M. Nguyen, S. Niccolai, S. Obraztsov, S. M. Panebianco, D. Perez, B. Pire, M. Ronayette, L. Royer, H. Sazdjian, I. Schienbein, A. Sharma, A. Shatat, Y. Shi, A. Soulier, D. Thienpont, A. Torrento, C. Van Hulse, A. Verplancke, S. Vetter, E. Voutier, J. Yarwick, E. Wanlin, Z. Zaidan
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:hep-ph
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19664v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** This document presents a synthesis of the theory contributions and discussions from the 2nd EIC-France Workshop, held at IJCLab (Orsay) on 1-3 December 2025. The workshop brought together members of the French hadron-physics community to review recent theoretical developments relevant to the future Electron-Ion Collider (EIC) and to coordinate national efforts in preparation for its early physics program. The report first summarizes the collider's initial running conditions and luminosity performance, as outlined in the EIC Early Science Matrix. It then provides concise overviews of the theoretical presentations on inclusive, semi-inclusive, exclusive, heavy-flavor, and small-x physics. Based on these discussions, two measurements emerged as especially well suited for early EIC operation and strongly aligned with areas of established French expertise: inclusive diffraction and inclusive quarkonium production. These channels offer clean signatures, robust theoretical interpretability, and direct sensitivity to fundamental QCD phenomena such as gluon saturation, heavy-quark dynamics, and the small-x structure of hadrons and nuclei. In addition, the workshop identified longer-term physics opportunities that will benefit from the full capabilities of the EIC after its ramp-up phase. These include accessing the three-dimensional structure of the pion through the Sullivan process and a broader program of exclusive three-body final states, both of...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Nacrith: Neural Lossless Compression via Ensemble Context Modeling and High-Precision CDF Coding
+- **Autores:** Roberto Tacconelli
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.IT
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19626v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** We present Nacrith, a lossless compression system that combines a 135M-parameter transformer language model (SmolLM2-135M) with an ensemble of lightweight online predictors and a 32-bit arithmetic coder. Beyond the base LLM-plus-arithmetic-coding paradigm, Nacrith introduces several contributions: (1) a CDF precision upgrade from 2^16 to 2^24 that eliminates ~75% of quantization overhead caused by minimum-probability floors in large vocabularies; (2) a token-level N-gram model for fast local predictions; (3) an adaptive log-space bias head correcting per-document LLM errors via online gradient descent; (4) confidence-based LLM skip for accelerating highly predictable tokens; (5) a hybrid binary format (NC06) extending neural compression to arbitrary binary files--to our knowledge a first among LLM-based compressors; (6) a llama.cpp inference backend achieving ~7x faster single-token decode than PyTorch; (7) parallel multi-GPU compression across up to 8 workers; and (8) native KV cache sliding window reducing per-slide cost by ~37x. The system requires only ~500 MB of GGUF weights and ~1.2 GB VRAM per worker, running on consumer GPUs. On alice29.txt (Canterbury Corpus, 152 KB), Nacrith achieves 0.918 bits per byte (bpb)--outperforming gzip by 3.1x, bzip2 by 2.5x, CMIX v21 by 44%, and ts_zip by 20%, while compressing below the 0th-, 1st-, and 2nd-order byte-level Shannon entropy...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [x] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] DICArt: Advancing Category-level Articulated Object Pose Estimation in Discrete State-Spaces
+- **Autores:** Li Zhang, Mingyu Mei, Ailing Wang, Xianhui Meng, Yan Zhong, Xinyuan Song, Liu Liu, Rujing Wang, Zaixing He, Cewu Lu
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.CV
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19565v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Articulated object pose estimation is a core task in embodied AI. Existing methods typically regress poses in a continuous space, but often struggle with 1) navigating a large, complex search space and 2) failing to incorporate intrinsic kinematic constraints. In this work, we introduce DICArt (DIsCrete Diffusion for Articulation Pose Estimation), a novel framework that formulates pose estimation as a conditional discrete diffusion process. Instead of operating in a continuous domain, DICArt progressively denoises a noisy pose representation through a learned reverse diffusion procedure to recover the GT pose. To improve modeling fidelity, we propose a flexible flow decider that dynamically determines whether each token should be denoised or reset, effectively balancing the real and noise distributions during diffusion. Additionally, we incorporate a hierarchical kinematic coupling strategy, estimating the pose of each rigid part hierarchically to respect the object's kinematic structure. We validate DICArt on both synthetic and real-world datasets. Experimental results demonstrate its superior performance and robustness. By integrating discrete generative modeling with structural priors, DICArt offers a new paradigm for reliable category-level 6D pose estimation in complex environments.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [x] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] The asymptotic charges of Curtright dual graviton and Curtright extensions of BMS algebra
+- **Autores:** Federico Manzoni
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:hep-th
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20037v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** This paper studies the asymptotic gauge charges of the Curtright mixed-symmetry rank-3 field $φ_{[ρσ]ν}$ in Minkowski spacetime, interpreted in $ D = 5 $ as the dual graviton. In Bondi coordinates at future null infinity, we impose radiation fall-offs and fix a de Donder-like gauge together with an on-shell traceless condition, similarly to what happens in linearized gravity. Surface charges associated with the residual gauge transformations are constructed as boundary integrals via Nöther's 2-form. In $ D = 5 $, exploiting Hodge/Hodge-like decompositions on $ S^{3} $, the charge splits into a scalar sector $ Q_Φ $, a vector sector $ Q_{V} $ and a TT sector $Q_{y^{\text{TT}}}$. $ Q_Φ $ is parametrized by a single arbitrary scalar function $ Φ$ (interpreted as the supertranslation-like parameter), $ Q_{V} $ is parametrized by a vector field $ V^{i} \in \mathfrak{Diff}(S^{3}) $ and the TT sector $Q_{y^{\text{TT}}}$ is parametrized by a trasverse-traceless rank-2 tensor $y_{ij}^{\text{TT}} \in \mathfrak{TT}(S^3)$. The corresponding charge algebra closes only if $V_i \in \mathfrak{o}(4)$ as semidirect sum $ \mathfrak{o}(4) \loplus (C^{\infty}(S^3) \oplus \mathfrak{TT}(S^3)) $, i.e an abelian extension of a $\mathfrak{BMS}$-like algebra featuring a higher-spin-like supertranslation sector.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [x] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Multilingual Large Language Models do not comprehend all natural languages to equal degrees
+- **Autores:** Natalia Moskvina, Raquel Montero, Masaya Yoshida, Ferdy Hubers, Paolo Morosi, Walid Irhaymi, Jin Yan, Tamara Serrano, Elena Pagliarini, Fritz Günther, Evelina Leivada
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.CL
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20065v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Large Language Models (LLMs) play a critical role in how humans access information. While their core use relies on comprehending written requests, our understanding of this ability is currently limited, because most benchmarks evaluate LLMs in high-resource languages predominantly spoken by Western, Educated, Industrialised, Rich, and Democratic (WEIRD) communities. The default assumption is that English is the best-performing language for LLMs, while smaller, low-resource languages are linked to less reliable outputs, even in multilingual, state-of-the-art models. To track variation in the comprehension abilities of LLMs, we prompt 3 popular models on a language comprehension task across 12 languages, representing the Indo-European, Afro-Asiatic, Turkic, Sino-Tibetan, and Japonic language families. Our results suggest that the models exhibit remarkable linguistic accuracy across typologically diverse languages, yet they fall behind human baselines in all of them, albeit to different degrees. Contrary to what was expected, English is not the best-performing language, as it was systematically outperformed by several Romance languages, even lower-resource ones. We frame the results by discussing the role of several factors that drive LLM performance, such as tokenization, language distance from Spanish and English, size of training data, and data origin in high- vs. low-resource languages and WEIRD vs. non-WEIRD communities.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [x] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] SEAL-pose: Enhancing 3D Human Pose Estimation via a Learned Loss for Structural Consistency
+- **Autores:** Yeonsung Kim, Junggeun Do, Seunguk Do, Sangmin Kim, Jaesik Park, Jay-Yoon Lee
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.CV
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20051v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** 3D human pose estimation (HPE) is characterized by intricate local and global dependencies among joints. Conventional supervised losses are limited in capturing these correlations because they treat each joint independently. Previous studies have attempted to promote structural consistency through manually designed priors or rule-based constraints; however, these approaches typically require manual specification and are often non-differentiable, limiting their use as end-to-end training objectives. We propose SEAL-pose, a data-driven framework in which a learnable loss-net trains a pose-net by evaluating structural plausibility. Rather than relying on hand-crafted priors, our joint-graph-based design enables the loss-net to learn complex structural dependencies directly from data. Extensive experiments on three 3D HPE benchmarks with eight backbones show that SEAL-pose reduces per-joint errors and improves pose plausibility compared with the corresponding backbones across all settings. Beyond improving each backbone, SEAL-pose also outperforms models with explicit structural constraints, despite not enforcing any such constraints. Finally, we analyze the relationship between the loss-net and structural consistency, and evaluate SEAL-pose in cross-dataset and in-the-wild settings.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [x] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] A Computationally Efficient Multidimensional Vision Transformer
+- **Autores:** Alaa El Ichi, Khalide Jbilou
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.LG
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19982v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Vision Transformers have achieved state-of-the-art performance in a wide range   of computer vision tasks, but their practical deployment is limited by high   computational and memory costs. In this paper, we introduce a novel tensor-based   framework for Vision Transformers built upon the Tensor Cosine Product   (Cproduct). By exploiting multilinear structures inherent in image data and the   orthogonality of cosine transforms, the proposed approach enables efficient   attention mechanisms and structured feature representations. We develop the   theoretical foundations of the tensor cosine product, analyze its algebraic   properties, and integrate it into a new Cproduct-based Vision Transformer   architecture (TCP-ViT). Numerical experiments on standard classification and   segmentation benchmarks demonstrate that the proposed method achieves a uniform   1/C parameter reduction (where C is the number of channels) while   maintaining competitive accuracy.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [x] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Coalescing random walks via the coalescence determinant
+- **Autores:** Piotr Śniady
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:math.PR
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20043v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** When identical particles on a line collide, they merge and continue as one. Exact determinantal formulas have long been available for particles conditioned never to collide, but collisions change the number of particles, and exact distributions for the survivors have been obtained only in specific settings and by ad hoc methods. Building on the coalescence determinant introduced in a companion paper, we study the wall-particle system: the joint system of survivors and the boundaries between their basins of attraction, starting from every site occupied. Its finite-dimensional distributions are determinants of block matrices built from transition probabilities and their cumulative sums; a finite block matrix suffices even when the initial configuration is infinite. As applications, we recover the Rayleigh spacing density and the joint distribution of consecutive gaps-which are negatively correlated-by new methods, and give a new derivation of the determinantal formula for the joint CDF of finitely many coalescing particles starting from fixed positions. All formulas hold for arbitrary nearest-neighbor random walks and their Brownian scaling limits, with no specific transition kernels required.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] No-dimensional results of combinatorial convexity. Dimension strikes back
+- **Autores:** Grigory Ivanov
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:math.FA
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20035v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** We discuss no-dimensional (approximate) versions of Carathéodory's and Helly's theorems. Our goal is to draw attention to open problems and potential applications related to these results. We survey recent progress and pose several questions. We also point out a simple way to ``bring the dimension back into the picture'': by combining no-dimensional statements with dimension-dependent norm comparisons, one can transfer problems in $\ell_1^d$, $\ell_\infty^d$, and Schatten classes $S_1, S_\infty$ to nearby $\ell_p^d$ or $S_p$ spaces with better geometry.   As elementary applications, we obtain a weak additive analogue of the Johnson--Lindenstrauss flattening lemma, local-to-global estimates for Chebyshev regression over the $\ell_1$ ball, and a local-to-global guarantee for quantum feasibility from locally consistent linear measurements.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Existence of weak solutions for incompressible fluid-Koiter shell interactions with Navier slip boundary condition
+- **Autores:** Claudiu Mîndrilă, Arnab Roy
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:math.AP
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20016v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** We study a three-dimensional fluid-structure interaction problem describing the motion of an incompressible, viscous fluid coupled with a deformable elastic shell of Koiter type that forms part of the fluid boundary. The fluid motion is governed by the incompressible Navier--Stokes equations posed on a time-dependent domain, while the shell evolution is described by a nonlinear elastic model. At the fluid-structure interface, we impose Navier slip boundary conditions, allowing for tangential slip penalized by friction. Our main result establishes the global-in-time existence of weak solutions up to the first possible self-intersection of the shell, for arbitrarily large initial data with finite energy. The analysis is carried out in a fully three-dimensional setting and addresses the major mathematical challenges arising from the moving domain, the geometric nonlinearity of the shell, and the reduced regularization induced by the slip boundary condition. The proof relies on a careful construction of suitable approximation schemes, novel compactness arguments adapted to the slip framework, and a new extension operator for divergence-free test functions compatible with the fluid-shell coupling. As a further contribution, we provide a direct approach to the strong convergence of second-order spatial derivatives of the shell displacement, which allows us to treat nonlinear Koiter shell...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [x] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Twist-Engineered Nonlinearity in Two-Dimensional Crystals for Tailored Quantum Light
+- **Autores:** Dylan Mcleod, Fabrizio Chiriano, Francesco Graffitti, Alessandro Fedrizzi, Brian D. Gerardot, Mauro Brotons-Gisbert
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:physics.optics
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20012v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Van der Waals (vdW) materials enable nonlinear-optical engineering with unprecedented resolution: their strong second-order susceptibilities ($χ^{(2)}$) and twist-tunable interlayer symmetry allow the effective nonlinearity to be shaped continuously, rather than through binary $\pmχ^{(2)}$ domain inversion as in bulk ferroelectrics. Here, we show that twist-angle domain engineering exploits this continuous degree of freedom to reconstruct target longitudinal nonlinearity profiles with high fidelity. Using spontaneous parametric down-conversion (SPDC) as a benchmark, we demonstrate that twist-engineered vdW crystals yield significantly improved approximations of target phase-matching functions and correspondingly higher single-photon purities, particularly in compact devices where fabrication constraints limit conventional approaches. We further show that this framework remains effective in experimentally relevant vdW materials and demanding non-degenerate wavelength regimes involving mid-infrared photons. More broadly, the ability to continuously and locally program $χ^{(2)}$ establishes a general framework for tailoring a wide range of SPDC properties, including absolute brightness, joint spectral amplitude structure, signal-idler frequency separation, and temporal wavepacket shape beyond what is accessible in conventional nonlinear crystals. These results position vdW heterostructures as a powerful platform for engineered quantum light sources and open new opportunities for nonlinear-optical devices shaped with monolayer thickness scale.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [x] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Discretization and regularization for the reconstruction of inhomogeneities by scattering measurements
+- **Autores:** Daniela Di Donato, Luca Rondi
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:math.AP
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19970v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** We consider the inverse problem of reconstructing inhomogeneities by performing a finite number of scattering measurements of acoustic type in the time-harmonic setting. We set up the reconstruction as a fully discrete variational problem with regularization. Such a problem depends on a variety of parameters, that is, the number of measurements, the regularization parameter and the discretization parameter, namely the size of the mesh on which we discretize the unknown coefficients of the Helmholtz type equation modelling our physical system. We show, through a convergence analysis, that one can carefully choose these parameters in such a way that the solution to this discrete regularized minimum problem is a good approximation of the looked-for solution to the inverse problem.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Probabilistic Photonic Computing
+- **Autores:** Frank Brückerhoff-Plückelmann, Anna P. Ovvyan, Akhil Varri, Hendrik Borras, Bernhard Klein, C. David Wright, Harish Bhaskaran, Ghazi Sarwat Syed, Abu Sebastian, Holger Fröning, Wolfram Pernice
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:physics.app-ph
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19968v1
+- **Citaciones:** 0
+- **Score de relevancia:** 33/100
+- **Abstract:** Probabilistic computing excels in approximating combinatorial problems and modelling uncertainty. However, using conventional deterministic hardware for probabilistic models is challenging: (pseudo) random number generation introduces computational overhead and additional data shuffling, which is particularly detrimental for safety-critical applications requiring low latency such as autonomous driving. Therefore, there is a pressing need for innovative probabilistic computing architectures that achieve low latencies with reasonable energy consumption. Physical computing offers a promising solution, as these systems do not rely on an abstract deterministic representation of data but directly encode the information in physical quantities. Therefore, they can be seamlessly integrated with physical entropy sources, enabling inherent probabilistic architectures. Photonic computing is a prominent variant due to the large available bandwidth, several orthogonal degrees of freedom for data encoding and optimal properties for in-memory computing and parallel data transfer. Here, we highlight key developments in physical photonic computing and photonic random number generation. We provide insights into the realization of probabilistic photonic processors and lend our perspective on their impact on AI systems and future challenges.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] LIBERTy: A Causal Framework for Benchmarking Concept-Based Explanations of LLMs with Structural Counterfactuals
+- **Autores:** Gilat Toker, Nitay Calderon, Ohad Amosy, Roi Reichart
+- **Fecha:** 2026-01-15
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.10700
+- **Link:** https://www.semanticscholar.org/paper/4f4182218a6a3e86d1e6447a54ccdda308dd69e1
+- **Citaciones:** 0
+- **Score de relevancia:** 32/100
+- **Abstract:** Concept-based explanations quantify how high-level concepts (e.g., gender or experience) influence model behavior, which is crucial for decision-makers in high-stakes domains. Recent work evaluates the faithfulness of such explanations by comparing them to reference causal effects estimated from counterfactuals. In practice, existing benchmarks rely on costly human-written counterfactuals that serve as an imperfect proxy. To address this, we introduce a framework for constructing datasets containing structural counterfactual pairs: LIBERTy (LLM-based Interventional Benchmark for Explainability with Reference Targets). LIBERTy is grounded in explicitly defined Structured Causal Models (SCMs) of the text generation, interventions on a concept propagate through the SCM until an LLM generates the counterfactual. We introduce three datasets (disease detection, CV screening, and workplace violence prediction) together with a new evaluation metric, order-faithfulness. Using them, we evaluate a wide range of methods across five models and identify substantial headroom for improving concept-based explanations. LIBERTy also enables systematic analysis of model sensitivity to interventions: we find that proprietary LLMs show markedly reduced sensitivity to demographic concepts, likely due to post-training mitigation. Overall, LIBERTy provides a much-needed benchmark for developing faithful explainability methods.
+- **Keywords match:** ['faithfulness evaluation LLM']
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [x] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [x] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [BAJA] KNIGHT: Knowledge Graph-Driven Multiple-Choice Question Generation with Adaptive Hardness Calibration
+- **Autores:** Mohammad Amanlou, Erfan Shafiee Moghaddam, Yasaman Amou Jafari, Mahdi Noori, Farhan Farsi, Behnam Bahrak
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.CL
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20135v1
+- **Citaciones:** 0
+- **Score de relevancia:** 31/100
+- **Abstract:** With the rise of large language models (LLMs), they have become instrumental in applications such as Retrieval-Augmented Generation (RAG). Yet evaluating these systems remains bottlenecked by the time and cost of building specialized assessment datasets. We introduce KNIGHT, an LLM-based, knowledge-graph-driven framework for generating multiple-choice question (MCQ) datasets from external sources. KNIGHT constructs a topic-specific knowledge graph, a structured and parsimonious summary of entities and relations, that can be reused to generate instructor-controlled difficulty levels, including multi-hop questions, without repeatedly re-feeding the full source text. This knowledge graph acts as a compressed, reusable state, making question generation a cheap read over the graph. We instantiate KNIGHT on Wikipedia/Wikidata while keeping the framework domain- and ontology-agnostic. As a case study, KNIGHT produces six MCQ datasets in History, Biology, and Mathematics. We evaluate quality on five criteria: fluency, unambiguity (single correct answer), topic relevance, option uniqueness, and answerability given the provided sources (as a proxy for hallucination). Results show that KNIGHT enables token- and cost-efficient generation from a reusable graph representation, achieves high quality across these criteria, and yields model rankings aligned with MMLU-style benchmarks, while supporting topic-specific and difficulty-controlled evaluation.
+- **Keywords match:** ['retrieval augmented generation evaluation']
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** Si -- RAGAS evaluation framework
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] A Dynamic Retrieval-Augmented Generation System with Selective Memory and Remembrance
+- **Autores:** Okan Bursa
+- **Fecha:** 2026-01-04
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.02428
+- **Link:** https://www.semanticscholar.org/paper/5329b23d01152dc687f0737d0cd3aed4bebebf60
+- **Citaciones:** 0
+- **Score de relevancia:** 31/100
+- **Abstract:** We introduce \emph{Adaptive RAG Memory} (ARM), a retrieval-augmented generation (RAG) framework that replaces a static vector index with a \emph{dynamic} memory substrate governed by selective remembrance and decay. Frequently retrieved items are consolidated and protected from forgetting, while rarely used items gradually decay, inspired by cognitive consolidation and forgetting principles. On a lightweight retrieval benchmark, ARM reaches near state-of-the-art performance (e.g., NDCG@5 $\approx$ 0.940, Recall@5 $=1.000$) with only $\sim$22M parameters in the embedding layer, achieving the best efficiency among ultra-efficient models ($<$25M parameters). In addition, we compare static vs. dynamic RAG combinations across Llama 3.1 and GPT-4o. Llama 3.1 with static RAG achieves the highest key-term coverage (67.2\%) at moderate latency, while GPT-4o with a dynamic selective retrieval policy attains the fastest responses (8.2s on average) with competitive coverage (58.7\%). We further present an engineering optimization of the DynamicRAG implementation, making embedding weights configurable, adjustable at runtime, and robust to invalid settings. ARM yields competitive accuracy, self-regularizing memory growth, and interpretable retention dynamics without retraining the generator\color{black} and provides practical trade-off between quality, latency and memory efficiency for production and research RAG system.
+- **Keywords match:** ['RAG system optimization']
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [x] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [BAJA] RAGExplorer: A Visual Analytics System for the Comparative Diagnosis of RAG Systems
+- **Autores:** Haoyu Tian, Yingchaojie Feng, Zhen Wen, Haoxuan Li, Minfeng Zhu, Wei Chen
+- **Fecha:** 2026-01-19
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.12991
+- **Link:** https://www.semanticscholar.org/paper/2f2d668397d21f566877ace0797e32b2d990d3aa
+- **Citaciones:** 0
+- **Score de relevancia:** 31/100
+- **Abstract:** The advent of Retrieval-Augmented Generation (RAG) has significantly enhanced the ability of Large Language Models (LLMs) to produce factually accurate and up-to-date responses. However, the performance of a RAG system is not determined by a single component but emerges from a complex interplay of modular choices, such as embedding models and retrieval algorithms. This creates a vast and often opaque configuration space, making it challenging for developers to understand performance trade-offs and identify optimal designs. To address this challenge, we present RAGExplorer, a visual analytics system for the systematic comparison and diagnosis of RAG configurations. RAGExplorer guides users through a seamless macro-to-micro analytical workflow. Initially, it empowers developers to survey the performance landscape across numerous configurations, allowing for a high-level understanding of which design choices are most effective. For a deeper analysis, the system enables users to drill down into individual failure cases, investigate how differences in retrieved information contribute to errors, and interactively test hypotheses by manipulating the provided context to observe the resulting impact on the generated answer. We demonstrate the effectiveness of RAGExplorer through detailed case studies and user studies, validating its ability to empower developers in navigating the complex RAG design space. Our code and user...
+- **Keywords match:** ['text embedding models comparison']
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [x] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [BAJA] MICE: Minimal Interaction Cross-Encoders for efficient Re-ranking
+- **Autores:** Mathias Vast, Victor Morand, Basile Van Cooten, Laure Soulier, Josiane Mothe, Benjamin Piwowarski
+- **Fecha:** 2026-02-18
+- **Fuente:** arXiv (Cornell University)
+- **DOI:** https://doi.org/10.48550/arxiv.2602.16299
+- **Link:** https://openalex.org/W7130574218
+- **Citaciones:** 0
+- **Score de relevancia:** 31/100
+- **Abstract:** Cross-encoders deliver state-of-the-art ranking effectiveness in information retrieval, but have a high inference cost. This prevents them from being used as first-stage rankers, but also incurs a cost when re-ranking documents. Prior work has addressed this bottleneck from two largely separate directions: accelerating cross-encoder inference by sparsifying the attention process or improving first-stage retrieval effectiveness using more complex models, e.g. late-interaction ones. In this work, we propose to bridge these two approaches, based on an in-depth understanding of the internal mechanisms of cross-encoders. Starting from cross-encoders, we show that it is possible to derive a new late-interaction-like architecture by carefully removing detrimental or unnecessary interactions. We name this architecture MICE (Minimal Interaction Cross-Encoders). We extensively evaluate MICE across both in-domain (ID) and out-of-domain (OOD) datasets. MICE decreases fourfold the inference latency compared to standard cross-encoders, matching late-interaction models like ColBERT while retaining most of cross-encoder ID effectiveness and demonstrating superior generalization abilities in OOD.
+- **Keywords match:** ['ColBERT late interaction']
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [x] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via openalex
+
+## [BAJA] Legal experts disagree with rationale extraction techniques for explaining ECtHR case outcome classification
+- **Autores:** Mahammad Namazov, Tom'avs Koref, Ivan Habernal
+- **Fecha:** 2026-01-18
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.12419
+- **Link:** https://www.semanticscholar.org/paper/6a5c07e21481e86c4d9782245115023793e3b1ba
+- **Citaciones:** 0
+- **Score de relevancia:** 31/100
+- **Abstract:** Interpretability is critical for applications of large language models in the legal domain which requires trust and transparency. While some studies develop task-specific approaches, other use the classification model's parameters to explain the decisions. However, which technique explains the legal outcome prediction best remains an open question. To address this challenge, we propose a comparative analysis framework for model-agnostic interpretability techniques. Among these, we employ two rationale extraction methods, which justify outcomes with human-interpretable and concise text fragments (i.e., rationales) from the given input text. We conduct comparison by evaluating faithfulness-via normalized sufficiency and comprehensiveness metrics along with plausibility-by asking legal experts to evaluate extracted rationales. We further assess the feasibility of LLM-as-a-Judge using legal expert evaluation results. We show that the model's"reasons"for predicting a violation differ substantially from those of legal experts, despite highly promising quantitative analysis results and reasonable downstream classification performance. The source code of our experiments is publicly available at https://github.com/trusthlt/IntEval.
+- **Keywords match:** ['faithfulness evaluation LLM']
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [x] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [BAJA] Curator: Efficient Vector Search with Low-Selectivity Filters
+- **Autores:** Yicheng Jin, Yongji Wu, Wenjun Hu, B. M. Maggs, Jun Yang, Xiao Zhang, Danyang Zhuo
+- **Fecha:** 2026-01-03
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.01291
+- **Link:** https://www.semanticscholar.org/paper/a3062944f9f3856e09a0eba95e5c25f32068be56
+- **Citaciones:** 1
+- **Score de relevancia:** 31/100
+- **Abstract:** Embedding-based dense retrieval has become the cornerstone of many critical applications, where approximate nearest neighbor search (ANNS) queries are often combined with filters on labels such as dates and price ranges. Graph-based indexes achieve state-of-the-art performance on unfiltered ANNS but encounter connectivity breakdown on low-selectivity filtered queries, where qualifying vectors become sparse and the graph structure among them fragments. Recent research proposes specialized graph indexes that address this issue by expanding graph degree, which incurs prohibitively high construction costs. Given these inherent limitations of graph-based methods, we argue for a dual-index architecture and present Curator, a partition-based index that complements existing graph-based approaches for low-selectivity filtered ANNS. Curator builds specialized indexes for different labels within a shared clustering tree, where each index adapts to the distribution of its qualifying vectors to ensure efficient search while sharing structure to minimize memory overhead. The system also supports incremental updates and handles arbitrary complex predicates beyond single-label filters by efficiently constructing temporary indexes on the fly. Our evaluation demonstrates that integrating Curator with state-of-the-art graph indexes reduces low-selectivity query latency by up to 20.9x compared to pre-filtering fallback, while increasing construction time and memory footprint by only 5.5% and 4.3%, respectively.
+- **Keywords match:** ['approximate nearest neighbor search']
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [x] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [BAJA] Deep Reinforcement Learning-Driven Adaptive Prompting for Robust Medical LLM Evaluation
+- **Autores:** Dong Ding, Wang Xi, Zenghui Ding, Jianqing Gao
+- **Fecha:** 2026-02-02
+- **Fuente:** Applied Sciences
+- **DOI:** https://doi.org/10.3390/app16031514
+- **Link:** https://www.semanticscholar.org/paper/c955bdd98fbcbfd944dd12d137bb5679f1fa83f4
+- **Citaciones:** 0
+- **Score de relevancia:** 28/100
+- **Abstract:** The accurate and reliable evaluation of large language models (LLMs) in medical domains is critical for real-world clinical deployment, automated medical reasoning, and patient safety. However, the evaluation process is highly sensitive to prompt design, and prevalent reliance on fixed or randomly sampled prompt policies often fails to dynamically adapt to clinical context, question complexity, or evolving safety requirements. This article presents a novel reinforcement learning-based framework for multi-prompt selection, which dynamically optimizes prompt policy per input for medical LLM evaluation across the Medical Knowledge Question-Answering dataset (MKQA), the Medical Multiple-Choice Question dataset (MCQ), and the Doctor-Patient Dialogue dataset. We formulate prompt selection as a Markov Decision Process (MDP) and employ a deep Q-Network (DQN) agent to maximize a reward signal incorporating textual accuracy, domain terminology coverage, safety, and dialogue relevance. Experiments on three medical LLM benchmarks demonstrate consistent improvements in composite reward (e.g., a 6.66% increase in MKQA vs. Random Baseline, and a 2.41% increase in Dialogue vs. Fixed Baseline) when compared to baselines. This was accompanied by robust enhancements in Safety (e.g., achieving 1.0000 in MKQA, a 5.26% increase vs. Fixed Baseline; and a 5.03% increase in Dialogue vs. Fixed Baseline) and substantial gains in Medical Terminology Coverage...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [BAJA] Mobile-O: Unified Multimodal Understanding and Generation on Mobile Device
+- **Autores:** Abdelrahman Shaker, Ahmed Heakl, Jaseel Muhammad, Ritesh Thawkar, Omkar Thawakar, Senmao Li, Hisham Cholakkal, Ian Reid, Eric P. Xing, Salman Khan, Fahad Shahbaz Khan
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.CV
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20161v1
+- **Citaciones:** 0
+- **Score de relevancia:** 25/100
+- **Abstract:** Unified multimodal models can both understand and generate visual content within a single architecture. Existing models, however, remain data-hungry and too heavy for deployment on edge devices. We present Mobile-O, a compact vision-language-diffusion model that brings unified multimodal intelligence to a mobile device. Its core module, the Mobile Conditioning Projector (MCP), fuses vision-language features with a diffusion generator using depthwise-separable convolutions and layerwise alignment. This design enables efficient cross-modal conditioning with minimal computational cost. Trained on only a few million samples and post-trained in a novel quadruplet format (generation prompt, image, question, answer), Mobile-O jointly enhances both visual understanding and generation capabilities. Despite its efficiency, Mobile-O attains competitive or superior performance compared to other unified models, achieving 74% on GenEval and outperforming Show-O and JanusFlow by 5% and 11%, while running 6x and 11x faster, respectively. For visual understanding, Mobile-O surpasses them by 15.3% and 5.1% averaged across seven benchmarks. Running in only ~3s per 512x512 image on an iPhone, Mobile-O establishes the first practical framework for real-time unified multimodal understanding and generation on edge devices. We hope Mobile-O will ease future research in real-time unified multimodal intelligence running entirely on-device with no cloud dependency. Our code, models, datasets, and...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Do Large Language Models Understand Data Visualization Rules?
+- **Autores:** Martin Sinnona, Valentin Bonas, Emmanuel Iarussi, Viviana Siless
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.CV
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20137v1
+- **Citaciones:** 0
+- **Score de relevancia:** 25/100
+- **Abstract:** Data visualization rules-derived from decades of research in design and perception-ensure trustworthy chart communication. While prior work has shown that large language models (LLMs) can generate charts or flag misleading figures, it remains unclear whether they can reason about and enforce visualization rules directly. Constraint-based systems such as Draco encode these rules as logical constraints for precise automated checks, but maintaining symbolic encodings requires expert effort, motivating the use of LLMs as flexible rule validators. In this paper, we present the first systematic evaluation of LLMs against visualization rules using hard-verification ground truth derived from Answer Set Programming (ASP). We translated a subset of Draco's constraints into natural-language statements and generated a controlled dataset of 2,000 Vega-Lite specifications annotated with explicit rule violations. LLMs were evaluated on both accuracy in detecting violations and prompt adherence, which measures whether outputs follow the required structured format. Results show that frontier models achieve high adherence (Gemma 3 4B / 27B: 100%, GPT-oss 20B: 98%) and reliably detect common violations (F1 up to 0.82),yet performance drops for subtler perceptual rules (F1 < 0.15 for some categories) and for outputs generated from technical ASP formulations.Translating constraints into natural language improved performance by up to 150%...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [x] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] NanoKnow: How to Know What Your Language Model Knows
+- **Autores:** Lingwei Gu, Nour Jedidi, Jimmy Lin
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.CL
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20122v1
+- **Citaciones:** 0
+- **Score de relevancia:** 25/100
+- **Abstract:** How do large language models (LLMs) know what they know? Answering this question has been difficult because pre-training data is often a "black box" -- unknown or inaccessible. The recent release of nanochat -- a family of small LLMs with fully open pre-training data -- addresses this as it provides a transparent view into where a model's parametric knowledge comes from. Towards the goal of understanding how knowledge is encoded by LLMs, we release NanoKnow, a benchmark dataset that partitions questions from Natural Questions and SQuAD into splits based on whether their answers are present in nanochat's pre-training corpus. Using these splits, we can now properly disentangle the sources of knowledge that LLMs rely on when producing an output. To demonstrate NanoKnow's utility, we conduct experiments using eight nanochat checkpoints. Our findings show: (1) closed-book accuracy is strongly influenced by answer frequency in the pre-training data, (2) providing external evidence can mitigate this frequency dependence, (3) even with external evidence, models are more accurate when answers were seen during pre-training, demonstrating that parametric and external knowledge are complementary, and (4) non-relevant information is harmful, with accuracy decreasing based on both the position and the number of non-relevant contexts. We release...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [x] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] StructXLIP: Enhancing Vision-language Models with Multimodal Structural Cues
+- **Autores:** Zanxi Ruan, Qiuyu Kong, Songqun Gao, Yiming Wang, Marco Cristani
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.CV
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20089v1
+- **Citaciones:** 0
+- **Score de relevancia:** 25/100
+- **Abstract:** Edge-based representations are fundamental cues for visual understanding, a principle rooted in early vision research and still central today. We extend this principle to vision-language alignment, showing that isolating and aligning structural cues across modalities can greatly benefit fine-tuning on long, detail-rich captions, with a specific focus on improving cross-modal retrieval. We introduce StructXLIP, a fine-tuning alignment paradigm that extracts edge maps (e.g., Canny), treating them as proxies for the visual structure of an image, and filters the corresponding captions to emphasize structural cues, making them "structure-centric". Fine-tuning augments the standard alignment loss with three structure-centric losses: (i) aligning edge maps with structural text, (ii) matching local edge regions to textual chunks, and (iii) connecting edge maps to color images to prevent representation drift. From a theoretical standpoint, while standard CLIP maximizes the mutual information between visual and textual embeddings, StructXLIP additionally maximizes the mutual information between multimodal structural representations. This auxiliary optimization is intrinsically harder, guiding the model toward more robust and semantically stable minima, enhancing vision-language alignment. Beyond outperforming current competitors on cross-modal retrieval in both general and specialized domains, our method serves as a general boosting recipe that can be integrated into future approaches in a plug-and-play...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [x] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] CQ-CiM: Hardware-Aware Embedding Shaping for Robust CiM-Based Retrieval
+- **Autores:** Xinzhao Li, Alptekin Vardar, Franz Müller, Navya Goli, Umamaheswara Tida, Kai Ni, X. Sharon Hu, Thomas Kämpfe, Ruiyang Qin
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.ET
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20083v1
+- **Citaciones:** 0
+- **Score de relevancia:** 25/100
+- **Abstract:** Deploying Retrieval-Augmented Generation (RAG) on edge devices is in high demand, but is hindered by the latency of massive data movement and computation on traditional architectures. Compute-in-Memory (CiM) architectures address this bottleneck by performing vector search directly within their crossbar structure. However, CiM's adoption for RAG is limited by a fundamental ``representation gap,'' as high-precision, high-dimension embeddings are incompatible with CiM's low-precision, low-dimension array constraints. This gap is compounded by the diversity of CiM implementations (e.g., SRAM, ReRAM, FeFET), each with unique designs (e.g., 2-bit cells, 512x512 arrays). Consequently, RAG data must be naively reshaped to fit each target implementation. Current data shaping methods handle dimension and precision disjointly, which degrades data fidelity. This not only negates the advantages of CiM for RAG but also confuses hardware designers, making it unclear if a failure is due to the circuit design or the degraded input data. As a result, CiM adoption remains limited. In this paper, we introduce CQ-CiM, a unified, hardware-aware data shaping framework that jointly learns Compression and Quantization to produce CiM-compatible low-bit embeddings for diverse CiM designs. To the best of our knowledge, this is the first work to shape data for comprehensive CiM usage on RAG.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Closing the gap in multimodal medical representation alignment
+- **Autores:** Eleonora Grassucci, Giordano Cicchetti, Danilo Comminiello
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.CV
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20046v1
+- **Citaciones:** 0
+- **Score de relevancia:** 25/100
+- **Abstract:** In multimodal learning, CLIP has emerged as the de-facto approach for mapping different modalities into a shared latent space by bringing semantically similar representations closer while pushing apart dissimilar ones. However, CLIP-based contrastive losses exhibit unintended behaviors that negatively impact true semantic alignment, leading to sparse and fragmented latent spaces. This phenomenon, known as the modality gap, has been partially mitigated for standard text and image pairs but remains unknown and unresolved in more complex multimodal settings, such as the medical domain. In this work, we study this phenomenon in the latter case, revealing that the modality gap is present also in medical alignment, and we propose a modality-agnostic framework that closes this gap, ensuring that semantically related representations are more aligned, regardless of their source modality. Our method enhances alignment between radiology images and clinical text, improving cross-modal retrieval and image captioning.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Deploying a Hybrid PVFinder Algorithm for Primary Vertex Reconstruction in LHCb's GPU-Resident HLT1
+- **Autores:** Simon Akar, Mohamed Elashri, Conor Henderson, Michael Sokoloff
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:hep-ex
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19959v1
+- **Citaciones:** 0
+- **Score de relevancia:** 25/100
+- **Abstract:** LHCb's Run 3 upgrade introduced a fully software-based trigger system operating at 30~MHz, processing an average of 5.6 proton-proton collision vertices per bunch crossing (event). This work presents the development of an inference engine for PVFinder, a hybrid deep neural network for finding primary vertices, the proton-proton collision points from which all subsequent particle decays originate into Allen, LHCb's High Level Trigger (HLT1) framework. The integration addresses critical real-time constraints including fixed memory pools, single-stream execution, and sub-400~$μ$s per-event processing budgets on NVIDIA GPUs. We introduce a translation layer that bridges Allen's Structure-of-Arrays (SoA) data layout with cuDNN's tensor format while maintaining zero-copy semantics and deterministic behavior. Current performance shows the CNN stage contributes significant throughput overhead. We present a roadmap targeting order-of-magnitude improvements through mixed-precision computing, model compression and other techniques.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] RPDR: A Round-trip Prediction-Based Data Augmentation Framework for Long-Tail Question Answering
+- **Autores:** Yiming Zhang, Siyue Zhang, Junbo Zhao, Chen Zhao
+- **Fecha:** 2026-02-19
+- **Fuente:** ArXiv.org
+- **DOI:** N/A
+- **Link:** https://openalex.org/W7130762914
+- **Citaciones:** 0
+- **Score de relevancia:** 25/100
+- **Abstract:** Long-tail question answering presents significant challenges for large language models (LLMs) due to their limited ability to acquire and accurately recall less common knowledge. Retrieval-augmented generation (RAG) systems have shown great promise in mitigating this limitation by integrating external retrieval mechanisms. However, dense retrieval models often face the same difficulties when generalizing to rare or niche knowledge. In this study, we introduce RPDR, a novel data augmentation framework that selects high-quality easy-to-learn training data, to enhance dense retrievers. Our approach is built around three core components: synthetic data generation, data selection with Round-Trip prediction to identify easy-to-learn instances, and retriever training with these instances. We evaluate RPDR on two long-tail retrieval benchmarks, PopQA and EntityQuestion, demonstrating substantial improvements over existing retrievers like BM25 and Contriver, especially on extremely long-tail categories. We identify the strengths and limitations of RPDR through detailed human analysis and propose a dynamic routing mechanism to dynamically route queries to specialized retrieval modules to further improve retrieval performance.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via openalex
+
+## [BAJA] DS@GT at TREC TOT 2025: Bridging Vague Recollection with Fusion Retrieval and Learned Reranking
+- **Autores:** Wenxin Zhou, Ritesh Mehta, Anthony Miyaguchi
+- **Fecha:** 2026-01-21
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.15518
+- **Link:** https://www.semanticscholar.org/paper/32cdb9ef0b0d6ed25d9607ec6830fd012fb22fdf
+- **Citaciones:** 0
+- **Score de relevancia:** 25/100
+- **Abstract:** We develop a two-stage retrieval system that combines multiple complementary retrieval methods with a learned reranker and LLM-based reranking, to address the TREC Tip-of-the-Tongue (ToT) task. In the first stage, we employ hybrid retrieval that merges LLM-based retrieval, sparse (BM25), and dense (BGE-M3) retrieval methods. We also introduce topic-aware multi-index dense retrieval that partitions the Wikipedia corpus into 24 topical domains. In the second stage, we evaluate both a trained LambdaMART reranker and LLM-based reranking. To support model training, we generate 5000 synthetic ToT queries using LLMs. Our best system achieves recall of 0.66 and NDCG@1000 of 0.41 on the test set by combining hybrid retrieval with Gemini-2.5-flash reranking, demonstrating the effectiveness of fusion retrieval.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [x] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [BAJA] Recovery problem of parametrizations from Legendre data
+- **Autores:** C. Muñoz-Cabello, T. Nishimura, R. Oset Sinha
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:math.DG
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19924v1
+- **Citaciones:** 0
+- **Score de relevancia:** 25/100
+- **Abstract:** The problem of recovery of parametrizations from Legendre data is a very important inverse problem. In this paper, we provide a systematic and widely-applicable method to recover parametrizations $f: U_n \to \mathbb{R}^{n+1}$ from Legendre data where $U_n$ is an open subset of $\mathbb R^n$. Namely, for a dense subset of the space of real-analytic parametrizations from $U_n$ into $\mathbb{R}^{n+1}$, we show how to recover the parametrization from the Gauss mapping and the height function. Moreover, in order to assist readers to apply results of this paper, many concrete examples are given.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Apophis source population and Earth encounter frequency of Apophis-like bodies
+- **Autores:** M. Brož, R. P. Binzel, P. Vernazza, M. Marsset, O. Chrenko, J. Ďurech, D. Herald
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:astro-ph.EP
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19849v1
+- **Citaciones:** 0
+- **Score de relevancia:** 25/100
+- **Abstract:** We provide context for Apophis' 2029 Earth passage by analyzing its possible source populations, in particular, the Flora family, which has a similar composition, corresponding to LL chondrite meteorites. Out of ${\sim}3380$ NEOs larger or equal than Apophis (${\ge}420\,{\rm m}$), $610\pm 140$ are LL-like NEOs from Flora. Their mean encounter probability is $p = 86\times 10^{-18}\,{\rm km}^{-2}\,{\rm y}^{-1}$, corresponding to once per 13000 y frequency of encounters closer than 38000 km. However, this does not apply to Apophis alone, for which the specific encounter probability is higher, $p' = 1603\times 10^{-18}\,{\rm km}^{-2}\,{\rm y}^{-1}$, but the frequency is lower, only once per 430000 y, when we consider it as a single object. Our simulation of the Flora family over $\sim$1 billion years indicates that Apophis-like bodies have orbits that are particularly persistent in near-Earth space. The temporal distribution of encounter probabilities exhibits peaks (up to ${>}10^4$ in the same units) and the specific value for Apophis is not unusual (occurring ${\sim}70\%$ of time). In other words, there is always at least one Apophis-like body among NEOs. We find that such persistence also creates favorable opportunities for temporary capture as Earth coorbitals. Apophis-like bodies are ultimately removed from the inner solar system...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [x] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Align When They Want, Complement When They Need! Human-Centered Ensembles for Adaptive Human-AI Collaboration
+- **Autores:** Hasan Amin, Ming Yin, Rajiv Khanna
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.AI
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20104v1
+- **Citaciones:** 0
+- **Score de relevancia:** 25/100
+- **Abstract:** In human-AI decision making, designing AI that complements human expertise has been a natural strategy to enhance human-AI collaboration, yet it often comes at the cost of decreased AI performance in areas of human strengths. This can inadvertently erode human trust and cause them to ignore AI advice precisely when it is most needed. Conversely, an aligned AI fosters trust yet risks reinforcing suboptimal human behavior and lowering human-AI team performance. In this paper, we start by identifying this fundamental tension between performance-boosting (i.e., complementarity) and trust-building (i.e., alignment) as an inherent limitation of the traditional approach for training a single AI model to assist human decision making. To overcome this, we introduce a novel human-centered adaptive AI ensemble that strategically toggles between two specialist AI models - the aligned model and the complementary model - based on contextual cues, using an elegantly simple yet provably near-optimal Rational Routing Shortcut mechanism. Comprehensive theoretical analyses elucidate why the adaptive AI ensemble is effective and when it yields maximum benefits. Moreover, experiments on both simulated and real-world data show that when humans are assisted by the adaptive AI ensemble in decision making, they can achieve significantly higher performance than when they are...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Dynamics of the Bianchi~V cosmological model inspired by quintessential $α$-attractors
+- **Autores:** Genly Leon, Amare Abebe, Andronikos Paliathanasis
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:gr-qc
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20072v1
+- **Citaciones:** 0
+- **Score de relevancia:** 25/100
+- **Abstract:** We investigate scalar-field cosmologies in the Bianchi V spacetime using a dynamical-systems framework. Motivated by representative $α$-attractor potentials - the E-model and T-model - we apply averaging theorems and amplitude--phase reductions to monomial potentials $\sim φ^{2n}$ of the scalar field, which approximate the attractor models near their minima, in the presence of matter with barotropic index $γ$. The reduced averaged system admits five generic isolated equilibria: Kasner vacua $\mathcal{K}_0^\pm$, the matter FLRW point $\mathcal{F}$, the scalar FLRW point $\mathcal{S}$, and the curvature Milne-type point $\mathcal{K}$, together with special families for tuned $(n,γ)$. We find that $\mathcal{K}_0^\pm$ are always sources, $\mathcal{F}$ is generically a saddle but can act as a sink for $γ<\min\{\tfrac{2n}{n+1},\tfrac{2}{3}\}$, $\mathcal{S}$ is a sink if $0<n<\tfrac{1}{2}$ and $\tfrac{2n}{n+1}<γ\leq 2$, while $\mathcal{K}$ becomes a sink whenever $γ>\tfrac{2}{3}$ and $n>\tfrac{1}{2}$. These results demonstrate that isotropic FLRW $α$-attractor models extend naturally to anisotropic Bianchi~V cosmologies: inflationary attractors remain robust, while the Milne-type curvature solution emerges as the late-time state.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Learning Discriminative and Generalizable Anomaly Detector for Dynamic Graph with Limited Supervision
+- **Autores:** Yuxing Tian, Yiyan Qi, Fengran Mo, Weixu Zhang, Jian Guo, Jian-Yun Nie
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.LG
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20019v1
+- **Citaciones:** 0
+- **Score de relevancia:** 25/100
+- **Abstract:** Dynamic graph anomaly detection (DGAD) is critical for many real-world applications but remains challenging due to the scarcity of labeled anomalies. Existing methods are either unsupervised or semi-supervised: unsupervised methods avoid the need for labeled anomalies but often produce ambiguous boundary, whereas semi-supervised methods can overfit to the limited labeled anomalies and generalize poorly to unseen anomalies. To address this gap, we consider a largely underexplored problem in DGAD: learning a discriminative boundary from normal/unlabeled data, while leveraging limited labeled anomalies \textbf{when available} without sacrificing generalization to unseen anomalies. To this end, we propose an effective, generalizable, and model-agnostic framework with three main components: (i) residual representation encoding that capture deviations between current interactions and their historical context, providing anomaly-relevant signals; (ii) a restriction loss that constrain the normal representations within an interval bounded by two co-centered hyperspheres, ensuring consistent scales while keeping anomalies separable; (iii) a bi-boundary optimization strategy that learns a discriminative and robust boundary using the normal log-likelihood distribution modeled by a normalizing flow. Extensive experiments demonstrate the superiority of our framework across diverse evaluation settings.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] The Universal Eccentricity Distribution for Dynamical Gravitational-Wave Merger Channels
+- **Autores:** Mor Rozner, Teagan A. Clarke, Isobel M. Romero-Shaw, Johan Samsing
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:astro-ph.HE
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20110v1
+- **Citaciones:** 0
+- **Score de relevancia:** 25/100
+- **Abstract:** We argue that all dynamical astrophysical black hole merger channels are expected to result in a common eccentricity distribution at gravitational wave (GW) frequencies relevant for LIGO/Virgo/KAGRA (LVK) in the high eccentricity limit. This follows from the large separation of scales between the GW regime required for creating eccentric mergers in LVK, and the underlying astrophysical formation environment. Our analytical solution shows exceptional agreement with numerical studies. This finding has important implications for both theoretical studies and ongoing searches for eccentric GW sources.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [x] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] CausalFlip: A Benchmark for LLM Causal Judgment Beyond Semantic Matching
+- **Autores:** Yuzhe Wang, Yaochen Zhu, Jundong Li
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.AI
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20094v1
+- **Citaciones:** 0
+- **Score de relevancia:** 25/100
+- **Abstract:** As large language models (LLMs) witness increasing deployment in complex, high-stakes decision-making scenarios, it becomes imperative to ground their reasoning in causality rather than spurious correlations. However, strong performance on traditional reasoning benchmarks does not guarantee true causal reasoning ability of LLMs, as high accuracy may still arise from memorizing semantic patterns instead of analyzing the underlying true causal structures. To bridge this critical gap, we propose a new causal reasoning benchmark, CausalFlip, designed to encourage the development of new LLM paradigm or training algorithms that ground LLM reasoning in causality rather than semantic correlation. CausalFlip consists of causal judgment questions built over event triples that could form different confounder, chain, and collider relations. Based on this, for each event triple, we construct pairs of semantically similar questions that reuse the same events but yield opposite causal answers, where models that rely heavily on semantic matching are systematically driven toward incorrect predictions. To further probe models' reliance on semantic patterns, we introduce a noisy-prefix evaluation that prepends causally irrelevant text before intermediate causal reasoning steps without altering the underlying causal relations or the logic of the reasoning process. We evaluate LLMs under multiple training paradigms, including answer-only training, explicit Chain-of-Thought...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Informativity and Identifiability for Identification of Networks of Dynamical Systems
+- **Autores:** Anders Hansson, João Victor Galvão da Mata, Martin S. Andersen
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:eess.SY
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20107v1
+- **Citaciones:** 0
+- **Score de relevancia:** 25/100
+- **Abstract:** In this paper, we show how informativity and identifiability for networks of dynamical systems can be investigated using Gröbner bases. We provide a sufficient condition for informativity in terms of positive definiteness of the spectrum of external signals and full generic rank of the transfer function relating the external signals to the inputs of the predictor. Moreover, we show how generic local network identifiability can be investigated by computing the dimension of the fiber associated with the closed loop transfer function from external measurable signals to the measured outputs.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Orthogonal Uplift Learning with Permutation-Invariant Representations for Combinatorial Treatments
+- **Autores:** Xinyan Su, Jiacan Gao, Mingyuan Ma, Xiao Xu, Xinrui Wan, Tianqi Gu, Enyun Yu, Jiecheng Guo, Zhiheng Zhang
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:stat.ME
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19851v1
+- **Citaciones:** 0
+- **Score de relevancia:** 25/100
+- **Abstract:** We study uplift estimation for combinatorial treatments. Uplift measures the pure incremental causal effect of an intervention (e.g., sending a coupon or a marketing message) on user behavior, modeled as a conditional individual treatment effect. Many real-world interventions are combinatorial: a treatment is a policy that specifies context-dependent action distributions rather than a single atomic label. Although recent work considers structured treatments, most methods rely on categorical or opaque encodings, limiting robustness and generalization to rare or newly deployed policies. We propose an uplift estimation framework that aligns treatment representation with causal semantics. Each policy is represented by the mixture it induces over contextaction components and embedded via a permutation-invariant aggregation. This representation is integrated into an orthogonalized low-rank uplift model, extending Robinson-style decompositions to learned, vector-valued treatments. We show that the resulting estimator is expressive for policy-induced causal effects, orthogonally robust to nuisance estimation errors, and stable under small policy perturbations. Experiments on large-scale randomized platform data demonstrate improved uplift accuracy and stability in long-tailed policy regimes
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Compound decisions and empirical Bayes via Bayesian nonparametrics
+- **Autores:** Nikolaos Ignatiadis, Sid Kankanala
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:math.ST
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20115v1
+- **Citaciones:** 0
+- **Score de relevancia:** 25/100
+- **Abstract:** We study the Gaussian sequence compound decision problem and analyze a Bayesian nonparametric estimator from an empirical Bayes, regret-based perspective. Motivated by sharp results for the classical nonparametric maximum likelihood estimator (NPMLE), we ask whether an analogous guarantee can be obtained using a standard Bayesian nonparametric prior. We show that a Dirichlet-process-based Bayesian procedure achieves near-optimal regret bounds. Our main results are stated in the compound decision framework, where the mean vector is treated as fixed, while we also provide parallel guarantees under a hierarchical model in which the means are drawn from a true unknown prior distribution. The posterior mean Bayes rule is, a fortiori, admissible, whereas we show that the NPMLE plug-in rule is inadmissible.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [x] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] On the Ramanujan Vector Field modulo $p$
+- **Autores:** Frederico Bianchini
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:math.NT
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20109v1
+- **Citaciones:** 0
+- **Score de relevancia:** 25/100
+- **Abstract:** For every prime $p \geq 5$, we compute the $p$-th power of the Ramanujan vector field that arises from the differential relations discovered by Ramanujan for the Eisenstein series $E_2,E_4$ and $E_6$. Our method results in explicit equations for the $p$-th power and uses classical results of Serre and Swinnerton-Dyer about modular forms modulo $p$. From this, we verify that a general conjecture by Sheperd-Barron and Ekedahl is valid for the Ramanujan vector field. Furthermore, we consider the affine realization of a certain moduli space of elliptic curves where the Ramanujan vector field is defined, and describe - in characteristic $p$ - the locus given by supersingular elliptic curves in two ways: a classical one - using equations for the supersingular polynomial - and a new one as the singular set of some vector fields. Additionally, we prove that the Ramanujan vector field is transversal to this locus.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Subconvexity Problem on $\operatorname{GL}_3$ over number fields: the twist aspect
+- **Autores:** Filippo Berta
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:math.NT
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20095v1
+- **Citaciones:** 0
+- **Score de relevancia:** 25/100
+- **Abstract:** Let $F$ denote a number field and let $\mathfrak{q}\subset O_F$ traverse a sequence of prime ideals with norm $N(\mathfrak{q}) \to \infty$ and for each $\mathfrak{q}$, let $χ\in \widehat{F^{\times}\setminus \mathbb{A}^\times}$ be a finite order character of conductor $\mathfrak{q}$. For a fixed unitary cuspidal automorphic representation $π$ of $\operatorname{GL}_3/F$ we show that \begin{equation*} L(π\otimes χ,\tfrac{1}{2})\ll \ N(\mathfrak{q})^{3/4-κ}.\end{equation*} holds for all $κ< \frac{1}{36}$.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Disco-RAG: Discourse-Aware Retrieval-Augmented Generation
+- **Autores:** Dongqi Liu, Hang Ding, Qiming Feng, Jian Li, Xurong Xie, Zhucun Xue, Chengjie Wang, Jiang-She Zhang, Yabiao Wang
+- **Fecha:** 2026-01-07
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.04377
+- **Link:** https://www.semanticscholar.org/paper/abd655a098bca5f799fe9d80ebae07a461353cb7
+- **Citaciones:** 0
+- **Score de relevancia:** 25/100
+- **Abstract:** Retrieval-Augmented Generation (RAG) has emerged as an important means of enhancing the performance of large language models (LLMs) in knowledge-intensive tasks. However, most existing RAG strategies treat retrieved passages in a flat and unstructured way, which prevents the model from capturing structural cues and constrains its ability to synthesize knowledge from dispersed evidence across documents. To overcome these limitations, we propose Disco-RAG, a discourse-aware framework that explicitly injects discourse signals into the generation process. Our method constructs intra-chunk discourse trees to capture local hierarchies and builds inter-chunk rhetorical graphs to model cross-passage coherence. These structures are jointly integrated into a planning blueprint that conditions the generation. Experiments on question answering and long-document summarization benchmarks show the efficacy of our approach. Disco-RAG achieves state-of-the-art results on the benchmarks without fine-tuning. These findings underscore the important role of discourse structure in advancing RAG systems.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [BAJA] Digital Twin--Driven Adaptive Wavelet Strategy for Efficient 6G Backbone Network Telemetry
+- **Autores:** Alexandre Barbosa de Lima, Xavier Hesselbach, José Roberto de Almeida Amazonas
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:eess.SP
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20034v1
+- **Citaciones:** 0
+- **Score de relevancia:** 25/100
+- **Abstract:** Classical orthogonal wavelets guarantee perfect reconstruction but rely on fixed bases optimized for polynomial smoothness, achieving suboptimal compression on signals with fractal spectral signatures. Conversely, learned methods offer adaptivity but typically enforce orthogonality via soft penalties, sacrificing structural guarantees.   This work establishes a rigorous equivalence between Multiscale Entanglement Renormalization Ansatz (MERA) tensor networks and paraunitary filter banks. The resulting framework learns adaptive wavelets while enforcing exact orthogonality through manifold-constrained optimization, guaranteeing perfect reconstruction and energy conservation throughout training.   Validation on Long-Range Dependent (LRD) network traffic demonstrates that learned filters outperform classical wavelets by 0.5--3.8~dB PSNR on six MAWI backbone traces (2020--2025, 314~Mbps--1.75~Gbps) while preserving the Hurst exponent within estimation uncertainty ($|ΔH| \le 0.03$). These results establish MERA-inspired wavelets as a principled approach for telemetry compression in 6G digital twin synchronization.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [x] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] ReAttn: Improving Attention-based Re-ranking via Attention Re-weighting
+- **Autores:** Yuxing Tian, Fengran Mo, Weixu Zhang, Yiyan Qi, Jian-Yun Nie
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.CL
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19969v1
+- **Citaciones:** 0
+- **Score de relevancia:** 25/100
+- **Abstract:** The strong capabilities of recent Large Language Models (LLMs) have made them highly effective for zero-shot re-ranking task. Attention-based re-ranking methods, which derive relevance scores directly from attention weights, offer an efficient and interpretable alternative to generation-based re-ranking methods. However, they still face two major limitations. First, attention signals are highly concentrated a small subset of tokens within a few documents, making others indistinguishable. Second, attention often overemphasizes phrases lexically similar to the query, yielding biased rankings that irrelevant documents with mere lexical resemblance are regarded as relevant. In this paper, we propose \textbf{ReAttn}, a post-hoc re-weighting strategy for attention-based re-ranking methods. It first compute the cross-document IDF weighting to down-weight attention on query-overlapping tokens that frequently appear across the candidate documents, reducing lexical bias and emphasizing distinctive terms. It then employs entropy-based regularization to mitigate over-concentrated attention, encouraging a more balanced distribution across informative tokens. Both adjustments operate directly on existing attention weights without additional training or supervision. Extensive experiments demonstrate the effectiveness of our method.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Entropy in Large Language Models
+- **Autores:** Marco Scharringhausen
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.CL
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20052v1
+- **Citaciones:** 0
+- **Score de relevancia:** 25/100
+- **Abstract:** In this study, the output of large language models (LLM) is considered an information source generating an unlimited sequence of symbols drawn from a finite alphabet. Given the probabilistic nature of modern LLMs, we assume a probabilistic model for these LLMs, following a constant random distribution and the source itself thus being stationary. We compare this source entropy (per word) to that of natural language (written or spoken) as represented by the Open American National Corpus (OANC). Our results indicate that the word entropy of such LLMs is lower than the word entropy of natural speech both in written or spoken form. The long-term goal of such studies is to formalize the intuitions of information and uncertainty in large language training to assess the impact of training an LLM from LLM generated training data. This refers to texts from the world wide web in particular.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Is Quadratic Gravity ghost free because the ghost is only virtual?
+- **Autores:** Osvaldo P. Santillán
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:hep-th
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20047v1
+- **Citaciones:** 0
+- **Score de relevancia:** 25/100
+- **Abstract:** In \cite{salvio} a prescription for calculating the correlation functions in Quadratic Gravity \cite{stelle1}-\cite{stelle2} was presented. This procedure does not enter in conflict with unitarity The Gauss-Ostrogradsky method for higher order theories defines two momentum densities $P_1$ and $P_2$ and two coordinate densities $Q_1$ and $Q_2$, one pair is standard, the other ghost like. The approach in \cite{salvio} involves the continuation $P_2\to i P_2$ and $Q_2\to i Q_2$ of the ghost variables. In the present work, following \cite{yomismo}, the LSZ rules are derived, but with a formalism adapted to full quartic or higher order theories. The hypothesis for quantization are that $[Q_1, Q_2]=\text{"gauge terms"}$, $[P_1, P_2]=\text{"gauge terms"}$ and $[P_1, Q_1]=iI+\text{"gauge terms"}$. This alone leads to the conclusion that $[P_2, Q_2]=-iI+\text{"gauge terms"}$, therefore this last pair of variables is ghost like. The graviton contains a massless mode, which is the standard graviton, plus two massive modes with masses $m_2$ and $m_3$. The third mode is usually interpreted as a ghost in the literature \cite{stelle2}. Here it is shown that, even after making the continuation $P_2\to i P_2$ and $Q_2\to i Q_2$, the creation and annihilation operators for this mode commute, the third mode does not appear as a free wave. This does...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Improving the Power of Bonferroni Adjustments under Joint Normality and Exchangeability
+- **Autores:** Caleb Hiltunen, Yeonwoo Rho
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:stat.ME
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20118v1
+- **Citaciones:** 0
+- **Score de relevancia:** 25/100
+- **Abstract:** Bonferroni's correction is a popular tool to address multiplicity but is notorious for its low power when tests are dependent. This paper proposes a practical modification of Bonferroni's correction when test statistics are jointly normal and exchangeable. This method is intuitive to practitioners and achieves higher power in sparse alternatives, as our simulations suggest. We also prove that this method successfully controls the family-wise error rate at any significance level.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Gromov-Hausdorff limits of immortal Kähler-Ricci flows
+- **Autores:** Man-Chun Lee, Valentino Tosatti, Junsheng Zhang
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:math.DG
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19913v1
+- **Citaciones:** 0
+- **Score de relevancia:** 25/100
+- **Abstract:** We show that the normalized Kähler-Ricci flow on a compact Kähler manifold with semiample canonical bundle converges in the Gromov-Hausdorff topology to the metric completion of the twisted Kähler-Einstein metric on the canonical model, as conjectured by Song-Tian's analytic mimimal model program.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [x] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Denotational Semantics for ODRL: Knowledge-Based Constraint Conflict Detection
+- **Autores:** Daham Mustafa, Diego Collarana, Yixin Peng, Rafiqul Haque, Christoph Lange-Bever, Christoph Quix, Stephan Decker
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.CL
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19883v1
+- **Citaciones:** 0
+- **Score de relevancia:** 25/100
+- **Abstract:** ODRL's six set-based operators -- isA, isPartOf, hasPart, isAnyOf, isAllOf, isNoneOf -- depend on external domain knowledge that the W3C specification leaves unspecified. Without it, every cross-dataspace policy comparison defaults to Unknown. We present a denotational semantics that maps each ODRL constraint to the set of knowledge-base concepts satisfying it. Conflict detection reduces to denotation intersection under a three-valued verdict -- Conflict, Compatible, or Unknown -- that is sound under incomplete knowledge. The framework covers all three ODRL composition modes (and, or, xone) and all three semantic domains arising in practice: taxonomic (class subsumption), mereological (part-whole containment), and nominal (identity). For cross-dataspace interoperability, we define order-preserving alignments between knowledge bases and prove two guarantees: conflicts are preserved across different KB standards, and unmapped concepts degrade gracefully to Unknown -- never to false conflicts. A runtime soundness theorem ensures that design-time verdicts hold for all execution contexts. The encoding stays within the decidable EPR fragment of first-order logic. We validate it with 154 benchmarks across six knowledge base families (GeoNames, ISO 3166, W3C DPV, a GDPR-derived taxonomy, BCP 47, and ISO 639-3) and four structural KBs targeting adversarial edge cases. Both the Vampire theorem prover and the Z3 SMT solver agree...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] The Invisible Gorilla Effect in Out-of-distribution Detection
+- **Autores:** Harry Anthony, Ziyun Liang, Hermione Warr, Konstantinos Kamnitsas
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.CV
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20068v1
+- **Citaciones:** 0
+- **Score de relevancia:** 25/100
+- **Abstract:** Deep Neural Networks achieve high performance in vision tasks by learning features from regions of interest (ROI) within images, but their performance degrades when deployed on out-of-distribution (OOD) data that differs from training data. This challenge has led to OOD detection methods that aim to identify and reject unreliable predictions. Although prior work shows that OOD detection performance varies by artefact type, the underlying causes remain underexplored. To this end, we identify a previously unreported bias in OOD detection: for hard-to-detect artefacts (near-OOD), detection performance typically improves when the artefact shares visual similarity (e.g. colour) with the model's ROI and drops when it does not - a phenomenon we term the Invisible Gorilla Effect. For example, in a skin lesion classifier with red lesion ROI, we show the method Mahalanobis Score achieves a 31.5% higher AUROC when detecting OOD red ink (similar to ROI) compared to black ink (dissimilar) annotations. We annotated artefacts by colour in 11,355 images from three public datasets (e.g. ISIC) and generated colour-swapped counterfactuals to rule out dataset bias. We then evaluated 40 OOD methods across 7 benchmarks and found significant performance drops for most methods when artefacts differed from the ROI. Our findings highlight an...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [x] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Mitigating Artifacts in Pre-quantization Based Scientific Data Compressors with Quantization-aware Interpolation
+- **Autores:** Pu Jiao, Sheng Di, Jiannan Tian, Mingze Xia, Xuan Wu, Yang Zhang, Xin Liang, Franck Cappello
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.DC
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20097v1
+- **Citaciones:** 0
+- **Score de relevancia:** 25/100
+- **Abstract:** Error-bounded lossy compression has been regarded as a promising way to address the ever-increasing amount of scientific data in today's high-performance computing systems. Pre-quantization, a critical technique to remove sequential dependency and enable high parallelism, is widely used to design and develop high-throughput error-controlled data compressors. Despite the extremely high throughput of pre-quantization based compressors, they generally suffer from low data quality with medium or large user-specified error bounds. In this paper, we investigate the artifacts generated by pre-quantization based compressors and propose a novel algorithm to mitigate them. Our contributions are fourfold: (1) We carefully characterize the artifacts in pre-quantization based compressors to understand the correlation between the quantization index and compression error; (2) We propose a novel quantization-aware interpolation algorithm to improve the decompressed data; (3) We parallelize our algorithm in both shared-memory and distributed-memory environments to obtain high performance; (4) We evaluate our algorithm and validate it with two leading pre-quantization based compressors using five real-world datasets. Experiments demonstrate that our artifact mitigation algorithm can effectively improve the quality of decompressed data produced by pre-quantization based compressors while maintaining their high compression throughput.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Dirichlet Scale Mixture Priors for Bayesian Neural Networks
+- **Autores:** August Arnstad, Leiv Rønneberg, Geir Storvik
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:stat.ML
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19859v1
+- **Citaciones:** 0
+- **Score de relevancia:** 25/100
+- **Abstract:** Neural networks are the cornerstone of modern machine learning, yet can be difficult to interpret, give overconfident predictions and are vulnerable to adversarial attacks. Bayesian neural networks (BNNs) provide some alleviation of these limitations, but have problems of their own. The key step of specifying prior distributions in BNNs is no trivial task, yet is often skipped out of convenience. In this work, we propose a new class of prior distributions for BNNs, the Dirichlet scale mixture (DSM) prior, that addresses current limitations in Bayesian neural networks through structured, sparsity-inducing shrinkage. Theoretically, we derive general dependence structures and shrinkage results for DSM priors and show how they manifest under the geometry induced by neural networks. In experiments on simulated and real world data we find that the DSM priors encourages sparse networks through implicit feature selection, show robustness under adversarial attacks and deliver competitive predictive performance with substantially fewer effective parameters. In particular, their advantages appear most pronounced in correlated, moderately small data regimes, and are more amenable to weight pruning. Moreover, by adopting heavy-tailed shrinkage mechanisms, our approach aligns with recent findings that such priors can mitigate the cold posterior effect, offering a principled alternative to the commonly used...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Efficient Inference for Noisy LLM-as-a-Judge Evaluation
+- **Autores:** Yiqun Chen, Sizhu Lu, Sijia Li, Moran Guo, Shen Li
+- **Fecha:** 2026-01-08
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.05420
+- **Link:** https://www.semanticscholar.org/paper/3d2b64c46257f9b6856820bd413b8b457e708b10
+- **Citaciones:** 2
+- **Score de relevancia:** 25/100
+- **Abstract:** Large language models (LLMs) are increasingly used as automatic evaluators of generative AI outputs, a paradigm often referred to as"LLM-as-a-judge."In practice, LLM judges are imperfect predictions for the underlying truth and can exhibit systematic, non-random errors. Two main approaches have recently been proposed to address this issue: (i) direct measurementerror correction based on misclassification models such as Rogan-Gladen-style estimators, and (ii) surrogate-outcome approaches such as prediction-powered inference (PPI), which correct bias by calibrating prediction residuals on a small set of gold-standard human labels. In this paper, we systematically study the performance of these two approaches for estimating mean parameters (e.g., average benchmark scores or pairwise win rates). Leveraging tools from semiparametric efficiency theory, we unify the two classes of estimators by deriving explicit forms of efficient influence function (EIF)-based efficient estimators and characterize conditions under which PPI-style estimators attain strictly smaller asymptotic variance than measurement-error corrections. We verify our theoretical results in simulations and demonstrate the methods on real-data examples. We provide an implementation of the benchmarked methods and comparison utilities at https://github.com/yiqunchen/debias-llm-as-a-judge.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [BAJA] Children's Expectations, Engagement, and Evaluation of an LLM-enabled Spherical Visualization Platform in the Classroom
+- **Autores:** Emelie Fälton, Isabelle Strömstedt, Mathis Brossier, Andreas Göransson, Konrad J. Schönborn, Amy Loutfi, E. Sundén, Mujtaba Fadhil Jawad, Yadgar Suleiman, Johanna Björklund, Mario Romero, Anders Ynnerman, Lonni Besançon
+- **Fecha:** 2026-01-16
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.11060
+- **Link:** https://www.semanticscholar.org/paper/18ef50e6530eff8d2d8f368541f94e43e9717ae5
+- **Citaciones:** 0
+- **Score de relevancia:** 25/100
+- **Abstract:** We present our first stage results from deploying an LLM-augmented visualization software in a classroom setting to engage primary school children with earth-related datasets. Motivated by the growing interest in conversational AI as a means to support inquiry-based learning, we investigate children's expectations, engagement, and evaluation of a spoken LLM interface with a shared, immersive visualization system in a formal educational context. Our system integrates a speech-capable large language model with an interactive spherical display. It enables children to ask natural-language questions and receive coordinated verbal explanations and visual responses through the LLM-augmented visualization updating in real time based on spoken queries. We report on a classroom study with Swedish children aged 9-10, combining structured observation and small-group discussions to capture expectations prior to interaction, interaction patterns during facilitated sessions, and children's reflections on their encounter afterward. Our results provide empirical insights into children's initial encounters with an LLM-enabled visualization platform within a classroom setting and their expectations, interactions, and evaluations of the system. These findings inform the technology's potential for educational use and highlight important directions for future research.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [x] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [BAJA] Studying the Separability of Visual Channel Pairs in Symbol Maps
+- **Autores:** Poorna Talkad Sukumar, Maurizio Porfiri, Oded Nov
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.HC
+- **DOI:** https://doi.org/10.1145/3772318.3790287
+- **Link:** https://arxiv.org/abs/2602.20022v1
+- **Citaciones:** 0
+- **Score de relevancia:** 25/100
+- **Abstract:** Visualizations often encode multivariate data by mapping attributes to distinct visual channels such as color, size, or shape. The effectiveness of these encodings depends on separability--the extent to which channels can be perceived independently. Yet systematic evidence for separability, especially in map-based contexts, is lacking. We present a crowdsourced experiment that evaluates the separability of four channel pairs--color (ordered) x shape, color (ordered) x size, size x shape, and size x orientation--in the context of bivariate symbol maps. Both accuracy and speed analyses show that color x shape is the most separable and size x orientation the least separable, while size x color and size x shape do not differ. Separability also proved asymmetric--performance depended on which channel encoded the task-relevant variable, with color and shape outperforming size, and square shape especially difficult to discriminate. Our findings advance the empirical understanding of visual separability, with implications for multivariate map design.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [x] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] When Models Ignore Definitions: Measuring Semantic Override Hallucinations in LLM Reasoning
+- **Autores:** Yogeswar Reddy Thota, Setareh Rafatirad, Homayoun Houman, Tooraj Nikoubin
+- **Fecha:** 2026-02-19
+- **Fuente:** arXiv (Cornell University)
+- **DOI:** https://doi.org/10.48550/arxiv.2602.17520
+- **Link:** https://openalex.org/W7130689585
+- **Citaciones:** 0
+- **Score de relevancia:** 25/100
+- **Abstract:** Large language models (LLMs) demonstrate strong performance on standard digital logic and Boolean reasoning tasks, yet their reliability under locally redefined semantics remains poorly understood. In many formal settings, such as circuit specifications, examinations, and hardware documentation, operators and components are explicitly redefined within narrow scope. Correct reasoning in these contexts requires models to temporarily suppress globally learned conventions in favor of prompt-local definitions. In this work, we study a systematic failure mode we term semantic override, in which an LLM reverts to its pretrained default interpretation of operators or gate behavior despite explicit redefinition in the prompt. We also identify a related class of errors, assumption injection, where models commit to unstated hardware semantics when critical details are underspecified, rather than requesting clarification. We introduce a compact micro-benchmark of 30 logic and digital-circuit reasoning tasks designed as verifier-style traps, spanning Boolean algebra, operator overloading, redefined gates, and circuit-level semantics. Evaluating three frontier LLMs, we observe persistent noncompliance with local specifications, confident but incompatible assumptions, and dropped constraints even in elementary settings. Our findings highlight a gap between surface-level correctness and specification-faithful reasoning, motivating evaluation protocols that explicitly test local unlearning and semantic compliance in formal domains.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [x] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via openalex
+
+## [BAJA] TEMPO: A Realistic Multi-Domain Benchmark for Temporal Reasoning-Intensive Retrieval
+- **Autores:** Abdelrahman Abdallah, Mohammed Ali, M. Abdul-Mageed, Adam Jatowt
+- **Fecha:** 2026-01-14
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.09523
+- **Link:** https://www.semanticscholar.org/paper/61735d21409a0974522db3abb612d8b92ed305d0
+- **Citaciones:** 0
+- **Score de relevancia:** 25/100
+- **Abstract:** Existing temporal QA benchmarks focus on simple fact-seeking queries from news corpora, while reasoning-intensive retrieval benchmarks lack temporal grounding. However, real-world information needs often require reasoning about temporal evolution and synthesizing evidence across time periods. We introduce TEMPO, the first benchmark combining temporal reasoning with reasoning-intensive retrieval across 13 domains. TEMPO features: (1) 1,730 complex queries requiring deep temporal reasoning such as tracking changes, identifying trends, or comparing cross-period evidence; (2) step-wise retrieval planning with 3,976 decomposed steps and gold documents mapped to each step for multi-hop evaluation; and (3) novel temporal metrics including Temporal Coverage@k and Temporal Precision@k measuring whether results span required time periods. Evaluation of 12 retrieval systems reveals substantial challenges: the best model (DiVeR) achieves only 32.0 NDCG@10 and 71.4\% Temporal Coverage@10, demonstrating difficulty in retrieving temporally complete evidence. We believe TEMPO provides a challenging benchmark for improving temporal reasoning in retrieval and RAG systems. Our code and data are available at https://github.com/tempo-bench/Tempo. See also our official website: https://tempo-bench.github.io/.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [x] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [BAJA] DR-Arena: an Automated Evaluation Framework for Deep Research Agents
+- **Autores:** Yi Gao, Ruochen Zhao, Yang Deng, Wenxuan Zhang
+- **Fecha:** 2026-01-15
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.10504
+- **Link:** https://www.semanticscholar.org/paper/917bf79e822419eacdbed9939467b4cc8e716f18
+- **Citaciones:** 0
+- **Score de relevancia:** 25/100
+- **Abstract:** As Large Language Models (LLMs) increasingly operate as Deep Research (DR) Agents capable of autonomous investigation and information synthesis, reliable evaluation of their task performance has become a critical bottleneck. Current benchmarks predominantly rely on static datasets, which suffer from several limitations: limited task generality, temporal misalignment, and data contamination. To address these, we introduce DR-Arena, a fully automated evaluation framework that pushes DR agents to their capability limits through dynamic investigation. DR-Arena constructs real-time Information Trees from fresh web trends to ensure the evaluation rubric is synchronized with the live world state, and employs an automated Examiner to generate structured tasks testing two orthogonal capabilities: Deep reasoning and Wide coverage. DR-Arena further adopts Adaptive Evolvement Loop, a state-machine controller that dynamically escalates task complexity based on real-time performance, demanding deeper deduction or wider aggregation until a decisive capability boundary emerges. Experiments with six advanced DR agents demonstrate that DR-Arena achieves a Spearman correlation of 0.94 with the LMSYS Search Arena leaderboard. This represents the state-of-the-art alignment with human preferences without any manual efforts, validating DR-Arena as a reliable alternative for costly human adjudication.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [BAJA] Topography-Induced Stationary Waves and the Onset of Nightside Warming on Rocky Planets around M-dwarf Stars
+- **Autores:** Howard Chen, Aida Ildirimzade, Evelyn Macdonald
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:astro-ph.EP
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20155v1
+- **Citaciones:** 0
+- **Score de relevancia:** 25/100
+- **Abstract:** Among potentially habitable worlds, rocky planets orbiting M dwarfs offer the most favorable prospects for atmospheric characterization, yet their climates may differ substantially from those of Earth analogs. In the tidally locked limit, the nightside's tendency to radiatively cool and potentially trap volatiles as permanent ice introduces a strong dependence of habitability on the planet's surface and atmospheric boundary conditions. We perform a suite of synchronously rotating experiments spanning a wide range of topographic and orographic realizations with different mean elevations and landmass distributions. Across a grid of $p_{\mathrm{N2}} = 0.5$-$8~\mathrm{bar}$ and $F_{\star} = 1200$-$1700~\mathrm{W\,m^{-2}}$, we find that surface relief breaks the flow symmetry, replacing the circumpolar vortices with mechanically forced stationary waves. Steep orography produces standing Rossby gyres that strengthen the cross-terminator jet and align vertical uplift with the day--night boundary. These new circulation regimes enhance moisture transport, increasing the infrared optical depth and promoting additional nightside cloud formation, which produces a stronger cloud-greenhouse feedback and lower the critical fluxes required for global planetary deglaciation. Broad, elevated plateaus drive a similarly fragmented but slightly weaker circulation, yielding less effective moisture transport. These results show that the relief and spatial distribution of landmasses, parameters unconstrained for most exoplanets, can exert...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] I Dropped a Neural Net
+- **Autores:** Hyunwoo Park
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.LG
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19845v1
+- **Citaciones:** 0
+- **Score de relevancia:** 25/100
+- **Abstract:** A recent Dwarkesh Patel podcast with John Collison and Elon Musk featured an interesting puzzle from Jane Street: they trained a neural net, shuffled all 96 layers, and asked to put them back in order.   Given unlabelled layers of a Residual Network and its training dataset, we recover the exact ordering of the layers. The problem decomposes into pairing each block's input and output projections ($48!$ possibilities) and ordering the reassembled blocks ($48!$ possibilities), for a combined search space of $(48!)^2 \approx 10^{122}$, which is more than the atoms in the observable universe. We show that stability conditions during training like dynamic isometry leave the product $W_{\text{out}} W_{\text{in}}$ for correctly paired layers with a negative diagonal structure, allowing us to use diagonal dominance ratio as a signal for pairing. For ordering, we seed-initialize with a rough proxy such as delta-norm or $\|W_{\text{out}}\|_F$ then hill-climb to zero mean squared error.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [x] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Evaluating the Impact of Data Anonymization on Image Retrieval
+- **Autores:** Marvin Chen, Manuel Eberhardinger, Johannes Maucher
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.LG
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19641v1
+- **Citaciones:** 0
+- **Score de relevancia:** 25/100
+- **Abstract:** With the growing importance of privacy regulations such as the General Data Protection Regulation, anonymizing visual data is becoming increasingly relevant across institutions. However, anonymization can negatively affect the performance of Computer Vision systems that rely on visual features, such as Content-Based Image Retrieval (CBIR). Despite this, the impact of anonymization on CBIR has not been systematically studied. This work addresses this gap, motivated by the DOKIQ project, an artificial intelligence-based system for document verification actively used by the State Criminal Police Office Baden-Württemberg. We propose a simple evaluation framework: retrieval results after anonymization should match those obtained before anonymization as closely as possible. To this end, we systematically assess the impact of anonymization using two public datasets and the internal DOKIQ dataset. Our experiments span three anonymization methods, four anonymization degrees, and four training strategies, all based on the state of the art backbone Self-Distillation with No Labels (DINO)v2. Our results reveal a pronounced retrieval bias in favor of models trained on original data, which produce the most similar retrievals after anonymization. The findings of this paper offer practical insights for developing privacy-compliant CBIR systems while preserving performance.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [x] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Fast and simple multiplication of bounded twin-width matrices
+- **Autores:** László Kozma, Michal Opler
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.DS
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20023v1
+- **Citaciones:** 0
+- **Score de relevancia:** 25/100
+- **Abstract:** Matrix multiplication is a fundamental task in almost all computational fields, including machine learning and optimization, computer graphics, signal processing, and graph algorithms (static and dynamic). Twin-width is a natural complexity measure of matrices (and more general structures) that has recently emerged as a unifying concept with important algorithmic applications. While the twin-width of a matrix is invariant to re-ordering rows and columns, most of its algorithmic applications to date assume that the input is given in a certain canonical ordering that yields a bounded twin-width contraction sequence. In general, efficiently finding such a sequence -- even for an approximate twin-width value -- remains a central and elusive open question. In this paper we show that a binary $n \times n$ matrix of twin-width $d$ can be preprocessed in $\widetilde{\mathcal{O}}_d(n^2)$ time, so that its product with any vector can be computed in $\widetilde{\mathcal{O}}_d(n)$ time. Notably, the twin-width of the input matrix need not be known and no particular ordering of its rows and columns is assumed. If a canonical ordering is available, i.e., if the input matrix is $d$-twin-ordered, then the runtime of preprocessing and matrix-vector products can be further reduced to $\mathcal{O}(n^2+dn)$ and $\mathcal{O}(dn)$. Consequently, we can multiply two...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [x] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Faithfulness vs. Safety: Evaluating LLM Behavior Under Counterfactual Medical Evidence
+- **Autores:** Kaijie Mo, Siddhartha Venkatayogi, Chantal Shaib, Ramez Kouzy, Wei Xu, Byron C. Wallace, Junyi Jessy Li
+- **Fecha:** 2026-01-17
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.11886
+- **Link:** https://www.semanticscholar.org/paper/9f3bde506867d247004fc430bb2317e29c15179b
+- **Citaciones:** 0
+- **Score de relevancia:** 24/100
+- **Abstract:** In high-stakes domains like medicine, it may be generally desirable for models to faithfully adhere to the context provided. But what happens if the context does not align with model priors or safety protocols? In this paper, we investigate how LLMs behave and reason when presented with counterfactual or even adversarial medical evidence. We first construct MedCounterFact, a counterfactual medical QA dataset that requires the models to answer clinical comparison questions (i.e., judge the efficacy of certain treatments, with evidence consisting of randomized controlled trials provided as context). In MedCounterFact, real-world medical interventions within the questions and evidence are systematically replaced with four types of counterfactual stimuli, ranging from unknown words to toxic substances. Our evaluation across multiple frontier LLMs on MedCounterFact reveals that in the presence of counterfactual evidence, existing models overwhelmingly accept such"evidence"at face value even when it is dangerous or implausible, and provide confident and uncaveated answers. While it may be prudent to draw a boundary between faithfulness and safety, our findings reveal that there exists no such boundary yet.
+- **Keywords match:** ['faithfulness evaluation LLM']
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [x] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [BAJA] Replayable Financial Agents: A Determinism-Faithfulness Assurance Harness for Tool-Using LLM Agents
+- **Autores:** Raffi Khatchadourian
+- **Fecha:** 2026-01-17
+- **Fuente:** arXiv.org
+- **DOI:** https://doi.org/10.48550/arXiv.2601.15322
+- **Link:** https://www.semanticscholar.org/paper/7748e74af03eda05f6781c50c49e42df83d7faf1
+- **Citaciones:** 0
+- **Score de relevancia:** 24/100
+- **Abstract:** LLM agents struggle with regulatory audit replay: when asked to reproduce a flagged transaction decision with identical inputs, most deployments fail to return consistent results. This paper introduces the Determinism-Faithfulness Assurance Harness (DFAH), a framework for measuring trajectory determinism and evidence-conditioned faithfulness in tool-using agents deployed in financial services. Across 74 configurations (12 models, 4 providers, 8-24 runs each at T=0.0) in non-agentic baseline experiments, 7-20B parameter models achieved 100% determinism, while 120B+ models required 3.7x larger validation samples to achieve equivalent statistical reliability. Agentic tool-use introduces additional variance (see Tables 4-7). Contrary to the assumed reliability-capability trade-off, a positive Pearson correlation emerged (r = 0.45, p<0.01, n = 51 at T=0.0) between determinism and faithfulness; models producing consistent outputs also tended to be more evidence-aligned. Three financial benchmarks are provided (compliance triage, portfolio constraints, DataOps exceptions; 50 cases each) along with an open-source stress-test harness. In these benchmarks and under DFAH evaluation settings, Tier 1 models with schema-first architectures achieved determinism levels consistent with audit replay requirements.
+- **Keywords match:** ['faithfulness evaluation LLM']
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [x] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via semantic_scholar
+
+## [BAJA] Personalized Longitudinal Medical Report Generation via Temporally-Aware Federated Adaptation
+- **Autores:** He Zhu, Ren Togo, Takahiro Ogawa, Kenji Hirata, Minghui Tang, Takaaki Yoshimura, Hiroyuki Sugimori, Noriko Nishioka, Yukie Shimizu, Kohsuke Kudo, Miki Haseyama
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.CV
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19668v1
+- **Citaciones:** 0
+- **Score de relevancia:** 20/100
+- **Abstract:** Longitudinal medical report generation is clinically important yet remains challenging due to strict privacy constraints and the evolving nature of disease progression. Although federated learning (FL) enables collaborative training without data sharing, existing FL methods largely overlook longitudinal dynamics by assuming stationary client distributions, making them unable to model temporal shifts across visits or patient-specific heterogeneity-ultimately leading to unstable optimization and suboptimal report generation.   We introduce Federated Temporal Adaptation (FTA), a federated setting that explicitly accounts for the temporal evolution of client data. Building upon this setting, we propose FedTAR, a framework that integrates demographic-driven personalization with time-aware global aggregation. FedTAR generates lightweight LoRA adapters from demographic embeddings and performs temporal residual aggregation, where updates from different visits are weighted by a meta-learned temporal policy optimized via first-order MAML.   Experiments on J-MID (1M exams) and MIMIC-CXR demonstrate consistent improvements in linguistic accuracy, temporal coherence, and cross-site generalization, establishing FedTAR as a robust and privacy-preserving paradigm for federated longitudinal modeling.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [x] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Transcending the Annotation Bottleneck: AI-Powered Discovery in Biology and Medicine
+- **Autores:** Soumick Chatterjee
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cs.CV
+- **DOI:** https://doi.org/10.1007/978-3-032-17216-7_19
+- **Link:** https://arxiv.org/abs/2602.20100v1
+- **Citaciones:** 0
+- **Score de relevancia:** 20/100
+- **Abstract:** The dependence on expert annotation has long constituted the primary rate-limiting step in the application of artificial intelligence to biomedicine. While supervised learning drove the initial wave of clinical algorithms, a paradigm shift towards unsupervised and self-supervised learning (SSL) is currently unlocking the latent potential of biobank-scale datasets. By learning directly from the intrinsic structure of data - whether pixels in a magnetic resonance image (MRI), voxels in a volumetric scan, or tokens in a genomic sequence - these methods facilitate the discovery of novel phenotypes, the linkage of morphology to genetics, and the detection of anomalies without human bias. This article synthesises seminal and recent advances in "learning without labels," highlighting how unsupervised frameworks can derive heritable cardiac traits, predict spatial gene expression in histology, and detect pathologies with performance that rivals or exceeds supervised counterparts.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [x] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Detecting and Explaining Unlawful Insider Trading: A Shapley Value and Causal Forest Approach to Identifying Key Drivers and Causal Relationships
+- **Autores:** Krishna Neupane, Igor Griva, Robert Axtell, William Kennedy, Jason Kinser
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:q-fin.ST
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19841v1
+- **Citaciones:** 0
+- **Score de relevancia:** 20/100
+- **Abstract:** Corporate insiders trade for diverse reasons, often possessing Material Non-Public Information (MNPI). Determining whether specific trades leverage MNPI is a significant challenge due to inherent complexity. This study focuses on two critical objectives: accurately detecting Unlawful Insider Trading (UIT) and identifying key features explaining classification. The analysis demonstrates how combining Shapley Values (SHAP) and Causal Forest (CF) reveals these explanatory drivers. The findings underscore the necessity of causality in identifying and interpreting UIT, requiring the consideration of alternative scenarios and potential outcomes. Within a high-dimensional feature space, the proposed architecture integrates state-of-the-art techniques to achieve high classification accuracy. The framework provides robust feature rankings via SHAP and causal significance assessments through CF, facilitating the discovery of unique causal relationships. Statistically significant relationships are documented between the outcome and several key features, including director status, price-to-book ratio, return, and market beta. These features significantly influence the likelihood of UIT, suggesting potential links between insider behavior and factors such as information asymmetry, valuation risk, market volatility, and stock performance. The analysis draws attention to the complexities of financial causality, noting that while initial descriptors offer intuitive insights, deeper examination is required to understand nuanced impacts. These findings reaffirm the architectural flexibility of...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** Si -- RAGAS evaluation framework
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] High-Accuracy Molecular Simulations with Machine-Learning Potentials and Semiclassical Approximations to Quantum Dynamics
+- **Autores:** Valerii Andreichev, Jindra Dušek, Markus Meuwly, Jeremy O. Richardson
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:physics.chem-ph
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19977v1
+- **Citaciones:** 0
+- **Score de relevancia:** 20/100
+- **Abstract:** Accurate simulations of molecules require high-level electronic-structure theory in combination with rigorous methods for approximating the quantum dynamics. Machine-learning approaches can significantly reduce the computational expense of this workflow without any loss of accuracy. We discuss various methods for constructing potential energy surfaces including transfer learning, which requires a minimal number of expensive training points. In this way, we can study chemical reactions at a high level but a low cost. In particular, as the potentials are smooth and differentiable, they enable the use of more advanced semiclassical approximations to quantum dynamics, such as perturbatively corrected instanton theory, which can capture both tunnelling and anharmonicity.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] PackFlow: Generative Molecular Crystal Structure Prediction via Reinforcement Learning Alignment
+- **Autores:** Akshay Subramanian, Elton Pan, Juno Nam, Maurice Weiler, Shuhui Qu, Cheol Woo Park, Tommi S. Jaakkola, Elsa Olivetti, Rafael Gomez-Bombarelli
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:physics.chem-ph
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20140v1
+- **Citaciones:** 0
+- **Score de relevancia:** 18/100
+- **Abstract:** Organic molecular crystals underpin technologies ranging from pharmaceuticals to organic electronics, yet predicting solid-state packing of molecules remains challenging because candidate generation is combinatorial and stability is only resolved after costly energy evaluations. Here we introduce PackFlow, a flow matching framework for molecular crystal structure prediction (CSP) that generates heavy-atom crystal proposals by jointly sampling Cartesian coordinates and unit-cell lattice parameters given a molecular graph. This lattice-aware generation interfaces directly with downstream relaxation and lattice-energy ranking, positioning PackFlow as a scalable proposal engine within standard CSP pipelines. To explicitly steer generation toward physically favourable regions, we propose physics alignment, a reinforcement learning post-training stage that uses machine-learned interatomic potential energies and forces as stability proxies. Physics alignment improves physical validity without altering inference-time sampling. We validate PackFlow's performance against heuristic baselines through two distinct evaluations. First, on a broad unseen set of molecular systems, we demonstrate superior candidate generation capability, with proposals exhibiting greater structural similarity to experimental polymorphs. Second, we assess the full end-to-end workflow on two unseen CSP blind-test case studies, including relaxation and lattice-energy analysis. In both settings, PackFlow outperforms heuristics-based methods by concentrating probability mass in low-energy basins, yielding candidates that relax into lower-energy minima and...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [x] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] VOLatility Archive for Realized Estimates (VOLARE)
+- **Autores:** Fabrizio Cipollini, Giulia Cruciani, Giampiero M. Gallo, Alessandra Insana, Edoardo Otranto, Fabio Spagnolo
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:q-fin.ST
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19732v1
+- **Citaciones:** 0
+- **Score de relevancia:** 18/100
+- **Abstract:** VOLARE (VOLatility Archive for Realized Estimates - https://volare.unime.it) is an open research infrastructure providing standardized realized volatility and covariance measures constructed from ultra-high-frequency financial data. The platform processes tick-level observations across equities, exchange rates, and futures using an asset-specific pipeline that addresses heterogeneous trading calendars, microstructure noise, and timestamp precision. For equities, price series are cleaned using a documented outlier detection procedure and sampled at regular intervals.   VOLARE delivers a comprehensive set of realized estimators, including realized variance, range-based measures, bipower variation, semivariances, realized quarticity, realized kernels, and multivariate covariance measures, ensuring methodological consistency and cross-asset comparability. In addition to bulk dataset download, the platform supports interactive visualization and real-time estimation of established volatility models such as HAR and MEM specifications.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [x] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] A Physics-Regularized Neural Network and Kirchhoff Markov Random Field Framework for Inferring Internal Electrochemical States from Operando Spectromicroscopy
+- **Autores:** Naoki Wada, Yuta Kimura, Masaichiro Mizumaki, Koji Amezawa, Ichiro Akai, Toru Aonishi
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:physics.chem-ph
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.19888v1
+- **Citaciones:** 0
+- **Score de relevancia:** 13/100
+- **Abstract:** Quantitative understanding of coupled reaction and transport processes in lithium-ion battery (LIB) composite electrodes remains challenging because key internal states cannot be measured directly. In this study, we develop a physics-integrated, data-driven analysis pipeline to estimate internal electrochemical states from operando microscopic X-ray absorption fine structure ($μ$-XAFS) hyperspectral data of LIB cathodes with LiPF$_6$ electrolyte. State-of-charge (SOC) maps are first constructed from Co K-edge spectra. To resolve ambiguities in the two-phase reaction region, a physics-regularized three-layer neural network is introduced, enforcing spatial continuity of SOC and current conservation. The inferred SOC dynamics are then incorporated into a Kirchhoff-based Markov random field framework that integrates Kirchhoff's current and voltage laws, Ohm's law, and a symmetric Butler-Volmer relation to estimate interfacial current, ionic current, electrolyte potential, and effective ionic conductivity. Application to composite electrodes with different initial electrolyte concentrations (0.3, 1, and 2M LiPF$_6$) reveals distinct reaction propagation behaviors governed by electrolyte concentration-dependent conductivity. The inferred electrolyte concentration distributions show qualitative agreement with independent operando X-ray transmission imaging performed on LIB composite cathodes employing a LiAsF$_6$ electrolyte. This framework enables quantitative visualization of otherwise inaccessible internal transport phenomena.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [x] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Microstructural Evolution and Crystallization Behavior of Amorphous Medium-Entropy Ti-Nb-Zr-Ag Thin Films
+- **Autores:** Anna Benediktová, Lucie Nedvědová, Michal Procházka, Zdeněk Jansa, Štěpánka Jansová, Christopher D. Woodgate, David Redka, Julie B. Staunton, Ján Minár
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:cond-mat.mtrl-sci
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20129v1
+- **Citaciones:** 0
+- **Score de relevancia:** 13/100
+- **Abstract:** Improving the performance of metallic implants increasingly relies on the development of multifunctional surface modifications that combine structural stability, bioactivity, and prevention of bacterial colonization. Medium-entropy alloys (MEAs) represent a promising approach for such coatings, as their chemical complexity allows the formation of structurally stable matrices with tunable properties. In this study, Ti-Nb-Zr and Ti-Nb-Zr-Ag thin films were deposited by magnetron sputtering and subjected to annealing at temperatures of up to 1100 $^{\circ}$C to evaluate the influence of Ag, added for its antibacterial potential, on structural evolution. The as-deposited Ag-free film was fully amorphous, whereas the Ag-containing film exhibited a predominantly amorphous matrix with finely dispersed crystalline nanoparticles, indicating that Ag promoted early-stage crystallization. Both films displayed a fine columnar morphology (column diameter $\sim$15 nm) with dome-like protrusions, a hierarchical surface structure favorable for protein adhesion. Upon annealing, the Ag-free film recrystallized into a granular, loosely packed morphology, while the Ag-containing film retained a compact structure, demonstrating the stabilizing role of Ag. These findings underscore the potential of Ag-containing amorphous MEAs for forming multifunctional coatings with enhanced thermal stability, antibacterial functionality, and biointerface-relevant surface features for advanced biomedical applications.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [x] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Experimental characterization of coherent and non-Markovian errors using tangent space decomposition
+- **Autores:** Elia Perego, Andrea Rodriguez-Blanco, K. Birgitta Whaley, Bharath Hebbe Madhusudhana
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:quant-ph
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20128v1
+- **Citaciones:** 0
+- **Score de relevancia:** 10/100
+- **Abstract:** Accurate characterization of coherent and non-Markovian errors remains a central challenge in quantum information processing, as conventional benchmarking techniques typically rely on Markovian and time-independent noise assumptions. In practice, however, quantum devices exhibit both systematic coherent miscalibrations and temporally correlated fluctuations, which complicate error diagnosis and mitigation. Here, we apply a technique based on tangent-space decomposition to characterize such error in single-qubit quantum gates implemented on a trapped ion platform. Small imperfections in a quantum operation are treated as perturbations of the target quantum map, represented as tangent vectors in the space of quantum channels. This formulations enables a natural decomposition of the deviation into three components corresponding to coherent, Markovian and non-Markovian processes.The relative weights of these components provide a quantitative measure of the contribution from each type of error mechanism, directly from a single tomographic snapshot. We experimentally validate this method on a single-qubit gates implemented on a trapped $^{40}$Ca$^+$ ion, where control is achieved through laser-driven optical transitions. By analyzing experimentally reconstructed process matrices, expressed in the Pauli Transfer Matrix and Choi representations, we identify and quantify non-Markovian effects arising from controlled injection of slow fluctuations in the experimental environment. We also characterize deterministic coherent miscalibrations using...
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [ ] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [x] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv
+
+## [BAJA] Production of dark matter in association with a Higgs boson via exclusive photon fusion in $pp$ collisions at $\sqrt{s}=13$ TeV
+- **Autores:** M. A. Arroyo-Ureña, H. Hernández-Arellano, I. Pedraza, S. Rosado-Navarro, T. A. Valencia-Pérez
+- **Fecha:** 2026-02-23
+- **Fuente:** arXiv:hep-ph
+- **DOI:** N/A
+- **Link:** https://arxiv.org/abs/2602.20116v1
+- **Citaciones:** 0
+- **Score de relevancia:** 10/100
+- **Abstract:** In this work we study the production of a dark matter (DM) particle in association with a Higgs boson via a central exclusive photon-fusion initiated process. We explore this type of production through the Inert Doublet Model plus a complex Singlet (IDMS), where an extension of the Standard Model by an additional $U(1)_X$ gauge symmetry and a $SU(2)$ inert scalar doublet gives rise to a DM candidate $χ$. This particular process involves the collision of two protons exchanging two colorless particles (in our case, photons), from which a central process occurs. Such interaction can be detected in the LHC using forward proton detectors, where the resulting missing mass spectrum can be observed after proton reconstruction, thus allowing a search for physics Beyond the Standard Model (BSM). We present results for different values of the difference of masses of a heavy scalar coming from the complex singlet, the DM candidate and the Higgs boson, $Δ= M_S - M_χ- M_h$, which is the phase space available for the final state in the central exclusive process.
+- **Keywords match:** []
+- **Categoria sugerida para mi tesis:**
+  - [ ] Sistemas RAG Hibridos
+  - [ ] Normalizacion/Preprocesamiento
+  - [ ] Segmentacion/Chunking
+  - [ ] Modelos de Embedding
+  - [x] Estrategias de Recuperacion
+  - [ ] Re-ranking
+  - [ ] Alucinaciones en LLMs
+  - [ ] Evaluacion de sistemas RAG
+  - [ ] Documentacion Cloud
+  - [ ] Metricas de evaluacion
+  - [ ] Vector Databases
+- **Cubre algun gap pendiente?** No
+- **Notas:** Paper encontrado via arxiv

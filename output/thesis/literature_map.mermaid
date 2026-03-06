@@ -1,0 +1,79 @@
+---
+title: Mapa de Literatura - Tesis RAG Hibrido
+---
+graph TD
+
+    THESIS["Modelo Semantico Hibrido<br/>para RAG sobre<br/>Documentacion Cloud"]
+
+    CAT0["Alucinaciones en LLMs<br/>(181 papers)"]
+    CAT1["Documentacion Cloud<br/>(340 papers)"]
+    CAT2["Estrategias de Recuperacion<br/>(515 papers)"]
+    CAT3["Evaluacion de sistemas RAG<br/>(479 papers)"]
+    CAT4["Metricas de evaluacion<br/>(393 papers)"]
+    CAT5["Modelos de Embedding<br/>(415 papers)"]
+    CAT6["Normalizacion/Preprocesamiento<br/>(81 papers)"]
+    CAT7["Re-ranking<br/>(130 papers)"]
+    CAT8["Segmentacion/Chunking<br/>(246 papers)"]
+    CAT9["Sistemas RAG Hibridos<br/>(2287 papers)"]
+    CAT10["Vector Databases<br/>(161 papers)"]
+
+    THESIS --> CAT0
+    THESIS --> CAT1
+    THESIS --> CAT2
+    THESIS --> CAT3
+    THESIS --> CAT4
+    THESIS --> CAT5
+    THESIS --> CAT6
+    THESIS --> CAT7
+    THESIS --> CAT8
+    THESIS --> CAT9
+    THESIS --> CAT10
+
+    CAT10 --> P0["Li et al., 2025"]
+    CAT10 --> P1["Qiu & Tang, 2025"]
+    CAT10 --> P2["Xu et al., 2025"]
+    CAT9 --> P3["Ko et al., 2025"]
+    CAT9 --> P4["Sun, 2025"]
+    CAT9 --> P5["Amanbayev et al., 2026"]
+    CAT2 --> P6["Jadon et al., 2025"]
+    CAT2 --> P7["Peng et al., 2025"]
+    CAT2 --> P8["Khattab & Zaharia, 2020"]
+    CAT4 --> P9["Jadon et al., 2025"]
+    CAT4 --> P10["Peng et al., 2025"]
+    CAT4 --> P11["Sun, 2025"]
+    CAT5 --> P12["Jadon et al., 2025"]
+    CAT5 --> P13["Khattab & Zaharia, 2020"]
+    CAT5 --> P14["Wang et al., 2025"]
+    CAT0 --> P15["Wang et al., 2025"]
+    CAT0 --> P16["Gan et al., 2025"]
+    CAT0 --> P17["Hindi et al., 2025"]
+    CAT8 --> P18["Jadon et al., 2025"]
+    CAT8 --> P19["Peng et al., 2025"]
+    CAT8 --> P20["Kartiyanta et al., 2025"]
+    CAT1 --> P21["Wulf et al., 2026"]
+    CAT1 --> P22["Wei et al., 2023"]
+    CAT1 --> P23["Ghosh et al., 2025"]
+    CAT7 --> P24["Khattab & Zaharia, 2020"]
+    CAT7 --> P25["Hindi et al., 2025"]
+    CAT7 --> P26["Noguera et al., 2025"]
+    CAT3 --> P27["Jadon et al., 2025"]
+    CAT3 --> P28["Kartiyanta et al., 2025"]
+    CAT3 --> P29["Wang et al., 2025"]
+    CAT6 --> P30["Gan et al., 2025"]
+    CAT6 --> P31["Subramanian et al., 2025"]
+    CAT6 --> P32["Zhou et al., 2025"]
+
+    classDef thesis fill:#1a73e8,color:#fff,stroke:#1557b0
+    classDef category fill:#34a853,color:#fff,stroke:#1e8e3e
+    class THESIS thesis
+    class CAT0 category
+    class CAT1 category
+    class CAT2 category
+    class CAT3 category
+    class CAT4 category
+    class CAT5 category
+    class CAT6 category
+    class CAT7 category
+    class CAT8 category
+    class CAT9 category
+    class CAT10 category

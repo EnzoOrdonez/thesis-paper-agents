@@ -1,0 +1,51 @@
+keyword_groups:
+  core_rag:
+    - "retrieval augmented generation hybrid"
+    - "RAG hybrid retrieval BM25"
+    - "RAG system optimization"
+    - "retrieval augmented generation evaluation"
+
+  retrieval_methods:
+    - "BM25 dense retrieval comparison"
+    - "dense passage retrieval"
+    - "ColBERT late interaction"
+    - "hybrid search lexical semantic"
+    - "neural information retrieval"
+
+  embeddings:
+    - "sentence-BERT embeddings"
+    - "BGE embedding model"
+    - "text embedding models comparison"
+    - "dense vector representation documents"
+
+  chunking_preprocessing:
+    - "document chunking strategies RAG"
+    - "text segmentation retrieval"
+    - "terminology normalization technical"
+    - "preprocessing pipeline information retrieval"
+
+  reranking:
+    - "cross-encoder reranking retrieval"
+    - "neural reranking RAG"
+    - "multi-stage retrieval reranking"
+
+  hallucination:
+    - "hallucination mitigation RAG"
+    - "faithfulness evaluation LLM"
+    - "groundedness RAG systems"
+
+  evaluation:
+    - "RAG evaluation metrics NDCG MRR"
+    - "RAGAS evaluation framework"
+    - "retrieval evaluation recall precision"
+
+  cloud_documentation:
+    - "cloud computing documentation analysis"
+    - "technical documentation retrieval"
+    - "API documentation search"
+    - "cloud services knowledge base"
+
+  vector_databases:
+    - "vector database retrieval comparison"
+    - "FAISS ChromaDB Pinecone benchmark"
+    - "approximate nearest neighbor search"

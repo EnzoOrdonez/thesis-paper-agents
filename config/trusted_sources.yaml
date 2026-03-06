@@ -1,0 +1,100 @@
+trusted_sources:
+  publishers:
+    - "IEEE"
+    - "ACM"
+    - "Springer"
+    - "Elsevier"
+    - "MDPI"
+    - "Nature"
+    - "Wiley"
+    - "Taylor & Francis"
+    - "AAAI"
+    - "JMLR"
+
+  conferences_tier1:
+    - "SIGIR"
+    - "EMNLP"
+    - "ACL"
+    - "NeurIPS"
+    - "ICML"
+    - "AAAI"
+    - "NAACL"
+    - "ICLR"
+    - "KDD"
+    - "WWW"
+    - "TheWebConf"
+    - "CIKM"
+
+  conferences_tier2:
+    - "ICDE"
+    - "COMPSAC"
+    - "COLING"
+    - "EACL"
+    - "ECIR"
+    - "ISAS"
+    - "AIED"
+    - "ICIT"
+
+  journals:
+    - "Information Retrieval Journal"
+    - "Journal of Machine Learning Research"
+    - "Applied Sciences"
+    - "IEEE Access"
+    - "IEEE Transactions"
+    - "ACM Computing Surveys"
+    - "Artificial Intelligence Review"
+    - "Neural Computing and Applications"
+    - "Knowledge-Based Systems"
+    - "Expert Systems with Applications"
+    - "Journal of Information Science"
+
+  preprints:
+    - "arXiv"
+
+# Category mappings for thesis organization
+thesis_categories:
+  - "Sistemas RAG Hibridos"
+  - "Normalizacion/Preprocesamiento"
+  - "Segmentacion/Chunking"
+  - "Modelos de Embedding"
+  - "Estrategias de Recuperacion"
+  - "Re-ranking"
+  - "Alucinaciones en LLMs"
+  - "Evaluacion de sistemas RAG"
+  - "Documentacion Cloud"
+  - "Metricas de evaluacion"
+  - "Vector Databases"
+
+# Gaps that still need to be covered
+pending_gaps:
+  - name: "ColBERT original"
+    description: "Khattab & Zaharia, SIGIR 2020"
+    search_hints: ["ColBERT efficient passage search", "Khattab Zaharia late interaction"]
+
+  - name: "DPR original"
+    description: "Karpukhin et al., Facebook AI, EMNLP 2020"
+    search_hints: ["Dense Passage Retrieval open-domain question answering", "Karpukhin DPR"]
+
+  - name: "Sentence-BERT original"
+    description: "Reimers & Gurevych, EMNLP 2019"
+    search_hints: ["Sentence-BERT sentence embeddings siamese", "Reimers Gurevych sentence embeddings"]
+
+  - name: "BGE embeddings"
+    description: "BAAI - Beijing Academy of Artificial Intelligence"
+    search_hints: ["BGE embedding BAAI", "C-Pack packaged resources general embeddings"]
+
+  - name: "BM25 fundacional"
+    description: "Robertson & Zaragoza, 2009 o Robertson et al., 1994"
+    search_hints: ["BM25 probabilistic relevance framework", "Robertson Okapi BM25"]
+
+  - name: "Documentacion cloud como objeto de estudio"
+    description: "Papers sobre complejidad/usabilidad de documentacion cloud"
+    search_hints: ["cloud documentation complexity", "technical documentation usability cloud"]
+
+  - name: "RAGAS evaluation framework"
+    description: "Framework de evaluacion para RAG"
+    search_hints: ["RAGAS automated evaluation RAG", "RAG assessment framework"]
+
+  - name: "Normalizacion terminologica en dominios tecnicos"
+    description: "Papers sobre normalizacion de terminologia tecnica"
+    search_hints: ["terminology normalization technical domain", "acronym normalization NLP"]

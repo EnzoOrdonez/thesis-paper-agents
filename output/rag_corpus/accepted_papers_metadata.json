@@ -1,0 +1,431 @@
+[
+  {
+    "id": "3b551c09-3514-4074-be80-2d4b10f6a53d",
+    "title": "ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT",
+    "authors": [
+      "O. Khattab",
+      "M. Zaharia"
+    ],
+    "year": 2020,
+    "doi": "10.1145/3397271.3401075",
+    "abstract": "Recent progress in Natural Language Understanding (NLU) is driving fast-paced advances in Information Retrieval (IR), largely owed to fine-tuning deep language models (LMs) for document ranking. While remarkably effective, the ranking models based on these LMs increase computational cost by orders of magnitude over prior approaches, particularly as they must feed each query-document pair through a massive neural network to compute a single relevance score. To tackle this, we present ColBERT, a novel ranking model that adapts deep LMs (in particular, BERT) for efficient retrieval. ColBERT introduces a late interaction architecture that independently encodes the query and the document using BERT and then employs a cheap yet powerful interaction step that models their fine-grained similarity. By delaying and yet retaining this fine-granular interaction, ColBERT can leverage the expressiveness of deep LMs while simultaneously gaining the ability to pre-compute document representations offline, considerably speeding up query processing. Crucially, ColBERT's pruning-friendly interaction mechanism enables leveraging vector-similarity indexes for end-to-end retrieval directly from millions of documents. We extensively evaluate ColBERT using two recent passage search datasets. Results show that ColBERT's effectiveness is competitive with existing BERT-based models (and outperforms every non-BERT baseline), while executing two orders-of-magnitude faster and requiring up to four orders-of-magnitude fewer FLOPs per query.",
+    "categories": [
+      "Modelos de Embedding",
+      "Estrategias de Recuperacion",
+      "Re-ranking",
+      "Vector Databases"
+    ],
+    "relevance_score": 77,
+    "citation_count": 1848,
+    "venue": "Annual International ACM SIGIR Conference on Research and Development in Information Retrieval",
+    "url": "https://www.semanticscholar.org/paper/60b8ad6177230ad5402af409a6edb5af441baeb4"
+  },
+  {
+    "id": "2eadc965-63fa-4d04-8774-0551fc91f5e3",
+    "title": "Enhancing the Precision and Interpretability of Retrieval-Augmented Generation (RAG) in Legal Technology: A Survey",
+    "authors": [
+      "Mahd Hindi",
+      "Linda Mohammed",
+      "Ommama Maaz",
+      "Abdulmalik Alwarafy"
+    ],
+    "year": 2025,
+    "doi": "10.1109/ACCESS.2025.3550145",
+    "abstract": "Retrieval-Augmented Generation (RAG) is a promising solution that can enhance the capabilities of large language model (LLM) applications in critical domains, including legal technology, by retrieving knowledge from external databases. Implementing RAG pipelines requires careful attention to the techniques and methods implemented in the different stages of the RAG process. However, robust RAG can enhance LLM generation with faithfulness and few hallucinations in responses. In this paper, we discuss the application of RAG in the legal domain. First, we present an overview of the main RAG methods, stages, techniques, and applications in the legal domain. We then briefly discuss the different information retrieval models, processes, and applied methods in current legal RAG solutions. Then, we explain the different quantitative and qualitative evaluation metrics. We also describe several emerging datasets and benchmarks. We then discuss and assess the ethical and privacy considerations for legal RAG and summarize various challenges, and propose a challenge scale based on RAG failure points and control over external knowledge. Finally, we provide insights into promising future research to leverage RAG efficiently and effectively in the legal field.",
+    "categories": [
+      "Segmentacion/Chunking",
+      "Estrategias de Recuperacion",
+      "Re-ranking",
+      "Alucinaciones en LLMs",
+      "Evaluacion de sistemas RAG",
+      "Metricas de evaluacion"
+    ],
+    "relevance_score": 72,
+    "citation_count": 34,
+    "venue": "IEEE Access",
+    "url": "https://www.semanticscholar.org/paper/f51e92ce3f63cf04c26374c0ca33a2a751931cf6"
+  },
+  {
+    "id": "a3b4c40d-5f9e-4079-8bbd-3d8259ac9536",
+    "title": "Retrieval Augmented Generation Evaluation in the Era of Large Language Models: A Comprehensive Survey",
+    "authors": [
+      "Aoran Gan",
+      "Hao Yu",
+      "Kai Zhang",
+      "Qi Liu",
+      "Wenyu Yan",
+      "Zhenya Huang",
+      "Shiwei Tong",
+      "Guoping Hu"
+    ],
+    "year": 2025,
+    "doi": "10.48550/arXiv.2504.14891",
+    "abstract": "Recent advancements in Retrieval-Augmented Generation (RAG) have revolutionized natural language processing by integrating Large Language Models (LLMs) with external information retrieval, enabling accurate, up-to-date, and verifiable text generation across diverse applications. However, evaluating RAG systems presents unique challenges due to their hybrid architecture that combines retrieval and generation components, as well as their dependence on dynamic knowledge sources in the LLM era. In response, this paper provides a comprehensive survey of RAG evaluation methods and frameworks, systematically reviewing traditional and emerging evaluation approaches, for system performance, factual accuracy, safety, and computational efficiency in the LLM era. We also compile and categorize the RAG-specific datasets and evaluation frameworks, conducting a meta-analysis of evaluation practices in high-impact RAG research. To the best of our knowledge, this work represents the most comprehensive survey for RAG evaluation, bridging traditional and LLM-driven methods, and serves as a critical resource for advancing RAG development.",
+    "categories": [
+      "Sistemas RAG Hibridos",
+      "Normalizacion/Preprocesamiento",
+      "Alucinaciones en LLMs",
+      "Evaluacion de sistemas RAG",
+      "Metricas de evaluacion"
+    ],
+    "relevance_score": 74,
+    "citation_count": 22,
+    "venue": "arXiv.org",
+    "url": "https://www.semanticscholar.org/paper/79e57387a664a5d7b128b2790a8f38f827e09124"
+  },
+  {
+    "id": "f762fdb5-1bba-452f-ab2f-ed14afe0c767",
+    "title": "Evaluation of Retrieval-Augmented Generation: A Survey",
+    "authors": [
+      "Hao Yu",
+      "Aoran Gan",
+      "Kai Zhang",
+      "Shiwei Tong",
+      "Qi Liu",
+      "Zhaofeng Liu"
+    ],
+    "year": 2024,
+    "doi": "10.1007/978-981-96-1024-2_8",
+    "abstract": "Retrieval-Augmented Generation (RAG) has recently gained traction in natural language processing. Numerous studies and real-world applications are leveraging its ability to enhance generative models through external information retrieval. Evaluating these RAG systems, however, poses unique challenges due to their hybrid structure and reliance on dynamic knowledge sources. To better understand these challenges, we conduct A Unified Evaluation Process of RAG (Auepora) and aim to provide a comprehensive overview of the evaluation and benchmarks of RAG systems. Specifically, we examine and compare several quantifiable metrics of the Retrieval and Generation components, such as relevance, accuracy, and faithfulness, within the current RAG benchmarks, encompassing the possible output and ground truth pairs. We then analyze the various datasets and metrics, discuss the limitations of current benchmarks, and suggest potential directions to advance the field of RAG benchmarks.",
+    "categories": [
+      "Sistemas RAG Hibridos",
+      "Alucinaciones en LLMs",
+      "Evaluacion de sistemas RAG",
+      "Metricas de evaluacion"
+    ],
+    "relevance_score": 70,
+    "citation_count": 217,
+    "venue": "arXiv.org",
+    "url": "https://www.semanticscholar.org/paper/3c6a6c8de005ef5722a54847747f65922e79d622"
+  },
+  {
+    "id": "fca0436a-6910-4827-b94d-e830daa53611",
+    "title": "Adaptive Hybrid Retrieval-Augmented Generation with Context-Aware Confidence Control",
+    "authors": [
+      "Yiran Sun"
+    ],
+    "year": 2025,
+    "doi": "10.1109/EIT67313.2025.11231898",
+    "abstract": "In recent years, Retrieval-Augmented Generation (RAG) has performed well in open-domain question answering and knowledge-intensive tasks, but it still faces challenges in retrieval accuracy, generation consistency, and reasoning efficiency when processing large-scale heterogeneous data. This paper proposes an adaptive hybrid retrieval-augmented generation system (AH-RAG), which effectively improves the retrieval recall and the factuality of generation by dynamically fusing sparse and dense retrieval and introducing a contextual confidence control mechanism in the generation stage. We evaluate it on the Natural Questions dataset and show that compared with the BM25 and DPR baselines, AH-RAG improves Recall@20 by 15.3% and 4.3%, respectively, and improves the generation indicator EM by 0.6%. Ablation experiments show that dynamic fusion, RDF reranking, and confidence control all have stable gains, while the end-to-end latency only increases by 4.8%. This method strikes a good balance between accuracy and efficiency and is suitable for fields such as open-domain question answering and knowledge base question answering.",
+    "categories": [
+      "Sistemas RAG Hibridos",
+      "Metricas de evaluacion"
+    ],
+    "relevance_score": 77,
+    "citation_count": 0,
+    "venue": "IEEE International Conference on Electro/Information Technology",
+    "url": "https://www.semanticscholar.org/paper/ae784ede10b1eeace29a2b8a39bc52fb3ace6b55"
+  },
+  {
+    "id": "bd783677-c276-4050-b685-83992aecae87",
+    "title": "Enhancing Medical Question Answering with LLMs via a Hybrid Retrieval-Augmented Generation Framework",
+    "authors": [
+      "Bushra Aljohani",
+      "Tawfeeq Alsanoosy"
+    ],
+    "year": 2026,
+    "doi": "10.3390/info17020133",
+    "abstract": "Given the knowledge-intensive and rapidly expanding nature of medical field, accurately synthesizing and interpreting findings remain a major challenge for clinicians and medical students. Although Large Language Models (LLMs) have advanced automated summarization or generated responses, their deployment is limited by hallucinations, outdated knowledge, and insufficient domain adaptation. Retrieval-Augmented Generation (RAG) addresses these issues by grounding LLMs in external knowledge bases. However, as the document corpus scales, maintaining RAG accuracy becomes increasingly difficult, making retrievers critical for contextual relevance. In this paper, we examined the efficiency of a modular RAG framework with a hybrid retrieval strategy that combines sparse retrieval (BM25) and dense retrieval (MedCPT) to extract the most relevant documents from the corpus, thereby providing contextual grounding for the LLM to improve medical responses. Evaluation was conducted on three benchmark healthcare datasets: PubMedQA, MedMCQA, and MedQA-US, using two LLMs, GPT-4o and BioGPT. Performance was assessed using retrieval metrics (context precision, context recall, F1-score) and generation metrics (BERTScore, RAG Assessment Score). The hybrid retriever achieved 92.14% recall, 74.36% precision, and an F1-score of 82.30%. GPT-4o with hybrid retrieval reached 89.4% faithfulness, 82.7% answer relevancy, and an F1BERT of 88.0% on PubMedQA. Results demonstrated that hybrid retrieval within a modular architecture substantially improves retrieval effectiveness and response quality. The proposed work offers a scalable, generalizable solution for high-stakes healthcare applications, supporting flexible retriever integration and robust evaluation to advance transparent QA systems.",
+    "categories": [
+      "Sistemas RAG Hibridos",
+      "Estrategias de Recuperacion",
+      "Alucinaciones en LLMs",
+      "Evaluacion de sistemas RAG"
+    ],
+    "relevance_score": 70,
+    "citation_count": 0,
+    "venue": "Information",
+    "url": "https://openalex.org/W7126397257"
+  },
+  {
+    "id": "94266553-1a44-42de-a776-46ad13eb98a3",
+    "title": "DIGRA: A Dynamic Graph Indexing for Approximate Nearest Neighbor Search with Range Filter",
+    "authors": [
+      "Mengxu Jiang",
+      "Zhi Yang",
+      "Fangyuan Zhang",
+      "Guanhao Hou",
+      "Jieming Shi",
+      "Wenchao Zhou",
+      "Feifei Li",
+      "Sibo Wang"
+    ],
+    "year": 2025,
+    "doi": "10.1145/3725399",
+    "abstract": "Recent advancements in AI have enabled models to map real-world entities, such as product images, into high-dimensional vectors, making approximate nearest neighbor search (ANNS) crucial for various applications. Often, these vectors are associated with additional attributes like price, prompting the need for range-filtered ANNS where users seek similar items within specific attribute ranges. Naive solutions like pre-filtering and post-filtering are straightforward but inefficient. Specialized indexes, such as SeRF, SuperPostFiltering, and iRangeGraph, have been developed to address these queries effectively. However, these solutions do not support dynamic updates, limiting their practicality in real-world scenarios where datasets frequently change. To address these challenges, we propose DIGRA, a novel dynamic graph index for range-filtered ANNS. DIGRA supports efficient dynamic updates while maintaining a balance among query efficiency, update efficiency, indexing cost, and result quality. Our approach introduces a dynamic multi-way tree structure combined with carefully integrated ANNS indices to handle range filtered ANNS efficiently. We employ a lazy weight-based update mechanism to significantly reduce update costs and adopt optimized choice of ANNS index to lower construction and update overhead. Experimental results demonstrate that DIGRA achieves superior trade-offs, making it suitable for large-scale dynamic datasets in real-world applications.",
+    "categories": [
+      "Vector Databases"
+    ],
+    "relevance_score": 78,
+    "citation_count": 11,
+    "venue": "Proc. ACM Manag. Data",
+    "url": "https://www.semanticscholar.org/paper/6dfba274c7d46fa63e43b7087dab9c153869960e"
+  },
+  {
+    "id": "f13f9894-ab44-4dc4-90c5-66d0328d872b",
+    "title": "Attribute Filtering in Approximate Nearest Neighbor Search: An In-depth Experimental Study",
+    "authors": [
+      "Mocheng Li",
+      "Xiao Yan",
+      "Baotong Lu",
+      "Yue Zhang",
+      "James Cheng",
+      "Chenhao Ma"
+    ],
+    "year": 2025,
+    "doi": "10.48550/arXiv.2508.16263",
+    "abstract": "With the growing integration of structured and unstructured data, new methods have emerged for performing similarity searches on vectors while honoring structured attribute constraints, i.e., a process known as Filtering Approximate Nearest Neighbor (Filtering ANN) search. Since many of these algorithms have only appeared in recent years and are designed to work with a variety of base indexing methods and filtering strategies, there is a pressing need for a unified analysis that identifies their core techniques and enables meaningful comparisons.\n In this work, we present a unified Filtering ANN search interface that encompasses the latest algorithms and evaluate them extensively from multiple perspectives. First, we propose a comprehensive taxonomy of existing Filtering ANN algorithms based on attribute types and filtering strategies. Next, we analyze their key components, i.e., index structures, pruning strategies, and entry point selection, to elucidate design differences and tradeoffs. We then conduct a broad experimental evaluation on 10 algorithms and 12 methods across 4 datasets (each with up to 10 million items), incorporating both synthetic and real attributes and covering selectivity levels from 0.1% to 100%. Finally, an in-depth component analysis reveals the influence of pruning, entry point selection, and edge filtering costs on overall performance. Based on our findings, we summarize the strengths and limitations of each approach, provide practical guidelines for selecting appropriate methods, and suggest promising directions for future research. Our code is available at: https://github.com/lmccccc/FANNBench.",
+    "categories": [
+      "Estrategias de Recuperacion",
+      "Metricas de evaluacion",
+      "Vector Databases"
+    ],
+    "relevance_score": 73,
+    "citation_count": 3,
+    "venue": "Proc. ACM Manag. Data",
+    "url": "https://www.semanticscholar.org/paper/ac8319cda454b8063b695c64bf9e610c9086cf90"
+  },
+  {
+    "id": "a0472c21-d5c9-4be2-a845-f8ce17c402f2",
+    "title": "Efficient Dynamic Indexing for Range Filtered Approximate Nearest Neighbor Search",
+    "authors": [
+      "Fangyuan Zhang",
+      "Mengxu Jiang",
+      "Guanhao Hou",
+      "Jieming Shi",
+      "Hua Fan",
+      "Wenchao Zhou",
+      "Feifei Li",
+      "Sibo Wang"
+    ],
+    "year": 2025,
+    "doi": "10.1145/3725401",
+    "abstract": "Given a set O of objects consisting of n high-dimensional vectors, the problem of approximate nearest neighbor (ANN) search for a query vector q is crucial in many applications where objects are represented as feature vectors in high-dimensional spaces. Each object in O often has attributes like popularity or price, which influence the search. Practically, searching for the nearest neighbor to q might include a range filter specifying the desired attribute values, e.g., within a specific price range. Existing solutions for range filtered ANN search often face trade-offs among excessive storage, poor query performance, and limited support for updates. To address this challenge, we propose RangePQ, a novel indexing scheme that supports efficient range filtered ANN searches and updates, requiring only linear space. Our scheme integrates seamlessly with existing PQ-based index---a widely recognized, scalable index type for ANN searches---to enhance range-filtered ANN queries and update capabilities. Our indexing method, supporting arbitrary range filters, has a space complexity of (O(n log K)), where K is a parameter of the PQ-based index and log K scales with O(log n). To reduce the space cost, we further present a hybrid two-layer structure to reduce space usage to O(n), preserving query efficiency without additional update costs. Experimental results demonstrate that our indexing scheme significantly improves query performance while maintaining competitive update performance and space efficiency.",
+    "categories": [
+      "Vector Databases"
+    ],
+    "relevance_score": 74,
+    "citation_count": 3,
+    "venue": "Proc. ACM Manag. Data",
+    "url": "https://www.semanticscholar.org/paper/0d08c568409152b12de1e058d004dcce163feedb"
+  },
+  {
+    "id": "047b3c90-bd98-4b37-ba22-aae9208a47b6",
+    "title": "Locality-Sensitive Indexing for Graph-Based Approximate Nearest Neighbor Search",
+    "authors": [
+      "Jun Woo Chung",
+      "Huawei Lin",
+      "Weijie Zhao"
+    ],
+    "year": 2025,
+    "doi": "10.1145/3726302.3730028",
+    "abstract": "The burgeoning size of modern text datasets has heightened the need for efficient text retrieval systems. For such applications, Approximate Nearest Neighbor (ANN) search algorithms, and in particular graph-based methods have long been established as the leading approach in terms of recall and search speed. However, the data and execution dependencies of vertices increase the construction workload and complicate maintenance processes for the constructed index. In this paper, we present Locality-Sensitive Indexing for Graph-Based Search (or LIGS), which utilizes independent locality-sensitive hashing algorithms to simulate a proximity graph, on which a standard graph search can be performed. We show that LIGS offers substantially faster maintenance (insertion/deletion) speeds and better conservation of graph quality compared to state-of-the-art graph-based ANN methods, demonstrating LIGS as a promising alternative for maintenance-heavy scenarios.",
+    "categories": [
+      "Vector Databases"
+    ],
+    "relevance_score": 76,
+    "citation_count": 2,
+    "venue": "Annual International ACM SIGIR Conference on Research and Development in Information Retrieval",
+    "url": "https://www.semanticscholar.org/paper/ebf5ad9ba9c7e23f8d8c9387c27769d8e00a693b"
+  },
+  {
+    "id": "cc656b04-3990-4a07-b1c3-8990647b94b2",
+    "title": "Efficient Approximate Nearest Neighbor Search via Hemi-Sphere Centroids Graph",
+    "authors": [
+      "Runwen Qiu",
+      "Jing Tang"
+    ],
+    "year": 2025,
+    "doi": "10.1145/3769786",
+    "abstract": "Nearest-neighbor search is a fundamental task in various applications, including retrieval-augmented generation, recommendation systems, and image classification. To cope with large datasets, Approximate Nearest Neighbor Search (ANNS) is widely used to save computational cost while maintaining high accuracy. Existing ANNS algorithms mainly focus on the Euclidean distance. However, in practice, cosine similarity is commonly adopted in downstream tasks. In this paper, we study the Monotonic Relative Neighbor Graph (MRNG), a state-of-the-art graph-based ANNS structure that shows strong performance under Euclidean distance. We analyze MRNG under cosine similarity and prove two key properties: (1) greedy search on the graph always moves closer to the query until the exact nearest neighbor is found, and (2) the graph's maximum out-degree is bounded by a constant independent of the dataset size. These properties lead to fast search and compact index size. However, constructing an exact MRNG is computationally expensive on large datasets. Moreover, existing approximate construction methods tailored for Euclidean distance, e.g., Euclidean centroid or KD-Trees, are not suitable for cosine similarity. To address these issues, we propose an approximate version of MRNG, named Hemi-Sphere Centroids Graph (HSCG), which uses the hemi-sphere centroids as the entry points and employs locality-sensitive hashing to initialize the graph efficiently. Extensive experiments on eight datasets demonstrate the superiority of HSCG in terms of both search performance and index size compared to existing representative algorithms under cosine similarity.",
+    "categories": [
+      "Vector Databases"
+    ],
+    "relevance_score": 81,
+    "citation_count": 2,
+    "venue": "Proc. ACM Manag. Data",
+    "url": "https://www.semanticscholar.org/paper/01bacdd2cb8c926c1a510bccdc43138fa725c4d1"
+  },
+  {
+    "id": "fe034b44-c083-4d7e-974c-62671f607bec",
+    "title": "Performance Evaluation for Cost-Effective Retrieval Process for Multi-Document Retrieval-Augmented Generation on a Domain-Specific Dataset",
+    "authors": [
+      "Maggiore Alica Kartiyanta",
+      "Eugenia Ancilla",
+      "Kenny Jingga"
+    ],
+    "year": 2025,
+    "doi": "10.1109/IAICT65714.2025.11101522",
+    "abstract": "Retrieval-Augmented Generation (RAG) has emerged as a promising approach to enhance Large Language Models (LLMs) in domain-specific tasks without requiring expensive fine-tuning. While paid dense embedding models, such as OpenAI’s text-embedding-3, are widely used in retrieval systems, their high cost raises concerns about whether free or traditional retrieval methods can offer comparable performance. This study evaluates the effectiveness of costeffective sparse and dense retrieval approaches within a RAG framework using the RAGEval DragonBall dataset, focusing on multi-document retrieval in the medical domain. Final retrieval evaluation using GPT-40-mini as the generator, with RAGAs and BERTScore as evaluation metrics, demonstrates that the traditional keyword-based retrieval method, BM25 outperforms others in several aspects: context recall (1.0), answer relevance (0.9087), factual correctness (0.7122), context entity recall (0.7741), semantic similarity (0.9478), and BERTScore (0.9277). Additionally, a hybrid model combining BM25 with dense embedding model and chunking yields competitive results, achieving the highest factual correctness (0.7789), semantic similarity (0.9515), and answer relevance (0.9094), while also maintaining perfect context recall (1.0) and the lowest noise sensitivity (0.1111), showing the possibility of combining both retrieval methods for improved performance. These results challenge the assumption that paid embeddings are always the better option and highlight the potential of costeffective retrieval strategies for domain-specific applications.",
+    "categories": [
+      "Sistemas RAG Hibridos",
+      "Segmentacion/Chunking",
+      "Estrategias de Recuperacion",
+      "Evaluacion de sistemas RAG"
+    ],
+    "relevance_score": 77,
+    "citation_count": 1,
+    "venue": "2025 IEEE International Conference on Industry 4.0, Artificial Intelligence, and Communications Technology (IAICT)",
+    "url": "https://www.semanticscholar.org/paper/023a80477bc114988b167596f67df6115ef031a0"
+  },
+  {
+    "id": "d4bead8a-11ce-4a07-9b5b-026128c0918e",
+    "title": "CORB-RAG: A Comprehensive Evaluation Benchmark for Retrieval-Augmented Generation Systems in the Chinese Telecommunications Operator Domain",
+    "authors": [
+      "Yanyan Wang",
+      "Yuqing Zhang",
+      "Kuang Xu",
+      "Yin Xu",
+      "Yingying Wang",
+      "Qiangzhong Feng"
+    ],
+    "year": 2025,
+    "doi": "10.1109/CCAI65422.2025.11189813",
+    "abstract": "Current evaluations of Retrieval-Augmented Generation (RAG) systems primarily focus on general datasets, lacking effective testing on domain-specific datasets, especially in application scenarios that requiring deep-seated domain knowledge. Additionally, there is limited research on customized retrieval strategies tailored for different domains, which directly impacts the response quality and efficiency of RAG systems. To address these issues, this paper proposes an evaluation benchmark for RAG systems in the Chinese telecommunications operator domain. Firstly, we expand the evaluation scope by not only utilizing general datasets but also constructing domainspecific datasets for telecom operators, enabling a more detailed analysis of RAG system performance and optimization potential. Secondly, in terms of generator evaluation, we go beyond existing benchmarks such as CRUD and Ralle by introducing advanced evaluation dimensions, including Contextual Relevance, Faithfulness, and Answer Relevance, providing a more comprehensive measure of content quality. Finally, we propose an innovative score-based hybrid retrieval strategy, which demonstrates superior performance in knowledge-based question-answering tasks within the telecom operator domain, significantly improving the accuracy and efficiency of information retrieval.",
+    "categories": [
+      "Sistemas RAG Hibridos",
+      "Modelos de Embedding",
+      "Estrategias de Recuperacion",
+      "Alucinaciones en LLMs",
+      "Evaluacion de sistemas RAG",
+      "Metricas de evaluacion"
+    ],
+    "relevance_score": 76,
+    "citation_count": 0,
+    "venue": "2025 IEEE 5th International Conference on Computer Communication and Artificial Intelligence (CCAI)",
+    "url": "https://www.semanticscholar.org/paper/07300590a8151a00f6e5a90832e973879d4b10ce"
+  },
+  {
+    "id": "8216a929-915d-4902-ad41-15f76e7fa750",
+    "title": "Fact, Fetch, and Reason: A Unified Evaluation of Retrieval-Augmented Generation",
+    "authors": [
+      "Satyapriya Krishna",
+      "Kalpesh Krishna",
+      "Anhad Mohananey",
+      "Steven Schwarcz",
+      "Adam Stambler",
+      "Shyam Upadhyay",
+      "Manaal Faruqui"
+    ],
+    "year": 2024,
+    "doi": "10.48550/arXiv.2409.12941",
+    "abstract": "Large Language Models (LLMs) have demonstrated significant performance improvements across various cognitive tasks. An emerging application is using LLMs to enhance retrieval-augmented generation (RAG) capabilities. These systems require LLMs to understand user queries, retrieve relevant information, and synthesize coherent and accurate responses. Given the increasing real-world deployment of such systems, comprehensive evaluation becomes crucial. To this end, we propose FRAMES (Factuality, Retrieval, And reasoning MEasurement Set), a high-quality evaluation dataset designed to test LLMs' ability to provide factual responses, assess retrieval capabilities, and evaluate the reasoning required to generate final answers. While previous work has provided datasets and benchmarks to evaluate these abilities in isolation, FRAMES offers a unified framework that provides a clearer picture of LLM performance in end-to-end RAG scenarios. Our dataset comprises challenging multi-hop questions that require the integration of information from multiple sources. We present baseline results demonstrating that even state-of-the-art LLMs struggle with this task, achieving 0.40 accuracy with no retrieval. The accuracy is significantly improved with our proposed multi-step retrieval pipeline, achieving an accuracy of 0.66 (>50% improvement). We hope our work will help bridge evaluation gaps and assist in developing more robust and capable RAG systems.",
+    "categories": [
+      "Estrategias de Recuperacion",
+      "Alucinaciones en LLMs",
+      "Evaluacion de sistemas RAG",
+      "Metricas de evaluacion"
+    ],
+    "relevance_score": 71,
+    "citation_count": 104,
+    "venue": "North American Chapter of the Association for Computational Linguistics",
+    "url": "https://www.semanticscholar.org/paper/46ff7e02fd4ff5fdfb9f85bc7071725b8089061f"
+  },
+  {
+    "id": "0f2413a6-9104-497b-9ea8-daf9f1cfcda6",
+    "title": "Enhancing Domain-Specific Retrieval-Augmented Generation: Synthetic Data Generation and Evaluation using Reasoning Models",
+    "authors": [
+      "Aryan Jadon",
+      "Avinash Patil",
+      "Shashank Kumar"
+    ],
+    "year": 2025,
+    "doi": "10.1109/IAICT65714.2025.11100564",
+    "abstract": "Retrieval-Augmented Generation (RAG) systems face significant performance gaps when applied to technical domains requiring precise information extraction from complex documents. Current evaluation methodologies relying on document-level metrics inadequately capture token-resolution retrieval accuracy that is critical for domain-related documents. We propose a framework combining granular evaluation metrics with synthetic data generation to optimize domain-specific RAG performance.First, we introduce token-aware metrics PrecisionΩ and Intersection-over-Union (IoU) that quantify context preservation versus information density trade offs inherent in technical texts. Second, we develop a reasoning model driven pipeline using instruction-tuned LLMs (DeepSeek-R1, DeepSeek-R1 distilled variants and Phi-4) to generate context-anchored QA pairs with discontinuous reference spans across three specialized corpora: SEC 10-K filings (finance), biomedical abstracts (PubMed), and APT threat reports (cybersecurity).Our empirical analysis reveals critical insights: smaller chunks (less than 10 tokens) improve precision by 31–42% (IoU=0.071 vs. baseline 0.053) at recall costs (–18%), while domain-specific embedding strategies yield 22% variance in optimal chunk sizing (5–20 tokens). The DeepSeek-R1-Distill-Qwen-32B model demonstrates superior concept alignment (+14% mean IoU over alternatives), though no configuration universally dominates financial texts favor larger chunks for risk factor coverage (Recall=0.81@size=20), whereas cybersecurity content benefits from atomic segmentation (PrecisionΩ=0.28@size=5).We open-source this toolkit enabling reproducible optimization of chunking strategies through automated synthetic dataset generation and multi-metric analysis pipelines. This work bridges critical gaps between generic RAG architectures and enterprise requirements for precision-sensitive domains. Our code is available on https://github.com/aryan-jadon/Synthetic-Data-Generation-and-Evaluation-using-Reasoning-Models.",
+    "categories": [
+      "Segmentacion/Chunking",
+      "Modelos de Embedding",
+      "Estrategias de Recuperacion",
+      "Evaluacion de sistemas RAG",
+      "Metricas de evaluacion"
+    ],
+    "relevance_score": 85,
+    "citation_count": 6,
+    "venue": "2025 IEEE International Conference on Industry 4.0, Artificial Intelligence, and Communications Technology (IAICT)",
+    "url": "https://www.semanticscholar.org/paper/e0ad275c86e232436f33b3eada9b2f48af3f6131"
+  },
+  {
+    "id": "3cd76edf-9a26-45b9-84fe-d3b112aea34c",
+    "title": "Justice AI: Legal Case Retrieval Using Dense Passage Retrieval",
+    "authors": [
+      "Yehsoon Park",
+      "Hanyong Lee",
+      "Jaesung Lee"
+    ],
+    "year": 2025,
+    "doi": "10.1109/ICCE63647.2025.10930108",
+    "abstract": "In contemporary society, resolving legal issues effectively requires precise knowledge and expert assistance, yet accessing and utilizing legal information remains challenging for many. Justice AI addresses this gap using advanced Dense Passage Retrieval (DPR) technology, implemented with the BERT-based KoBERT model and the GPT-based LCube model. KoBERT, optimized for Korean legal texts, ensures high relevance and comprehension of complex legal terms, while LCube enhances understanding and generates natural language responses for deeper contextual insight. The system achieved a cosine similarity score of 0.9002, demonstrating excellent relevance in retrieved results. Performance evaluation using Precision, Recall, and F1 Score yielded metrics of 0.42, 1.0, and 0.5915, respectively, for LCube. Although tailored for Korean legal texts, the underlying technology showcases strong adaptability for diverse legal systems, positioning Justice AI as a globally applicable tool with potential to transform legal research and services.",
+    "categories": [
+      "Estrategias de Recuperacion",
+      "Metricas de evaluacion",
+      "Evaluacion de sistemas RAG"
+    ],
+    "relevance_score": 71,
+    "citation_count": 0,
+    "venue": "IEEE International Conference on Consumer Electronics",
+    "url": "https://www.semanticscholar.org/paper/dda6f6a369edaf2fa96dfdef55049b9aea61ed13"
+  },
+  {
+    "id": "c0098acd-f2e9-4e06-92c7-cb367a472d7e",
+    "title": "Augmenting Passage Representations with Query Generation for Enhanced Cross-Lingual Dense Retrieval",
+    "authors": [
+      "Shengyao Zhuang",
+      "Linjun Shou",
+      "G. Zuccon"
+    ],
+    "year": 2023,
+    "doi": "10.1145/3539618.3591952",
+    "abstract": "Effective cross-lingual dense retrieval methods that rely on multilingual pre-trained language models (PLMs) need to be trained to encompass both the relevance matching task and the cross-language alignment task. However, cross-lingual data for training is often scarcely available. In this paper, rather than using more cross-lingual data for training, we propose to use cross-lingual query generation to augment passage representations with queries in languages other than the original passage language. These augmented representations are used at inference time so that the representation can encode more information across the different target languages. Training of a cross-lingual query generator does not require additional training data to that used for the dense retriever. The query generator training is also effective because the pre-training task for the generator (T5 text-to-text training) is very similar to the fine-tuning task (generation of a query). The use of the generator does not increase query latency at inference and can be combined with any cross-lingual dense retrieval method. Results from experiments on a benchmark cross-lingual information retrieval dataset show that our approach can improve the effectiveness of existing cross-lingual dense retrieval methods. Implementation of our methods, along with all generated query files are made publicly available at https://github.com/ielab/xQG4xDR.",
+    "categories": [
+      "Estrategias de Recuperacion"
+    ],
+    "relevance_score": 71,
+    "citation_count": 10,
+    "venue": "Annual International ACM SIGIR Conference on Research and Development in Information Retrieval",
+    "url": "https://www.semanticscholar.org/paper/2157a00d97636599f4b6060e43d81d8d50b8c7f5"
+  },
+  {
+    "id": "be9b005b-7a68-44b0-8a61-94f24439dcea",
+    "title": "LateSplit: Lightweight Post-Retrieval Chunking for Query-Aligned Text Segmentation in RAG Systems",
+    "authors": [
+      "Zirong Peng",
+      "Xiaoming Liu",
+      "Guan Yang"
+    ],
+    "year": 2025,
+    "doi": "10.1109/ainit65432.2025.11036011",
+    "abstract": "Retrieval-Augmented Generation (RAG) has become indispensable for knowledge-intensive applications, enhancing large language models (LLMs) by integrating external information. However, the efficacy of RAG systems critically depends on text chunking strategies, where conventional pre-retrieval methods often produce misaligned or fragmented content, impairing downstream tasks. This paper introduces LateSplit, a hybrid chunking framework that combines conventional pre- retrieval chunking with novel post-retrieval refinement to better align documents with query intent. Building on standard chunking approaches, LateSplit performs dynamic boundary adjustment after retrieval, preserving logical coherence while improving relevance. As a lightweight, plug-and-play solution, LateSplit reduces computational overhead by 1.9x compared to semantic chunking techniques while achieving precision improvements of up to 44.2 % and IoU gains of 20.4 % across diverse datasets. Experimental results demonstrate its flexibility and practicality, offering a cost-effective enhancement for RAG pipelines.",
+    "categories": [
+      "Segmentacion/Chunking",
+      "Estrategias de Recuperacion",
+      "Metricas de evaluacion"
+    ],
+    "relevance_score": 81,
+    "citation_count": 2,
+    "venue": "2025 IEEE 6th International Seminar on Artificial Intelligence, Networking and Information Technology (AINIT)",
+    "url": "https://www.semanticscholar.org/paper/762d2871aaa22f1d3020408b8faf55d16886efdf"
+  },
+  {
+    "id": "f2d3c1d0-6ad3-4a77-8eea-da3682d34907",
+    "title": "Retrieval-Augmented Generation with GPT-4o-mini: Integrating Configurable Chunking, Hybrid Search, and Multimodal Image Retrieval",
+    "authors": [
+      "Chun Wei Loo",
+      "Zi Qian Leong",
+      "J. Ong",
+      "Huen Thong Chong",
+      "Yong Poh Yu",
+      "Tong Ming Lim"
+    ],
+    "year": 2025,
+    "doi": "10.1109/ICCBE65177.2025.11255653",
+    "abstract": "Retrieval-augmented generation (RAG) systems significantly enhance the capabilities of large language models (LLMs) by grounding responses in external knowledge. We implemented a RAG system utilizing the GPT-4o-mini model to advance knowledge base management, configurable document processing, and multimodal information retrieval. We constructed a modular knowledge base framework that supports creation, configuration, and granular management of diverse information sources, including text in formats of TXT, PDF, CSV, and extracted visual data. The key feature of the developed framework is the user-configurable document chunking process, allowing optimization of text segmentation through adjustable parameters (chunk size, overlap, custom separators) before ingestion. The framework employs ChromaDB as its vector store, implementing a hybrid search that combines dense vector-based semantic similarity with traditional keyword matching, offering configurable weighting and relevance thresholds. Furthermore, we introduce automated image extraction from PDF documents into knowledge ingestion. Extracted images are indexed with associated metadata and rudimentary captions. In the query process, relevant images are retrieved alongside pertinent text chunks, providing richer, multimodal context to the GPT-4o-mini model. The developed framework highlights the design and implementation details of the components, demonstrating a flexible and efficient construction of RAG systems capable of leveraging both textual and visual information from managed knowledge bases.",
+    "categories": [
+      "Sistemas RAG Hibridos",
+      "Segmentacion/Chunking"
+    ],
+    "relevance_score": 73,
+    "citation_count": 0,
+    "venue": "2025 IEEE International Conference on Computation, Big-Data and Engineering (ICCBE)",
+    "url": "https://www.semanticscholar.org/paper/2e0e846b3ed203590bcd688af24c0cd425c15ea9"
+  }
+]

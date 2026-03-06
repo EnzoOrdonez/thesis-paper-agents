@@ -1,0 +1,49 @@
+general:
+  date_range_days: 7
+  min_year: 2020
+  preferred_min_year: 2023
+  max_results_per_query: 20
+  relevance_threshold_high: 70
+  relevance_threshold_medium: 40
+
+apis:
+  semantic_scholar:
+    enabled: true
+    base_url: "https://api.semanticscholar.org/graph/v1"
+    rate_limit_per_second: 1
+    fields: "title,abstract,year,venue,externalIds,authors,citationCount,publicationDate,url"
+
+  arxiv:
+    enabled: true
+    base_url: "http://export.arxiv.org/api/query"
+    rate_limit_seconds: 3
+    categories: ["cs.IR", "cs.CL", "cs.AI", "cs.LG"]
+
+  openalex:
+    enabled: true
+    base_url: "https://api.openalex.org"
+    email: ""
+    rate_limit_per_second: 10
+
+  crossref:
+    enabled: true
+    base_url: "https://api.crossref.org"
+    email: ""
+    rate_limit_per_second: 50
+
+output:
+  daily_dir: "output/daily"
+  reports_dir: "output/reports"
+  database_path: "data/papers_database.json"
+  existing_papers_path: "data/existing_papers.json"
+  log_dir: "logs"
+  cache_dir: "data/cache"
+
+notifications:
+  enabled: false
+  method: "telegram"
+  telegram_bot_token: ""
+  telegram_chat_id: ""
+  email_smtp: ""
+  email_to: ""
+  notify_on_high_relevance: true
