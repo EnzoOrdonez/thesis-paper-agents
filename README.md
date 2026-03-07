@@ -1,49 +1,79 @@
-# Thesis Paper Agents
+<p align="center">
+  <img src="./assets/readme-banner.svg" alt="CloudRAG banner" width="100%">
+</p>
 
-Sistema en Python para descubrir, priorizar, consolidar y exportar papers academicos orientados a una tesis sobre sistemas RAG hibridos.
+<p align="center">
+  <strong>Thesis Paper Agents</strong><br>
+  Discovery, ranking, curation and monitoring for a hybrid RAG thesis focused on cloud documentation.
+</p>
 
-## Resumen
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.14-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python 3.14">
+  <img src="https://img.shields.io/badge/FastAPI-Web_UI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI Web UI">
+  <img src="https://img.shields.io/badge/SQLite-Primary_Storage-003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite Primary Storage">
+  <img src="https://img.shields.io/badge/HTMX-Server_Rendered-3366CC?style=for-the-badge&logo=htmx&logoColor=white" alt="HTMX Server Rendered">
+  <img src="https://img.shields.io/badge/Hybrid_RAG-Cloud_Documentation-F97316?style=for-the-badge" alt="Hybrid RAG Cloud Documentation">
+</p>
 
-Este proyecto automatiza la vigilancia bibliografica de una tesis centrada en:
+<p align="center">
+  <a href="#overview">Overview</a> |
+  <a href="#architecture">Architecture</a> |
+  <a href="#quick-start">Quick Start</a> |
+  <a href="#web-monitor">Web Monitor</a> |
+  <a href="#automation">Automation</a> |
+  <a href="#project-layout">Project Layout</a>
+</p>
 
-> Diseno y validacion de un modelo semantico hibrido para optimizar sistemas RAG sobre documentacion tecnica cloud en AWS, Azure y Google Cloud, comparandolo con enfoques densos y/o semanticos puros.
+## Overview
 
-No es solo un buscador de papers. Es un pipeline reproducible para:
+This repository is a research pipeline for a thesis on hybrid RAG systems over cloud technical documentation across AWS, Azure and Google Cloud.
 
-- buscar papers recientes y fundacionales en multiples fuentes academicas
-- reducir ruido con filtros y scoring orientados a la tesis
-- consolidar una base local de literatura en JSON
-- generar reportes, referencias y artefactos utiles para el estado del arte
-- preparar un corpus util para experimentacion futura con RAG
+It is not just a paper scraper. It is an end-to-end workflow that helps you:
 
-## Estado del proyecto
+- discover recent and foundational papers from multiple academic sources
+- reduce noise with thesis-oriented ranking and filtering
+- consolidate a local literature database in SQLite
+- review papers manually with status, notes and category assignment
+- generate reports, APA references, BibTeX and thesis-ready exports
+- monitor the pipeline from a local web UI
 
-Estado actual: utilizable y estable para trabajo academico con revision humana.
+## Why This Exists
 
-El pipeline ya incorpora:
+In this thesis, the hard part is not only finding papers. The hard part is separating fast:
 
-- busqueda paralela por API con cache local
-- deduplicacion indexada por DOI y titulo normalizado
-- scoring heuristico centrado en RAG hibrido, retrieval, reranking, embeddings y documentacion cloud
-- penalizacion para papers demasiado aplicados a dominios ajenos al foco de la tesis
-- priorizacion de fuentes confiables en el ranking final
-- exportacion a Markdown, JSON, APA 7 y BibTeX
+- foundational papers
+- strong methodological papers
+- relevant comparative studies
+- recent but still provisional papers
+- noisy or peripheral results
 
-La revision humana sigue siendo obligatoria para decidir que papers entran al marco teorico final.
+This project turns that curation problem into a reproducible workflow with traceability.
 
-## Problema que resuelve
+## What It Does
 
-En una tesis como esta, el problema no es solo encontrar papers. El problema real es separar rapidamente:
+| Capability | What it gives you |
+|---|---|
+| Multi-source discovery | Search across Semantic Scholar, arXiv and OpenAlex |
+| Thesis-aware scoring | Prioritize hybrid RAG, retrieval, reranking, embeddings and cloud documentation |
+| Indexed deduplication | Remove duplicates efficiently using DOI and normalized title signals |
+| SQLite primary storage | Keep a local indexed database with incremental upserts |
+| Runtime resilience | Persist cooldowns and provider status across runs |
+| Structured job history | Track search, compile and metadata runs in SQLite |
+| Web review workflow | Filter, inspect, accept, reject and annotate papers from the browser |
+| Thesis exports | Generate reports, APA 7, BibTeX and accepted-paper corpus exports |
 
-- papers fundacionales
-- papers metodologicos fuertes
-- papers comparativos relevantes
-- papers recientes potencialmente utiles pero todavia provisionales
-- papers ruidosos o demasiado perifericos
+## Stack
 
-Este proyecto intenta resolver esa curacion de forma sistematica, dejando trazabilidad en cada corrida.
+| Layer | Tools |
+|---|---|
+| Language | Python 3.14 |
+| Storage | SQLite primary storage + JSON compatibility export |
+| APIs | Semantic Scholar, arXiv, OpenAlex, CrossRef |
+| Web | FastAPI, Jinja2, HTMX, Uvicorn |
+| Reporting | Markdown, BibTeX, APA 7, Mermaid |
+| Scheduling | `run_all.py` + Windows Task Scheduler |
 
-## Flujo general
+## Architecture
 
 ```mermaid
 flowchart LR
@@ -51,191 +81,166 @@ flowchart LR
     B --> C[Semantic Scholar]
     B --> D[arXiv]
     B --> E[OpenAlex]
-    C --> F[Deduplicacion]
+    C --> F[Deduplication]
     D --> F
     E --> F
-    F --> G[Scoring y categorias]
-    G --> H[Reporte diario MD]
-    G --> I[Reporte diario JSON]
+    F --> G[Scoring and categories]
+    G --> H[Daily report MD]
+    G --> I[Daily report JSON]
     I --> J[Paper Compiler]
     H --> J
-    J --> K[Base consolidada JSON]
-    J --> L[Referencias APA y BibTeX]
-    J --> M[Reportes y gap analysis]
-    J --> N[Artefactos para tesis y corpus RAG]
+    J --> K[SQLite primary storage]
+    J --> L[Job history and runtime locks]
+    J --> M[Reports, references and thesis exports]
+    K --> N[Web Monitor]
 ```
 
-## Principios de seleccion
+## Key Improvements Already Implemented
 
-El ranking prioriza:
+- Parallel search per provider with persistent provider runtime state.
+- Incremental import of daily reports.
+- Idempotent report generation and reduced file churn.
+- SQLite as primary storage with incremental upsert sync.
+- Structured `job_runs` and `runtime_locks` stored in SQLite.
+- Web monitor with dashboard, filters, paper detail and manual run controls.
+- Proxy-aware links for restricted academic sources.
 
-- venues y publishers confiables
-- trabajos recientes con senales razonables de impacto
-- papers metodologicos sobre retrieval, reranking, chunking, embeddings y evaluacion
-- trabajos directamente relacionados con RAG hibrido
-- estudios sobre documentacion tecnica, knowledge bases y cloud documentation
-- papers fundacionales que cubren gaps del marco teorico
+## Quick Start
 
-Tambien se penalizan papers que, aunque usan RAG, estan demasiado enfocados en aplicaciones de nicho fuera del foco central de la tesis, por ejemplo medicina, 6G o finanzas, salvo que aporten una contribucion metodologica clara.
+### Requirements
 
-## Caracteristicas principales
+- Python 3.11+ recommended
+- Internet access for academic APIs
+- Optional: `SEMANTIC_SCHOLAR_API_KEY` and `OPENALEX_EMAIL`
 
-- `daily_researcher.py`: busca papers nuevos, aplica filtros, genera ranking y escribe reportes diarios.
-- `paper_compiler.py`: importa reportes diarios, consolida base de datos, valida metadata y genera reportes acumulados.
-- `review_papers.py`: revision interactiva para aceptar o rechazar papers.
-- `export_thesis.py`: genera artefactos utiles para redaccion de tesis.
-- `search_specific.py`: busqueda puntual por titulo, DOI, autor o keyword.
-- `add_manual.py`: agrega papers manualmente si una referencia importante no entro por las APIs.
-
-## Fuentes academicas utilizadas
-
-| Fuente | Uso principal | Comentario |
-|---|---|---|
-| Semantic Scholar | busqueda principal, metadata y citaciones | muy util para ranking inicial, pero puede rate-limitear sin API key |
-| arXiv | recall de novedades en IR, NLP y AI | excelente para detectar trabajo reciente |
-| OpenAlex | metadata, DOI y senales bibliometricas | muy util para consolidacion |
-| CrossRef | verificacion de DOI | ayuda a limpiar referencias |
-
-## Estructura del repositorio
-
-```text
-thesis-paper-agents/
-|-- config/
-|   |-- config.yaml
-|   |-- keywords.yaml
-|   `-- trusted_sources.yaml
-|-- src/
-|   |-- agents/
-|   |-- apis/
-|   |-- models/
-|   `-- utils/
-|-- data/
-|-- logs/
-|-- output/
-|   |-- daily/
-|   |-- reports/
-|   |-- thesis/
-|   `-- rag_corpus/
-|-- daily_researcher.py
-|-- paper_compiler.py
-|-- review_papers.py
-|-- export_thesis.py
-|-- search_specific.py
-|-- add_manual.py
-`-- run_all.py
-```
-
-## Instalacion
-
-### Requisitos
-
-- Python 3.11+ recomendado
-- acceso a internet para consultar APIs academicas
-- opcional: `SEMANTIC_SCHOLAR_API_KEY` y `OPENALEX_EMAIL` para mejorar estabilidad y rate limits
-
-### Setup rapido
+### Installation
 
 ```bash
-python -m venv venv
-source venv/bin/activate  # Linux/Mac
-venv\Scripts\activate     # Windows
-
-pip install -r requirements.txt
-cp .env.example .env
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
+copy .env.example .env
 ```
 
-Variables opcionales de entorno:
+If `pip` is not available on Windows:
 
-- `SEMANTIC_SCHOLAR_API_KEY`
-- `OPENALEX_EMAIL`
-- `TELEGRAM_BOT_TOKEN`
-- `TELEGRAM_CHAT_ID`
+```bash
+python -m ensurepip --upgrade
+python -m pip install -r requirements.txt
+```
 
-## Configuracion
-
-Los archivos mas importantes son:
-
-- `config/config.yaml`: umbrales, concurrencia, APIs, directorios y comportamiento del ranking
-- `config/keywords.yaml`: grupos de queries para cada tema de la tesis
-- `config/trusted_sources.yaml`: fuentes confiables, categorias y gaps fundacionales
-
-### Parametros importantes de `config/config.yaml`
-
-- `general.search_workers_per_query`: concurrencia por query
-- `general.strict_source_filter`: si es `true`, conserva solo fuentes confiables
-- `general.untrusted_keep_score_threshold`: minimo score para conservar papers no confiables
-- `general.min_keep_score`: corte minimo final despues del scoring
-- `general.provisional_ranking_penalty`: castiga papers provisionales en el ranking final
-- `general.missing_doi_ranking_penalty`: castiga papers sin DOI al ordenar tops y reportes
-- `general.missing_venue_ranking_penalty`: castiga papers sin venue claro
-- `apis.semantic_scholar.max_retries_without_key`: limite de reintentos sin API key
-- `apis.semantic_scholar.cooldown_seconds`: apagado temporal ante demasiados `429`
-- `apis.semantic_scholar.shutdown_after_consecutive_failures`: cuantas queries fallidas tolerar antes de desactivar temporalmente esa API
-
-### Recomendaciones practicas de calibracion
-
-- Para exploracion amplia: `strict_source_filter: false`
-- Para filtrado muy conservador: `strict_source_filter: true`
-- `min_keep_score: 35` es un buen punto de partida si quieres priorizar calidad sobre recall
-- Si ves muchos provisionales arriba en el top diario, sube `provisional_ranking_penalty`
-- Si no tienes `SEMANTIC_SCHOLAR_API_KEY`, deja los reintentos bajos para no perder tiempo en `429`
-
-## Uso
-
-### 1. Busqueda diaria
+### Daily Search
 
 ```bash
 python daily_researcher.py
-python daily_researcher.py --days 30
 python daily_researcher.py --dry-run
-python daily_researcher.py --schedule 08:00
+python daily_researcher.py --api openalex
+python daily_researcher.py --api-status
 ```
 
-### 2. Compilacion y consolidacion
+### Compile and Consolidate
 
 ```bash
 python paper_compiler.py
-python paper_compiler.py --review
 python paper_compiler.py --stats
-python paper_compiler.py --export-apa
-python paper_compiler.py --export-bibtex
-python paper_compiler.py --gap-analysis
+python paper_compiler.py --metadata-status
+python paper_compiler.py --sqlite-status
 ```
 
-### 3. Pipeline completo
+### Pipeline by Phases
 
 ```bash
 python run_all.py
-python run_all.py --notify
-python run_all.py --dry-run
-python run_all.py --search-only
-python run_all.py --compile-only
-python run_all.py --days 14
+python run_all.py --phase search
+python run_all.py --phase compile
+python run_all.py --phase metadata
+python run_all.py --phase search --phase compile --api openalex
 ```
 
-### 4. Busqueda puntual
+## Web Monitor
+
+Run the local UI with:
 
 ```bash
-python search_specific.py --title "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks"
-python search_specific.py --author "Khattab" --keyword "ColBERT"
-python search_specific.py --doi "10.1145/3397271.3401075"
+python web_monitor.py
 ```
 
-### 5. Carga manual
+Main routes:
+
+- `GET /` dashboard
+- `GET /papers` paginated paper table with filters
+- `GET /papers/{paper_id}` paper detail and review panel
+- `GET /jobs` job history and manual execution
+- `GET /health` healthcheck
+
+The web UI supports:
+
+- filtering by text, status, relevance, API, trust, category, year, DOI verification, Scopus and found date
+- editing paper status, notes and thesis categories
+- launching manual pipeline runs
+- opening direct or proxy-based academic links
+
+## Proxy Support
+
+The web UI builds two link modes when possible:
+
+- `Open with proxy`
+- `Open direct`
+
+Supported domains are configured in `config/config.yaml` under `web.proxy.supported_domains`.
+
+Example host rewrite:
+
+- direct: `https://ieeexplore.ieee.org/search/searchresult.jsp?...`
+- proxy: `https://ieeexplore-ieee-org.ezproxy.ulima.edu.pe/search/searchresult.jsp?...`
+
+Seed domains currently included:
+
+- `ieeexplore.ieee.org`
+- `dl.acm.org`
+- `link.springer.com`
+- `www.sciencedirect.com`
+- `onlinelibrary.wiley.com`
+
+## Automation
+
+Recommended automation model for v1:
+
+- `Windows Task Scheduler + run_all.py`
+- the web UI as the local review and monitoring surface
+
+Suggested scheduled jobs:
 
 ```bash
-python add_manual.py --doi "10.1145/3397271.3401075"
-python add_manual.py --title "Paper Title" --authors "Author1, Author2" --year 2024 --venue "IEEE"
+python run_all.py --phase search --phase compile
+python run_all.py --phase metadata
 ```
 
-## Outputs generados
+If one provider is rate-limited, you can also schedule provider-specific runs:
 
-### Reportes diarios
+```bash
+python run_all.py --phase search --api openalex
+python run_all.py --phase search --api arxiv
+```
 
-- `output/daily/YYYY-MM-DD_daily_papers.md`: reporte legible para revision humana
-- `output/daily/YYYY-MM-DD_daily_papers.json`: salida estructurada para importacion automatica
+## Outputs
 
-### Reportes consolidados
+### Daily Outputs
+
+- `output/daily/YYYY-MM-DD_daily_papers.md`
+- `output/daily/YYYY-MM-DD_daily_papers.json`
+- `output/daily/YYYY-MM-DD_<api>_daily_papers.md`
+- `output/daily/YYYY-MM-DD_<api>_daily_papers.json`
+
+### Local Persistence
+
+- `data/papers_database.sqlite` primary storage
+- `data/papers_database.json` compatibility export
+- `data/api_runtime_state.json` persistent provider runtime state
+- `job_runs` table in SQLite for structured execution history
+- `runtime_locks` table in SQLite for concurrency control
+
+### Consolidated Reports
 
 - `output/reports/consolidated_report.md`
 - `output/reports/gap_analysis.md`
@@ -243,45 +248,58 @@ python add_manual.py --title "Paper Title" --authors "Author1, Author2" --year 2
 - `output/reports/references_apa7.md`
 - `output/reports/references.bib`
 
-### Artefactos de tesis
+### Thesis Artifacts
 
 - `output/thesis/`
 - `output/rag_corpus/`
 
-## Flujo recomendado de trabajo
+## Project Layout
 
-1. Ejecutar `python daily_researcher.py --dry-run` para inspeccionar el volumen y el top del dia.
-2. Ejecutar `python daily_researcher.py` si el resultado luce razonable.
-3. Ejecutar `python paper_compiler.py` para consolidar los nuevos papers.
-4. Revisar `python paper_compiler.py --stats` y, si hace falta, `python paper_compiler.py --gap-analysis`.
-5. Usar `review_papers.py` para aceptar o rechazar papers importantes.
-6. Exportar referencias o artefactos para la tesis cuando toque redactar.
+```text
+thesis-paper-agents/
+|-- assets/
+|-- config/
+|-- data/
+|-- logs/
+|-- output/
+|-- src/
+|   |-- agents/
+|   |-- apis/
+|   |-- models/
+|   |-- utils/
+|   `-- web/
+|       |-- static/
+|       `-- templates/
+|-- daily_researcher.py
+|-- paper_compiler.py
+|-- review_papers.py
+|-- export_thesis.py
+|-- run_all.py
+`-- web_monitor.py
+```
 
-## Calidad actual y limites
+## Current Strengths
 
-Fortalezas actuales:
+- strong noise reduction relative to raw academic search volume
+- robust deduplication and incremental processing
+- SQLite-centered architecture ready for long-term growth
+- human-in-the-loop review preserved as a first-class part of the workflow
+- web monitoring layer without breaking the CLI workflow
 
-- buena reduccion de ruido frente al volumen bruto de resultados
-- deduplicacion rapida y bastante robusta
-- buen equilibrio entre recall y filtro conservador
-- pipeline reproducible y facil de inspeccionar porque usa archivos simples
+## Current Limits
 
-Limitaciones actuales:
+- scoring is still heuristic, not a learned reranker
+- final quality still depends on `keywords.yaml` and `trusted_sources.yaml`
+- provisional papers still require academic judgment
+- the web UI is intentionally local-first and has no authentication in v1
 
-- el scoring sigue siendo heuristico; no es un reranker entrenado
-- la calidad final depende de `keywords.yaml` y `trusted_sources.yaml`
-- los papers `provisional` no deben tomarse como evidencia fuerte sin revision
-- puede seguir entrando algun paper aplicado fuera del foco si tiene una contribucion metodologica fuerte
-- la revision humana sigue siendo necesaria para decisiones academicas finales
+## Short Roadmap
 
-## Roadmap corto
+- measure precision and recall with a manually labeled gold set
+- add full-text search if the local database grows further
+- separate the bibliographic layer from the future semantic RAG corpus layer
+- expand the UI only if manual curation volume justifies it
 
-- migrar la base local de JSON a SQLite para mejorar escalabilidad y trazabilidad
-- crear un gold set manual para medir precision de la seleccion
-- separar la ingesta en jobs idempotentes por API
-- incorporar interfaz de curacion para aceptar, rechazar y etiquetar papers
-- separar la capa bibliografica de la capa de corpus semantico para RAG experimental
+## Important Note
 
-## Nota importante
-
-Este proyecto esta pensado como asistente de curacion academica, no como sustituto del juicio del tesista. El objetivo es reducir trabajo manual repetitivo y mejorar consistencia, no eliminar la evaluacion critica.
+This project is an academic curation assistant, not a replacement for thesis judgment. Its purpose is to reduce repetitive manual work and improve consistency, not to eliminate critical evaluation.

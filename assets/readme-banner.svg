@@ -1,0 +1,70 @@
+<svg width="1400" height="360" viewBox="0 0 1400 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">CloudRAG banner</title>
+  <desc id="desc">CloudRAG Thesis Paper Agents for Hybrid RAG research on cloud documentation.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1400" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#08111F"/>
+      <stop offset="1" stop-color="#0E1D33"/>
+    </linearGradient>
+    <linearGradient id="chip1" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#2B6CB0"/>
+      <stop offset="1" stop-color="#4299E1"/>
+    </linearGradient>
+    <linearGradient id="chip2" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#0D9488"/>
+      <stop offset="1" stop-color="#14B8A6"/>
+    </linearGradient>
+    <linearGradient id="chip3" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#EA580C"/>
+      <stop offset="1" stop-color="#FB923C"/>
+    </linearGradient>
+    <linearGradient id="chip4" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#3B82F6"/>
+      <stop offset="1" stop-color="#60A5FA"/>
+    </linearGradient>
+    <filter id="shadow" x="286" y="30" width="850" height="110" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <rect width="1400" height="360" rx="24" fill="url(#bg)"/>
+  <line x1="0" y1="138" x2="1400" y2="138" stroke="#20324F"/>
+
+  <g transform="translate(320 54)">
+    <circle cx="24" cy="24" r="22" fill="#D9D6FF"/>
+    <circle cx="52" cy="20" r="20" fill="#F4F2FF"/>
+    <circle cx="76" cy="28" r="24" fill="#E5E7FF"/>
+    <rect x="18" y="30" width="74" height="26" rx="13" fill="#E9E8FF"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <text x="505" y="86" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="66" font-weight="700">CloudRAG</text>
+  </g>
+  <text x="700" y="180" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="600">Hybrid RAG Research Monitor for Cloud Documentation</text>
+  <text x="700" y="216" text-anchor="middle" fill="#9FB0C7" font-family="Segoe UI, Arial, sans-serif" font-size="18">Thesis Paper Agents for discovery, ranking, curation and export</text>
+
+  <g transform="translate(172 264)">
+    <rect width="150" height="44" rx="12" fill="url(#chip1)"/>
+    <text x="75" y="28" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="600">Python 3.14</text>
+  </g>
+  <g transform="translate(338 264)">
+    <rect width="150" height="44" rx="12" fill="url(#chip2)"/>
+    <text x="75" y="28" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="600">FastAPI</text>
+  </g>
+  <g transform="translate(504 264)">
+    <rect width="160" height="44" rx="12" fill="#2D3748"/>
+    <text x="80" y="28" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="600">SQLite</text>
+  </g>
+  <g transform="translate(680 264)">
+    <rect width="140" height="44" rx="12" fill="url(#chip3)"/>
+    <text x="70" y="28" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="600">HTMX</text>
+  </g>
+  <g transform="translate(836 264)">
+    <rect width="170" height="44" rx="12" fill="#64748B"/>
+    <text x="85" y="28" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="600">OpenAlex</text>
+  </g>
+  <g transform="translate(1022 264)">
+    <rect width="204" height="44" rx="12" fill="url(#chip4)"/>
+    <text x="102" y="28" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="600">Semantic Scholar</text>
+  </g>
+</svg>
