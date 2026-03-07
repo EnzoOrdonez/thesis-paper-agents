@@ -1,7 +1,8 @@
-<p align="center">
-  <img src="./assets/readme-banner.svg" alt="CloudRAG banner" width="100%">
-</p>
+<h1 align="center">CloudRAG</h1>
 
+<p align="center">
+  <strong>Hybrid RAG Research Monitor for Cloud Documentation</strong>
+</p>
 <p align="center">
   <strong>Thesis Paper Agents</strong><br>
   Discovery, ranking, curation and monitoring for a hybrid RAG thesis focused on cloud documentation.
@@ -344,3 +345,4 @@ thesis-paper-agents/
 ## Important Note
 
 This project is an academic curation assistant, not a replacement for thesis judgment. Its purpose is to reduce repetitive manual work and improve consistency, not to eliminate critical evaluation.
+
