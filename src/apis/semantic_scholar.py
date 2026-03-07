@@ -1,9 +1,10 @@
-﻿"""Semantic Scholar API client for paper search."""
+"""Semantic Scholar API client for paper search."""
 
 from __future__ import annotations
 
 import os
 import time
+from datetime import datetime, timezone
 from typing import Any
 
 import requests
@@ -42,6 +43,7 @@ class SemanticScholarAPI:
         self._last_request_time: float = 0
         self._consecutive_rate_limit_failures = 0
         self._disabled_until: float = 0
+        self._last_error: str = ""
         self.session = requests.Session()
         if self.api_key:
             self.session.headers["x-api-key"] = self.api_key
@@ -56,15 +58,43 @@ class SemanticScholarAPI:
     def _is_disabled(self) -> bool:
         return time.time() < self._disabled_until
 
+    def is_temporarily_disabled(self) -> bool:
+        """Return whether the provider is currently in cooldown."""
+        return self._is_disabled()
+
+    def _disabled_until_iso(self) -> str | None:
+        if not self._disabled_until or time.time() >= self._disabled_until:
+            return None
+        return datetime.fromtimestamp(self._disabled_until, tz=timezone.utc).isoformat()
+
+    def restore_runtime_state(self, state: dict[str, Any]) -> None:
+        """Restore persisted cooldown metadata from a previous run."""
+        disabled_until = state.get("disabled_until")
+        if disabled_until:
+            try:
+                self._disabled_until = datetime.fromisoformat(disabled_until).timestamp()
+            except ValueError:
+                self._disabled_until = 0
+        self._consecutive_rate_limit_failures = int(state.get("consecutive_failures", 0) or 0)
+        self._last_error = str(state.get("last_error", "") or "")
+
+    def export_runtime_state(self) -> dict[str, Any]:
+        """Export cooldown metadata so daily runs can persist provider state."""
+        return {
+            "disabled_until": self._disabled_until_iso(),
+            "consecutive_failures": self._consecutive_rate_limit_failures,
+            "last_error": self._last_error,
+        }
+
     def _trip_circuit_breaker(self) -> None:
         self._disabled_until = time.time() + self.cooldown_seconds
         logger.warning(
-            "Semantic Scholar disabled for %.0f minutes after repeated 429 responses",
+            "Semantic Scholar disabled for %.0f minutes after repeated failures",
             self.cooldown_seconds / 60,
         )
 
     def _request_with_backoff(self, url: str, params: dict[str, Any]) -> dict[str, Any] | None:
-        """Make a GET request with exponential backoff on 429."""
+        """Make a GET request with exponential backoff on retryable failures."""
         if self._is_disabled():
             logger.warning("Skipping Semantic Scholar request because the client is temporarily disabled")
             return None
@@ -78,6 +108,7 @@ class SemanticScholarAPI:
                 response = self.session.get(url, params=params, timeout=30)
                 if response.status_code == 200:
                     self._consecutive_rate_limit_failures = 0
+                    self._last_error = ""
                     return response.json()
                 if response.status_code == 429:
                     retry_after = response.headers.get("Retry-After")
@@ -89,6 +120,7 @@ class SemanticScholarAPI:
                     logger.warning("Rate limited (429), waiting %ss (attempt %s)", int(delay), attempt + 1)
                     if attempt >= max_retries:
                         self._consecutive_rate_limit_failures += 1
+                        self._last_error = "HTTP 429"
                         if self._consecutive_rate_limit_failures >= self.shutdown_after_consecutive_failures:
                             self._trip_circuit_breaker()
                         return None
@@ -96,13 +128,21 @@ class SemanticScholarAPI:
                     delay = min(delay * 2, 30)
                     continue
                 logger.error("Semantic Scholar API error %s: %s", response.status_code, response.text[:200])
+                self._consecutive_rate_limit_failures += 1
+                self._last_error = f"HTTP {response.status_code}"
+                if self._consecutive_rate_limit_failures >= self.shutdown_after_consecutive_failures:
+                    self._trip_circuit_breaker()
                 return None
             except requests.RequestException as exc:
                 logger.error("Semantic Scholar request error: %s", exc)
+                self._last_error = str(exc)
                 if attempt < max_retries:
                     time.sleep(delay)
                     delay = min(delay * 2, 30)
                 else:
+                    self._consecutive_rate_limit_failures += 1
+                    if self._consecutive_rate_limit_failures >= self.shutdown_after_consecutive_failures:
+                        self._trip_circuit_breaker()
                     return None
         return None
 

@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="grid two-up">
+    <article class="panel">
+        <div class="panel-head"><h2>Lanzar job</h2>{% if message %}<span class="pill">{{ message }}</span>{% endif %}</div>
+        <div class="help-box compact-help">
+            <p><strong>Guia:</strong> usa <code>Compile</code> para consolidar, <code>Metadata</code> para DOI/Scopus y <code>Search</code> cuando quieras traer papers nuevos desde APIs.</p>
+        </div>
+        <form method="post" action="/jobs/run" class="stack-form">
+            <div class="checkbox-grid">
+                <label><input type="checkbox" name="phases" value="search"> Search</label>
+                <label><input type="checkbox" name="phases" value="compile" checked> Compile</label>
+                <label><input type="checkbox" name="phases" value="metadata" checked> Metadata</label>
+            </div>
+            <fieldset class="checkbox-fieldset">
+                <legend>APIs de busqueda opcionales</legend>
+                <div class="checkbox-grid compact-grid">
+                    {% for api in enabled_search_apis %}
+                    <label><input type="checkbox" name="api_names" value="{{ api }}"> {{ api }}</label>
+                    {% endfor %}
+                </div>
+            </fieldset>
+            <label><input type="checkbox" name="dry_run" value="true"> Dry run</label>
+            <button type="submit" class="primary">Ejecutar</button>
+        </form>
+    </article>
+    <article class="panel">
+        <div class="panel-head"><h2>Estado actual</h2></div>
+        {% if lock_info %}
+        <p class="muted">Hay una ejecucion activa hasta {{ lock_info.expires_at }}.</p>
+        <p class="muted">Owner: {{ lock_info.owner_id }}</p>
+        {% else %}
+        <p class="muted">No hay locks activos.</p>
+        {% endif %}
+    </article>
+</section>
+
+<section class="panel">
+    <div class="panel-head"><h2>Historial</h2></div>
+    <table class="data-table wide">
+        <thead><tr><th>Inicio</th><th>Status</th><th>Trigger</th><th>Fases</th><th>APIs</th><th>Resultados</th><th>Error</th></tr></thead>
+        <tbody>
+        {% for job in jobs %}
+        <tr>
+            <td>{{ job.started_at }}</td>
+            <td>{{ job.status }}</td>
+            <td>{{ job.trigger }}{% if job.dry_run %} / dry-run{% endif %}</td>
+            <td>{{ job.phases|join(', ') }}</td>
+            <td>{{ job.api_names|join(', ') if job.api_names else 'todas' }}</td>
+            <td>
+                search={{ job.search_final_papers or 0 }} |
+                import={{ job.compile_imported_count or 0 }} |
+                doi={{ job.metadata_doi_processed or 0 }}
+            </td>
+            <td>{{ job.error_message or '-' }}</td>
+        </tr>
+        {% else %}
+        <tr><td colspan="7" class="muted">Sin jobs registrados.</td></tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</section>
+{% endblock %}

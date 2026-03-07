@@ -102,7 +102,7 @@ flowchart LR
 - Idempotent report generation and reduced file churn.
 - SQLite as primary storage with incremental upsert sync.
 - Structured `job_runs` and `runtime_locks` stored in SQLite.
-- Web monitor with dashboard, filters, paper detail and manual run controls.
+- Web monitor with dashboard, sortable paper table, paper detail, manual run controls and light/dark theme toggle.
 - Proxy-aware links for restricted academic sources.
 
 ## Quick Start
@@ -171,14 +171,18 @@ Main routes:
 - `GET /papers` paginated paper table with filters
 - `GET /papers/{paper_id}` paper detail and review panel
 - `GET /jobs` job history and manual execution
+- `GET /settings/proxy` local proxy configuration
 - `GET /health` healthcheck
 
 The web UI supports:
 
 - filtering by text, status, relevance, API, trust, category, year, DOI verification, Scopus and found date
+- sorting visible paper columns from the table header with ascending and descending controls, plus reset to the default ranking order
+- switching between light and dark mode with browser-local persistence
 - editing paper status, notes and thesis categories
 - launching manual pipeline runs
 - opening direct or proxy-based academic links
+- editing local proxy rules from the browser
 
 ## Proxy Support
 
@@ -187,20 +191,57 @@ The web UI builds two link modes when possible:
 - `Open with proxy`
 - `Open direct`
 
-Supported domains are configured in `config/config.yaml` under `web.proxy.supported_domains`.
+Important:
 
-Example host rewrite:
+- this repository does not grant institutional access to anyone
+- your university proxy will only work for users who actually have access through that institution
+- the proxy feature is a link transformation helper, not an authentication bypass
 
-- direct: `https://ieeexplore.ieee.org/search/searchresult.jsp?...`
-- proxy: `https://ieeexplore-ieee-org.ezproxy.ulima.edu.pe/search/searchresult.jsp?...`
+The proxy layer supports per-domain rules and can now be edited from the web UI in `/settings/proxy`. Local changes are stored outside the base repo config so each user can keep their own institutional setup.
 
-Seed domains currently included:
+Supported strategies:
 
-- `ieeexplore.ieee.org`
-- `dl.acm.org`
-- `link.springer.com`
-- `www.sciencedirect.com`
-- `onlinelibrary.wiley.com`
+1. `host_rewrite`
+   - direct: `https://ieeexplore.ieee.org/search/searchresult.jsp?...`
+   - proxy: `https://ieeexplore-ieee-org.ezproxy.example.edu/search/searchresult.jsp?...`
+
+2. `prefix`
+   - direct: `https://publisher.example/article/123`
+   - proxy: `https://proxy.example.edu/login?url=https%3A%2F%2Fpublisher.example%2Farticle%2F123`
+
+Example config:
+
+```yaml
+web:
+  proxy:
+    mode: "dual"
+    prefer_proxy_button: true
+    rules:
+      - name: "Example EZproxy host rewrite"
+        strategy: "host_rewrite"
+        provider_host: "ezproxy.example.edu"
+        domains:
+          - "ieeexplore.ieee.org"
+          - "dl.acm.org"
+
+      - name: "My custom prefix proxy"
+        strategy: "prefix"
+        prefix_url: "https://proxy.example.edu/login?url="
+        encode_target: true
+        domains:
+          - "link.springer.com"
+          - "www.sciencedirect.com"
+```
+
+This means different users can configure different proxies for different domains.
+
+Practical note:
+
+- your idea is correct for restricted publishers such as IEEE, ACM, Springer or ScienceDirect
+- for arXiv it is usually unnecessary because arXiv is open access
+- so adding a proxy rule for arXiv is possible, but in most cases redundant
+
+The app does not fetch content through the proxy. It only rewrites outbound links.
 
 ## Automation
 

@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="panel">
+    <div class="panel-head">
+        <h2>Configuracion de proxies</h2>
+        {% if message %}<span class="pill ok">{{ message }}</span>{% endif %}
+    </div>
+    <div class="help-box">
+        <p>Estas reglas son locales por usuario y se guardan en <code>{{ settings_path }}</code>. No dan acceso institucional por si solas; solo reescriben los enlaces para abrirlos con el proxy configurado.</p>
+        <p>Usa <strong>host rewrite</strong> para esquemas tipo EZproxy y <strong>prefix</strong> para proxies que anteponen una URL de login.</p>
+        <p>arXiv normalmente no necesita proxy porque es open access.</p>
+    </div>
+</section>
+
+<section class="panel">
+    <form method="post" action="/settings/proxy" class="stack-form">
+        <div class="settings-grid">
+            <label class="inline-label">Modo
+                <select name="mode">
+                    <option value="dual" {% if proxy_mode == 'dual' %}selected{% endif %}>Dual</option>
+                    <option value="direct" {% if proxy_mode == 'direct' %}selected{% endif %}>Prefer direct</option>
+                    <option value="proxy_only" {% if proxy_mode == 'proxy_only' %}selected{% endif %}>Proxy only</option>
+                </select>
+            </label>
+            <label class="inline-label">Boton preferido
+                <select name="prefer_proxy_button">
+                    <option value="true" {% if prefer_proxy_button %}selected{% endif %}>Proxy</option>
+                    <option value="false" {% if not prefer_proxy_button %}selected{% endif %}>Directo</option>
+                </select>
+            </label>
+        </div>
+
+        <div class="stack-list">
+            {% for rule in rules %}
+            <article class="panel rule-card">
+                <div class="panel-head">
+                    <h3>Regla {{ loop.index }}</h3>
+                </div>
+                <div class="rule-grid">
+                    <label class="inline-label">Nombre
+                        <input type="text" name="rule_name" value="{{ rule.name }}" placeholder="Example IEEE proxy">
+                    </label>
+                    <label class="inline-label">Estrategia
+                        <select name="rule_strategy">
+                            <option value="host_rewrite" {% if rule.strategy == 'host_rewrite' %}selected{% endif %}>host_rewrite</option>
+                            <option value="prefix" {% if rule.strategy == 'prefix' %}selected{% endif %}>prefix</option>
+                        </select>
+                    </label>
+                    <label class="inline-label wide-field">Dominios
+                        <textarea name="rule_domains" rows="4" placeholder="ieeexplore.ieee.org&#10;dl.acm.org">{{ rule.domains_text }}</textarea>
+                    </label>
+                    <label class="inline-label">Provider host
+                        <input type="text" name="rule_provider_host" value="{{ rule.provider_host }}" placeholder="ezproxy.example.edu">
+                    </label>
+                    <label class="inline-label">Prefix URL
+                        <input type="text" name="rule_prefix_url" value="{{ rule.prefix_url }}" placeholder="https://proxy.example.edu/login?url=">
+                    </label>
+                    <label class="inline-label">Target template
+                        <input type="text" name="rule_target_template" value="{{ rule.target_template }}" placeholder="https://proxy.example.edu/open?target={url}">
+                    </label>
+                    <label class="inline-label">Encode target
+                        <select name="rule_encode_target">
+                            <option value="true" {% if rule.encode_target == 'true' %}selected{% endif %}>true</option>
+                            <option value="false" {% if rule.encode_target == 'false' %}selected{% endif %}>false</option>
+                        </select>
+                    </label>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+
+        <div class="actions">
+            <button type="submit" name="action" value="save" class="primary">Guardar reglas</button>
+            <button type="submit" name="action" value="reset">Restablecer a valores base</button>
+        </div>
+    </form>
+</section>
+{% endblock %}

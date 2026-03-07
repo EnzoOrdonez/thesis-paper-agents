@@ -1,0 +1,30 @@
+{% if flash %}<p class="flash">{{ flash }}</p>{% endif %}
+<div class="panel-head"><h2>Revision</h2></div>
+<div class="help-box compact-help">
+    <p><strong>Orden sugerido:</strong> 1) cambia el estado, 2) deja notas cortas con el por que, 3) marca categorias de tesis para futuras exportaciones.</p>
+</div>
+<form hx-post="/papers/{{ paper.id }}/status" hx-target="#review-panel" class="stack-form">
+    <label class="inline-label">Estado
+        <select name="status">
+            {% for value in ['new','reviewed','accepted','rejected'] %}
+            <option value="{{ value }}" {% if paper.status == value %}selected{% endif %}>{{ value }}</option>
+            {% endfor %}
+        </select>
+    </label>
+    <button type="submit" class="primary">Guardar estado</button>
+</form>
+
+<form hx-post="/papers/{{ paper.id }}/notes" hx-target="#review-panel" class="stack-form">
+    <label>Notas
+        <textarea name="notes" rows="6">{{ paper.notes or '' }}</textarea>
+    </label>
+    <button type="submit">Guardar notas</button>
+</form>
+
+<form hx-post="/papers/{{ paper.id }}/categories" hx-target="#review-panel" class="stack-form category-picker">
+    <p class="eyebrow">Categorias de tesis</p>
+    {% for category in thesis_categories %}
+    <label><input type="checkbox" name="categories" value="{{ category }}" {% if category in paper.categories %}checked{% endif %}> {{ category }}</label>
+    {% endfor %}
+    <button type="submit">Guardar categorias</button>
+</form>

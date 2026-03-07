@@ -1,0 +1,84 @@
+{% set default_sort_link = '/papers?' ~ papers_query(filters, 'ranking_score', 'desc', 1) %}
+{% macro sort_controls(label, field, default_sort_link) -%}
+{% set asc_active = sort == field and sort_dir == 'asc' %}
+{% set desc_active = sort == field and sort_dir == 'desc' %}
+{% set asc_link = default_sort_link if asc_active else '/papers?' ~ papers_query(filters, field, 'asc', 1) %}
+{% set desc_link = default_sort_link if desc_active else '/papers?' ~ papers_query(filters, field, 'desc', 1) %}
+<th>
+    <div class="sort-header">
+        <span>{{ label }}</span>
+        <span class="sort-actions">
+            <a href="{{ asc_link }}"
+               hx-get="{{ asc_link }}"
+               hx-target="#papers-results"
+               hx-push-url="true"
+               class="sort-link{% if asc_active %} active{% endif %}"
+               title="Orden ascendente{% if asc_active %} (clic de nuevo para volver al orden por defecto){% endif %}">&#9650;</a>
+            <a href="{{ desc_link }}"
+               hx-get="{{ desc_link }}"
+               hx-target="#papers-results"
+               hx-push-url="true"
+               class="sort-link{% if desc_active %} active{% endif %}"
+               title="Orden descendente{% if desc_active %} (clic de nuevo para volver al orden por defecto){% endif %}">&#9660;</a>
+        </span>
+    </div>
+</th>
+{%- endmacro %}
+
+<section class="panel table-panel">
+    <div class="panel-head">
+        <h2>{{ papers_page.total }} resultados</h2>
+        <div class="panel-head-actions">
+            {% if sort != 'ranking_score' or sort_dir != 'desc' %}
+            <a href="{{ default_sort_link }}" hx-get="{{ default_sort_link }}" hx-target="#papers-results" hx-push-url="true" class="secondary-action">Orden por defecto</a>
+            {% endif %}
+            <p class="muted">Pagina {{ papers_page.page }} de {{ papers_page.pages }}</p>
+        </div>
+    </div>
+    <table class="data-table wide">
+        <thead>
+            <tr>
+                {{ sort_controls('Titulo', 'title', default_sort_link) }}
+                {{ sort_controls('Year', 'year', default_sort_link) }}
+                {{ sort_controls('Ranking', 'ranking_score', default_sort_link) }}
+                {{ sort_controls('Fuente', 'source_api', default_sort_link) }}
+                {{ sort_controls('Status', 'status', default_sort_link) }}
+                <th class="access-head">Acceso</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for paper in papers_page["items"] %}
+            <tr>
+                <td>
+                    <a href="/papers/{{ paper.id }}">{{ paper.title }}</a>
+                    <div class="muted small">{{ paper.categories|join(', ') }}</div>
+                </td>
+                <td>{{ paper.year or 'N/A' }}</td>
+                <td>{{ paper.ranking_score }} <span class="muted">/ {{ paper.relevance_score }}</span></td>
+                <td>{{ paper.source_api or 'N/A' }}{% if paper.source_trusted %} - trusted{% else %} - provisional{% endif %}</td>
+                <td>{{ paper.status }}</td>
+                <td class="access-column">
+                    <div class="access-actions">
+                        {% if paper.access_links.proxy %}<a class="primary ghost" href="{{ paper.access_links.proxy }}" target="_blank" rel="noopener">Proxy</a>{% endif %}
+                        {% if paper.access_links.direct %}<a href="{{ paper.access_links.direct }}" target="_blank" rel="noopener">Directo</a>{% endif %}
+                    </div>
+                </td>
+            </tr>
+        {% else %}
+            <tr><td colspan="6" class="muted">No hay resultados con esos filtros.</td></tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <div class="pager">
+        {% if papers_page.page > 1 %}
+        {% set prev_link = '/papers?' ~ papers_query(filters, sort, sort_dir, papers_page.page - 1) %}
+        <a href="{{ prev_link }}" hx-get="{{ prev_link }}" hx-target="#papers-results" hx-push-url="true">Anterior</a>
+        {% else %}
+        <span></span>
+        {% endif %}
+        {% if papers_page.page < papers_page.pages %}
+        {% set next_link = '/papers?' ~ papers_query(filters, sort, sort_dir, papers_page.page + 1) %}
+        <a href="{{ next_link }}" hx-get="{{ next_link }}" hx-target="#papers-results" hx-push-url="true">Siguiente</a>
+        {% endif %}
+    </div>
+</section>

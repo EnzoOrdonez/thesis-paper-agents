@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title }} | Thesis Paper Agents</title>
+    <script>
+        (function () {
+            var storedTheme = localStorage.getItem("tpa-theme");
+            var theme = storedTheme === "dark" ? "dark" : "light";
+            document.documentElement.setAttribute("data-theme", theme);
+        })();
+    </script>
+    <link rel="stylesheet" href="/static/app.css">
+    <script src="https://unpkg.com/htmx.org@1.9.12"></script>
+</head>
+<body>
+    <div class="shell">
+        <header class="topbar">
+            <div>
+                <p class="eyebrow">Thesis Paper Agents</p>
+                <h1>Monitoreo bibliografico para tesis RAG hibrida</h1>
+            </div>
+            <div class="header-actions">
+                <nav class="nav">
+                    <a href="/" class="{% if request.url.path == '/' %}active{% endif %}">Dashboard</a>
+                    <a href="/papers" class="{% if request.url.path.startswith('/papers') %}active{% endif %}">Papers</a>
+                    <a href="/jobs" class="{% if request.url.path.startswith('/jobs') %}active{% endif %}">Jobs</a>
+                    <a href="/settings/proxy" class="{% if request.url.path.startswith('/settings/proxy') %}active{% endif %}">Proxy</a>
+                </nav>
+                <button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false">Modo oscuro</button>
+            </div>
+        </header>
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+    </div>
+    <script>
+        (function () {
+            var button = document.getElementById("theme-toggle");
+            if (!button) {
+                return;
+            }
+
+            function applyTheme(theme) {
+                document.documentElement.setAttribute("data-theme", theme);
+                button.textContent = theme === "dark" ? "Modo claro" : "Modo oscuro";
+                button.setAttribute("aria-pressed", theme === "dark" ? "true" : "false");
+            }
+
+            var currentTheme = document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
+            applyTheme(currentTheme);
+
+            button.addEventListener("click", function () {
+                var nextTheme = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+                localStorage.setItem("tpa-theme", nextTheme);
+                applyTheme(nextTheme);
+            });
+        })();
+    </script>
+</body>
+</html>

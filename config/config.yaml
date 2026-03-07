@@ -4,6 +4,8 @@ general:
   preferred_min_year: 2023
   max_results_per_query: 20
   search_workers_per_query: 3
+  doi_validation_batch_size: 25
+  scopus_check_batch_size: 25
   strict_source_filter: false
   untrusted_keep_score_threshold: 65
   min_keep_score: 35
@@ -28,6 +30,9 @@ apis:
     enabled: true
     base_url: "http://export.arxiv.org/api/query"
     rate_limit_seconds: 3
+    max_retries: 2
+    cooldown_seconds: 900
+    shutdown_after_consecutive_failures: 2
     categories: ["cs.IR", "cs.CL", "cs.AI", "cs.LG"]
 
   openalex:
@@ -35,12 +40,18 @@ apis:
     base_url: "https://api.openalex.org"
     email: ""
     rate_limit_per_second: 10
+    max_retries: 3
+    cooldown_seconds: 900
+    shutdown_after_consecutive_failures: 2
 
   crossref:
     enabled: true
     base_url: "https://api.crossref.org"
     email: ""
     rate_limit_per_second: 50
+    max_retries: 3
+    cooldown_seconds: 900
+    shutdown_after_consecutive_failures: 2
 
 output:
   daily_dir: "output/daily"
@@ -49,6 +60,12 @@ output:
   existing_papers_path: "data/existing_papers.json"
   log_dir: "logs"
   cache_dir: "data/cache"
+  import_manifest_path: "data/import_manifest.json"
+  api_runtime_state_path: "data/api_runtime_state.json"
+  sqlite_enabled: true
+  sqlite_primary_storage: true
+  sqlite_database_path: "data/papers_database.sqlite"
+  json_export_enabled: true
 
 notifications:
   enabled: false
@@ -58,4 +75,28 @@ notifications:
   email_smtp: ""
   email_to: ""
   notify_on_high_relevance: true
-
+web:
+  host: "127.0.0.1"
+  port: 8000
+  page_size: 50
+  local_only: true
+  proxy:
+    mode: "dual"
+    prefer_proxy_button: true
+    rules:
+      - name: "Example EZproxy host rewrite"
+        strategy: "host_rewrite"
+        provider_host: "ezproxy.example.edu"
+        domains:
+          - "ieeexplore.ieee.org"
+          - "dl.acm.org"
+          - "link.springer.com"
+          - "www.sciencedirect.com"
+          - "onlinelibrary.wiley.com"
+      - name: "Example custom prefix proxy"
+        strategy: "prefix"
+        prefix_url: "https://proxy.example.edu/login?url="
+        encode_target: true
+        domains:
+          - "example.com"
+          - "www.example.com"

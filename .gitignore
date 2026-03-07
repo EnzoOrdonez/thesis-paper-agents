@@ -20,3 +20,10 @@ logs/
 .idea/
 *.swp
 *.swo
+data/import_manifest.json
+data/papers_database.sqlite
+data/papers_database.sqlite-shm
+data/papers_database.sqlite-wal
+data/api_runtime_state.json
+
+data/web_proxy_settings.yaml

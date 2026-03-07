@@ -21,6 +21,7 @@ from src.apis.semantic_scholar import SemanticScholarAPI
 from src.models.paper import Paper
 from src.utils.duplicate_detector import DedupIndex, add_to_dedup_index, has_duplicate_in_index, load_existing_dedup_index
 from src.utils.logger import setup_logger
+from src.utils.api_runtime import APIRuntimeTracker
 from src.utils.relevance_scorer import check_gap_coverage, is_from_trusted_source, ranking_score, score_paper, suggest_categories
 
 logger = setup_logger("daily_researcher")
@@ -50,6 +51,8 @@ QUERY_CONCEPT_ALIASES = {
     "ann": ["approximate nearest neighbor", "nearest neighbor", "ann", "hnsw"],
     "ragas": ["ragas", "rag assessment"],
 }
+
+SEARCH_API_ORDER = ("semantic_scholar", "arxiv", "openalex")
 
 
 def _normalize_text(text: str) -> str:
@@ -188,13 +191,44 @@ def save_cache(cache_dir: Path, cache_key: str, results: list[dict]) -> None:
         json.dump(payload, f, ensure_ascii=False, indent=2)
 
 
-def build_api_clients(config: dict) -> dict[str, Any]:
+def get_enabled_search_apis(config: dict | None = None) -> list[str]:
+    """Return the enabled search APIs in deterministic order."""
+    active_config = config or load_config()
+    api_config = active_config.get("apis", {})
+    return [api_name for api_name in SEARCH_API_ORDER if api_config.get(api_name, {}).get("enabled", True)]
+
+
+def get_api_runtime_tracker(config: dict | None = None) -> APIRuntimeTracker:
+    """Load the persistent runtime state for per-provider ingestion."""
+    active_config = config or load_config()
+    state_path = active_config.get("output", {}).get("api_runtime_state_path", "data/api_runtime_state.json")
+    return APIRuntimeTracker(state_path)
+
+
+def _ordered_api_names(api_names: set[str] | list[str]) -> list[str]:
+    selected = set(api_names)
+    return [api_name for api_name in SEARCH_API_ORDER if api_name in selected]
+
+
+def _build_report_basename(today: str, selected_apis: list[str], enabled_apis: list[str]) -> str:
+    if not selected_apis or set(selected_apis) == set(enabled_apis):
+        return f"{today}_daily_papers"
+    suffix = "_".join(selected_apis)
+    return f"{today}_{suffix}_daily_papers"
+
+
+def build_api_clients(
+    config: dict,
+    selected_apis: set[str] | None = None,
+    runtime_tracker: APIRuntimeTracker | None = None,
+) -> dict[str, Any]:
     """Instantiate reusable API clients for a search run."""
     api_config = config.get("apis", {})
     clients: dict[str, Any] = {}
+    selected = selected_apis or set(SEARCH_API_ORDER)
 
     semantic_scholar = api_config.get("semantic_scholar", {})
-    if semantic_scholar.get("enabled", True):
+    if semantic_scholar.get("enabled", True) and "semantic_scholar" in selected:
         clients["semantic_scholar"] = SemanticScholarAPI(
             base_url=semantic_scholar.get("base_url", "https://api.semanticscholar.org/graph/v1"),
             rate_limit=semantic_scholar.get("rate_limit_per_second", 1),
@@ -209,20 +243,30 @@ def build_api_clients(config: dict) -> dict[str, Any]:
         )
 
     arxiv = api_config.get("arxiv", {})
-    if arxiv.get("enabled", True):
+    if arxiv.get("enabled", True) and "arxiv" in selected:
         clients["arxiv"] = ArxivAPI(
             base_url=arxiv.get("base_url", "http://export.arxiv.org/api/query"),
             rate_limit_seconds=arxiv.get("rate_limit_seconds", 3),
+            max_retries=arxiv.get("max_retries", 2),
+            cooldown_seconds=arxiv.get("cooldown_seconds", 900),
+            shutdown_after_consecutive_failures=arxiv.get("shutdown_after_consecutive_failures", 2),
             categories=arxiv.get("categories", ["cs.IR", "cs.CL", "cs.AI", "cs.LG"]),
         )
 
     openalex = api_config.get("openalex", {})
-    if openalex.get("enabled", True):
+    if openalex.get("enabled", True) and "openalex" in selected:
         clients["openalex"] = OpenAlexAPI(
             base_url=openalex.get("base_url", "https://api.openalex.org"),
             email=openalex.get("email", ""),
             rate_limit_per_second=openalex.get("rate_limit_per_second", 10),
+            max_retries=openalex.get("max_retries", 3),
+            cooldown_seconds=openalex.get("cooldown_seconds", 900),
+            shutdown_after_consecutive_failures=openalex.get("shutdown_after_consecutive_failures", 2),
         )
+
+    if runtime_tracker:
+        for api_name, client in clients.items():
+            runtime_tracker.apply_to_client(api_name, client)
 
     return clients
 
@@ -285,13 +329,20 @@ def search_openalex(
     return papers
 
 
-def _write_structured_daily_report(papers: list[Paper], stats: dict[str, int], output_dir: Path, today: str) -> None:
+def _write_structured_daily_report(
+    papers: list[Paper],
+    stats: dict[str, int],
+    output_dir: Path,
+    report_basename: str,
+    selected_apis: list[str],
+) -> None:
     """Persist the daily report in JSON so downstream steps do not need to parse Markdown."""
-    filepath = output_dir / f"{today}_daily_papers.json"
-    tmp_filepath = output_dir / f"{today}_daily_papers.json.tmp"
+    filepath = output_dir / f"{report_basename}.json"
+    tmp_filepath = output_dir / f"{report_basename}.json.tmp"
 
     payload = {
         "generated_at": datetime.now().isoformat(),
+        "selected_apis": selected_apis,
         "stats": stats,
         "papers": [paper.model_dump() for paper in papers],
     }
@@ -306,12 +357,68 @@ def _write_structured_daily_report(papers: list[Paper], stats: dict[str, int], o
     logger.info(f"Structured daily report written to {filepath}")
 
 
-def run_daily_search(days: int = 7, dry_run: bool = False) -> list[Paper]:
-    """Execute the full daily search across all APIs and keyword groups."""
+def _format_runtime_value(value: str | None) -> str:
+    if not value:
+        return "-"
+    try:
+        return datetime.fromisoformat(value).strftime("%Y-%m-%d %H:%M")
+    except ValueError:
+        return value
+
+
+def _format_disabled_until(value: str | None) -> str:
+    if not value:
+        return "-"
+    try:
+        disabled_until = datetime.fromisoformat(value)
+    except ValueError:
+        return value
+    if disabled_until <= datetime.now(disabled_until.tzinfo):
+        return "-"
+    return disabled_until.strftime("%Y-%m-%d %H:%M")
+
+
+def show_api_status() -> None:
+    """Print the persisted ingestion status for each search provider."""
+    config = load_config()
+    tracker = get_api_runtime_tracker(config)
+    enabled_apis = set(get_enabled_search_apis(config))
+
+    table = Table(title="Search API Runtime Status")
+    table.add_column("API", style="cyan")
+    table.add_column("Enabled", style="green")
+    table.add_column("Status", style="magenta")
+    table.add_column("Disabled Until", style="yellow")
+    table.add_column("Last Run", style="white")
+    table.add_column("Queries", style="green")
+    table.add_column("Results", style="green")
+    table.add_column("Last Error", style="red")
+
+    for api_name in SEARCH_API_ORDER:
+        provider = tracker.get_provider(api_name)
+        table.add_row(
+            api_name,
+            "yes" if api_name in enabled_apis else "no",
+            str(provider.get("last_status", "never") or "never"),
+            _format_disabled_until(provider.get("disabled_until")),
+            _format_runtime_value(provider.get("last_run_finished_at")),
+            str(provider.get("last_queries_submitted", 0) or 0),
+            str(provider.get("last_results_returned", 0) or 0),
+            str(provider.get("last_error", "") or "-")[:60],
+        )
+
+    console.print(table)
+
+
+def run_daily_search(days: int = 7, dry_run: bool = False, api_names: list[str] | None = None) -> tuple[list[Paper], dict[str, Any]]:
+    """Execute the full daily search across the selected APIs and keyword groups."""
     config = load_config()
     keywords = load_keywords()
     cache_dir = get_cache_path(config)
-    clients = build_api_clients(config)
+    enabled_api_names = get_enabled_search_apis(config)
+    selected_api_names = _ordered_api_names(api_names or enabled_api_names)
+    runtime_tracker = get_api_runtime_tracker(config)
+    clients = build_api_clients(config, selected_apis=set(selected_api_names), runtime_tracker=runtime_tracker)
 
     date_from = (date.today() - timedelta(days=days)).isoformat()
     general_config = config.get("general", {})
@@ -321,26 +428,57 @@ def run_daily_search(days: int = 7, dry_run: bool = False) -> list[Paper]:
     untrusted_keep_threshold = general_config.get("untrusted_keep_score_threshold", 65)
     min_keep_score = general_config.get("min_keep_score", 35)
     worker_count = min(general_config.get("search_workers_per_query", 3), max(len(clients), 1))
+    total_keyword_queries = sum(len(group_keywords) for group_keywords in keywords.values())
 
     console.print("\n[bold cyan]Daily Researcher Agent[/bold cyan]")
     console.print(f"Searching papers from {date_from} to today")
     console.print(f"Keyword groups: {len(keywords)}")
-    console.print(f"Enabled APIs: {', '.join(clients.keys())}")
+    console.print(f"Enabled APIs: {', '.join(enabled_api_names)}")
+    console.print(f"Selected APIs: {', '.join(selected_api_names)}")
     console.print()
 
     search_plan: list[tuple[str, str, Any, str]] = []
+    cooldown_skipped_apis: list[str] = []
+
     if "semantic_scholar" in clients:
-        search_plan.append(("Semantic Scholar", "semantic_scholar_results", search_semantic_scholar, "semantic_scholar"))
+        if clients["semantic_scholar"].is_temporarily_disabled():
+            cooldown_skipped_apis.append("semantic_scholar")
+            runtime_tracker.mark_skipped("semantic_scholar", clients["semantic_scholar"], total_keyword_queries, reason="cooldown")
+        else:
+            runtime_tracker.mark_started("semantic_scholar", total_keyword_queries)
+            search_plan.append(("Semantic Scholar", "semantic_scholar_results", search_semantic_scholar, "semantic_scholar"))
     if "arxiv" in clients:
-        search_plan.append(("arXiv", "arxiv_results", search_arxiv, "arxiv"))
+        if clients["arxiv"].is_temporarily_disabled():
+            cooldown_skipped_apis.append("arxiv")
+            runtime_tracker.mark_skipped("arxiv", clients["arxiv"], total_keyword_queries, reason="cooldown")
+        else:
+            runtime_tracker.mark_started("arxiv", total_keyword_queries)
+            search_plan.append(("arXiv", "arxiv_results", search_arxiv, "arxiv"))
     if "openalex" in clients:
-        search_plan.append(("OpenAlex", "openalex_results", search_openalex, "openalex"))
+        if clients["openalex"].is_temporarily_disabled():
+            cooldown_skipped_apis.append("openalex")
+            runtime_tracker.mark_skipped("openalex", clients["openalex"], total_keyword_queries, reason="cooldown")
+        else:
+            runtime_tracker.mark_started("openalex", total_keyword_queries)
+            search_plan.append(("OpenAlex", "openalex_results", search_openalex, "openalex"))
+
+    if cooldown_skipped_apis:
+        console.print(f"[yellow]APIs skipped due to cooldown: {', '.join(cooldown_skipped_apis)}[/yellow]")
 
     if not search_plan:
-        console.print("[yellow]No search APIs are enabled in config.[/yellow]")
-        return []
+        runtime_tracker.save()
+        console.print("[yellow]No search APIs are currently available for this run.[/yellow]")
+        return [], {
+            "selected_apis": selected_api_names,
+            "raw_results": 0,
+            "final_papers": 0,
+            "high_relevance": 0,
+            "medium_relevance": 0,
+            "low_relevance": 0,
+            "stats": {"apis_cooldown_skipped": len(cooldown_skipped_apis)},
+        }
 
-    expected_queries = sum(len(group_keywords) for group_keywords in keywords.values()) * len(search_plan)
+    expected_queries = total_keyword_queries * len(search_plan)
 
     all_papers: list[Paper] = []
     stats = {
@@ -356,6 +494,7 @@ def run_daily_search(days: int = 7, dry_run: bool = False) -> list[Paper]:
         "trusted_kept": 0,
         "provisional_kept": 0,
         "below_min_year": 0,
+        "apis_cooldown_skipped": len(cooldown_skipped_apis),
     }
 
     with ThreadPoolExecutor(max_workers=worker_count) as executor:
@@ -391,6 +530,10 @@ def run_daily_search(days: int = 7, dry_run: bool = False) -> list[Paper]:
                         all_papers.extend(filtered_papers)
                         progress.update(task, description=f"[cyan]{label}[/cyan] {query[:50]}...")
                         progress.advance(task)
+
+    for _, metric_key, _, client_key in search_plan:
+        runtime_tracker.mark_completed(client_key, clients[client_key], total_keyword_queries, stats[metric_key])
+    runtime_tracker.save()
 
     console.print(f"\n[bold]Raw results:[/bold] {len(all_papers)} papers")
 
@@ -471,6 +614,7 @@ def run_daily_search(days: int = 7, dry_run: bool = False) -> list[Paper]:
     table.add_row("Untrusted removed", str(stats["untrusted_removed"]))
     table.add_row("Trusted kept", str(stats["trusted_kept"]))
     table.add_row("Provisional kept", str(stats["provisional_kept"]))
+    table.add_row("APIs skipped by cooldown", str(stats["apis_cooldown_skipped"]))
     table.add_row("Below min year removed", str(stats["below_min_year"]))
     table.add_row("Final papers", str(len(scored_papers)))
     table.add_row("HIGH relevance", str(len(high)))
@@ -484,22 +628,42 @@ def run_daily_search(days: int = 7, dry_run: bool = False) -> list[Paper]:
         for paper in gap_papers:
             console.print(f"  - [bold]{paper.covers_gap}[/bold]: {paper.title}")
 
+    report_api_names = [client_key for _, _, _, client_key in search_plan]
     if not dry_run:
-        write_daily_report(scored_papers, stats, config)
+        write_daily_report(scored_papers, stats, config, report_api_names)
     else:
         console.print("\n[yellow]Dry run - no files written.[/yellow]")
 
-    return scored_papers
+    summary = {
+        "selected_apis": report_api_names,
+        "raw_results": len(all_papers),
+        "final_papers": len(scored_papers),
+        "high_relevance": len(high),
+        "medium_relevance": len(medium),
+        "low_relevance": len(low),
+        "stats": stats,
+    }
+
+    return scored_papers, summary
 
 
-def write_daily_report(papers: list[Paper], stats: dict[str, int], config: dict) -> None:
+def write_daily_report(
+    papers: list[Paper],
+    stats: dict[str, int],
+    config: dict,
+    selected_apis: list[str] | None = None,
+) -> None:
     """Write the daily report in Markdown plus a structured JSON mirror."""
     today = date.today().isoformat()
     output_dir = Path(config.get("output", {}).get("daily_dir", "output/daily"))
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    filepath = output_dir / f"{today}_daily_papers.md"
-    tmp_filepath = output_dir / f"{today}_daily_papers.md.tmp"
+    enabled_apis = get_enabled_search_apis(config)
+    report_api_names = selected_apis or enabled_apis
+    report_basename = _build_report_basename(today, report_api_names, enabled_apis)
+
+    filepath = output_dir / f"{report_basename}.md"
+    tmp_filepath = output_dir / f"{report_basename}.md.tmp"
 
     high = [paper for paper in papers if paper.relevance_level.value == "ALTA"]
     medium = [paper for paper in papers if paper.relevance_level.value == "MEDIA"]
@@ -510,6 +674,7 @@ def write_daily_report(papers: list[Paper], stats: dict[str, int], config: dict)
     lines.append(f"# Reporte Diario de Papers -- {today}")
     lines.append("")
     lines.append("## Resumen")
+    lines.append(f"- Scope de APIs: {', '.join(report_api_names)}")
     lines.append(f"- Papers encontrados: {len(papers)}")
     lines.append(f"- Papers de alta relevancia: {len(high)}")
     lines.append(f"- Papers de media relevancia: {len(medium)}")
@@ -518,6 +683,7 @@ def write_daily_report(papers: list[Paper], stats: dict[str, int], config: dict)
     lines.append(f"- Papers provisionales conservados: {stats.get('provisional_kept', 0)}")
     lines.append(f"- Resultados descartados por no parecer responder a la query: {stats.get('query_mismatch_removed', 0)}")
     lines.append(f"- Papers descartados por score demasiado bajo: {stats.get('low_score_removed', 0)}")
+    lines.append(f"- APIs saltadas por cooldown: {stats.get('apis_cooldown_skipped', 0)}")
     lines.append(f"- APIs consultadas: {stats.get('total_queries', 0)}/{stats.get('expected_queries', 0)} llamadas")
     lines.append("")
 
@@ -582,13 +748,7 @@ def write_daily_report(papers: list[Paper], stats: dict[str, int], config: dict)
         filepath.unlink()
     tmp_filepath.rename(filepath)
 
-    _write_structured_daily_report(papers, stats, output_dir, today)
+    _write_structured_daily_report(papers, stats, output_dir, report_basename, report_api_names)
 
     console.print(f"\n[bold green]Report written:[/bold green] {filepath}")
     logger.info(f"Daily report written to {filepath}")
-
-
-
-
-
-

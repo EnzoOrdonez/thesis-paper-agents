@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="grid detail-grid">
+    <article class="panel paper-main">
+        <p class="eyebrow">{{ paper.relevance_level }} | ranking {{ paper.ranking_score }} | {{ paper.status }}</p>
+        <h2>{{ paper.title }}</h2>
+        <p class="muted">{{ paper.authors|join(', ') }}</p>
+        <p class="muted">{{ paper.year or 'N/A' }} | {{ paper.venue or 'Sin venue' }} | {{ paper.source_api or 'Sin API' }} | {% if paper.source_trusted %}trusted{% else %}provisional{% endif %}</p>
+        <div class="help-box compact-help">
+            <p><strong>Guia:</strong> primero abre el paper, luego confirma su calidad academica con DOI, venue y Scopus, y finalmente decide si queda aceptado, rechazado o pendiente.</p>
+        </div>
+        <div class="actions">
+            {% if paper.access_links.proxy %}<a class="primary" href="{{ paper.access_links.proxy }}" target="_blank" rel="noopener">Abrir con proxy</a>{% endif %}
+            {% if paper.access_links.direct %}<a href="{{ paper.access_links.direct }}" target="_blank" rel="noopener">Abrir directo</a>{% endif %}
+        </div>
+        <dl class="meta-grid">
+            <div><dt>DOI</dt><dd>{{ paper.doi or 'N/A' }}</dd></div>
+            <div><dt>Citaciones</dt><dd>{{ paper.citation_count }}</dd></div>
+            <div><dt>Scopus</dt><dd>{{ paper.scopus_indexed if paper.scopus_indexed is not none else 'N/A' }}</dd></div>
+            <div><dt>DOI verificado</dt><dd>{{ paper.doi_verified if paper.doi_verified is not none else 'N/A' }}</dd></div>
+            <div><dt>Gap</dt><dd>{{ paper.covers_gap or 'Ninguno' }}</dd></div>
+            <div><dt>Fecha hallazgo</dt><dd>{{ paper.date_found or 'N/A' }}</dd></div>
+        </dl>
+        <div class="abstract-box">
+            <h3>Abstract</h3>
+            <p>{{ paper.abstract or 'Sin abstract disponible.' }}</p>
+        </div>
+    </article>
+    <aside class="panel" id="review-panel">
+        {% include "_paper_review_panel.html" %}
+    </aside>
+</section>
+{% endblock %}

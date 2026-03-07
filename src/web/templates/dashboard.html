@@ -1,0 +1,209 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero-grid">
+    <article class="panel stat-panel accent">
+        <p class="eyebrow">Base primaria</p>
+        <h2>{{ metrics.total_papers }}</h2>
+        <p>Papers consolidados en SQLite.</p>
+    </article>
+    <article class="panel stat-panel">
+        <p class="eyebrow">Revision</p>
+        <h2>{{ metrics.status_counts.get('new', 0) }}</h2>
+        <p>Pendientes. Aceptados: {{ metrics.status_counts.get('accepted', 0) }} | Rechazados: {{ metrics.status_counts.get('rejected', 0) }}</p>
+    </article>
+    <article class="panel stat-panel">
+        <p class="eyebrow">Relevancia</p>
+        <h2>{{ metrics.relevance_counts.get('ALTA', 0) }}</h2>
+        <p>Alta relevancia. Media: {{ metrics.relevance_counts.get('MEDIA', 0) }} | Baja: {{ metrics.relevance_counts.get('BAJA', 0) }}</p>
+    </article>
+    <article class="panel stat-panel">
+        <p class="eyebrow">Gaps</p>
+        <h2>{{ covered_gaps }}/{{ total_gaps }}</h2>
+        <p>Cobertura fundacional actual.</p>
+    </article>
+</section>
+
+<section class="panel guide-panel">
+    <div class="panel-head">
+        <h2>Guia rapida</h2>
+        <a href="/papers?only_pending=true">Ir a pendientes</a>
+    </div>
+    <div class="guide-grid">
+        <article class="guide-step">
+            <p class="eyebrow">Paso 1</p>
+            <h3>Lee el estado general</h3>
+            <p>Usa este dashboard para revisar volumen, relevancia, gaps cubiertos y salud de las APIs.</p>
+        </article>
+        <article class="guide-step">
+            <p class="eyebrow">Paso 2</p>
+            <h3>Filtra en Papers</h3>
+            <p>Prioriza trusted, ALTA o MEDIA, DOI verificado y pendientes para limpiar la cola de revision.</p>
+        </article>
+        <article class="guide-step">
+            <p class="eyebrow">Paso 3</p>
+            <h3>Revisa y decide</h3>
+            <p>Abre el detalle, guarda notas, acepta o rechaza y marca categorias de tesis sin salir de la web.</p>
+        </article>
+        <article class="guide-step">
+            <p class="eyebrow">Paso 4</p>
+            <h3>Opera el pipeline</h3>
+            <p>Desde Jobs lanzas fases manuales y desde Proxy guardas tus reglas institucionales locales.</p>
+        </article>
+    </div>
+</section>
+
+<section class="grid two-up">
+    <article class="panel">
+        <div class="panel-head">
+            <h2>Ejecucion manual</h2>
+            {% if lock_info %}<span class="pill danger">Pipeline ocupado</span>{% else %}<span class="pill ok">Disponible</span>{% endif %}
+        </div>
+        <div class="help-box compact-help">
+            <p><strong>Recomendado:</strong> usa <code>Search + Compile</code> para el flujo diario y agrega <code>Metadata</code> cuando quieras refrescar DOI y Scopus.</p>
+        </div>
+        <form method="post" action="/jobs/run" class="stack-form">
+            <div class="checkbox-grid">
+                <label><input type="checkbox" name="phases" value="search" checked> Search</label>
+                <label><input type="checkbox" name="phases" value="compile" checked> Compile</label>
+                <label><input type="checkbox" name="phases" value="metadata"> Metadata</label>
+            </div>
+            <fieldset class="checkbox-fieldset">
+                <legend>APIs de busqueda opcionales</legend>
+                <div class="checkbox-grid compact-grid">
+                    {% for api in enabled_search_apis %}
+                    <label><input type="checkbox" name="api_names" value="{{ api }}"> {{ api }}</label>
+                    {% endfor %}
+                </div>
+            </fieldset>
+            <label><input type="checkbox" name="dry_run" value="true"> Dry run</label>
+            <button type="submit" class="primary">Lanzar pipeline</button>
+        </form>
+    </article>
+
+    <article class="panel">
+        <div class="panel-head">
+            <h2>Ultimos jobs</h2>
+            <a href="/jobs">Ver todo</a>
+        </div>
+        <div class="stack-list compact">
+            {% for job in jobs[:6] %}
+            <div class="list-row">
+                <strong>{{ job.status }}</strong>
+                <span>{{ job.started_at }}</span>
+                <span>{{ ', '.join(job.phases) }}</span>
+            </div>
+            {% else %}
+            <p class="muted">Todavia no hay jobs registrados.</p>
+            {% endfor %}
+        </div>
+    </article>
+</section>
+
+<section class="grid two-up">
+    <article class="panel">
+        <div class="panel-head"><h2>APIs de busqueda</h2></div>
+        <table class="data-table">
+            <thead><tr><th>API</th><th>Status</th><th>Queries</th><th>Results</th></tr></thead>
+            <tbody>
+            {% for row in runtime.search %}
+            <tr>
+                <td>{{ row.name }}</td>
+                <td>{{ row.status }}</td>
+                <td>{{ row.queries }}</td>
+                <td>{{ row.results }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </article>
+
+    <article class="panel">
+        <div class="panel-head"><h2>Metadata providers</h2></div>
+        <table class="data-table">
+            <thead><tr><th>Stage</th><th>Status</th><th>Batch</th><th>Processed</th></tr></thead>
+            <tbody>
+            {% for row in runtime.metadata %}
+            <tr>
+                <td>{{ row.name }}</td>
+                <td>{{ row.status }}</td>
+                <td>{{ row.batch }}</td>
+                <td>{{ row.processed }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </article>
+</section>
+
+<section class="grid two-up">
+    <article class="panel">
+        <div class="panel-head"><h2>Distribucion por categoria</h2></div>
+        <table class="data-table">
+            <thead><tr><th>Categoria</th><th>Total</th></tr></thead>
+            <tbody>
+            {% for category, count in metrics.category_counts.items() %}
+            <tr>
+                <td>{{ category }}</td>
+                <td>{{ count }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </article>
+
+    <article class="panel">
+        <div class="panel-head"><h2>Fuentes y confianza</h2></div>
+        <div class="stack-list compact">
+            {% for source, count in metrics.source_counts.items() %}
+            <div class="list-row">
+                <strong>{{ source }}</strong>
+                <span>{{ count }}</span>
+            </div>
+            {% endfor %}
+            <div class="list-row">
+                <strong>Trusted</strong>
+                <span>{{ metrics.trust_counts.get('trusted', 0) }}</span>
+            </div>
+            <div class="list-row">
+                <strong>Provisional</strong>
+                <span>{{ metrics.trust_counts.get('provisional', 0) }}</span>
+            </div>
+        </div>
+    </article>
+</section>
+
+<section class="grid two-up">
+    <article class="panel">
+        <div class="panel-head"><h2>Top alta relevancia</h2><a href="/papers?relevance_level=ALTA">Filtrar</a></div>
+        <div class="stack-list">
+            {% for paper in high_papers %}
+            <article class="paper-card">
+                <div>
+                    <p class="eyebrow">{{ paper.relevance_level }} | ranking {{ paper.ranking_score }}</p>
+                    <h3><a href="/papers/{{ paper.id }}">{{ paper.title }}</a></h3>
+                    <p class="muted">{{ paper.year or 'N/A' }} | {{ paper.venue or 'Sin venue' }}</p>
+                </div>
+                <div class="actions">
+                    {% if paper.access_links.proxy %}<a class="primary ghost" href="{{ paper.access_links.proxy }}" target="_blank" rel="noopener">Abrir con proxy</a>{% endif %}
+                    {% if paper.access_links.direct %}<a href="{{ paper.access_links.direct }}" target="_blank" rel="noopener">Abrir directo</a>{% endif %}
+                </div>
+            </article>
+            {% else %}
+            <p class="muted">No hay papers ALTA todavia.</p>
+            {% endfor %}
+        </div>
+    </article>
+
+    <article class="panel">
+        <div class="panel-head"><h2>Gaps fundacionales</h2></div>
+        <div class="stack-list">
+            {% for gap in gap_status %}
+            <div class="list-row gap-row">
+                <strong>{{ gap.name }}</strong>
+                <span>{% if gap.covered %}Cubierto{% else %}Pendiente{% endif %}</span>
+            </div>
+            {% endfor %}
+        </div>
+    </article>
+</section>
+{% endblock %}

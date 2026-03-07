@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="panel">
+    <div class="panel-head">
+        <h2>Filtrado de papers</h2>
+        <p class="muted">Busqueda server-side sobre SQLite, sin parsear Markdown ni depender del JSON.</p>
+    </div>
+    <div class="help-box compact-help">
+        <p><strong>Guia:</strong> empieza con <code>Solo pendientes</code> o <code>ALTA/MEDIA</code>, luego reduce ruido con <code>trusted</code>, <code>DOI verificado</code> y categoria.</p>
+        <p>Tambien puedes ordenar desde el encabezado de la tabla con flechas ascendentes y descendentes por columna. Si vuelves a pulsar la flecha activa o usas el boton de reset, regresas al orden por defecto.</p>
+    </div>
+    <form class="filters" hx-get="/papers" hx-target="#papers-results" hx-push-url="true">
+        <input type="text" name="q" value="{{ filters.q }}" placeholder="Titulo, abstract, DOI o autor">
+        <select name="status">
+            <option value="">Todos los estados</option>
+            {% for value in ['new','accepted','rejected','reviewed'] %}
+            <option value="{{ value }}" {% if filters.status == value %}selected{% endif %}>{{ value }}</option>
+            {% endfor %}
+        </select>
+        <select name="relevance_level">
+            <option value="">Toda relevancia</option>
+            {% for value in ['ALTA','MEDIA','BAJA'] %}
+            <option value="{{ value }}" {% if filters.relevance_level == value %}selected{% endif %}>{{ value }}</option>
+            {% endfor %}
+        </select>
+        <select name="source_api">
+            <option value="">Todas las APIs</option>
+            {% for value in filter_values.source_apis %}
+            <option value="{{ value }}" {% if filters.source_api == value %}selected{% endif %}>{{ value }}</option>
+            {% endfor %}
+        </select>
+        <select name="source_trusted">
+            <option value="">Trusted y provisional</option>
+            <option value="trusted" {% if filters.source_trusted == 'trusted' %}selected{% endif %}>Solo trusted</option>
+            <option value="provisional" {% if filters.source_trusted == 'provisional' %}selected{% endif %}>Solo provisional</option>
+        </select>
+        <select name="category">
+            <option value="">Todas las categorias</option>
+            {% for value in filter_values.categories %}
+            <option value="{{ value }}" {% if filters.category == value %}selected{% endif %}>{{ value }}</option>
+            {% endfor %}
+        </select>
+        <select name="year">
+            <option value="">Todos los anos</option>
+            {% for value in filter_values.years %}
+            <option value="{{ value }}" {% if filters.year == value|string %}selected{% endif %}>{{ value }}</option>
+            {% endfor %}
+        </select>
+        <select name="doi_verified">
+            <option value="">DOI verificado: cualquiera</option>
+            <option value="true" {% if filters.doi_verified == 'true' %}selected{% endif %}>DOI verificado</option>
+            <option value="false" {% if filters.doi_verified == 'false' %}selected{% endif %}>DOI no verificado</option>
+            <option value="unknown" {% if filters.doi_verified == 'unknown' %}selected{% endif %}>DOI sin revisar</option>
+        </select>
+        <select name="scopus_indexed">
+            <option value="">Scopus: cualquiera</option>
+            <option value="true" {% if filters.scopus_indexed == 'true' %}selected{% endif %}>Indexado en Scopus</option>
+            <option value="false" {% if filters.scopus_indexed == 'false' %}selected{% endif %}>No indexado</option>
+            <option value="unknown" {% if filters.scopus_indexed == 'unknown' %}selected{% endif %}>Sin revisar</option>
+        </select>
+        <select name="date_found">
+            <option value="">Cualquier fecha de hallazgo</option>
+            {% for value in filter_values.dates_found %}
+            <option value="{{ value }}" {% if filters.date_found == value %}selected{% endif %}>{{ value }}</option>
+            {% endfor %}
+        </select>
+        <label class="checkbox-inline"><input type="checkbox" name="only_pending" value="true" {% if filters.only_pending %}checked{% endif %}> Solo pendientes</label>
+        <select name="sort">
+            {% for value, label in [('title','Titulo'),('year','Year'),('ranking_score','Ranking'),('source_api','Fuente'),('status','Status'),('date_found','Fecha encontrada'),('citation_count','Citaciones'),('relevance_score','Score')] %}
+            <option value="{{ value }}" {% if sort == value %}selected{% endif %}>{{ label }}</option>
+            {% endfor %}
+        </select>
+        <input type="hidden" name="sort_dir" value="{{ sort_dir }}">
+        <button type="submit" class="primary">Aplicar filtros</button>
+    </form>
+</section>
+
+<div id="papers-results">
+    {% include "_papers_table.html" %}
+</div>
+{% endblock %}

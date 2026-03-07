@@ -22,22 +22,20 @@ sys.path.insert(0, str(Path(__file__).parent))
 import yaml
 from rich.console import Console
 
+from src.agents.paper_compiler import load_config, load_database as load_papers_database
 from src.models.paper import Paper, PaperStatus, RelevanceLevel
 from src.utils.reference_formatter import format_apa7
 
 console = Console()
 
-DB_PATH = "data/papers_database.json"
+CONFIG = load_config()
+DB_PATH = CONFIG["output"]["database_path"]
 OUTPUT_DIR = Path("output/thesis")
 
 
 def load_database() -> list[Paper]:
-    db_path = Path(DB_PATH)
-    if not db_path.exists():
-        return []
-    with open(db_path, encoding="utf-8") as f:
-        data = json.load(f)
-    return [Paper(**item) for item in data]
+    return load_papers_database(DB_PATH)
+
 
 
 def load_categories() -> list[str]:
@@ -121,7 +119,7 @@ def _infer_relevance_to_thesis(paper: Paper) -> str:
     return cat_relevance.get(cats[0], "Relevancia general")
 
 
-# ── Exporters ────────────────────────────────────────────────────────────────
+# Exporters
 
 def export_estado_del_arte_tabla(papers: list[Paper], category_filter: str | None = None) -> None:
     """Generate state-of-the-art table in Markdown."""
@@ -249,7 +247,7 @@ def export_estado_del_arte_borrador(papers: list[Paper], category_filter: str | 
 
     lines = [
         f"# Borrador de Estado del Arte",
-        f"_Generado: {today} — BORRADOR para revision del autor_",
+        f"_Generado: {today} - BORRADOR para revision del autor_",
         "",
         "> **Nota:** Este es un borrador generado automaticamente. ",
         "> Debe ser revisado, editado y enriquecido por el autor de la tesis.",
@@ -312,7 +310,7 @@ def export_estado_del_arte_borrador(papers: list[Paper], category_filter: str | 
         # Add citation list
         lines.append(f"**Referencias de esta seccion ({len(cat_papers)}):**")
         for p in cat_papers[:10]:
-            lines.append(f"- {_author_cite(p)} — _{p.title}_")
+            lines.append(f"- {_author_cite(p)} - _{p.title}_")
         if len(cat_papers) > 10:
             lines.append(f"- _... y {len(cat_papers) - 10} referencias adicionales_")
         lines.append("")
@@ -331,8 +329,7 @@ def export_referencias_tesis(papers: list[Paper]) -> None:
 
     accepted = [p for p in papers if p.status == PaperStatus.ACCEPTED]
     accepted.sort(key=lambda p: (p.authors[0] if p.authors else "", p.year or 0))
-
-    lines = [f"# Referencias para la Tesis — Generado: {today}", ""]
+    lines = [f"# Referencias para la Tesis - Generado: {today}", ""]
     lines.append(f"Total papers aceptados: {len(accepted)}")
     lines.append("")
 

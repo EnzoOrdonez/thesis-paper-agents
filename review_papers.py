@@ -25,11 +25,13 @@ from rich.rule import Rule
 from rich.table import Table
 from rich.text import Text
 
+from src.agents.paper_compiler import load_config, load_database as load_papers_database, save_database as save_papers_database
 from src.models.paper import Paper, PaperStatus, RelevanceLevel
 
 console = Console()
 
-DB_PATH = "data/papers_database.json"
+CONFIG = load_config()
+DB_PATH = CONFIG["output"]["database_path"]
 THESIS_CATEGORIES = [
     "Sistemas RAG Hibridos",
     "Normalizacion/Preprocesamiento",
@@ -46,23 +48,12 @@ THESIS_CATEGORIES = [
 
 
 def load_database() -> list[Paper]:
-    db_path = Path(DB_PATH)
-    if not db_path.exists():
-        return []
-    with open(db_path, encoding="utf-8") as f:
-        data = json.load(f)
-    return [Paper(**item) for item in data]
+    return load_papers_database(DB_PATH)
+
 
 
 def save_database(papers: list[Paper]) -> None:
-    db_path = Path(DB_PATH)
-    db_path.parent.mkdir(parents=True, exist_ok=True)
-    tmp_path = db_path.with_suffix(".json.tmp")
-    with open(tmp_path, "w", encoding="utf-8") as f:
-        json.dump([p.model_dump() for p in papers], f, ensure_ascii=False, indent=2)
-    if db_path.exists():
-        db_path.unlink()
-    tmp_path.rename(db_path)
+    save_papers_database(papers, DB_PATH)
 
 
 def display_paper(paper: Paper, index: int, total: int) -> None:
@@ -78,7 +69,7 @@ def display_paper(paper: Paper, index: int, total: int) -> None:
     console.print()
     console.print(Rule(style="cyan"))
     console.print(
-        f"  [bold cyan]Paper {index}/{total}[/bold cyan] — "
+        f"  [bold cyan]Paper {index}/{total}[/bold cyan] - "
         f"Score: [bold yellow]{paper.relevance_score}/100[/bold yellow] [{level_str}]"
     )
     console.print(Rule(style="cyan"))
@@ -183,7 +174,7 @@ def main() -> None:
         return
 
     console.print(Panel.fit(
-        f"[bold cyan]Revision de Papers — {len(to_review)} pendientes[/bold cyan]",
+        f"[bold cyan]Revision de Papers - {len(to_review)} pendientes[/bold cyan]",
         border_style="cyan",
     ))
 

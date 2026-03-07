@@ -25,6 +25,24 @@ except ModuleNotFoundError as exc:
 from src.agents.daily_researcher import load_config
 
 
+def _print_quick_guide(host: str, port: int) -> None:
+    base_url = f"http://{host}:{port}"
+    print("")
+    print("Thesis Paper Agents - Web Monitor")
+    print(f"Abre: {base_url}")
+    print("Guia rapida:")
+    print(f"  Dashboard : {base_url}/")
+    print(f"  Papers    : {base_url}/papers")
+    print(f"  Jobs      : {base_url}/jobs")
+    print(f"  Proxy     : {base_url}/settings/proxy")
+    print("Flujo sugerido:")
+    print("  1. Revisa el dashboard para ver estado, jobs y APIs")
+    print("  2. Entra a /papers para filtrar pendientes y papers fuertes")
+    print("  3. Abre el detalle para aceptar, rechazar o anotar")
+    print("  4. Usa /jobs y /settings/proxy cuando necesites operar el pipeline")
+    print("")
+
+
 def main() -> None:
     config = load_config()
     web_config = config.get("web", {})
@@ -35,6 +53,7 @@ def main() -> None:
     parser.add_argument("--reload", action="store_true", help="Enable auto-reload for development")
     args = parser.parse_args()
 
+    _print_quick_guide(args.host, args.port)
     uvicorn.run("src.web.app:create_app", factory=True, host=args.host, port=args.port, reload=args.reload)
 
 

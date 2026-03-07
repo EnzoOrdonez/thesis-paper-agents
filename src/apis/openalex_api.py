@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import os
 import time
+from datetime import datetime, timezone
 from typing import Any
 
 import requests
@@ -24,11 +25,21 @@ class OpenAlexAPI:
         base_url: str = DEFAULT_BASE_URL,
         email: str | None = None,
         rate_limit_per_second: float = 10.0,
+        max_retries: int = 3,
+        cooldown_seconds: int = 900,
+        shutdown_after_consecutive_failures: int = 2,
     ):
         self.base_url = base_url.rstrip("/")
         self.email = email or os.getenv("OPENALEX_EMAIL", "")
         self.rate_limit_per_second = rate_limit_per_second
+        self.max_retries = max_retries
+        self.cooldown_seconds = cooldown_seconds
+        self.shutdown_after_consecutive_failures = shutdown_after_consecutive_failures
         self._last_request_time: float = 0
+        self._consecutive_failures = 0
+        self._disabled_until: float = 0
+        self._last_error: str = ""
+        self._last_outcome: str = "never"
         self.session = requests.Session()
         if self.email:
             self.session.headers["User-Agent"] = f"ThesisPaperAgents/1.0 (mailto:{self.email})"
@@ -40,33 +51,101 @@ class OpenAlexAPI:
             time.sleep(wait)
         self._last_request_time = time.time()
 
+    def _is_disabled(self) -> bool:
+        return time.time() < self._disabled_until
+
+    def is_temporarily_disabled(self) -> bool:
+        """Return whether the provider is currently in cooldown."""
+        return self._is_disabled()
+
+    def _disabled_until_iso(self) -> str | None:
+        if not self._disabled_until or time.time() >= self._disabled_until:
+            return None
+        return datetime.fromtimestamp(self._disabled_until, tz=timezone.utc).isoformat()
+
+    def restore_runtime_state(self, state: dict[str, Any]) -> None:
+        """Restore persisted cooldown metadata from a previous run."""
+        disabled_until = state.get("disabled_until")
+        if disabled_until:
+            try:
+                self._disabled_until = datetime.fromisoformat(disabled_until).timestamp()
+            except ValueError:
+                self._disabled_until = 0
+        self._consecutive_failures = int(state.get("consecutive_failures", 0) or 0)
+        self._last_error = str(state.get("last_error", "") or "")
+
+    def export_runtime_state(self) -> dict[str, Any]:
+        """Export cooldown metadata so daily runs can persist provider state."""
+        return {
+            "disabled_until": self._disabled_until_iso(),
+            "consecutive_failures": self._consecutive_failures,
+            "last_error": self._last_error,
+        }
+
+    def last_request_failed(self) -> bool:
+        """Return whether the last request failed at transport or rate-limit level."""
+        return self._last_outcome in {"failed", "skipped"}
+
+    def _trip_circuit_breaker(self) -> None:
+        self._disabled_until = time.time() + self.cooldown_seconds
+        logger.warning(
+            "OpenAlex disabled for %.0f minutes after repeated failures",
+            self.cooldown_seconds / 60,
+        )
+
+    def _register_failure(self, error: str) -> None:
+        self._consecutive_failures += 1
+        self._last_error = error
+        self._last_outcome = "failed"
+        if self._consecutive_failures >= self.shutdown_after_consecutive_failures:
+            self._trip_circuit_breaker()
+
     def _get(self, endpoint: str, params: dict[str, Any]) -> dict[str, Any] | None:
         """Make a GET request with backoff."""
+        if self._is_disabled():
+            logger.warning("Skipping OpenAlex request because the client is temporarily disabled")
+            self._last_outcome = "skipped"
+            return None
+
         url = f"{self.base_url}{endpoint}"
         if self.email:
             params["mailto"] = self.email
 
-        max_retries = 3
         delay = 2.0
-        for attempt in range(max_retries + 1):
+        for attempt in range(self.max_retries + 1):
             self._wait_rate_limit()
             try:
                 resp = self.session.get(url, params=params, timeout=30)
                 if resp.status_code == 200:
+                    self._consecutive_failures = 0
+                    self._last_error = ""
+                    self._last_outcome = "success"
                     return resp.json()
                 if resp.status_code == 429:
-                    logger.warning(f"OpenAlex rate limited, waiting {delay}s")
+                    retry_after = resp.headers.get("Retry-After")
+                    if retry_after:
+                        try:
+                            delay = max(delay, float(retry_after))
+                        except ValueError:
+                            pass
+                    logger.warning("OpenAlex rate limited, waiting %ss", int(delay))
+                    if attempt >= self.max_retries:
+                        self._register_failure("HTTP 429")
+                        return None
                     time.sleep(delay)
                     delay = min(delay * 2, 60)
                     continue
-                logger.error(f"OpenAlex error {resp.status_code}: {resp.text[:200]}")
+                logger.error("OpenAlex error %s: %s", resp.status_code, resp.text[:200])
+                self._register_failure(f"HTTP {resp.status_code}")
                 return None
-            except requests.RequestException as e:
-                logger.error(f"OpenAlex request error: {e}")
-                if attempt < max_retries:
+            except requests.RequestException as exc:
+                logger.error("OpenAlex request error: %s", exc)
+                self._last_error = str(exc)
+                if attempt < self.max_retries:
                     time.sleep(delay)
-                    delay *= 2
+                    delay = min(delay * 2, 60)
                 else:
+                    self._register_failure(str(exc))
                     return None
         return None
 
@@ -77,24 +156,18 @@ class OpenAlexAPI:
         from_date: str | None = None,
         to_date: str | None = None,
     ) -> list[Paper]:
-        """Search for papers matching a query.
+        """Search for papers matching a query."""
+        if self._is_disabled():
+            logger.info("OpenAlex skipped for '%s' because the client is in cooldown", query)
+            self._last_outcome = "skipped"
+            return []
 
-        Args:
-            query: Text search query.
-            limit: Maximum number of results.
-            from_date: Filter papers from this date (YYYY-MM-DD).
-            to_date: Filter papers up to this date (YYYY-MM-DD).
-
-        Returns:
-            List of Paper objects.
-        """
         params: dict[str, Any] = {
             "search": query,
             "per_page": min(limit, 50),
             "sort": "publication_date:desc",
         }
 
-        # Build filter
         filters: list[str] = []
         if from_date:
             filters.append(f"from_publication_date:{from_date}")
@@ -103,7 +176,7 @@ class OpenAlexAPI:
         if filters:
             params["filter"] = ",".join(filters)
 
-        logger.debug(f"Searching OpenAlex: query='{query}'")
+        logger.debug("Searching OpenAlex: query='%s'", query)
         data = self._get("/works", params)
         if not data:
             return []
@@ -114,18 +187,14 @@ class OpenAlexAPI:
                 paper = self._parse_work(item)
                 if paper:
                     papers.append(paper)
-            except Exception as e:
-                logger.warning(f"Failed to parse OpenAlex work: {e}")
+            except Exception as exc:
+                logger.warning("Failed to parse OpenAlex work: %s", exc)
 
-        logger.info(f"OpenAlex: found {len(papers)} papers for '{query}'")
+        logger.info("OpenAlex: found %s papers for '%s'", len(papers), query)
         return papers
 
     def check_scopus_indexed(self, doi: str) -> bool:
-        """Check if a paper with given DOI is indexed in Scopus via OpenAlex.
-
-        OpenAlex ingests Scopus data, so if a work is found and has a primary_location
-        with a source that has type 'journal', it's very likely Scopus-indexed.
-        """
+        """Check if a paper with given DOI is indexed in Scopus via OpenAlex."""
         if not doi:
             return False
 
@@ -142,12 +211,10 @@ class OpenAlexAPI:
         primary = work.get("primary_location") or {}
         source = primary.get("source") or {}
 
-        # Check if it has an ISSN (good indicator of Scopus indexing)
         issn = source.get("issn_l") or source.get("issn")
         if issn:
             return True
 
-        # Check biblio for journal metadata
         return source.get("type") == "journal"
 
     def get_paper_by_doi(self, doi: str) -> Paper | None:
@@ -168,7 +235,6 @@ class OpenAlexAPI:
         if not title:
             return None
 
-        # Authors
         authors: list[str] = []
         for authorship in data.get("authorships", []):
             author_data = authorship.get("author", {})
@@ -176,18 +242,15 @@ class OpenAlexAPI:
             if name:
                 authors.append(name)
 
-        # DOI
         doi = data.get("doi")
         if doi and doi.startswith("https://doi.org/"):
             doi = doi[len("https://doi.org/"):]
 
-        # Venue info
         primary = data.get("primary_location") or {}
         source = primary.get("source") or {}
         venue = source.get("display_name")
         publisher = data.get("host_venue", {}).get("publisher") if "host_venue" in data else None
 
-        # Publication date
         pub_date = data.get("publication_date")
         year = data.get("publication_year")
 
@@ -199,7 +262,7 @@ class OpenAlexAPI:
             venue=venue,
             publisher=publisher,
             doi=doi,
-            url=data.get("id"),  # OpenAlex URL
+            url=data.get("id"),
             abstract=self._reconstruct_abstract(data),
             citation_count=data.get("cited_by_count", 0) or 0,
             source_api="openalex",
@@ -211,11 +274,10 @@ class OpenAlexAPI:
         if not inverted:
             return None
 
-        # Rebuild from inverted index
         word_positions: list[tuple[int, str]] = []
         for word, positions in inverted.items():
             for pos in positions:
                 word_positions.append((pos, word))
 
-        word_positions.sort(key=lambda x: x[0])
-        return " ".join(w for _, w in word_positions)
+        word_positions.sort(key=lambda item: item[0])
+        return " ".join(word for _, word in word_positions)
