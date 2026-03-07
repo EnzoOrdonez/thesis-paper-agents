@@ -1,8 +1,5 @@
-<h1 align="center">CloudRAG</h1>
+<h1 align="center">Hybrid RAG Research Monitor for Cloud Documentation</h1>
 
-<p align="center">
-  <strong>Hybrid RAG Research Monitor for Cloud Documentation</strong>
-</p>
 <p align="center">
   <strong>Thesis Paper Agents</strong><br>
   Discovery, ranking, curation and monitoring for a hybrid RAG thesis focused on cloud documentation.
