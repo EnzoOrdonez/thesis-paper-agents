@@ -3,6 +3,13 @@ general:
   min_year: 2020
   preferred_min_year: 2023
   max_results_per_query: 20
+  search_workers_per_query: 3
+  strict_source_filter: false
+  untrusted_keep_score_threshold: 65
+  min_keep_score: 35
+  provisional_ranking_penalty: 15
+  missing_doi_ranking_penalty: 3
+  missing_venue_ranking_penalty: 2
   relevance_threshold_high: 70
   relevance_threshold_medium: 40
 
@@ -12,6 +19,10 @@ apis:
     base_url: "https://api.semanticscholar.org/graph/v1"
     rate_limit_per_second: 1
     fields: "title,abstract,year,venue,externalIds,authors,citationCount,publicationDate,url"
+    max_retries_with_key: 4
+    max_retries_without_key: 2
+    cooldown_seconds: 1800
+    shutdown_after_consecutive_failures: 2
 
   arxiv:
     enabled: true
@@ -47,3 +58,4 @@ notifications:
   email_smtp: ""
   email_to: ""
   notify_on_high_relevance: true
+

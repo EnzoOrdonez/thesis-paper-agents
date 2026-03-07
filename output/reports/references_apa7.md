@@ -1,4 +1,4 @@
-# Referencias APA 7 -- Generado: 2026-02-24
+# Referencias APA 7 -- Generado: 2026-03-06
 
 - Unknown Author (2024). Enhancing RAG Systems: A Survey of Optimization Strategies for Performance and Scalability. *INTERANTIONAL JOURNAL OF SCIENTIFIC RESEARCH IN ENGINEERING AND MANAGEMENT*. https://doi.org/10.55041/ijsrem35402
 
@@ -273,6 +273,8 @@ Information Retrieval. *INTI Journal*. https://doi.org/10.61453/jods.v2025no15
 
 - Aytar, A. Y., Kilic, K., & Kaya, K. (2024). A Retrieval-Augmented Generation Framework for Academic Literature Navigation in Data Science. *arXiv.org*. https://doi.org/10.48550/arXiv.2412.15404
 
+- Sertel, A. Y. (2026). Routing Memory: Lightweight Long-Term Memory for Agentic LLMs via Vector-Quantized Routing. *Zenodo (CERN European Organization for Nuclear Research)*. https://doi.org/10.5281/zenodo.18868514
+
 - Kim, A., Lee, S., & Oh, J. (2026). A Hybrid Retrieval and Agent Reasoning Approach to KEJI Index Evaluation Using Hybrid-RAG. *Journal of Korea Multimedia Society*. https://doi.org/10.9717/kmms.2026.29.1.077
 
 - Bilal, A., Mohsin, A., Umer, M., Subhan, A., Rizwan, H., Mohsin, A., & Hougen, D. (2026). What If We Allocate Test-Time Compute Adaptively?. *arXiv:cs.CL*. https://arxiv.org/abs/2602.01070v1
@@ -308,6 +310,8 @@ Information Retrieval. *INTI Journal*. https://doi.org/10.61453/jods.v2025no15
 - Shabbir, A., Sheikh, M. U., Munir, M. A., Debary, H., Fiaz, M., Zaheer, M. Z., Fraccaro, P., Khan, F. S., Khan, M. H., Zhu, X. X., & Khan, S. (2026). OpenEarthAgent: A Unified Framework for Tool-Augmented Geospatial Agents. *arXiv:cs.CV*. https://arxiv.org/abs/2602.17665v1
 
 - Nagahama, A., Asai, N., Feliciani, C., Jia, X., & Nishinari, K. (2026). Effect of vehicle groups on heterogeneous disordered traffic flow. *arXiv:physics.soc-ph*. https://arxiv.org/abs/2602.18056v1
+
+- Siriweera, A., Rangila, J., Naruse, K., Paik, I., & Jayanada, I. (2026). S5-HES Agent: Society 5.0-driven Agentic Framework to Democratize Smart Home Environment Simulation. *ArXiv.org*. https://openalex.org/W7133364371
 
 - Akintobi, A. E. (2025). Examining Cross-Cultural Influences and Geographic Transitions On the Evolution of Artistic Styles in Global Creative Communities. *Engineering and Technology Journal*. https://doi.org/10.47191/etj/v10i09.09
 
@@ -655,6 +659,8 @@ Information Retrieval. *INTI Journal*. https://doi.org/10.61453/jods.v2025no15
 
 - Gavrilova, A. V. & Galli, C. (2026). Conversing with machines: How AI is changing the way scientists think. *Quantitative Biology*. https://doi.org/10.1002/qub2.70032
 
+- Vrtiak, A., Baten, D., & Torres-Knoop, A. (2026). Rethinking Reproducibility in the Classical (HPC)-Quantum Era: Toward Workflow-Centered Science. *arXiv:cs.ET*. https://arxiv.org/abs/2603.04924v1
+
 - Zielińska, A. & Jankowski, R. (2025). Forecasting Installation Demand Using Machine Learning: Evidence from a Large PV Installer in Poland. *Energies*. https://doi.org/10.3390/en18184998
 
 - Patil, A. P., Benagi, A., Rage, C., Narayan, D., A, S., & Sahu, P. P. (2024). CLIP-Based Image Retrieval: A Comparative Study Using CEITM Evaluation. *2024 1st International Conference on Communications and Computer Science (InCCCS)*. https://doi.org/10.1109/InCCCS60947.2024.10593420
@@ -831,6 +837,8 @@ Information Retrieval. *INTI Journal*. https://doi.org/10.61453/jods.v2025no15
 
 - Snegirev, A., Tikhonova, M., Maksimova, A., Fenogenova, A., & Abramov, A. (2024). The Russian-focused embedders' exploration: ruMTEB benchmark and Russian embedding model design. *North American Chapter of the Association for Computational Linguistics*. https://doi.org/10.48550/arXiv.2408.12503
 
+- Vazhentsev, A., Marina, M., Moskovskiy, D., Pletenev, S., Seleznyov, M., Salnikov, M., Tutubalina, E., Konovalov, V., Nikishina, I., Panchenko, A., & Moskvoretskii, V. (2026). Leveraging LLM Parametric Knowledge for Fact Checking without Retrieval. *arXiv:cs.CL*. https://arxiv.org/abs/2603.05471v1
+
 - Lebeurrier, A., Vayer, T., & Gribonval, R. (2026). Path-conditioned training: a principled way to rescale ReLU neural networks. *arXiv:stat.ML*. https://arxiv.org/abs/2602.19799v1
 
 - Novais, A. M. A., Ferreira, D. O. C., Silva, J. P. C., Brakes, M. F. C., Presa, J. P. C., & Oliveira, S. S. T. d. (2025). Enhancing Legal Question Answering in Brazilian Portuguese through Domain-Specific Embedding Models. *Anais do XXII Encontro Nacional de Inteligência Artificial e Computacional (ENIAC 2025)*. https://doi.org/10.5753/eniac.2025.13841
@@ -854,6 +862,8 @@ Information Retrieval. *INTI Journal*. https://doi.org/10.61453/jods.v2025no15
 - Shah, A., Beniwal, H., & Singh, M. (2026). One Instruction Does Not Fit All: How Well Do Embeddings Align Personas and Instructions in Low-Resource Indian Languages?. *arXiv (Cornell University)*. https://doi.org/10.48550/arxiv.2601.10205
 
 - Jadon, A., Patil, A., & Kumar, S. (2025). Enhancing Domain-Specific Retrieval-Augmented Generation: Synthetic Data Generation and Evaluation using Reasoning Models. *2025 IEEE International Conference on Industry 4.0, Artificial Intelligence, and Communications Technology (IAICT)*. https://doi.org/10.1109/IAICT65714.2025.11100564
+
+- Roy, A., Wang, Z., & MacLellan, C. J. (2026). Grounded Concreteness: Human-Like Concreteness Sensitivity in Vision-Language Models. *arXiv.org*. https://doi.org/10.48550/arXiv.2601.18065
 
 - Paranjape, A. & Sheth, R. K. (2026). Zel'dovich smearing approximation of the BAO feature for model-agnostic cosmological inference. *arXiv:astro-ph.CO*. https://arxiv.org/abs/2602.14533v1
 
@@ -935,6 +945,8 @@ Information Retrieval. *INTI Journal*. https://doi.org/10.61453/jods.v2025no15
 
 - Mutsaddi, A. & Choudhary, A. (2025). Enhancing Plagiarism Detection in Marathi with a Weighted Ensemble of TF-IDF and BERT Embeddings for Low-Resource Language Processing. *COLING Workshops*. https://doi.org/10.48550/arXiv.2501.05260
 
+- Pavan, A., Darbha, S., & Birgisson, B. (2026). The Inverse Micromechanics Problem given Dielectric Constants for Isotropic Composites with Spherical Inclusions. *arXiv:math.OC*. https://arxiv.org/abs/2603.05460v1
+
 - Arnstad, A., Rønneberg, L., & Storvik, G. (2026). Dirichlet Scale Mixture Priors for Bayesian Neural Networks. *arXiv:stat.ML*. https://arxiv.org/abs/2602.19859v1
 
 - Pyae, A., Ravyse, W., Luimula, M., Pizarro-Lucas, E., Sanchez, P. L., Dorado-Diaz, I. P., & Thaw, A. K. (2023). Exploring User Experience and Usability in a Metaverse Learning Environment for Students: A Usability Study of the Artificial Intelligence, Innovation, and Society (AIIS). *Electronics*. https://doi.org/10.3390/electronics12204283
@@ -1004,6 +1016,8 @@ Information Retrieval. *INTI Journal*. https://doi.org/10.61453/jods.v2025no15
 - Wang, B., Lou, Q., Zheng, M., & Zhao, D. (2025). PIR-RAG: A System for Private Information Retrieval in Retrieval-Augmented Generation. *arXiv.org*. https://doi.org/10.48550/arXiv.2509.21325
 
 - Brahmandam, B. A. (2025). Multi Cloud Environments: ML Enhanced Cost Optimization. *International Journal of Innovative Research in Science Engineering and Technology*. https://doi.org/10.15680/ijirset.2025.1403456
+
+- Sundaralingam, B., Murali, A., & Birchfield, S. (2026). cuRoboV2: Dynamics-Aware Motion Generation with Depth-Fused Distance Fields for High-DoF Robots. *arXiv:cs.RO*. https://arxiv.org/abs/2603.05493v1
 
 - Bodó, B., Helberger, N., Irion, K., Borgesius, K. Z., Möller, J., Velde, B. v. d., Bol, N., Es, B. v., & Vreese, C. H. d. (2025). Tackling the Algorithmic Control Crisis -- the Technical, Legal, and Ethical Challenges of Research into Algorithmic Agents. *ArXiv.org*. https://doi.org/10.48550/arxiv.2510.25337
 
@@ -1297,6 +1311,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 
 - Broggini, C., Carlo, G. D., Luzio, L. D., Piatti, D., & Toni, C. (2026). RadioAxion results on the search for axion dark matter under Gran Sasso. *arXiv:hep-ex*. https://arxiv.org/abs/2602.18392v1
 
+- Carvalho, C., Teixeira, F., Rolland, T., & Abad, A. (2026). Exploring the potential and limitations of Model Merging for Multi-Domain Adaptation in ASR. *arXiv:cs.CL*. https://arxiv.org/abs/2603.05354v1
+
 - Evoli, C., Vaiman, I., Petrera, S., & Salamida, F. (2026). Updated Air-Shower $X_{\rm max}$ Moment Parametrizations for UHECR Composition with Latest Hadronic Interaction Models. *arXiv:astro-ph.HE*. https://arxiv.org/abs/2602.18118v1
 
 - Gay, C., Trunin, P., Cafiso, D., Xu, Y., Taghavi, M., & Beccai, L. (2026). Optically Sensorized Electro-Ribbon Actuator (OS-ERA). *arXiv:cs.RO*. https://arxiv.org/abs/2602.17474v1
@@ -1581,6 +1597,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 
 - Massinger, C. E. (2026). Antrocon — Multi-Agent LLM Orchestration System. *Zenodo (CERN European Organization for Nuclear Research)*. https://doi.org/10.5281/zenodo.18648837
 
+- Simon, C., Conforti, M., Bellinghen, L. V., Fournier, M., Mussot, A., Leo, F., & Gorza, S. (2026). Self-organization of cavity solitons in Brillouin-Kerr ring resonators. *arXiv:physics.optics*. https://arxiv.org/abs/2603.05216v1
+
 - Abramson, C. M., Li, Z., Prendergast, T., & Dohan, D. (2025). Qualitative Research in an Era of AI: A Pragmatic Approach to Data Analysis, Workflow, and Computation. https://doi.org/10.31235/osf.io/7bsgy_v1
 
 - Cortes, C., Mohri, M., & Zhong, Y. (2026). A Theoretical Framework for Modular Learning of Robust Generative Models. *arXiv:cs.LG*. https://arxiv.org/abs/2602.17554v1
@@ -1624,6 +1642,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 - Lloyd, D. A., Yao, D., Ganaway, A., Chen, T. Y., Ohta, Y., Ohta, J., Akay, Y. M., Ohsawa, M., & Akay, M. (2026). AI-Generated Motifs Distinguish Altered Spatiotemporal Pain Response in the VTA of Mice with Chronic Pain. *IEEE journal of biomedical and health informatics*. https://doi.org/10.1109/JBHI.2025.3650713
 
 - Abdelminaam, D., Waleed, M., Emad, R., Ehab, O., Ayman, A., & Mohamed, N. R. (2025). Experimental Insights into Multilingual Language Detection Using Machine and Deep Learning Models with Balanced Training Strategies. *2025 International Mobile, Intelligent, and Ubiquitous Computing Conference (MIUCC)*. https://doi.org/10.1109/MIUCC66482.2025.11196745
+
+- Sierra, D. A., Candela, P. M., Romeri, V. D., Papoulias, D. K., & S, L. T. (2026). Axial-vector neutral-current measurements in coherent elastic neutrino-nucleus scattering experiments. *arXiv:hep-ph*. https://arxiv.org/abs/2603.05281v1
 
 - Betancur-Vásquez, D., Hoyos-Giraldo, N., Mejia-Muñoz, J. H., & Giraldo-Forero, A. F. (2025). Evaluating Retrieval-Augmented Generation Architectures for Clinical Guideline Question Answering: A Case Study in Obstetrics. *2025 12th International Conference on Soft Computing & Machine Intelligence (ISCMI)*. https://doi.org/10.1109/ISCMI67495.2025.11358608
 
@@ -1845,6 +1865,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 
 - Quinn, D., Yücel, E. E., Prammer, M., Fan, Z., Skadron, K., Patel, J. M., Martínez, J. F., & Alian, M. (2025). DReX: Accurate and Scalable Dense Retrieval Acceleration via Algorithmic-Hardware Codesign. *International Symposium on Computer Architecture*. https://doi.org/10.1145/3695053.3731079
 
+- Quinn, D., Yücel, E., Martínez, J. F., & Alian, M. (2026). Multi-Stage Data-Centric Dense Retrieval. *IEEE Micro*. https://doi.org/10.1109/mm.2026.3665668
+
 - Acharya, D. & Hammoud, M. (2026). Avey-B. *arXiv (Cornell University)*. https://doi.org/10.48550/arxiv.2602.15814
 
 - Kapoor, D., Setia, S., Arora, S., & Bharti, K. (2025). Farmsaathi: a Retrieval-Reranking Rag Framework for Multilingual Conversational Ai in Indian Agriculture. *Oriental COCOSDA International Conference on Speech Database and Assessments*. https://doi.org/10.1109/O-COCOSDA68185.2025.11384836
@@ -1924,6 +1946,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 - Taranis, D., Razis, G., & Anagnostopoulos, I. (2026). A Pilot Study on Multilingual Detection of Irregular Migration Discourse on X and Telegram Using Transformer-Based Models. *Electronics*. https://doi.org/10.3390/electronics15020281
 
 - Tzolas, D. & Venetis, I. E. (2025). S2BERTopic – A Topic Modeling Approach on Semantic Similarity Leveraging BERTopic. *International Conference on Information, Intelligence, Systems and Applications*. https://doi.org/10.1109/IISA66859.2025.11311261
+
+- Dimitropoulos, D., Michalopoulos, A., Tsitsigkos, D., & Mamoulis, N. (2026). CRISP: Correlation-Resilient Indexing via Subspace Partitioning. *arXiv:cs.DB*. https://arxiv.org/abs/2603.05180v1
 
 - Karydas, D., Margaritis, D., & Leligou, H. C. (2026). Training Methods for Large Language Models: Current Approaches and Challenges. *Technologies*. https://doi.org/10.3390/technologies14020133
 
@@ -2607,6 +2631,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 
 - Roncaglia, G. (2026). Cataloguing, Metadata, and Generative AI. Early Experiences and Future Perspectives. *JLIS it*. https://doi.org/10.36253/jlis.it-693
 
+- Audrito, G., Martini, M., Navone, A., Galluzzo, G., & Chiaberge, M. (2026). VinePT-Map: Pole-Trunk Semantic Mapping for Resilient Autonomous Robotics in Vineyards. *arXiv:cs.RO*. https://arxiv.org/abs/2603.05070v1
+
 - Cipolloni, G., Erdős, L., & Kolupaiev, O. (2026). The eigenvalues of i.i.d. matrices are hyperuniform. *arXiv:math.PR*. https://arxiv.org/abs/2602.17628v1
 
 - Leonardi, G., Montani, S., & Striani, M. (2025). Checking Medical Process Conformance by Exploiting LLMs. *Applied Sciences*. https://doi.org/10.3390/app151810184
@@ -2805,6 +2831,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 
 - Xu, H., Manohar, M., Bernstein, P. A., Chandramouli, B., Wen, R., & Simhadri, H. (2025). In-Place Updates of a Graph Index for Streaming Approximate Nearest Neighbor Search. *arXiv.org*. https://doi.org/10.48550/arXiv.2502.13826
 
+- Lim, H. (2026). The Impact of Query Decomposition and Cross-Encoder Reranking in Multi-Hop Retrieval-Augmented Generation. *Journal of Youth Impact*. https://doi.org/10.66245/jyi.v1.i1.002
+
 - Liu, H., Fang, X., Cui, Q., & Chiu, T. W. (2026). A systematic mapping review on how generative artificial intelligence impacts social and emotional learning: A case of large language model chatbots. *Review of Education*. https://doi.org/10.1002/rev3.70141
 
 - Chen, H., Feng, Y., Jia, Z., Bhatt, S., & Huang, H. (2026). LERD: Latent Event-Relational Dynamics for Neurodegenerative Classification. *arXiv:cs.LG*. https://arxiv.org/abs/2602.18195v1
@@ -2825,6 +2853,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 
 - Abdaoui, H., Barki, C., Dergaa, I., Tlili, K., Ceylan, H. I., Bragazzi, N., Giorgio, A. d., Salah, R. B., & Rahmouni, H. B. (2025). Accurate Clinical Entity Recognition and Code Mapping of Anatomopathological Reports Using BioClinicalBERT Enhanced by Retrieval-Augmented Generation: A Hybrid Deep Learning Approach. *Bioengineering*. https://doi.org/10.3390/bioengineering13010030
 
+- Ghanadian, H., Kamali, A., & Tekieh, M. H. (2026). Enhancing Scientific Literature Chatbots with Retrieval-Augmented Generation: A Performance Evaluation of Vector and Graph-Based Systems. https://www.semanticscholar.org/paper/8c50f07da087d4de6402ca9ae60a650cca81b769
+
 - Khanpour, H., Soleymaninia, M., Azizi, M., Klasen, M., Hashamipour, H., Salajegheh, M., & Meißner, U. (2026). Toward Precision Helicity PDFs from Global DIS and SIDIS Fits with Projected EIC Measurements. *arXiv:hep-ph*. https://arxiv.org/abs/2602.17298v1
 
 - Bao, H., Huang, Y., Wang, X., Zhang, Z., Zhou, Y., Yang, C., Zhang, X., & Ye, Y. (2026). Position: General Alignment Has Hit a Ceiling; Edge Alignment Must Be Taken Seriously. *arXiv:cs.CL*. https://arxiv.org/abs/2602.20042v1
@@ -2842,6 +2872,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 - Rahiman, H., Omari, M., Salameh, K., & Alnomam, A. (2025). Optimizing Content-Based Image Retrieval System Through Dimensionality Reduction Techniques. *International Symposium on INnovations in Intelligent SysTems and Applications*. https://doi.org/10.1109/INISTA68122.2025.11249669
 
 - CAI, H. & Chen, W. (2026). CLIP-GMC: Contrastive Language-image Pretraining Model for Few-shot Galaxy Morphology Classification. *The Astronomical Journal*. https://doi.org/10.3847/1538-3881/ae37eb
+
+- Aljalal, H. M., Alshareef, H. H., Alduraib, N. M., Hamdoun, H. M., & Alsedais, R. (2026). AI-Assisted Interpretation of Children’s Drawings via Retrieval-Augmented Generation. *IEEE Access*. https://doi.org/10.1109/ACCESS.2026.3664468
 
 - Ni, H., Liu, F., Ma, X., Su, L., Wang, S., Yin, D., Xiong, H., & Liu, H. (2025). TP-RAG: Benchmarking Retrieval-Augmented Large Language Model Agents for Spatiotemporal-Aware Travel Planning. *Conference on Empirical Methods in Natural Language Processing*. https://doi.org/10.18653/v1/2025.emnlp-main.626
 
@@ -2870,6 +2902,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 - Ding, H., Pang, L., Wei, Z., Shen, H., & Cheng, X. (2024). Retrieve Only When It Needs: Adaptive Retrieval Augmentation for Hallucination Mitigation in Large Language Models. *arXiv.org*. https://doi.org/10.48550/arXiv.2402.10612
 
 - Wang, H., Zhan, Y., Liu, L., Ding, L., Yang, Y., & Yu, J. (2026). Towards alleviating hallucination in text-to-image retrieval for CLIP in zero-shot learning. *Neurocomputing*. https://doi.org/10.1016/j.neucom.2026.132640
+
+- Shao, H., Hao, Y., Song, T., Xia, Y., Zhang, D., Huang, S., Wu, X., Xu, S., Xu, L., Dong, L., Chi, Z., Zou, Y., & Wei, F. (2026). SlideSparse: Fast and Flexible (2N-2):2N Structured Sparsity. *arXiv:cs.LG*. https://arxiv.org/abs/2603.05232v1
 
 - Li, H., Wang, S. X., Shang, F., Niu, K., & Song, R. (2024). Applications of Large Language Models in Cloud Computing: An Empirical Study Using Real-world Data. *International Journal of Innovative Research in Computer Science & Technology*. https://doi.org/10.55524/ijircst.2024.12.4.10
 
@@ -2914,6 +2948,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 - Chen, H., Long, Q., Pu, S., Luo, X., Ju, W., Xiao, M., Zhou, Y., Zhao, J., & Wang, X. (2026). DeepEra: A Deep Evidence Reranking Agent for Scientific Retrieval-Augmented Generated Question Answering. *arXiv (Cornell University)*. https://doi.org/10.48550/arxiv.2601.16478
 
 - Luo, H., Yan, Y., Bian, Y., Feng, W., Zhang, R., Liu, Y., Wang, J., Sun, G., Niyato, D., Yu, H., Jamalipour, A., & Mao, S. (2025). AI Reasoning for Wireless Communications and Networking: A Survey and Perspectives. *arXiv (Cornell University)*. https://doi.org/10.48550/arxiv.2509.09193
+
+- Xie, H. & Shi, C. (2026). VectorMaton: Efficient Vector Search with Pattern Constraints via an Enhanced Suffix Automaton. *arXiv (Cornell University)*. https://doi.org/10.48550/arxiv.2603.01525
 
 - Qiu, H., Hu, W., Dou, Z., & Peng, N. (2024). VALOR-EVAL: Holistic Coverage and Faithfulness Evaluation of Large Vision-Language Models. *Annual Meeting of the Association for Computational Linguistics*. https://doi.org/10.48550/arXiv.2404.13874
 
@@ -3065,6 +3101,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 
 - Man, H., Ngo, N. T., Lai, V. D., Rossi, R. A., Dernoncourt, F., & Nguyen, T. (2025). LUSIFER: Language Universal Space Integration for Enhanced Multilingual Embeddings with Large Language Models. *arXiv.org*. https://doi.org/10.48550/arXiv.2501.00874
 
+- Dinh, H. P., Huy, H. N., & El-Haj, M. (2026). VietJobs: A Vietnamese Job Advertisement Dataset. *arXiv:cs.CL*. https://arxiv.org/abs/2603.05262v1
+
 - Wakaura, H. & Tanimae, T. (2026). Reversible Information Transformation via Quantum Reservoir Computing: Conditions, Protocol, and Noise Resilience. *arXiv:quant-ph*. https://arxiv.org/abs/2602.19700v1
 
 - Tekgöz, H., Erdoğan, H., Uz, H., & Altınok, H. (2025). Evaluation of Vector Database and LLM Models in Retrieval-Augmented Generation (RAG) Systems. *2025 10th International Conference on Computer Science and Engineering (UBMK)*. https://doi.org/10.1109/UBMK67458.2025.11206778
@@ -3132,6 +3170,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 - Zhang, H., Zhang, L., Fang, L., & Filgueira, R. (2024). Multi-Level AI-Driven Analysis of Software Repository Similarities. *IEEE International Conference on e-Science*. https://doi.org/10.1109/e-Science62913.2024.10678701
 
 - Cao, H. (2024). Recent advances in text embedding: A Comprehensive Review of Top-Performing Methods on the MTEB Benchmark. *arXiv.org*. https://doi.org/10.48550/arXiv.2406.01607
+
+- Cao, H., Driouich, I., & Thomas, E. (2026). Beyond Task Completion: Revealing Corrupt Success in LLM Agents through Procedure-Aware Evaluation. *arXiv (Cornell University)*. https://doi.org/10.48550/arxiv.2603.03116
 
 - Wang, H., Song, Y., & Bi, H. (2025). Optimizing public health management with predictive analytics: leveraging the power of random forest. *Frontiers in Big Data*. https://doi.org/10.3389/fdata.2025.1574683
 
@@ -3317,6 +3357,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 
 - Haromain, I., Munir, S., & Rahmah, A. (2025). Analisa Prompt Engineering pada Large Language Model dengan Retrieval-Augmented Generation untuk Informasi Obat dan Vitamin. *Indonesian Journal of Computer Science*. https://doi.org/10.31294/ijcs.v4i2.10005
 
+- Peivaste, I., Boscher, N. D., Makradi, A., & Belouettar, S. (2026). Escaping the Hydrolysis Trap: An Agentic Workflow for Inverse Design of Durable Photocatalytic Covalent Organic Frameworks. *arXiv:physics.chem-ph*. https://arxiv.org/abs/2603.05188v1
+
 - Wiratsin, I., Ragkhitwetsagul, C., Paixao, M., Sousa, D., Lapvikai, P., & Haddawy, P. (2025). An Empirical Study of Java Code Improvements Based on Stack Overflow Answer Edits. *arXiv.org*. https://doi.org/10.48550/arXiv.2511.05813
 
 - Publishers, I. A. (2026). PYTHON PROGRAMMING: A GUIDE TO EFFECTIVE PROBLEM SOLVING by Challa Sundeep Babu Mrs. Yerraginnela Shravani Mohd Ishaq. *Zenodo (CERN European Organization for Nuclear Research)*. https://doi.org/10.5281/zenodo.18359996
@@ -3343,6 +3385,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 
 - Papadimitriou, I., Gialampoukidis, I., Vrochidis, S., & Kompatsiaris, Y. (2024). RAG Playground: A Framework for Systematic Evaluation of Retrieval Strategies and Prompt Engineering in RAG Systems. *arXiv.org*. https://doi.org/10.48550/arXiv.2412.12322
 
+- Mansilla, I. G. C. & Ninad, U. (2026). Learning Causal Structure of Time Series using Best Order Score Search. *arXiv:cs.LG*. https://arxiv.org/abs/2603.05370v1
+
 - Shaik, I. H. (2026). Semantic Shift NLP. *Zenodo (CERN European Organization for Nuclear Research)*. https://doi.org/10.5281/zenodo.18469096
 
 - Chung, I., Kerboua, I., Kardos, M., Solomatin, R., & Enevoldsen, K. C. (2025). Maintaining MTEB: Towards Long Term Usability and Reproducibility of Embedding Benchmarks. *arXiv.org*. https://doi.org/10.48550/arXiv.2506.21182
@@ -3360,6 +3404,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 - Mahmood, I., Mastan, M., Naveed, Z., Iftikhar, H., Ahmad, W., & Adnan, S. M. (2025). AzureIQ-RAG: Hybrid RAG System for Automated Information Retrieval and Semantic Query Answering Using Azure AI. *2025 12th International Conference on Information Technology (ICIT)*. https://doi.org/10.1109/ICIT64950.2025.11049144
 
 - Deng, I., Xu, N., & Steinert-Threlkeld, S. (2026). Differences in Typological Alignment in Language Models' Treatment of Differential Argument Marking. *arXiv:cs.CL*. https://arxiv.org/abs/2602.17653v1
+
+- Saddiq, I., Fan, Y., Palgrave, R. G., Isaacs, M. A., Morgan, D., & Butler, K. T. (2026). A Shift-Invariant Deep Learning Framework for Automated Analysis of XPS Spectra. *arXiv:cond-mat.mtrl-sci*. https://arxiv.org/abs/2603.05350v1
 
 - Ita, I., Tahir, M., & Vincentius, E. (2023). Analisis Komparatif Layanan Cloud : Microsoft Azure, Aws, Dan Google Cloud Platform (GCP). *Jurnal Informasi Sains dan Teknologi*. https://doi.org/10.55606/isaintek.v6i02.127
 
@@ -3549,7 +3595,11 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 
 - Masoumi, J., Abazari, Z., & Hosseini, Z. M. (2026). An Investigation into Development and Implementation of Knowledge Management in Iranian Government-Affiliated Research Centers. *SHILAP Revista de lepidopterología*. https://doi.org/10.22054/dcm.2025.83841.1259
 
+- Martínez-Cifuentes, J. & Quesada, N. (2026). Calculating trace distances of bosonic states in Krylov subspace. *arXiv:quant-ph*. https://arxiv.org/abs/2603.05499v1
+
 - Salcedo, J. S., Castillo, J. C., Castro‐González, Á., & Salichs, M. Á. (2025). From Games to Understanding: Semantrix as a Testbed for Advancing Semantics in Human–Computer Interaction with Transformers. *Electronics*. https://doi.org/10.3390/electronics14173480
+
+- Raut, J., Wilke, D. N., & Schmidt, S. (2026). Towards a data-scale independent regulariser for robust sparse identification of non-linear dynamics. *arXiv:cs.LG*. https://arxiv.org/abs/2603.05201v1
 
 - Billa, J. (2026). The Cascade Equivalence Hypothesis: When Do Speech LLMs Behave Like ASR$\rightarrow$LLM Pipelines?. *arXiv:cs.CL*. https://arxiv.org/abs/2602.17598v1
 
@@ -3777,6 +3827,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 
 - Tan, J., Dou, Z., Wang, W., Wang, M. W., Chen, W., & Wen, J. (2025). HtmlRAG: HTML is Better Than Plain Text for Modeling Retrieved Knowledge in RAG Systems. https://doi.org/10.1145/3696410.3714546
 
+- Shi, J., Gao, J., Xia, J., Fehér, T. B., & Long, C. (2026). GPU-Native Approximate Nearest Neighbor Search with IVF-RaBitQ: Fast Index Build and Search. *arXiv (Cornell University)*. https://doi.org/10.48550/arxiv.2602.23999
+
 - Luo, J., Chen, Q., & Binnig, C. (2026). Do GPUs Really Need New Tabular File Formats?. *arXiv:cs.DB*. https://arxiv.org/abs/2602.17335v1
 
 - Zhao, J., Ji, Z., Feng, Y., Qi, P., Niu, S., Tang, B., Xiong, F., & Li, Z. (2024). Meta-Chunking: Learning Text Segmentation and Semantic Completion via Logical Perception. https://www.semanticscholar.org/paper/2a856ed8f7d8b2a551be74c19494b8063d9a1a57
@@ -3931,9 +3983,13 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 
 - Festor, J., Snels, I., & Kleinberg, B. (2026). Human attribution of empathic behaviour to AI systems. *arXiv:cs.CY*. https://arxiv.org/abs/2602.17293v1
 
+- Wilinski, J. H. (2026). The Science Data Lake: A Unified Open Infrastructure Integrating 293 Million Papers Across Eight Scholarly Sources with Embedding-Based Ontology Alignment. *arXiv (Cornell University)*. https://doi.org/10.48550/arxiv.2603.03126
+
 - Axetorn, J., Edholm, F., Dobslaw, F., & Gren, L. (2025). Addressing Trust Requirements in the Design of an Open-Source Multi-Agent LLM-Based Domain-Specific Chatbot. https://doi.org/10.21203/rs.3.rs-7494256/v1
 
 - Cook, J., Antognini, D., Klissarov, M., Musat, C., & Grefenstette, E. (2026). Learning to Learn from Language Feedback with Social Meta-Learning. *arXiv:cs.CL*. https://arxiv.org/abs/2602.16488v1
+
+- Chang, J. D., Drozdov, A., Toshniwal, S., Oertell, O., Trott, A., Portes, J., Gupta, A., Koppol, P., Baheti, A., Kulinski, S., Zhou, I., Dea, I., Opsahl-Ong, K., Favreau-Lessard, S., Owen, S., Ortiz, J. J. G., Singhvi, A., Andrade, X., Wang, C., ... Frankle, J. (2026). KARL: Knowledge Agents via Reinforcement Learning. *arXiv:cs.AI*. https://arxiv.org/abs/2603.05218v1
 
 - Dan, J., Pale, U., Amirshahi, A., Cappelletti, W., Ingolfsson, T., Wang, X., Cossettini, A., Bernini, A., Benini, L., Beniczky, S., Atienza, D., & Ryvlin, P. (2024). SzCORE: Seizure Community Open‐Source Research Evaluation framework for the validation of electroencephalography‐based automated seizure detection algorithms. *Epilepsia*. https://doi.org/10.1111/epi.18113
 
@@ -4081,6 +4137,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 
 - Niu, J., Liu, Z., Gu, Z., Wang, B., Ouyang, L., Zhao, Z., Chu, T., He, T., Wu, F., Zhang, Q., Jin, Z., Liang, G., Zhang, R., Zhang, W., Qu, Y., Ren, Z., Sun, Y., Zheng, Y., Ma, D., ... He, C. (2025). MinerU2.5: A Decoupled Vision-Language Model for Efficient High-Resolution Document Parsing. *arXiv.org*. https://doi.org/10.48550/arXiv.2509.22186
 
+- Li, J., Qi, C., Wang, R., Chen, Q., (102656), L. X., Liang, D., Simons, B., & Liang, S. (2026). When Safety Becomes a Vulnerability: Exploiting LLM Alignment Homogeneity for Transferable Blocking in RAG. *ArXiv.org*. https://openalex.org/W7134016749
+
 - Wu, J., Zhu, J., Qi, Y., Chen, J., Xu, M., Menolascina, F., Jin, Y., & Grau, V. (2025). Medical Graph RAG: Evidence-based Medical Large Language Model via Graph Retrieval-Augmented Generation. *Annual Meeting of the Association for Computational Linguistics*. https://doi.org/10.18653/v1/2025.acl-long.1381
 
 - Feng, J., Luo, R., Li, X. M., Zhou, X., Wang, M., Yin, J., & Yuan, H. (2026). Bridging the Semantic Gap in BIM Interior Design: A Neuro-Symbolic Framework for Explainable Scene Completion. *Applied Sciences*. https://doi.org/10.3390/app16031530
@@ -4088,6 +4146,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 - Zhao, J., Jiang, J., Xu, Z., Zhang, Y., Fang, Q., Liu, L., Zhu, Q., Yu, Y., Maeda, K., Galbany, L., Kuncarayakti, H., Ivezić, Ž., Jha, S. W., Yoachim, P., Meng, D., Wu, W., Liu, Z., Connolly, A. J., Jia, Z., ... Zhang, H. (2026). WFST Supernovae in the First Year: III. Systematical Study of the Photometric Behavior of Early-phase Core-collapse Supernovae. *arXiv:astro-ph.HE*. https://arxiv.org/abs/2602.17275v1
 
 - Liu, J., Yu, H., Yan, Z., & Zhang, X. (2026). Focus-LIME: Surgical Interpretation of Long-Context Large Language Models via Proxy-Based Neighborhood Selection. *arXiv (Cornell University)*. https://doi.org/10.48550/arxiv.2602.04607
+
+- Fang, J., Chen, W., Xue, H., Zhou, F., Le, T., Wang, Y., Zhang, Y., Lv, J., Wen, C., & Lu, C. (2026). RoboPocket: Improve Robot Policies Instantly with Your Phone. *arXiv:cs.RO*. https://arxiv.org/abs/2603.05504v1
 
 - Huang, J., Zhong, Y., Yu, G., Jiang, Z., Yan, M., Luan, W., Yang, T., Ren, R., & Meij, E. (2025). iKnow: an Intent-Guided Chatbot for Cloud Operations with Retrieval-Augmented Generation. https://doi.org/10.1109/ase63991.2025.00084
 
@@ -4195,6 +4255,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 
 - Zhao, K., Luca, I., & Triantafillou, P. (2026). Benchmarking Unlearning for Vision Transformers. *arXiv:cs.CV*. https://arxiv.org/abs/2602.20114v1
 
+- Toyoshima, K., Iwata, Y., & Wakamatsu, H. (2026). Application of Sequential Approximation Optimization with reduced simulation numbers for integrated system optimization. *IEEE/SICE International Symposium on System Integration*. https://doi.org/10.1109/SII64115.2026.11404584
+
 - Sun, K., Huang, C., Wu, J., Cai, X., & Zhang, B. (2025). Flexible Data Extraction from Unstructured Measurement Reports using a Template-Driven Approach. *2025 7th International Conference on Frontier Technologies of Information and Computer (ICFTIC)*. https://doi.org/10.1109/ICFTIC68075.2025.11324608
 
 - Jiang, K., Liu, Y., Chen, W., Luo, J., Chen, Z., Pan, L., Li, G., & Lin, L. (2025). Beyond the Destination: A Novel Benchmark for Exploration-Aware Embodied Question Answering. *arXiv.org*. https://doi.org/10.48550/arXiv.2503.11117
@@ -4272,6 +4334,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 - Brown, K., Yalla, G., Cheung, L., Frederik, J., Houck, D., deVelder, N., Simley, E., & Fleming, P. (2025). Comparison of wind-farm control strategies under realistic offshore wind conditions: wake quantities of interest. *Wind Energy Science*. https://doi.org/10.5194/wes-10-1737-2025
 
 - Enevoldsen, K. C., Chung, I., Kerboua, I., Kardos, M., Mathur, A., Stap, D., Gala, J., Siblini, W., Krzemi'nski, D., Winata, G. I., Sturua, S., Utpala, S., Ciancone, M., Schaeffer, M., Sequeira, G., Misra, D., Dhakal, S., Rystrøm, J., Solomatin, R., ... Muennighoff, N. (2025). MMTEB: Massive Multilingual Text Embedding Benchmark. *arXiv.org*. https://www.semanticscholar.org/paper/653b0b997f3ea32f15a81128fc6daeea04d1fa87
+
+- Liang, K. Y., Pei, Z., Zhang, H., Liu, Y., Song, S., & Wang, J. (2026). Retrieval-Augmented Generation with Covariate Time Series. *arXiv:cs.AI*. https://arxiv.org/abs/2603.04951v1
 
 - Tsumuraya, K., Uehara, M., & Adachi, Y. (2023). Semantic Search of Japanese Sentences Using Distributed Representations. *2023 Eleventh International Symposium on Computing and Networking Workshops (CANDARW)*. https://doi.org/10.1109/CANDARW60564.2023.00021
 
@@ -4665,6 +4729,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 
 - Guo, L., Wang, Y., Wen, T., Wang, Y., Feng, A., Chen, B., Jegelka, S., & You, C. (2026). CSRv2: Unlocking Ultra-Sparse Embeddings. *arXiv (Cornell University)*. https://doi.org/10.48550/arxiv.2602.05735
 
+- Yang, L., Bena, R. M., Wilkinson, M., Bahati, G., Brenes, A. N., Cosner, R. K., & Ames, A. D. (2026). Safe-SAGE: Social-Semantic Adaptive Guidance for Safe Engagement through Laplace-Modulated Poisson Safety Functions. *arXiv:cs.RO*. https://arxiv.org/abs/2603.05497v1
+
 - Pham, L., Luu, T., Vo, T., Nguyen, M., & Hoang, V. (2025). VN-MTEB: Vietnamese Massive Text Embedding Benchmark. *arXiv.org*. https://doi.org/10.48550/arXiv.2507.21500
 
 - Hallee, L., Kapur, R., Patel, A., Gleghorn, J. P., & Khomtchouk, B. B. (2025). Contrastive learning and mixture of experts enables precise vector embeddings in biological databases. *Scientific Reports*. https://doi.org/10.1038/s41598-025-98185-8
@@ -4674,6 +4740,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 - Vu, L. L., Tien, D. N., & Minh, T. D. (2023). Stratified Ranking for Dense Passage Retrieval. *Symposium on Information and Communication Technology*. https://doi.org/10.1145/3628797.3628810
 
 - Van, L. V. & Hong, H. L. (2025). Combining Large Language Model and Supportive Models for Legal Question Answering. *International Conference on Knowledge and Systems Engineering*. https://doi.org/10.1109/KSE68178.2025.11309535
+
+- Xu, L., Zhang, X., Tuo, Q., & Li, R. (2026). SEA-TS: Self-Evolving Agent for Autonomous Code Generation of Time Series Forecasting Algorithms. *arXiv:cs.AI*. https://arxiv.org/abs/2603.04873v1
 
 - Jin, L., Zhao, C., Han, D., Zuo, Z., Liang, Y., Liao, Y., & Tohti, T. (2026). RaR: a clustering-based retrieve-and-rerank framework for knowledge graph reasoning in medical question answering. *Knowledge and Information Systems*. https://doi.org/10.1007/s10115-025-02676-z
 
@@ -4773,6 +4841,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 
 - Alsuhaibani, M. (2025). The geometry of meaning: evaluating sentence embeddings from diverse transformer-based models for natural language inference. *PeerJ Computer Science*. https://doi.org/10.7717/peerj-cs.2957
 
+- Amghar, M. & Amazioug, M. (2026). Nonreciprocal transparency windows, Fano resonance, and slow/fast light in a membrane-in-the-middle magnomechanical system induced by the Barnett effect. *arXiv:quant-ph*. https://arxiv.org/abs/2603.05359v1
+
 - Amin, M., Soliman, A., El-Sousy, F. F. M., & Mohammed, O. (2023). Practical Implementation of High-Efficiency Multiple-Input Converter Embedding Renewables and Energy Storage for DC-Microgrid Applications. *IEEE transactions on industry applications*. https://doi.org/10.1109/TIA.2023.3274095
 
 - Ayad, M. A. B., Dinzinger, M., Dastidar, K. G., Mitrović, J., & Granitzer, M. (2025). Compressed Concatenation of Small Embedding Models. https://doi.org/10.1145/3746252.3760831
@@ -4804,6 +4874,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 - Charnine, M. M. & Kalinin, S. S. (2024). Natural Language Processing Tools for Predictive Modeling of Advanced Trends in Formal Ontologies in Biomedical Sciences. *SibScript*. https://doi.org/10.21603/sibscript-2024-26-4-567-575
 
 - Rahman, M. M. M. & Tešić, J. (2025). Accelerating Vector Search at Scale: BAM-ANN with Batch-Aware Memory-Disk Hybrid Indexing. *International Conference on Content-Based Multimedia Indexing*. https://doi.org/10.1109/CBMI66578.2025.11339281
+
+- Maskur, M., Prasetya, D. D., Widiyaningtyas, T., & Zain, A. (2026). Comparative Evaluation of BM25–FAISS and Small-LLM–GPT in Retrieval-Augmented Generation Concept Map Assessment. *Kinetik*. https://doi.org/10.22219/kinetik.v11i1.2594
 
 - Mihoubi, M., Zerkouk, M., & Chikhaoui, B. (2025). Beyond classical and contemporary models: a transformative AI framework for student dropout prediction in distance learning using RAG, Prompt engineering, and Cross-modal fusion. *EDULEARN Proceedings*. https://doi.org/10.21125/edulearn.2025.0815
 
@@ -4981,6 +5053,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 
 - Al-Ghossein, M., Contal, E., & Robicquet, A. (2024). ICLERB: In-Context Learning Embedding and Reranker Benchmark. *arXiv.org*. https://doi.org/10.48550/arXiv.2411.18947
 
+- Schmidt, M. D. & Iossifidis, I. (2026). The Spatial and Temporal Resolution of Motor Intention in Multi-Target Prediction. *arXiv:q-bio.NC*. https://arxiv.org/abs/2603.05418v1
+
 - Buchem, M. M. v., Kant, I. M. J., King, L., Kazmaier, J., Steyerberg, E., & Bauer, M. P. (2024). Impact of a Digital Scribe System on Clinical Documentation Time and Quality: Usability Study. *JMIR AI*. https://doi.org/10.2196/60020
 
 - Tabib, M., Abdeljaoued-Tej, I., & Raouafi, H. (2026). Enhancing Large Language Models with Retrieval Augmented Generation for a Trusted Help Desk Solution. *Lecture notes in networks and systems*. https://doi.org/10.1007/978-3-032-03695-7_3
@@ -5012,6 +5086,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 - Mizmizi, M., Yu, Z., Du, G., & Spagnolini, U. (2026). Device-Centric ISAC for Exposure Control via Opportunistic Virtual Aperture Sensing. *arXiv:eess.SP*. https://arxiv.org/abs/2602.17609v1
 
 - Toruan, M. F. R. H. L., Shakya, R. D. N., Tseitkin, S., Zhao, R. K., & Arachchilage, N. (2026). When Security Meets Usability: An Empirical Investigation of Post-Quantum Cryptography APIs. *arXiv (Cornell University)*. https://doi.org/10.48550/arxiv.2602.14539
+
+- Asenov, M., Benkirane, K., Goldwater, D., & Ghodsi, A. (2026). Retrieval or Representation? Reassessing Benchmark Gaps in Multilingual and Visually Rich RAG. *ArXiv.org*. https://openalex.org/W7134016910
 
 - Bockling, M., Paulheim, H., & Iana, A. (2025). Walk&Retrieve: Simple Yet Effective Zero-shot Retrieval-Augmented Generation via Knowledge Graph Walks. *arXiv.org*. https://www.semanticscholar.org/paper/07982a06afd97d6d3c0bbe881c2657d8617c6256
 
@@ -5545,6 +5621,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 
 - Gumilang, M. A., Ferdiana, R., Hidayah, I., Azmi, M., Annisa, S., & Hasan, F. (2025). Task-Oriented Context Engineering for Pedagogic Agent Powered by Large Language Model. https://doi.org/10.1109/incit66780.2025.11276004
 
+- Jia, M. & Rodriguez, J. D. (2026). Unsupervised Text Segmentation via Kernel Change-Point Detection on Sentence Embeddings. *arXiv.org*. https://doi.org/10.48550/arXiv.2601.18788
+
 - Zaib, M., Sheng, Q. Z., Zhang, W. E., Alhazmi, E., & Mahmood, A. (2024). Learning Contrastive Representations for Dense Passage Retrieval in Open-Domain Conversational Question Answering. *WISE*. https://doi.org/10.1007/978-981-96-0579-8_1
 
 - Hossen, M., Labate, D., & Charon, N. (2026). Feature-based morphological analysis of shape graph data. *arXiv:cs.LG*. https://arxiv.org/abs/2602.16120v1
@@ -5730,6 +5808,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 - Dietrich, N. & Loh, C. (2026). Retrieval-Augmented Generation: A Practical Guide for Radiologists. *Roentgen Ray Review*. https://doi.org/10.2214/r3j.25.01106
 
 - Harris, N., Butani, A., & Hashmy, S. (2024). Enhancing Embedding Performance through Large Language Model-based Text Enrichment and Rewriting. *Advances in Artificial Intelligence and Machine Learning*. https://doi.org/10.48550/arXiv.2404.12283
+
+- Corrêa, N. K., Sen, A., Fatimah, S., Falk, S., Landgraf, L., Kastner, J., & Flek, L. (2026). Tucano 2 Cool: Better Open Source LLMs for Portuguese. *arXiv (Cornell University)*. https://doi.org/10.48550/arxiv.2603.03543
 
 - Pipitone, N. & Alami, G. H. (2024). LegalBench-RAG: A Benchmark for Retrieval-Augmented Generation in the Legal Domain. *arXiv.org*. https://doi.org/10.48550/arXiv.2408.10343
 
@@ -6069,6 +6149,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 
 - Lin, P., Wang, Q., Wang, Q., Chen, J., He, L., Qin, Z., Li, S., Han, J., Yao, X., Yu, Y., & Yao, Z. (2024). Evaluation of the anti-atherosclerotic effect for Allium macrostemon Bge. Polysaccharides and structural characterization of its a newly active fructan. *Carbohydrate Polymers*. https://doi.org/10.1016/j.carbpol.2024.122289
 
+- Wang, P., Cai, R., Wang, Z., Mei, H., Liu, Q., Li, P., & Wang, Z. (2026). $\nabla$-Reasoner: LLM Reasoning via Test-Time Gradient Descent in Latent Space. *arXiv:cs.LG*. https://arxiv.org/abs/2603.04948v1
+
 - Zhan, P., Lu, L., Huang, W., Zheng, M., Lin, Q., & Zuo, Y. (2023). Sumformer: recursive positional encoding for transformer in short text classification. *Other Conferences*. https://doi.org/10.1117/12.2687014
 
 - Liu, P., Mao, Y., Liu, K., Yan, Z., Xie, Y., Xie, S., Zhu, H., & Sun, L. (2025). GraphFormer: Document-Level Relation Extractor for Open Source Cyber Threat Intelligence. https://doi.org/10.36227/techrxiv.175756204.49475080/v1
@@ -6188,6 +6270,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 - Pasi, P. S. (2026). Multilingual-To-Multimodal (M2M): Unlocking New Languages with Monolingual Text. *arXiv (Cornell University)*. https://doi.org/10.48550/arxiv.2601.10096
 
 - Chen, P., Fu, L., Chen, C., Lin, Y., Chen, C., Huang, C., & Wang, J. (2024). Self-supervised Learning and Masked Language Model for Code-switching Automatic Speech Recognition. *IEEE International Conference on Consumer Electronics*. https://doi.org/10.1109/ICCE62051.2024.10634607
+
+- Hsu, P., Xu, W., Liu, Q., Rosing, T., & Yu, S. (2026). HAVEN: High-Bandwidth Flash Augmented Vector Engine for Large-Scale Approximate Nearest-Neighbor Search Acceleration. *arXiv (Cornell University)*. https://doi.org/10.48550/arxiv.2603.01175
 
 - Lee, P., Hung, S., Chang, P., Chang, C., Bao, L., Yeh, T., & Lee, L. (2026). Exploring Problem-Solving Strategies in Gifted and Regular Students: Education Insights from Eye-Tracking Analysis. *Applied System Innovation*. https://doi.org/10.3390/asi9020038
 
@@ -6501,6 +6585,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 
 - Seetharaman, R., Dhole, K. D., & Bansal, A. (2025). InsertRank: LLMs can reason over BM25 scores to Improve Listwise Reranking. *arXiv.org*. https://doi.org/10.48550/arXiv.2506.14086
 
+- Seetharaman, R., Bansal, A., Zamani, H., & Dhole, K. (2026). Scaling Laws for Reranking in Information Retrieval. *arXiv:cs.IR*. https://arxiv.org/abs/2603.04816v1
+
 - Thomas, R., Kitanovski, T., Goldblum, M., & Pal, A. (2026). Dynamic Delayed Tree Expansion For Improved Multi-Path Speculative Decoding. *arXiv:cs.LG*. https://arxiv.org/abs/2602.16994v1
 
 - Rajagopalan, R., Giri, R., Tang, Z., & Han, K. (2026). Masked Autoencoders as Universal Speech Enhancer. *arXiv (Cornell University)*. https://doi.org/10.48550/arxiv.2602.02413
@@ -6682,6 +6768,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 - Tacconelli, R. (2026). Nacrith: Neural Lossless Compression via Ensemble Context Modeling and High-Precision CDF Coding. *arXiv:cs.IT*. https://arxiv.org/abs/2602.19626v1
 
 - Pesl, R. D., Mathew, J. G., Mecella, M., & Aiello, M. (2025). Retrieval-Augmented Generation for Service Discovery: Chunking Strategies and Benchmarking. *arXiv.org*. https://doi.org/10.48550/arXiv.2505.19310
+
+- Chan, R. S. M., Liu, T., Kiegeland, S., Pasti, C., Vigly, J. H., O'Donnell, T. J., Cotterell, R., & Vieira, T. (2026). Ensembling Language Models with Sequential Monte Carlo. *arXiv:cs.CL*. https://arxiv.org/abs/2603.05432v1
 
 - Vujanic, R. & Rueckstiess, T. (2025). LEAF: Knowledge Distillation of Text Embedding Models with Teacher-Aligned Representations. *arXiv (Cornell University)*. https://doi.org/10.48550/arxiv.2509.12539
 
@@ -6949,6 +7037,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 
 - Arif, S., Farid, S., Athar, A., & Raza, A. A. (2024). UQA: Corpus for Urdu Question Answering. *International Conference on Language Resources and Evaluation*. https://doi.org/10.48550/arXiv.2405.01458
 
+- Abuzakuk, S., Kermarrec, A., Pires, R., Randl, M., & Biswas, S. (2026). Catapults to the Rescue: Accelerating Vector Search by Exploiting Query Locality. *arXiv (Cornell University)*. https://doi.org/10.48550/arxiv.2603.02164
+
 - Shaikh, S. & Halbe, A. (2025). Dual-Source Retrieval for Educational Chatbots: A Performance Evaluation of Semantic Embedding Models. *2025 IEEE 4th International Conference for Advancement in Technology (ICONAT)*. https://doi.org/10.1109/ICONAT66879.2025.11362744
 
 - Thukral, S. (2025). The Impact of AI Tools on Compassion Fatigue and Workload among Counselors: An Indian Perspective — A Systematic Review. *International Journal For Multidisciplinary Research*. https://doi.org/10.36948/ijfmr.2025.v07i05.59383
@@ -7041,6 +7131,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 
 - Krishna, S., Krishna, K., Mohananey, A., Schwarcz, S., Stambler, A., Upadhyay, S., & Faruqui, M. (2024). Fact, Fetch, and Reason: A Unified Evaluation of Retrieval-Augmented Generation. *North American Chapter of the Association for Computational Linguistics*. https://doi.org/10.48550/arXiv.2409.12941
 
+- Kantha, S. & Laflorencie, N. (2026). Strong zero modes in random Ising-Majorana chains. *arXiv:cond-mat.dis-nn*. https://arxiv.org/abs/2603.05313v1
+
 - Baturin, S. (2026). Asymptotic Smoothing of the Lipschitz Loss Landscape in Overparameterized One-Hidden-Layer ReLU Networks. *arXiv:cs.LG*. https://arxiv.org/abs/2602.17596v1
 
 - Dutta, S., Muzahid, S., Schaye, J., Johnson, S., Herenz, E. C., Pessa, I., Augustin, R., Bouché, N. F., Braspenning, J., Cantalupo, S., Das, S., & Wendt, M. (2026). MUSEQuBES: Probing Anisotropies in Gas and Metal Distributions in the Circumgalactic Medium. *arXiv:astro-ph.GA*. https://arxiv.org/abs/2602.17593v1
@@ -7056,6 +7148,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 - Thornton, S. (2026). Retrieval Pivot Attacks in Hybrid RAG: Measuring and Mitigating Amplified Leakage from Vector Seeds to Graph Expansion. *arXiv (Cornell University)*. https://doi.org/10.48550/arxiv.2602.08668
 
 - Berry, S. L., Görgülü, B., Tunç, S., & Çevik, M. (2025). Predicting offer burden to optimize batch sizes in simultaneously expiring kidney offers. *Frontiers in Artificial Intelligence*. https://doi.org/10.3389/frai.2025.1662960
+
+- Lamont, S., Walder, C., Montague, P., Dezfouli, A., & Norrish, M. (2026). Free Lunch for Pass@$k$? Low Cost Diverse Sampling for Diffusion Language Models. *arXiv:cs.CL*. https://arxiv.org/abs/2603.04893v1
 
 - MacAvaney, S. & Macdonald, C. (2025). On Precomputation and Caching in Information Retrieval Experiments with Pipeline Architectures. *arXiv (Cornell University)*. https://doi.org/10.48550/arxiv.2504.09984
 
@@ -7129,6 +7223,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 
 - Kim, S., Lee, S., & Lee, D. (2026). Persona2Web: Benchmarking Personalized Web Agents for Contextual Reasoning with User History. *arXiv:cs.CL*. https://arxiv.org/abs/2602.17003v1
 
+- Ergun, S., Mitterer, T., & Zangl, H. (2026). Digital Twin Driven Textile Classification and Foreign Object Recognition in Automated Sorting Systems. *arXiv:cs.CV*. https://arxiv.org/abs/2603.05230v1
+
 - Iyer, S. (2025). Spectral-Multiplicative Optimization Framework. *Zenodo (CERN European Organization for Nuclear Research)*. https://doi.org/10.5281/zenodo.17556483
 
 - Lee, S. & Hwang, S. (2026). Selective Training for Large Vision Language Models via Visual Information Gain. *arXiv:cs.CV*. https://arxiv.org/abs/2602.17186v1
@@ -7159,6 +7255,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 
 - Es, S., James, J., Anke, L. E., & Schockaert, S. (2024). RAGAs: Automated Evaluation of Retrieval Augmented Generation. *Proceedings of the 18th Conference of the European Chapter of the Association for Computational Linguistics: System Demonstrations*. https://doi.org/10.18653/v1/2024.eacl-demo.16
 
+- Yehezkel, S., Yadin, S., Elata, N., Ostrovsky-Berman, Y., & Kawar, B. (2026). Accelerating Text-to-Video Generation with Calibrated Sparse Attention. *arXiv:cs.CV*. https://arxiv.org/abs/2603.05503v1
+
 - Gupta, S., Ranjan, R., & Singh, S. N. (2024). A Comprehensive Survey of Retrieval-Augmented Generation (RAG): Evolution, Current Landscape and Future Directions. *arXiv.org*. https://doi.org/10.48550/arXiv.2410.12837
 
 - Cynthia, S. T. & Roy, B. (2025). Towards LLM-Powered Task-Aware Retrieval of Scientific Workflows for Galaxy. *arXiv (Cornell University)*. https://doi.org/10.48550/arxiv.2511.01757
@@ -7169,9 +7267,13 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 
 - Liu, S. & Jiang, D. (2025). A Formula-Structure-Embedding-Based GNN for Formula Equivalence Determination. *Applied Sciences*. https://doi.org/10.3390/app15105448
 
+- Ning, S., Qiu, L., & He, X. (2026). Wiki-R1: Incentivizing Multimodal Reasoning for Knowledge-based VQA via Data and Sampling Curriculum. *arXiv:cs.CV*. https://arxiv.org/abs/2603.05256v1
+
 - Yang, S. & Liu, Y. (2026). Descent-Guided Policy Gradient for Scalable Cooperative Multi-Agent Learning. *arXiv:cs.MA*. https://arxiv.org/abs/2602.20078v1
 
 - Wang, S., Zhu, T., Liu, B., Ding, M., Ye, D., Zhou, W., & Yu, P. S. (2025). Unique Security and Privacy Threats of Large Language Models: A Comprehensive Survey. *ACM Computing Surveys*. https://doi.org/10.1145/3764113
+
+- Shi, S., Xiang, S., Zeng, X., Chen, Y., Yu, W., Zhang, Y., Guo, X., & Hao, Y. (2026). Hardware Implementation of Photonic Spiking Hash Retrieval. *arXiv (Cornell University)*. https://doi.org/10.48550/arxiv.2603.02738
 
 - Geng, S., Zhao, W., & Rush, A. M. (2025). Great Memory, Shallow Reasoning: Limits of kNN-LMs. https://doi.org/10.18653/v1/2025.naacl-short.40
 
@@ -7419,6 +7521,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 
 - Barman, S., Das, N., Gupta, S., & Shiragur, K. (2026). Welfarist Formulations for Diverse Similarity Search. *arXiv (Cornell University)*. https://doi.org/10.48550/arxiv.2602.08742
 
+- Boppana, S., Ma, A., Loeffler, M., Sarfati, R., Bigelow, E., Geiger, A., Lewis, O., & Merullo, J. (2026). Reasoning Theater: Disentangling Model Beliefs from Chain-of-Thought. *arXiv:cs.CL*. https://arxiv.org/abs/2603.05488v1
+
 - Aler, S., Abenojar, M., Dones, V., Tiquis, M., Velasco, J., Sanchez, R., Pangilinan, A., Sanchez, A., Belgica, J., Sanchez, J., Ahmadian, M., Tajabadi, A., Aler, J., Amihan, S., Sanchez, R., Baddeley, A., Eysenck, M., Anderson, M., Baker, C., ... Learn, L. V. (2025). Vocabulary Acquisition, Content Retention, and Multimodal Learning Styles Among L2 Learners. *International Journal of Open-access Interdisciplinary and New Educational Discoveries of ETCOR Educational Research Center (iJOINED ETCOR)*. https://doi.org/10.63498/etcor448
 
 - Sun, S., Zhao, L., Deng, M., & Fu, X. (2025). VTS-LLM: Domain-Adaptive LLM Agent for Enhancing Awareness in Vessel Traffic Services through Natural Language. *arXiv.org*. https://doi.org/10.48550/arXiv.2505.00989
@@ -7649,6 +7753,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 
 - Suharyadi & Saputra, I. (2025). Hybrid Ensemble Retrieval-Augmented Generation for Indonesian Legal Consultation with Keyword Boosting. *Journal of Novel Engineering Science and Technology*. https://doi.org/10.56741/jnest.v4i02.1042
 
+- Chong, S. & Kaveh, K. (2026). On Ehrhart theory for tropical vector bundles. *arXiv:math.AG*. https://arxiv.org/abs/2603.05292v1
+
 - Kumar, S. (2025). Event-stream architectures for zero-lag search: Advances in change-data-capture and real-time indexing. *World Journal of Advanced Research and Reviews*. https://doi.org/10.30574/wjarr.2025.26.2.1825
 
 - Roychowdhury, S., Soman, S., Ranjani, H. G., Gunda, N., Chhabra, V., & Bala, S. K. (2024). Evaluation of RAG Metrics for Question Answering in the Telecom Domain. *arXiv.org*. https://doi.org/10.48550/arXiv.2407.12873
@@ -7834,6 +7940,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 - Cohere, T., Aakanksha, Ahmadian, A., Ahmed, M., Alammar, J., Alnumay, Y., Althammer, S., Arkhangorodsky, A., Aryabumi, V., Aumiller, D., Avalos, R., Aviv, Z., Bae, S., Baji, S., Barbet, A., Bartolo, M., Bebensee, B., Beladia, N., Beller-Morales, W., ... Zhao, Z. (2025). Command A: An Enterprise-Ready Large Language Model. https://www.semanticscholar.org/paper/f1f07a37d4cd44daab987ff19c0bcd185910f50c
 
 - Kwartler, T., Berman, M., & Aqrawi, A. (2024). Good Parenting is all you need - Multi-agentic LLM Hallucination Mitigation. *arXiv.org*. https://doi.org/10.48550/arXiv.2410.14262
+
+- Zadouri, T., Hoehnerbach, M., Shah, J., Liu, T., Thakkar, V., & Dao, T. (2026). FlashAttention-4: Algorithm and Kernel Pipelining Co-Design for Asymmetric Hardware Scaling. *arXiv:cs.CL*. https://arxiv.org/abs/2603.05451v1
 
 - Lazebnik, T. (2026). The Economical-Ecological Benefits of Matching Non-matching Socks. *arXiv:cs.IR*. https://arxiv.org/abs/2602.18221v1
 
@@ -8355,6 +8463,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 
 - Zhong, W., Yan, Y., Yang, K., Liu, Y., Fu, X., Yao, Z., & Yin, C. (2026). [Development and validation of PhenoRAG: A visualization tool for automated human phenotype ontology term annotation based on large language models and retrieval-augmented generation technology]. *Zhonghua yi xue yi chuan xue za zhi = Zhonghua yixue yichuanxue zazhi = Chinese journal of medical genetics*. https://doi.org/10.3760/cma.j.cn511374-20250923-00564
 
+- Zhu, W. (2026). MRAG: Benchmarking Retrieval-Augmented Generation for Bio-medicine. *arXiv.org*. https://doi.org/10.48550/arXiv.2601.16503
+
 - Huang, W., Han, J., Ye, X., Pan, Z., & Hauser, K. (2026). Simulation-Ready Cluttered Scene Estimation via Physics-aware Joint Shape and Pose Optimization. *arXiv:cs.RO*. https://arxiv.org/abs/2602.20150v1
 
 - Su, W., Tang, Y., Ai, Q., Yan, J., Wang, C., Wang, H., Ye, Z., Zhou, Y., & Liu, Y. (2025). Parametric Retrieval Augmented Generation. https://doi.org/10.1145/3726302.3729957
@@ -8438,6 +8548,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 - Jiang, W., Clemons, J., Sankaralingam, K., & Kozyrakis, C. (2026). How Fast Can I Run My VLA? Demystifying VLA Inference Performance with VLA-Perf. *arXiv:cs.RO*. https://arxiv.org/abs/2602.18397v1
 
 - Shan, W., Li, X., Wang, X., Li, Q., & Wang, Z. (2025). Improving 3D Thin Vessel Segmentation in Brain TOF-MRA via a Dual-space Context-Aware Network. *IEEE journal of biomedical and health informatics*. https://doi.org/10.1109/JBHI.2025.3595640
+
+- Li, W., Fang, P., & Xue, H. (2026). SRasP: Self-Reorientation Adversarial Style Perturbation for Cross-Domain Few-Shot Learning. *arXiv:cs.CV*. https://arxiv.org/abs/2603.05135v1
 
 - Zheng, W., Fatsi, N., Barcklow, D., Kalaev, D., Yao, S., Reinert, O., Bruss, C. B., & Rosa, D. (2025). Tuning-Free LLM Can Build A Strong Recommender Under Sparse Connectivity And Knowledge Gap Via Extracting Intent. https://www.semanticscholar.org/paper/96bc872a4673294c1856e30e62fab3212f3a03a7
 
@@ -8564,6 +8676,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 - Zhao, X., Wang, K., Zhang, X., Yao, C., & Wang, A. (2026). HyMem: Hybrid Memory Architecture with Dynamic Retrieval Scheduling. *arXiv (Cornell University)*. https://doi.org/10.48550/arxiv.2602.13933
 
 - Li, X., Wang, K., Gouda, G., Choudhary, S., Wang, Y., Hu, L., Vaughan, J., & Lecue, F. (2025). Who Judges the Judge? LLM Jury-on-Demand: Building Trustworthy LLM Evaluation Systems. *arXiv.org*. https://doi.org/10.48550/arXiv.2512.01786
+
+- Zhu, X., Zheng, Y., Wang, S., Yang, J., Yang, Y., Tu, W., & Wang, Z. (2026). GEM-TFL: Bridging Weak and Full Supervision for Forgery Localization through EM-Guided Decomposition and Temporal Refinement. *arXiv:cs.CV*. https://arxiv.org/abs/2603.05095v1
 
 - Yu, X., Hu, L., Reichman, B., Chu, D., Chandrupatla, R., Zhang, X., Heck, L., & Rosing, T. (2025). SensorChat: Answering Qualitative and Quantitative Questions during Long-term Multimodal Sensor Interactions. *Proceedings of the ACM on Interactive Mobile Wearable and Ubiquitous Technologies*. https://doi.org/10.1145/3749496
 
@@ -8811,6 +8925,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 
 - Wei, Y., Han, J., & Yang, Y. (2025). Adapting General-Purpose Embedding Models to Private Datasets Using Keyword-based Retrieval. https://doi.org/10.18653/v1/2025.findings-acl.357
 
+- Zhong, Y., Huang, R., Wang, M., Guo, Z., Li, Y., Yu, M. C., & Jin, Z. (2026). Type-Aware Retrieval-Augmented Generation with Dependency Closure for Solver-Executable Industrial Optimization Modeling. *arXiv (Cornell University)*. https://doi.org/10.48550/arxiv.2603.03180
+
 - Asensio, Y., Mattioni, S., Vaquero, D., Cordero-Silis, C. A., Jalali, H. B., Marchelli, D., Gobbi, M., Casanova, F., Stasio, F. D., Guimarães, M. H. D., Hueso, L. E., & Martín-García, B. (2026). Unveiling Photoluminescence Signatures of Magneto-Optical Coupling in Layered Hybrid Manganese Chloride Perovskites. *arXiv:cond-mat.mtrl-sci*. https://doi.org/10.1002/adom.202503123
 
 - Ma, Y., Chai, X., Gan, Z., & Zhang, Y. (2024). Privacy-Preserving TPE-Based JPEG Image Retrieval in Cloud-Assisted Internet of Things. *IEEE Internet of Things Journal*. https://doi.org/10.1109/JIOT.2023.3301042
@@ -8830,6 +8946,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 - Wang, Y., Wang, M., Liang, J., Wang, L., Yu, Y., & He, R. (2026). Mitigating the Safety-utility Trade-off in LLM Alignment via Adaptive Safe Context Learning. *arXiv (Cornell University)*. https://doi.org/10.48550/arxiv.2602.13562
 
 - Zhang, Y., Khan, S. A., Mahmud, A. K. M. F., Yang, H., Lavin, A., Levin, M., Frey, J. G., Dunnmon, J., Evans, J. H., Bundy, A., Džeroski, S., Tegnér, J., & Zenil, H. (2025). Exploring the role of large language models in the scientific method: from hypothesis to discovery. *npj Artificial Intelligence*. https://doi.org/10.1038/s44387-025-00019-5
+
+- Yang, Y. & Das, S. (2026). Residual RL--MPC for Robust Microrobotic Cell Pushing Under Time-Varying Flow. *arXiv:cs.RO*. https://arxiv.org/abs/2603.05448v1
 
 - Bai, Y., Grant, C. E., & Wang, D. Z. (2025). RAMQA: A Unified Framework for Retrieval-Augmented Multi-Modal Question Answering. *North American Chapter of the Association for Computational Linguistics*. https://doi.org/10.48550/arXiv.2501.13297
 
@@ -8919,6 +9037,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 
 - Kanani, Y., Tufchi, S., Ahlawat, C., & Ahmed, T. (2025). Fully Local Retrieval-Augmented Generation Framework Using LLaMA 3.1 for Enhanced Knowledge Retrieval. *2025 International Conference on Artificial intelligence and Emerging Technologies (ICAIET)*. https://doi.org/10.1109/ICAIET65052.2025.11211493
 
+- Saxena, Y., Padia, A., Gunaratna, K., & Gaur, M. (2026). IMRNNs: An Efficient Method for Interpretable Dense Retrieval via Embedding Modulation. *arXiv.org*. https://doi.org/10.48550/arXiv.2601.20084
+
 - Moshfeghi, Y. & McGuire, N. (2025). Brain-Machine Interfaces &amp; Information Retrieval Challenges and Opportunities. https://doi.org/10.1145/3726302.3730350
 
 - Srinivas, Y. & Aluri (2025). Enhancing Developer Productivity Through Intelligent Documentation Retrieval. *Journal of Information Systems Engineering & Management*. https://doi.org/10.52783/jisem.v10i62s.13643
@@ -8940,6 +9060,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 - Zhu, Y., Newman, K. S., Lutzeyer, J. F., Romero-Soriano, A., Drozdzal, M., & Russakovsky, O. (2026). GASS: Geometry-Aware Spherical Sampling for Disentangled Diversity Enhancement in Text-to-Image Generation. *arXiv:cs.CV*. https://arxiv.org/abs/2602.17200v1
 
 - Ye, R. (2025). Structure-Aware Semantic Chunking: A Hybrid Penalty Mechanism for Document Segmentation. *Zenodo (CERN European Organization for Nuclear Research)*. https://doi.org/10.5281/zenodo.17797913
+
+- Wu, Y., Liu, F., Xie, Z., Liu, Z., Zhang, C., Wang, J., & Li, L. (2026). TSEmbed: Unlocking Task Scaling in Universal Multimodal Embeddings. *arXiv:cs.CL*. https://arxiv.org/abs/2603.04772v1
 
 - Park, Y., Lee, H., & Lee, J. (2025). Justice AI: Legal Case Retrieval Using Dense Passage Retrieval. *IEEE International Conference on Consumer Electronics*. https://doi.org/10.1109/ICCE63647.2025.10930108
 
@@ -8991,6 +9113,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 
 - Zhao, Y., Zhu, J., Ding, Z., & Li, X. (2026). GRACE: Reinforcement Learning for Grounded Response and Abstention under Contextual Evidence. *arXiv (Cornell University)*. https://doi.org/10.48550/arxiv.2601.04525
 
+- Wu, Y., Liang, P., Xiang, Y., Yuan, M., Liu, J., Yang, J., Li, X., & Yan, W. (2026). Tiny-Critic RAG: Empowering Agentic Fallback with Parameter-Efficient Small Language Models. *arXiv (Cornell University)*. https://openalex.org/W7133365321
+
 - Lu, Y., Nie, S., Lu, M., Yang, X., Zhang, X., & Zhang, P. (2026). Tracing Copied Pixels and Regularizing Patch Affinity in Copy Detection. *arXiv:cs.CV*. https://arxiv.org/abs/2602.17484v1
 
 - Tang, Y., Su, W., Zhou, Q., & Ai, Q. (2026). Multi-Field Tool Retrieval. *arXiv (Cornell University)*. https://doi.org/10.48550/arxiv.2602.05366
@@ -9016,6 +9140,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 - Zhu, Y., Zhao, R., Li, Z., Zheng, B., Zhang, Z., Chen, Z., & Ge, C. (2025). Frequency-Aware Graph Construction and Search for Dynamic Vector Databases. https://www.semanticscholar.org/paper/d5138567dfedfc418043c6e1f7531106ff3b3924
 
 - Zhu, Y., Rong, H., & Luo, H. (2026). Token-Guard: Towards Token-Level Hallucination Control via Self-Checking Decoding. *arXiv (Cornell University)*. https://doi.org/10.48550/arxiv.2601.21969
+
+- Zhu, Y., Bradford, M., Lai, K., Obiso, T., Venkatesha, V., Pustejovsky, J., & Krishnaswamy, N. (2026). Distributed Partial Information Puzzles: Examining Common Ground Construction Under Epistemic Asymmetry. *arXiv:cs.AI*. https://arxiv.org/abs/2603.05450v1
 
 - Chen, Y., Dong, G., Zhu, Y., & Dou, Z. (2025). Revisiting RAG Ensemble: A Theoretical and Mechanistic Analysis of Multi-RAG System Collaboration. *ArXiv.org*. https://openalex.org/W4415013423
 
@@ -9174,6 +9300,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 - Thota, Y. R., Rafatirad, S., Houman, H., & Nikoubin, T. (2026). When Models Ignore Definitions: Measuring Semantic Override Hallucinations in LLM Reasoning. *arXiv:cs.AR*. https://arxiv.org/abs/2602.17520v1
 
 - Thota, Y. R., Rafatirad, S., Houman, H., & Nikoubin, T. (2026). Human-AI Interaction: Evaluating LLM Reasoning on Digital Logic Circuit included Graph Problems, in terms of creativity in design and analysis. *arXiv:cs.AR*. https://arxiv.org/abs/2602.15336v1
+
+- Brelet, Y., Marquette, A., Beyer, N., Versini, G., Faerber, J., Vomir, M., Halte, V., & Barthelemy, M. (2026). Technical design report of a complete and compact broadband high-harmonics femtosecond beamline based on a modular hollow waveguide for photons generation centered on the upper region of the extreme ultraviolet spectral range. *arXiv:physics.optics*. https://arxiv.org/abs/2603.05431v1
 
 - Bondalapati, Y. & Bm, H. (2025). Scalable Retrieval-Augmented Generation (RAG) with Kubernetes for Enhanced Document Intelligence. *China International Conference on Circuits and Systems*. https://doi.org/10.1109/CICCS66437.2025.11280266
 
@@ -9847,6 +9975,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 
 - Zhu, Z., Wang, Y., & Liu, D. (2025). Hybrid Query of Boolean Filter and Vector Similarity Search: Benchmark, Comparison and Direction. *2025 5th Asia Conference on Information Engineering (ACIE)*. https://doi.org/10.1109/ACIE64499.2025.00026
 
+- Meng, Z., Xie, Z., Ye, Z., Lu, C., Liu, Z., Niu, Z., Hu, Y., & Cao, S. (2026). GCAgent: Enhancing Group Chat Communication through Dialogue Agents System. *arXiv:cs.AI*. https://arxiv.org/abs/2603.05240v1
+
 - Zhao, Z. & Welsch, R. E. (2024). Aligning LLMs with Human Instructions and Stock Market Feedback in Financial Sentiment Analysis. *arXiv.org*. https://doi.org/10.48550/arXiv.2410.14926
 
 - Wang, Z., Zhang, Q., Lu, B., Chen, Q., & Tan, C. (2025). Towards Robustness: A Critique of Current Vector Database Assessments. *arXiv (Cornell University)*. https://doi.org/10.48550/arxiv.2507.00379
@@ -9856,6 +9986,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 - Zhao, Z., Xue, B., Lin, E., Zhou, M., Vartak, K., Ali-Zade, S., Lu, C., Li, T., Kuang, B., Jian, R., Wen, B., Staay, D. v. d., Bao, Y., Li, E., Deng, C., Liu, S., Wang, Q., & Ren, K. (2026). Multi-Probe Zero Collision Hash (MPZCH): Mitigating Embedding Collisions and Enhancing Model Freshness in Large-Scale Recommenders. *arXiv:cs.LG*. https://arxiv.org/abs/2602.17050v1
 
 - Xiao, Z., Ma, Q., Gu, M., Chen, C. J., Chen, X., Ordóñez, V., & Mohan, V. (2025). MetaEmbed: Scaling Multimodal Retrieval at Test-Time with Flexible Late Interaction. *arXiv.org*. https://doi.org/10.48550/arXiv.2509.18095
+
+- Xie, Z., Gong, J., Tan, X., Zhang, Z., & Xie, Y. (2026). Zero-Shot Robotic Manipulation via 3D Gaussian Splatting-Enhanced Multimodal Retrieval-Augmented Generation. *arXiv (Cornell University)*. https://openalex.org/W7133365396
 
 - Shao, Z., Gregory, B., Sarker, S., Ruff, J., Schuller, I. K., Kalcheim, Y., & Singer, A. (2026). Martensitic laminate geometry controls electronic phase transitions in a Mott insulator. *arXiv:cond-mat.mtrl-sci*. https://arxiv.org/abs/2602.18268v1
 
@@ -9876,6 +10008,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 - Cui, Z., Liu, S., Dong, X., Chu, X., Gu, L., Yang, M., & Harada, T. (2026). Unifying Color and Lightness Correction with View-Adaptive Curve Adjustment for Robust 3D Novel View Synthesis. *arXiv:cs.CV*. https://arxiv.org/abs/2602.18322v1
 
 - Wang, Z., Yuan, H., Dong, W., Cong, G., & Li, F. (2024). CORAG: A Cost-Constrained Retrieval Optimization System for Retrieval-Augmented Generation. *arXiv.org*. https://doi.org/10.48550/arXiv.2411.00744
+
+- Xu, Z., Wu, Y., & Zhao, Y. (2026). TRIZ-RAGNER: A Retrieval-Augmented Large Language Model for TRIZ-Aware Named Entity Recognition in Patent-Based Contradiction Mining. *arXiv (Cornell University)*. https://openalex.org/W7133267788
 
 - Ben-Zion, Z., Simon, G., & Lazebnik, T. (2026). Can LLMs Get High? A Dual-Metric Framework for Evaluating Psychedelic Simulation and Safety in Large Language Models. https://doi.org/10.21203/rs.3.rs-8682370/v1
 
@@ -9922,6 +10056,8 @@ Approaches. *Journal of Spine Research and Surgery*. https://doi.org/10.26502/fj
 - Bhatti, Z. H., Ahtisham, B., Tausif, S., George, N., Bajwa, N. u. H., & Javed, M. (2026). Can You Tell It's AI? Human Perception of Synthetic Voices in Vishing Scenarios. *arXiv:cs.CR*. https://arxiv.org/abs/2602.20061v1
 
 - Lee, Z. Y. & Tang, X. (2026). Evaluation of Dynamic Vector Bin Packing for Virtual Machine Placement. *arXiv:cs.DC*. https://arxiv.org/abs/2602.14704v1
+
+- Liu, Z., Tang, S., Wu, Z., Yuan, X., & Shen, Z. (2026). Diff-ES: Stage-wise Structural Diffusion Pruning via Evolutionary Search. *arXiv:cs.CV*. https://arxiv.org/abs/2603.05105v1
 
 - Li, Z., Wang, Z., Wang, W., Hung, K., Xie, H., & Wang, F. L. (2025). Retrieval-Augmented Generation for Educational Application: A Systematic Survey. *Computers and Education: Artificial Intelligence*. https://doi.org/10.1016/j.caeai.2025.100417
 

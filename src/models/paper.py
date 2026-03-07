@@ -1,9 +1,9 @@
-"""Pydantic models for academic papers."""
+﻿"""Pydantic models for academic papers."""
 
 from __future__ import annotations
 
 import uuid
-from datetime import date, datetime
+from datetime import date
 from enum import Enum
 from typing import Optional
 
@@ -45,6 +45,7 @@ class Paper(BaseModel):
     scopus_indexed: Optional[bool] = None
     doi_verified: Optional[bool] = None
     source_api: Optional[str] = None
+    source_trusted: Optional[bool] = None
     date_found: str = Field(default_factory=lambda: date.today().isoformat())
     status: PaperStatus = PaperStatus.NEW
     notes: Optional[str] = None
@@ -63,6 +64,7 @@ class Paper(BaseModel):
     def normalized_title(self) -> str:
         """Return lowercase title stripped of punctuation for comparison."""
         import re
+
         return re.sub(r"[^\w\s]", "", self.title.lower()).strip()
 
 

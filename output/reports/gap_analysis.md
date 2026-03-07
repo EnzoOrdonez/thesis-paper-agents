@@ -1,20 +1,20 @@
-# Analisis de Gaps -- Generado: 2026-02-24
+# Analisis de Gaps -- Generado: 2026-03-06
 
 ## Estado por Categoria:
 
 | Categoria | Papers | Status | Accion |
 |-----------|--------|--------|--------|
-| Sistemas RAG Hibridos | 2543 | Excelente | Mantener |
+| Sistemas RAG Hibridos | 2574 | Excelente | Mantener |
 | Normalizacion/Preprocesamiento | 90 | Excelente | Mantener |
-| Segmentacion/Chunking | 257 | Excelente | Mantener |
-| Modelos de Embedding | 451 | Excelente | Mantener |
-| Estrategias de Recuperacion | 544 | Excelente | Mantener |
-| Re-ranking | 132 | Excelente | Mantener |
-| Alucinaciones en LLMs | 182 | Excelente | Mantener |
-| Evaluacion de sistemas RAG | 568 | Excelente | Mantener |
-| Documentacion Cloud | 354 | Excelente | Mantener |
-| Metricas de evaluacion | 401 | Excelente | Mantener |
-| Vector Databases | 154 | Excelente | Mantener |
+| Segmentacion/Chunking | 262 | Excelente | Mantener |
+| Modelos de Embedding | 455 | Excelente | Mantener |
+| Estrategias de Recuperacion | 552 | Excelente | Mantener |
+| Re-ranking | 136 | Excelente | Mantener |
+| Alucinaciones en LLMs | 185 | Excelente | Mantener |
+| Evaluacion de sistemas RAG | 576 | Excelente | Mantener |
+| Documentacion Cloud | 356 | Excelente | Mantener |
+| Metricas de evaluacion | 404 | Excelente | Mantener |
+| Vector Databases | 159 | Excelente | Mantener |
 
 ## Gaps Fundacionales Pendientes:
 

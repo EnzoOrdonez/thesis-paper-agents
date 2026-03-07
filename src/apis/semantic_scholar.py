@@ -1,4 +1,4 @@
-"""Semantic Scholar API client for paper search."""
+﻿"""Semantic Scholar API client for paper search."""
 
 from __future__ import annotations
 
@@ -26,12 +26,22 @@ class SemanticScholarAPI:
         base_url: str = DEFAULT_BASE_URL,
         rate_limit: float = 1.0,
         fields: str = DEFAULT_FIELDS,
+        max_retries_with_key: int = 4,
+        max_retries_without_key: int = 2,
+        cooldown_seconds: int = 1800,
+        shutdown_after_consecutive_failures: int = 2,
     ):
         self.api_key = api_key or os.getenv("SEMANTIC_SCHOLAR_API_KEY", "")
         self.base_url = base_url.rstrip("/")
         self.rate_limit = rate_limit
         self.fields = fields
+        self.max_retries_with_key = max_retries_with_key
+        self.max_retries_without_key = max_retries_without_key
+        self.cooldown_seconds = cooldown_seconds
+        self.shutdown_after_consecutive_failures = shutdown_after_consecutive_failures
         self._last_request_time: float = 0
+        self._consecutive_rate_limit_failures = 0
+        self._disabled_until: float = 0
         self.session = requests.Session()
         if self.api_key:
             self.session.headers["x-api-key"] = self.api_key
@@ -43,28 +53,55 @@ class SemanticScholarAPI:
             time.sleep(wait)
         self._last_request_time = time.time()
 
+    def _is_disabled(self) -> bool:
+        return time.time() < self._disabled_until
+
+    def _trip_circuit_breaker(self) -> None:
+        self._disabled_until = time.time() + self.cooldown_seconds
+        logger.warning(
+            "Semantic Scholar disabled for %.0f minutes after repeated 429 responses",
+            self.cooldown_seconds / 60,
+        )
+
     def _request_with_backoff(self, url: str, params: dict[str, Any]) -> dict[str, Any] | None:
         """Make a GET request with exponential backoff on 429."""
-        max_retries = 4
+        if self._is_disabled():
+            logger.warning("Skipping Semantic Scholar request because the client is temporarily disabled")
+            return None
+
+        max_retries = self.max_retries_with_key if self.api_key else self.max_retries_without_key
         delay = 2.0
+
         for attempt in range(max_retries + 1):
             self._wait_rate_limit()
             try:
-                resp = self.session.get(url, params=params, timeout=30)
-                if resp.status_code == 200:
-                    return resp.json()
-                if resp.status_code == 429:
-                    logger.warning(f"Rate limited (429), waiting {delay}s (attempt {attempt + 1})")
+                response = self.session.get(url, params=params, timeout=30)
+                if response.status_code == 200:
+                    self._consecutive_rate_limit_failures = 0
+                    return response.json()
+                if response.status_code == 429:
+                    retry_after = response.headers.get("Retry-After")
+                    if retry_after:
+                        try:
+                            delay = max(delay, float(retry_after))
+                        except ValueError:
+                            pass
+                    logger.warning("Rate limited (429), waiting %ss (attempt %s)", int(delay), attempt + 1)
+                    if attempt >= max_retries:
+                        self._consecutive_rate_limit_failures += 1
+                        if self._consecutive_rate_limit_failures >= self.shutdown_after_consecutive_failures:
+                            self._trip_circuit_breaker()
+                        return None
                     time.sleep(delay)
-                    delay = min(delay * 2, 60)
+                    delay = min(delay * 2, 30)
                     continue
-                logger.error(f"Semantic Scholar API error {resp.status_code}: {resp.text[:200]}")
+                logger.error("Semantic Scholar API error %s: %s", response.status_code, response.text[:200])
                 return None
-            except requests.RequestException as e:
-                logger.error(f"Semantic Scholar request error: {e}")
+            except requests.RequestException as exc:
+                logger.error("Semantic Scholar request error: %s", exc)
                 if attempt < max_retries:
                     time.sleep(delay)
-                    delay = min(delay * 2, 60)
+                    delay = min(delay * 2, 30)
                 else:
                     return None
         return None
@@ -75,16 +112,11 @@ class SemanticScholarAPI:
         limit: int = 20,
         year_range: str | None = None,
     ) -> list[Paper]:
-        """Search for papers matching a query.
+        """Search for papers matching a query."""
+        if self._is_disabled():
+            logger.info("Semantic Scholar skipped for '%s' because the client is in cooldown", query)
+            return []
 
-        Args:
-            query: Search query string.
-            limit: Maximum number of results.
-            year_range: Optional year filter, e.g. "2023-2025".
-
-        Returns:
-            List of Paper objects.
-        """
         url = f"{self.base_url}/paper/search"
         params: dict[str, Any] = {
             "query": query,
@@ -94,7 +126,7 @@ class SemanticScholarAPI:
         if year_range:
             params["year"] = year_range
 
-        logger.debug(f"Searching Semantic Scholar: query='{query}', year={year_range}")
+        logger.debug("Searching Semantic Scholar: query='%s', year=%s", query, year_range)
         data = self._request_with_backoff(url, params)
         if not data:
             return []
@@ -105,10 +137,10 @@ class SemanticScholarAPI:
                 paper = self._parse_paper(item)
                 if paper:
                     papers.append(paper)
-            except Exception as e:
-                logger.warning(f"Failed to parse paper: {e}")
+            except Exception as exc:
+                logger.warning("Failed to parse paper: %s", exc)
 
-        logger.info(f"Semantic Scholar: found {len(papers)} papers for '{query}'")
+        logger.info("Semantic Scholar: found %s papers for '%s'", len(papers), query)
         return papers
 
     def get_paper_by_doi(self, doi: str) -> Paper | None:
@@ -124,9 +156,9 @@ class SemanticScholarAPI:
         """Search for a paper by exact title match."""
         papers = self.search(title, limit=5)
         title_lower = title.lower().strip()
-        for p in papers:
-            if p.title.lower().strip() == title_lower:
-                return p
+        for paper in papers:
+            if paper.title.lower().strip() == title_lower:
+                return paper
         return papers[0] if papers else None
 
     def _parse_paper(self, data: dict[str, Any]) -> Paper | None:
@@ -136,8 +168,8 @@ class SemanticScholarAPI:
             return None
 
         authors = []
-        for a in data.get("authors", []):
-            name = a.get("name")
+        for author in data.get("authors", []):
+            name = author.get("name")
             if name:
                 authors.append(name)
 

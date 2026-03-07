@@ -1,9 +1,9 @@
-"""arXiv API client for paper search."""
+﻿"""arXiv API client for paper search."""
 
 from __future__ import annotations
 
 import time
-from datetime import datetime, timedelta
+from datetime import datetime
 from typing import Any
 
 import feedparser
@@ -31,6 +31,7 @@ class ArxivAPI:
         self.rate_limit_seconds = rate_limit_seconds
         self.categories = categories or list(VALID_CATEGORIES)
         self._last_request_time: float = 0
+        self.session = requests.Session()
 
     def _wait_rate_limit(self) -> None:
         elapsed = time.time() - self._last_request_time
@@ -45,18 +46,8 @@ class ArxivAPI:
         max_results: int = 20,
         date_from: str | None = None,
     ) -> list[Paper]:
-        """Search arXiv for papers matching a query.
-
-        Args:
-            query: Search query (will be searched in title+abstract).
-            max_results: Maximum number of results.
-            date_from: Optional start date for filtering (YYYY-MM-DD).
-
-        Returns:
-            List of Paper objects.
-        """
-        # Build arXiv query: search in title and abstract, restrict to categories
-        cat_filter = " OR ".join(f"cat:{c}" for c in self.categories)
+        """Search arXiv for papers matching a query."""
+        cat_filter = " OR ".join(f"cat:{category}" for category in self.categories)
         search_query = f"all:{query} AND ({cat_filter})"
 
         params = {
@@ -71,26 +62,24 @@ class ArxivAPI:
         self._wait_rate_limit()
 
         try:
-            resp = requests.get(self.base_url, params=params, timeout=30)
-            resp.raise_for_status()
-        except requests.RequestException as e:
-            logger.error(f"arXiv request error: {e}")
+            response = self.session.get(self.base_url, params=params, timeout=30)
+            response.raise_for_status()
+        except requests.RequestException as exc:
+            logger.error(f"arXiv request error: {exc}")
             return []
 
-        feed = feedparser.parse(resp.text)
+        feed = feedparser.parse(response.text)
         papers: list[Paper] = []
 
         for entry in feed.entries:
             try:
                 paper = self._parse_entry(entry)
                 if paper:
-                    # Filter by date if specified
-                    if date_from and paper.publication_date:
-                        if paper.publication_date < date_from:
-                            continue
+                    if date_from and paper.publication_date and paper.publication_date < date_from:
+                        continue
                     papers.append(paper)
-            except Exception as e:
-                logger.warning(f"Failed to parse arXiv entry: {e}")
+            except Exception as exc:
+                logger.warning(f"Failed to parse arXiv entry: {exc}")
 
         logger.info(f"arXiv: found {len(papers)} papers for '{query}'")
         return papers
@@ -102,24 +91,22 @@ class ArxivAPI:
             return None
 
         authors = []
-        for a in entry.get("authors", []):
-            name = a.get("name", "").strip()
+        for author in entry.get("authors", []):
+            name = author.get("name", "").strip()
             if name:
                 authors.append(name)
 
-        # Extract publication date
         published = entry.get("published", "")
-        pub_date = None
+        publication_date = None
         year = None
         if published:
             try:
-                dt = datetime.strptime(published[:10], "%Y-%m-%d")
-                pub_date = dt.strftime("%Y-%m-%d")
-                year = dt.year
+                parsed_date = datetime.strptime(published[:10], "%Y-%m-%d")
+                publication_date = parsed_date.strftime("%Y-%m-%d")
+                year = parsed_date.year
             except ValueError:
                 pass
 
-        # Extract DOI if available
         doi = None
         arxiv_id = None
         for link in entry.get("links", []):
@@ -129,13 +116,11 @@ class ArxivAPI:
             if "arxiv.org/abs/" in href:
                 arxiv_id = href.split("/abs/")[-1]
 
-        # Get abstract
         abstract = entry.get("summary", "").replace("\n", " ").strip()
 
-        # Primary category
-        primary_cat = ""
+        primary_category = ""
         if hasattr(entry, "arxiv_primary_category"):
-            primary_cat = entry.arxiv_primary_category.get("term", "")
+            primary_category = entry.arxiv_primary_category.get("term", "")
 
         url = f"https://arxiv.org/abs/{arxiv_id}" if arxiv_id else entry.get("link", "")
 
@@ -143,8 +128,8 @@ class ArxivAPI:
             title=title,
             authors=authors,
             year=year,
-            publication_date=pub_date,
-            venue=f"arXiv:{primary_cat}" if primary_cat else "arXiv",
+            publication_date=publication_date,
+            venue=f"arXiv:{primary_category}" if primary_category else "arXiv",
             publisher="arXiv",
             doi=doi,
             url=url,
