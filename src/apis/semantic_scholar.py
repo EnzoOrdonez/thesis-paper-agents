@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import os
+import random
 import time
 from datetime import UTC, datetime
 from typing import Any
@@ -87,10 +88,12 @@ class SemanticScholarAPI:
         }
 
     def _trip_circuit_breaker(self) -> None:
-        self._disabled_until = time.time() + self.cooldown_seconds
+        jitter = random.uniform(0, 30)
+        cooldown = self.cooldown_seconds + jitter
+        self._disabled_until = time.time() + cooldown
         logger.warning(
             "Semantic Scholar disabled for %.0f minutes after repeated failures",
-            self.cooldown_seconds / 60,
+            cooldown / 60,
         )
 
     def _request_with_backoff(self, url: str, params: dict[str, Any]) -> dict[str, Any] | None:

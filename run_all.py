@@ -37,6 +37,7 @@ from src.agents.paper_compiler import (
     run_metadata_phase,
 )
 from src.models.paper import RelevanceLevel
+from src.utils.cache_manager import cleanup_cache
 from src.utils.logger import setup_logger
 from src.utils.monitor_store import acquire_runtime_lock, create_job_run, finish_job_run, release_runtime_lock
 
@@ -179,6 +180,8 @@ def run_selected_phases(
 ) -> dict[str, Any]:
     """Execute the selected pipeline phases once."""
     config = load_config()
+    cache_dir = config.get("output", {}).get("cache_dir", "data/cache")
+    cleanup_cache(cache_dir, max_age_days=14)
     runtime_path = _runtime_storage_path(config)
     lock_owner = str(uuid.uuid4())
     papers: list = []
