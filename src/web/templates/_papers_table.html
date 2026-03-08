@@ -4,7 +4,7 @@
 {% set desc_active = sort == field and sort_dir == 'desc' %}
 {% set asc_link = default_sort_link if asc_active else '/papers?' ~ papers_query(filters, field, 'asc', 1) %}
 {% set desc_link = default_sort_link if desc_active else '/papers?' ~ papers_query(filters, field, 'desc', 1) %}
-<th>
+<th scope="col">
     <div class="sort-header">
         <span>{{ label }}</span>
         <span class="sort-actions">
@@ -37,15 +37,16 @@
     </div>
     <form id="batch-form" method="post" action="/papers/batch">
     <table class="data-table wide">
+        <caption class="sr-only">Tabla de papers academicos - {{ papers_page.total }} resultados</caption>
         <thead>
             <tr>
-                <th class="batch-col"><input type="checkbox" id="select-all" title="Seleccionar todos"></th>
+                <th scope="col" class="batch-col"><input type="checkbox" id="select-all" title="Seleccionar todos" aria-label="Seleccionar todos los papers"></th>
                 {{ sort_controls('Titulo', 'title', default_sort_link) }}
                 {{ sort_controls('Year', 'year', default_sort_link) }}
                 {{ sort_controls('Ranking', 'ranking_score', default_sort_link) }}
                 {{ sort_controls('Fuente', 'source_api', default_sort_link) }}
                 {{ sort_controls('Status', 'status', default_sort_link) }}
-                <th class="access-head">Acceso</th>
+                <th scope="col" class="access-head">Acceso</th>
             </tr>
         </thead>
         <tbody>

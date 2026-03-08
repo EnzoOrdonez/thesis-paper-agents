@@ -3,6 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Thesis Paper Agents - Bibliographic monitoring and curation for a hybrid RAG thesis on cloud documentation.">
+    <meta name="theme-color" content="#a3472f">
     <title>{{ title }} | Thesis Paper Agents</title>
     <script>
         (function () {
@@ -15,6 +17,7 @@
     <script src="https://unpkg.com/htmx.org@1.9.12"></script>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Saltar al contenido</a>
     <div class="shell">
         <header class="topbar">
             <div>
@@ -23,15 +26,15 @@
             </div>
             <div class="header-actions">
                 <nav class="nav">
-                    <a href="/" class="{% if request.url.path == '/' %}active{% endif %}">Dashboard</a>
-                    <a href="/papers" class="{% if request.url.path.startswith('/papers') %}active{% endif %}">Papers</a>
-                    <a href="/jobs" class="{% if request.url.path.startswith('/jobs') %}active{% endif %}">Jobs</a>
-                    <a href="/settings/proxy" class="{% if request.url.path.startswith('/settings/proxy') %}active{% endif %}">Proxy</a>
+                    <a href="/" class="{% if request.url.path == '/' %}active{% endif %}"{% if request.url.path == '/' %} aria-current="page"{% endif %}>Dashboard</a>
+                    <a href="/papers" class="{% if request.url.path.startswith('/papers') %}active{% endif %}"{% if request.url.path.startswith('/papers') %} aria-current="page"{% endif %}>Papers</a>
+                    <a href="/jobs" class="{% if request.url.path.startswith('/jobs') %}active{% endif %}"{% if request.url.path.startswith('/jobs') %} aria-current="page"{% endif %}>Jobs</a>
+                    <a href="/settings/proxy" class="{% if request.url.path.startswith('/settings/proxy') %}active{% endif %}"{% if request.url.path.startswith('/settings/proxy') %} aria-current="page"{% endif %}>Proxy</a>
                 </nav>
-                <button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false">Modo oscuro</button>
+                <button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false" aria-label="Cambiar entre modo claro y oscuro">Modo oscuro</button>
             </div>
         </header>
-        <main>
+        <main role="main" id="main-content">
             {% block content %}{% endblock %}
         </main>
     </div>
