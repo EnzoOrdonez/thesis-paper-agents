@@ -345,6 +345,23 @@ thesis-paper-agents/
 - separate the bibliographic layer from the future semantic RAG corpus layer
 - expand the UI only if manual curation volume justifies it
 
+## Development
+
+```bash
+pip install -e ".[dev]"
+
+# Linting
+ruff check .
+ruff check --fix .
+
+# Formatting
+ruff format .
+ruff format --check .
+
+# Type checking
+mypy src/
+```
+
 ## Important Note
 
 This project is an academic curation assistant, not a replacement for thesis judgment. Its purpose is to reduce repetitive manual work and improve consistency, not to eliminate critical evaluation.
