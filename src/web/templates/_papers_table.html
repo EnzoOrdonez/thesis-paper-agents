@@ -35,9 +35,11 @@
             <p class="muted">Pagina {{ papers_page.page }} de {{ papers_page.pages }}</p>
         </div>
     </div>
+    <form id="batch-form" method="post" action="/papers/batch">
     <table class="data-table wide">
         <thead>
             <tr>
+                <th class="batch-col"><input type="checkbox" id="select-all" title="Seleccionar todos"></th>
                 {{ sort_controls('Titulo', 'title', default_sort_link) }}
                 {{ sort_controls('Year', 'year', default_sort_link) }}
                 {{ sort_controls('Ranking', 'ranking_score', default_sort_link) }}
@@ -48,7 +50,8 @@
         </thead>
         <tbody>
         {% for paper in papers_page["items"] %}
-            <tr>
+            <tr class="batch-row">
+                <td class="batch-col"><input type="checkbox" name="paper_ids" value="{{ paper.id }}" class="batch-check"></td>
                 <td>
                     <a href="/papers/{{ paper.id }}">{{ paper.title }}</a>
                     <div class="muted small">{{ paper.categories|join(', ') }}</div>
@@ -65,10 +68,19 @@
                 </td>
             </tr>
         {% else %}
-            <tr><td colspan="6" class="muted">No hay resultados con esos filtros.</td></tr>
+            <tr><td colspan="7" class="muted">No hay resultados con esos filtros.</td></tr>
         {% endfor %}
         </tbody>
     </table>
+    <div class="batch-bar" id="batch-bar" style="display:none;">
+        <span id="batch-count">0 seleccionados</span>
+        <div class="batch-actions">
+            <button type="submit" name="action" value="accepted" class="batch-btn accept">Aceptar</button>
+            <button type="submit" name="action" value="rejected" class="batch-btn reject">Rechazar</button>
+            <button type="submit" name="action" value="reviewed" class="batch-btn review">Revisado</button>
+        </div>
+    </div>
+    </form>
     <div class="pager">
         {% if papers_page.page > 1 %}
         {% set prev_link = '/papers?' ~ papers_query(filters, sort, sort_dir, papers_page.page - 1) %}
@@ -82,3 +94,31 @@
         {% endif %}
     </div>
 </section>
+<script>
+(function() {
+    var selectAll = document.getElementById('select-all');
+    var batchBar = document.getElementById('batch-bar');
+    var batchCount = document.getElementById('batch-count');
+    if (!selectAll || !batchBar) return;
+
+    function updateBar() {
+        var checked = document.querySelectorAll('.batch-check:checked');
+        if (checked.length > 0) {
+            batchBar.style.display = 'flex';
+            batchCount.textContent = checked.length + ' seleccionado' + (checked.length > 1 ? 's' : '');
+        } else {
+            batchBar.style.display = 'none';
+        }
+    }
+
+    selectAll.addEventListener('change', function() {
+        var boxes = document.querySelectorAll('.batch-check');
+        for (var i = 0; i < boxes.length; i++) boxes[i].checked = selectAll.checked;
+        updateBar();
+    });
+
+    document.addEventListener('change', function(e) {
+        if (e.target.classList.contains('batch-check')) updateBar();
+    });
+})();
+</script>

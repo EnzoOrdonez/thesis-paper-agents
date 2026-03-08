@@ -101,7 +101,7 @@ flowchart LR
 - Idempotent report generation and reduced file churn.
 - SQLite as primary storage with incremental upsert sync.
 - Structured `job_runs` and `runtime_locks` stored in SQLite.
-- Web monitor with dashboard, sortable paper table, paper detail, manual run controls and light/dark theme toggle.
+- Web monitor with dashboard, sortable paper table, batch accept/reject operations, paper detail, manual run controls and light/dark theme toggle.
 - Proxy-aware links for restricted academic sources.
 
 ## Quick Start
@@ -183,6 +183,7 @@ The web UI supports:
 - filtering by text, status, relevance, API, trust, category, year, DOI verification, Scopus and found date
 - sorting visible paper columns from the table header with ascending and descending controls, plus reset to the default ranking order
 - switching between light and dark mode with browser-local persistence
+- batch accept/reject/reviewed operations via multi-select checkboxes
 - editing paper status, notes and thesis categories
 - launching manual pipeline runs
 - opening direct or proxy-based academic links

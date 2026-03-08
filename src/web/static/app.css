@@ -544,6 +544,85 @@ button.primary:hover,
     border-color: var(--accent);
 }
 
+.batch-col {
+    width: 36px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.batch-col input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    accent-color: var(--accent);
+}
+
+.batch-row:has(.batch-check:checked) {
+    background: var(--accent-wash) !important;
+}
+
+.batch-bar {
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 12px 18px;
+    margin-top: 12px;
+    border-radius: 16px;
+    background: linear-gradient(180deg, var(--panel-strong), var(--panel));
+    border: 1px solid var(--line-strong);
+    box-shadow: 0 -4px 16px var(--shadow-strong);
+}
+
+.batch-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.batch-btn {
+    padding: 8px 14px;
+    border-radius: 12px;
+    font-size: .85rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.batch-btn.accept {
+    background: var(--success);
+    border-color: var(--success);
+    color: white;
+}
+
+.batch-btn.accept:hover {
+    background: #236840;
+    border-color: #236840;
+}
+
+.batch-btn.reject {
+    background: var(--danger);
+    border-color: var(--danger);
+    color: white;
+}
+
+.batch-btn.reject:hover {
+    background: #8a2a33;
+    border-color: #8a2a33;
+}
+
+.batch-btn.review {
+    background: var(--panel);
+    border-color: var(--line-strong);
+    color: var(--ink);
+}
+
+.batch-btn.review:hover {
+    background: var(--accent-wash);
+    border-color: var(--accent);
+    color: var(--accent-deep);
+}
+
 .pager {
     display: flex;
     justify-content: space-between;

@@ -481,6 +481,18 @@ def create_app() -> FastAPI:
             return _render(request, "_paper_review_panel.html", context)
         return RedirectResponse(url=f"/papers/{paper_id}", status_code=303)
 
+    @app.post("/papers/batch")
+    async def papers_batch(request: Request) -> RedirectResponse:
+        form = await request.form()
+        paper_ids = [str(item) for item in form.getlist("paper_ids") if item]
+        action = str(form.get("action") or "").strip()
+        if not paper_ids or action not in {"accepted", "rejected", "reviewed"}:
+            return RedirectResponse(url="/papers", status_code=303)
+        for paper_id in paper_ids:
+            update_paper_status(app.state.sqlite_path, paper_id, action, app.state.config)
+        refresh_json_export_from_sqlite(app.state.sqlite_path, app.state.json_path)
+        return RedirectResponse(url="/papers", status_code=303)
+
     @app.post("/jobs/run")
     async def run_job(request: Request) -> RedirectResponse:
         form = await request.form()
