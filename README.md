@@ -13,6 +13,8 @@
   <img src="https://img.shields.io/badge/SQLite-Primary_Storage-003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite Primary Storage">
   <img src="https://img.shields.io/badge/HTMX-Server_Rendered-3366CC?style=for-the-badge&logo=htmx&logoColor=white" alt="HTMX Server Rendered">
   <img src="https://img.shields.io/badge/Hybrid_RAG-Cloud_Documentation-F97316?style=for-the-badge" alt="Hybrid RAG Cloud Documentation">
+  <img src="https://img.shields.io/badge/Docker-Ready-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker Ready">
+  <img src="https://img.shields.io/badge/License-GPL_3.0-green?style=for-the-badge" alt="GPL 3.0">
 </p>
 
 <p align="center">
@@ -304,34 +306,40 @@ python run_all.py --phase search --api arxiv
 
 ```text
 thesis-paper-agents/
-|-- assets/
-|-- config/
-|-- data/
-|-- logs/
-|-- output/
+|-- .github/workflows/   # CI pipeline (GitHub Actions)
+|-- config/              # YAML configuration files
+|-- data/                # SQLite database, JSON exports, cache
+|-- logs/                # Runtime logs
+|-- output/              # Generated reports and thesis artifacts
 |-- src/
-|   |-- agents/
-|   |-- apis/
-|   |-- models/
-|   |-- utils/
-|   `-- web/
-|       |-- static/
-|       `-- templates/
+|   |-- agents/          # Pipeline orchestration
+|   |-- apis/            # Academic API clients
+|   |-- models/          # Pydantic data models
+|   |-- utils/           # Shared utilities
+|   `-- web/             # FastAPI web application
+|       |-- static/      # CSS and JS assets
+|       `-- templates/   # Jinja2 HTML templates
+|-- tests/               # pytest test suite
 |-- daily_researcher.py
 |-- paper_compiler.py
-|-- review_papers.py
-|-- export_thesis.py
 |-- run_all.py
-`-- web_monitor.py
+|-- web_monitor.py
+|-- Dockerfile
+|-- docker-compose.yml
+`-- pyproject.toml
 ```
 
 ## Current Strengths
 
 - strong noise reduction relative to raw academic search volume
 - robust deduplication and incremental processing
-- SQLite-centered architecture ready for long-term growth
+- SQLite-centered architecture with FTS5 full-text search
 - human-in-the-loop review preserved as a first-class part of the workflow
-- web monitoring layer without breaking the CLI workflow
+- responsive web UI with batch operations, dark mode and accessibility features
+- modern Python packaging (`pyproject.toml`) with type hints throughout
+- automated CI pipeline (GitHub Actions) with linting, formatting and tests
+- Docker support for reproducible deployment
+- cache auto-cleanup and resilient API rate limiting with exponential backoff
 
 ## Current Limits
 
@@ -343,9 +351,8 @@ thesis-paper-agents/
 ## Short Roadmap
 
 - measure precision and recall with a manually labeled gold set
-- add full-text search if the local database grows further
 - separate the bibliographic layer from the future semantic RAG corpus layer
-- expand the UI only if manual curation volume justifies it
+- add a learned reranker to complement the heuristic scoring
 
 ## Development
 

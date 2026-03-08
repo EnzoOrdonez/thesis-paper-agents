@@ -2,13 +2,12 @@
 
 from __future__ import annotations
 
-import json
 import sqlite3
 from pathlib import Path
 
 import pytest
 
-from src.models.paper import Paper, PaperStatus, RelevanceLevel
+from src.models.paper import Paper
 from src.utils.sqlite_store import (
     ensure_schema,
     get_sqlite_status,
