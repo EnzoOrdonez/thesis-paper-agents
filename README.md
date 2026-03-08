@@ -367,6 +367,8 @@ ruff format --check .
 mypy src/
 ```
 
+See [CONTRIBUTING.md](CONTRIBUTING.md) for more details on project conventions and how to add new API clients.
+
 ## Docker
 
 ```bash
