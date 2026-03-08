@@ -120,7 +120,8 @@ class OpenAlexAPI:
                     self._consecutive_failures = 0
                     self._last_error = ""
                     self._last_outcome = "success"
-                    return resp.json()
+                    data: dict[str, Any] = resp.json()
+                    return data
                 if resp.status_code == 429:
                     retry_after = resp.headers.get("Retry-After")
                     if retry_after:

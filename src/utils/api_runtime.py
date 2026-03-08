@@ -65,7 +65,8 @@ class APIRuntimeTracker:
         provider = providers.setdefault(api_name, {})
         for key, value in DEFAULT_PROVIDER_STATE.items():
             provider.setdefault(key, value)
-        return provider
+        result: dict[str, Any] = provider
+        return result
 
     def apply_to_client(self, api_name: str, client: Any) -> None:
         if hasattr(client, "restore_runtime_state"):

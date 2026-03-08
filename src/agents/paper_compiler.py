@@ -39,7 +39,8 @@ OPENALEX_SCOPUS_RUNTIME_KEY = "openalex_scopus"
 
 def load_config(path: str = "config/config.yaml") -> dict[str, Any]:
     with open(path, encoding="utf-8") as f:
-        return yaml.safe_load(f)
+        result: dict[str, Any] = yaml.safe_load(f)
+        return result
 
 
 def get_api_runtime_tracker(config: dict | None = None) -> APIRuntimeTracker:
@@ -214,7 +215,8 @@ def _resolve_sqlite_path(database_path: str, config: dict[str, Any] | None = Non
 
     sqlite_path = output_config.get("sqlite_database_path")
     if sqlite_path:
-        return sqlite_path
+        result: str = sqlite_path
+        return result
 
     return str(Path(database_path).with_suffix(".sqlite"))
 

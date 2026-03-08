@@ -14,14 +14,16 @@ def load_pending_gaps(path: str = "config/trusted_sources.yaml") -> list[dict]:
     """Load the list of pending foundational gaps."""
     with open(path, encoding="utf-8") as f:
         data = yaml.safe_load(f)
-    return data.get("pending_gaps", [])
+    result: list[dict] = data.get("pending_gaps", [])
+    return result
 
 
 def load_thesis_categories(path: str = "config/trusted_sources.yaml") -> list[str]:
     """Load the list of thesis categories."""
     with open(path, encoding="utf-8") as f:
         data = yaml.safe_load(f)
-    return data.get("thesis_categories", [])
+    result: list[str] = data.get("thesis_categories", [])
+    return result
 
 
 def analyze_category_coverage(papers: list[Paper]) -> dict[str, dict]:

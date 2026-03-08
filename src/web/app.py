@@ -435,7 +435,7 @@ def create_app() -> FastAPI:
         return RedirectResponse(url="/settings/proxy?message=Configuracion+de+proxy+guardada.", status_code=303)
 
     @app.post("/papers/{paper_id}/status", response_class=HTMLResponse)
-    async def paper_status(request: Request, paper_id: str, status: str = Form(...)) -> HTMLResponse:
+    async def paper_status(request: Request, paper_id: str, status: str = Form(...)) -> HTMLResponse | RedirectResponse:
         paper = update_paper_status(app.state.sqlite_path, paper_id, status, app.state.config)
         if not paper:
             raise HTTPException(status_code=404, detail="Paper not found")
@@ -450,7 +450,7 @@ def create_app() -> FastAPI:
         return RedirectResponse(url=f"/papers/{paper_id}", status_code=303)
 
     @app.post("/papers/{paper_id}/notes", response_class=HTMLResponse)
-    async def paper_notes(request: Request, paper_id: str, notes: str = Form(default="")) -> HTMLResponse:
+    async def paper_notes(request: Request, paper_id: str, notes: str = Form(default="")) -> HTMLResponse | RedirectResponse:
         paper = update_paper_notes(app.state.sqlite_path, paper_id, notes, app.state.config)
         if not paper:
             raise HTTPException(status_code=404, detail="Paper not found")
@@ -465,7 +465,7 @@ def create_app() -> FastAPI:
         return RedirectResponse(url=f"/papers/{paper_id}", status_code=303)
 
     @app.post("/papers/{paper_id}/categories", response_class=HTMLResponse)
-    async def paper_categories(request: Request, paper_id: str) -> HTMLResponse:
+    async def paper_categories(request: Request, paper_id: str) -> HTMLResponse | RedirectResponse:
         form = await request.form()
         categories = [str(item) for item in form.getlist("categories") if item]
         paper = update_paper_categories(app.state.sqlite_path, paper_id, categories, app.state.config)

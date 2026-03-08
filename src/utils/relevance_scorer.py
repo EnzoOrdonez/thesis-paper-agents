@@ -106,7 +106,8 @@ def _load_json(cache_key: tuple[str, int | None]) -> list[dict]:
     if modified_ns is None:
         return []
     with open(resolved_path, encoding="utf-8") as f:
-        return json.load(f)
+        result: list[dict] = json.load(f)
+        return result
 
 
 def _load_trusted_sources(path: str = "config/trusted_sources.yaml") -> dict[str, Any]:
@@ -119,7 +120,8 @@ def _load_app_config(path: str = "config/config.yaml") -> dict[str, Any]:
 
 def _load_keywords(path: str = "config/keywords.yaml") -> dict[str, list[str]]:
     data = _load_yaml(_cache_key(path))
-    return data.get("keyword_groups", {})
+    result: dict[str, list[str]] = data.get("keyword_groups", {})
+    return result
 
 
 def _load_existing_papers(path: str = "data/existing_papers.json") -> list[dict]:
@@ -128,7 +130,8 @@ def _load_existing_papers(path: str = "data/existing_papers.json") -> list[dict]
 
 def _load_pending_gaps(path: str = "config/trusted_sources.yaml") -> list[dict]:
     data = _load_yaml(_cache_key(path))
-    return data.get("pending_gaps", [])
+    result: list[dict] = data.get("pending_gaps", [])
+    return result
 
 
 def _normalize_text(text: str) -> str:
@@ -853,7 +856,8 @@ def check_gap_coverage(paper: Paper, gaps_path: str = "config/trusted_sources.ya
     for gap in gaps:
         gap_name = gap["name"]
         if _matches_gap_rule(paper, gap_name):
-            return gap_name
+            result: str = gap_name
+            return result
 
         if gap_name in FOUNDATIONAL_GAP_RULES:
             continue
@@ -863,9 +867,11 @@ def check_gap_coverage(paper: Paper, gaps_path: str = "config/trusted_sources.ya
             if len(words) <= 1:
                 continue
             if all(word in combined for word in words):
-                return gap_name
+                hint_result: str = gap_name
+                return hint_result
         gap_words = gap_name.lower().split()
         if len(gap_words) > 1 and all(word in combined for word in gap_words):
-            return gap_name
+            words_result: str = gap_name
+            return words_result
 
     return None

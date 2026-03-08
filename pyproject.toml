@@ -43,6 +43,8 @@ dev = [
     "pytest>=7.0",
     "ruff>=0.4.0",
     "mypy>=1.10",
+    "types-requests>=2.31.0",
+    "types-PyYAML>=6.0",
 ]
 
 [project.scripts]
@@ -73,7 +75,8 @@ indent-style = "space"
 python_version = "3.11"
 warn_return_any = true
 warn_unused_configs = true
-ignore_missing_imports = true
+ignore_missing_imports = false
+disallow_untyped_defs = false
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

@@ -112,7 +112,8 @@ class SemanticScholarAPI:
                 if response.status_code == 200:
                     self._consecutive_rate_limit_failures = 0
                     self._last_error = ""
-                    return response.json()
+                    data: dict[str, Any] = response.json()
+                    return data
                 if response.status_code == 429:
                     retry_after = response.headers.get("Retry-After")
                     if retry_after:

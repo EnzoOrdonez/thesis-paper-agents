@@ -189,10 +189,10 @@ def find_duplicates_in_list(papers: list[Paper]) -> list[tuple[int, int, float]]
             duplicates.append((pair[0], pair[1], 100.0))
             seen_pairs.add(pair)
 
-    for indices in title_blocks.values():
-        if len(indices) < 2:
+    for title_indices in title_blocks.values():
+        if len(title_indices) < 2:
             continue
-        for i, j in combinations(sorted(indices), 2):
+        for i, j in combinations(sorted(title_indices), 2):
             pair = (i, j)
             if pair in seen_pairs or pair in compared_pairs:
                 continue

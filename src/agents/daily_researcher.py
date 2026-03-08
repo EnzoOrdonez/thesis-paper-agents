@@ -178,14 +178,16 @@ def _filter_papers_for_query(query: str, papers: list[Paper]) -> list[Paper]:
 def load_config(path: str = "config/config.yaml") -> dict[str, Any]:
     """Load the main configuration file."""
     with open(path, encoding="utf-8") as f:
-        return yaml.safe_load(f)
+        result: dict[str, Any] = yaml.safe_load(f)
+        return result
 
 
 def load_keywords(path: str = "config/keywords.yaml") -> dict[str, list[str]]:
     """Load keyword groups for searching."""
     with open(path, encoding="utf-8") as f:
         data = yaml.safe_load(f)
-    return data.get("keyword_groups", {})
+    result: dict[str, list[str]] = data.get("keyword_groups", {})
+    return result
 
 
 def get_cache_path(config: dict) -> Path:
@@ -213,7 +215,8 @@ def load_cache(cache_dir: Path, cache_key: str) -> list[dict] | None:
         cached_time = datetime.fromisoformat(data["timestamp"])
         if datetime.now() - cached_time > timedelta(hours=24):
             return None
-        return data["results"]
+        results: list[dict] = data["results"]
+        return results
     except (json.JSONDecodeError, KeyError, ValueError):
         return None
 

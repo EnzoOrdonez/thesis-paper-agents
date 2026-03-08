@@ -6,7 +6,7 @@ import time
 from datetime import UTC, datetime
 from typing import Any
 
-import feedparser
+import feedparser  # type: ignore[import-untyped]
 import requests
 
 from src.models.paper import Paper

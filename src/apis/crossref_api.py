@@ -117,7 +117,8 @@ class CrossRefAPI:
                     self._consecutive_failures = 0
                     self._last_error = ""
                     self._last_outcome = "success"
-                    return resp.json()
+                    data: dict[str, Any] = resp.json()
+                    return data
                 if resp.status_code == 404:
                     logger.debug("CrossRef: not found at %s", url)
                     self._last_error = ""
