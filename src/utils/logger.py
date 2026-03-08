@@ -33,9 +33,7 @@ def setup_logger(name: str, log_dir: str = "logs", level: int = logging.DEBUG) -
 
     # File handler — DEBUG level
     today = datetime.now().strftime("%Y-%m-%d")
-    file_handler = logging.FileHandler(
-        os.path.join(log_dir, f"{today}.log"), encoding="utf-8"
-    )
+    file_handler = logging.FileHandler(os.path.join(log_dir, f"{today}.log"), encoding="utf-8")
     file_handler.setLevel(logging.DEBUG)
     file_handler.setFormatter(log_format)
     logger.addHandler(file_handler)

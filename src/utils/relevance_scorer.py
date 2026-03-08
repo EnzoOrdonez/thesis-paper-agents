@@ -22,7 +22,6 @@ import yaml
 
 from src.models.paper import Paper, RelevanceLevel
 
-
 FOUNDATIONAL_GAP_RULES: dict[str, dict[str, Any]] = {
     "ColBERT original": {
         "title_any": ["colbert"],
@@ -57,7 +56,14 @@ FOUNDATIONAL_GAP_RULES: dict[str, dict[str, Any]] = {
     },
     "Documentacion cloud como objeto de estudio": {
         "text_all": [["cloud", "documentation"]],
-        "text_any": ["technical documentation", "api documentation", "usability", "developer documentation", "documentation usability", "documentation complexity"],
+        "text_any": [
+            "technical documentation",
+            "api documentation",
+            "usability",
+            "developer documentation",
+            "documentation usability",
+            "documentation complexity",
+        ],
     },
     "RAGAS evaluation framework": {
         "title_any": ["ragas"],
@@ -263,25 +269,59 @@ def _genericity_penalty(paper: Paper) -> int:
     combined = f"{paper.title or ''} {paper.abstract or ''}".lower()
 
     off_topic_indicators = [
-        "medical", "clinical", "patient", "diagnosis", "healthcare",
-        "legal", "court", "jurisdiction", "statute",
-        "financial", "stock", "trading", "portfolio",
-        "biology", "genomic", "protein", "molecular",
-        "chemistry", "chemical", "reaction",
-        "agriculture", "crop", "soil",
-        "physics", "quantum", "particle",
+        "medical",
+        "clinical",
+        "patient",
+        "diagnosis",
+        "healthcare",
+        "legal",
+        "court",
+        "jurisdiction",
+        "statute",
+        "financial",
+        "stock",
+        "trading",
+        "portfolio",
+        "biology",
+        "genomic",
+        "protein",
+        "molecular",
+        "chemistry",
+        "chemical",
+        "reaction",
+        "agriculture",
+        "crop",
+        "soil",
+        "physics",
+        "quantum",
+        "particle",
     ]
 
     on_topic_core = [
-        "information retrieval", "natural language processing",
-        "text retrieval", "document retrieval", "passage retrieval",
-        "semantic search", "embedding", "vector search",
-        "question answering", "knowledge base",
-        "retrieval augmented", "rag system", "rag pipeline",
-        "language model", "transformer", "bert",
-        "chunking", "reranking", "re-ranking",
-        "bm25", "dense retrieval", "hybrid search",
-        "cloud documentation", "technical documentation",
+        "information retrieval",
+        "natural language processing",
+        "text retrieval",
+        "document retrieval",
+        "passage retrieval",
+        "semantic search",
+        "embedding",
+        "vector search",
+        "question answering",
+        "knowledge base",
+        "retrieval augmented",
+        "rag system",
+        "rag pipeline",
+        "language model",
+        "transformer",
+        "bert",
+        "chunking",
+        "reranking",
+        "re-ranking",
+        "bm25",
+        "dense retrieval",
+        "hybrid search",
+        "cloud documentation",
+        "technical documentation",
     ]
 
     off_topic_count = sum(1 for keyword in off_topic_indicators if keyword in combined)
@@ -295,7 +335,6 @@ def _genericity_penalty(paper: Paper) -> int:
     return 0
 
 
-
 def _methodology_focus_bonus(paper: Paper) -> int:
     """Reward generalizable retrieval/system papers over domain-only applications."""
     combined = f"{paper.title or ''} {paper.abstract or ''}".lower()
@@ -303,22 +342,61 @@ def _methodology_focus_bonus(paper: Paper) -> int:
     bonus = 0
 
     retrieval_method_signals = [
-        "retriever", "retrievers", "retrieval pipeline", "retrieval system",
-        "reranker", "reranking", "re-ranking", "similarity metric", "similarity metrics",
-        "index", "indexing", "vector database", "faiss", "milvus", "pgvector",
-        "bm25", "dense retrieval", "dense passage retrieval", "colbert",
-        "cross-encoder", "late interaction", "approximate nearest neighbor",
-        "chunking", "segmentation", "embedding model", "embedding models",
+        "retriever",
+        "retrievers",
+        "retrieval pipeline",
+        "retrieval system",
+        "reranker",
+        "reranking",
+        "re-ranking",
+        "similarity metric",
+        "similarity metrics",
+        "index",
+        "indexing",
+        "vector database",
+        "faiss",
+        "milvus",
+        "pgvector",
+        "bm25",
+        "dense retrieval",
+        "dense passage retrieval",
+        "colbert",
+        "cross-encoder",
+        "late interaction",
+        "approximate nearest neighbor",
+        "chunking",
+        "segmentation",
+        "embedding model",
+        "embedding models",
     ]
     evaluation_signals = [
-        "empirical evaluation", "systematic evaluation", "benchmark", "benchmarks",
-        "comparison", "comparative", "ablation", "effect size", "anova",
-        "ndcg", "mrr", "recall", "precision", "latency", "cost",
+        "empirical evaluation",
+        "systematic evaluation",
+        "benchmark",
+        "benchmarks",
+        "comparison",
+        "comparative",
+        "ablation",
+        "effect size",
+        "anova",
+        "ndcg",
+        "mrr",
+        "recall",
+        "precision",
+        "latency",
+        "cost",
     ]
     cloud_doc_signals = [
-        "technical documentation", "api documentation", "developer documentation",
-        "cloud documentation", "documentation retrieval", "knowledge base",
-        "aws", "azure", "gcp", "google cloud",
+        "technical documentation",
+        "api documentation",
+        "developer documentation",
+        "cloud documentation",
+        "documentation retrieval",
+        "knowledge base",
+        "aws",
+        "azure",
+        "gcp",
+        "google cloud",
     ]
 
     retrieval_hits = sum(1 for signal in retrieval_method_signals if signal in combined)
@@ -342,7 +420,9 @@ def _methodology_focus_bonus(paper: Paper) -> int:
     elif cloud_hits >= 1:
         bonus += 6
 
-    if (retrieval_hits >= 1 or cloud_hits >= 1) and any(signal in title_text for signal in ["benchmark", "evaluation", "comparison", "survey"]):
+    if (retrieval_hits >= 1 or cloud_hits >= 1) and any(
+        signal in title_text for signal in ["benchmark", "evaluation", "comparison", "survey"]
+    ):
         bonus += 2
 
     return bonus
@@ -354,29 +434,66 @@ def _applied_domain_penalty(paper: Paper) -> int:
 
     domain_groups = {
         "medical": [
-            "medical", "clinical", "healthcare", "patient", "pubmedqa", "medqa",
-            "medmcqa", "biomedical", "hospital",
+            "medical",
+            "clinical",
+            "healthcare",
+            "patient",
+            "pubmedqa",
+            "medqa",
+            "medmcqa",
+            "biomedical",
+            "hospital",
         ],
         "telecom": [
-            "6g", "wireless", "radio frequency", "rf sensing", "spectrogram",
-            "radar", "communications intelligence", "telecommunication",
+            "6g",
+            "wireless",
+            "radio frequency",
+            "rf sensing",
+            "spectrogram",
+            "radar",
+            "communications intelligence",
+            "telecommunication",
         ],
         "finance": [
-            "financial", "fintech", "stock", "trading", "portfolio", "compliance domain",
+            "financial",
+            "fintech",
+            "stock",
+            "trading",
+            "portfolio",
+            "compliance domain",
         ],
         "legal": [
-            "legal", "court", "jurisdiction", "regulation", "statute",
+            "legal",
+            "court",
+            "jurisdiction",
+            "regulation",
+            "statute",
         ],
         "science": [
-            "materials science", "graphene", "molecular", "genomic", "protein", "chemistry",
+            "materials science",
+            "graphene",
+            "molecular",
+            "genomic",
+            "protein",
+            "chemistry",
         ],
         "sensor": [
-            "eeg", "wearable", "sensor data", "disaster impact", "museum exhibition",
+            "eeg",
+            "wearable",
+            "sensor data",
+            "disaster impact",
+            "museum exhibition",
         ],
     }
     thesis_anchor_signals = [
-        "technical documentation", "api documentation", "developer documentation",
-        "cloud documentation", "aws", "azure", "gcp", "google cloud",
+        "technical documentation",
+        "api documentation",
+        "developer documentation",
+        "cloud documentation",
+        "aws",
+        "azure",
+        "gcp",
+        "google cloud",
     ]
 
     domain_hits = sum(1 for signals in domain_groups.values() if any(signal in combined for signal in signals))
@@ -398,6 +515,7 @@ def _applied_domain_penalty(paper: Paper) -> int:
         penalty -= 3
 
     return -max(penalty, 0)
+
 
 def _existing_paper_bonus(paper: Paper) -> int:
     """Give bonus if paper cites or references papers already in our thesis."""
@@ -433,15 +551,33 @@ def _thesis_alignment_bonus(paper: Paper) -> int:
     bonus = 0
 
     hybrid_signals = [
-        "hybrid retrieval", "hybrid search", "bm25", "lexical", "sparse", "dense retrieval",
-        "semantic search", "late interaction",
+        "hybrid retrieval",
+        "hybrid search",
+        "bm25",
+        "lexical",
+        "sparse",
+        "dense retrieval",
+        "semantic search",
+        "late interaction",
     ]
     cloud_doc_signals = [
-        "technical documentation", "api documentation", "developer documentation", "cloud documentation",
-        "aws", "azure", "gcp", "google cloud",
+        "technical documentation",
+        "api documentation",
+        "developer documentation",
+        "cloud documentation",
+        "aws",
+        "azure",
+        "gcp",
+        "google cloud",
     ]
     comparison_signals = [
-        "benchmark", "comparison", "compare", "versus", "vs", "ablation", "evaluation",
+        "benchmark",
+        "comparison",
+        "compare",
+        "versus",
+        "vs",
+        "ablation",
+        "evaluation",
     ]
 
     hybrid_matches = sum(1 for signal in hybrid_signals if signal in combined)
@@ -463,7 +599,6 @@ def is_from_trusted_source(paper: Paper, sources: dict | None = None) -> bool:
     return source_tier(paper, sources) > 0 or paper.source_api == "arxiv"
 
 
-
 def ranking_score(paper: Paper, config: dict[str, Any] | None = None) -> int:
     """Return a trust-adjusted ranking score for ordering reports and top lists."""
     general_config = (config or _load_app_config()).get("general", {})
@@ -477,6 +612,8 @@ def ranking_score(paper: Paper, config: dict[str, Any] | None = None) -> int:
         score -= general_config.get("missing_venue_ranking_penalty", 2)
 
     return max(score, 0)
+
+
 def score_paper(paper: Paper) -> Paper:
     """Calculate relevance score for a paper and update it in-place."""
     sources = _load_trusted_sources()
@@ -575,10 +712,18 @@ def suggest_categories(paper: Paper) -> list[str]:
     has_rag_title = any(indicator in title_text for indicator in rag_indicators)
 
     hybrid_indicators = [
-        "hybrid retrieval", "hybrid search", "hybrid rag",
-        "bm25 and semantic", "bm25 and dense", "bm25 + dense",
-        "bm25 + semantic", "lexical and semantic", "lexical and dense",
-        "sparse and dense", "hybrid model", "hybrid approach",
+        "hybrid retrieval",
+        "hybrid search",
+        "hybrid rag",
+        "bm25 and semantic",
+        "bm25 and dense",
+        "bm25 + dense",
+        "bm25 + semantic",
+        "lexical and semantic",
+        "lexical and dense",
+        "sparse and dense",
+        "hybrid model",
+        "hybrid approach",
     ]
     has_hybrid = any(indicator in combined_text for indicator in hybrid_indicators)
 
@@ -595,15 +740,25 @@ def suggest_categories(paper: Paper) -> list[str]:
                 category_scores.setdefault("Estrategias de Recuperacion", 1.0)
 
     normalization_keywords = [
-        "terminology normalization", "term normalization", "acronym normalization",
-        "preprocessing pipeline", "text preprocessing", "text normalization",
+        "terminology normalization",
+        "term normalization",
+        "acronym normalization",
+        "preprocessing pipeline",
+        "text preprocessing",
+        "text normalization",
     ]
     if any(keyword in combined_text for keyword in normalization_keywords):
         category_scores.setdefault("Normalizacion/Preprocesamiento", 2.0)
 
     metric_keywords = [
-        "ndcg", "mrr", "recall@", "precision@", "f1 score",
-        "exact match", "mean reciprocal rank", "evaluation metric",
+        "ndcg",
+        "mrr",
+        "recall@",
+        "precision@",
+        "f1 score",
+        "exact match",
+        "mean reciprocal rank",
+        "evaluation metric",
     ]
     if any(keyword in combined_text for keyword in metric_keywords):
         category_scores.setdefault("Metricas de evaluacion", 2.0)
@@ -620,7 +775,10 @@ def suggest_categories(paper: Paper) -> list[str]:
             return ["Re-ranking"]
         if any(keyword in combined_text for keyword in ["embedding", "vector representation", "sentence embedding"]):
             return ["Modelos de Embedding"]
-        if any(keyword in combined_text for keyword in ["vector database", "faiss", "chromadb", "pinecone", "nearest neighbor"]):
+        if any(
+            keyword in combined_text
+            for keyword in ["vector database", "faiss", "chromadb", "pinecone", "nearest neighbor"]
+        ):
             return ["Vector Databases"]
         if any(keyword in combined_text for keyword in ["chunk", "segment", "split"]):
             return ["Segmentacion/Chunking"]
@@ -711,6 +869,3 @@ def check_gap_coverage(paper: Paper, gaps_path: str = "config/trusted_sources.ya
             return gap_name
 
     return None
-
-
-

@@ -9,7 +9,6 @@ from typing import Any
 
 from src.models.paper import Paper
 
-
 SCHEMA_STATEMENTS = [
     """
     CREATE TABLE IF NOT EXISTS papers (
@@ -144,17 +143,11 @@ def _metadata_value(conn: sqlite3.Connection, key: str) -> str | None:
 
 
 def _ensure_papers_columns(conn: sqlite3.Connection) -> None:
-    tables = {
-        row[0]
-        for row in conn.execute("SELECT name FROM sqlite_master WHERE type = 'table'")
-    }
+    tables = {row[0] for row in conn.execute("SELECT name FROM sqlite_master WHERE type = 'table'")}
     if "papers" not in tables:
         return
 
-    existing_columns = {
-        row[1]
-        for row in conn.execute("PRAGMA table_info(papers)")
-    }
+    existing_columns = {row[1] for row in conn.execute("PRAGMA table_info(papers)")}
     for column_name, ddl in REQUIRED_PAPERS_COLUMNS.items():
         if column_name not in existing_columns:
             conn.execute(f"ALTER TABLE papers ADD COLUMN {column_name} {ddl}")
@@ -181,10 +174,7 @@ def sync_papers_to_sqlite(papers: list[Paper], path: str, *, force: bool = False
                 conn.execute(statement)
             _ensure_papers_columns(conn)
 
-        existing_rows = {
-            str(row[0]): str(row[1] or "")
-            for row in conn.execute("SELECT id, row_hash FROM papers")
-        }
+        existing_rows = {str(row[0]): str(row[1] or "") for row in conn.execute("SELECT id, row_hash FROM papers")}
 
         incoming_ids: set[str] = set()
         records_to_upsert: list[tuple[Any, ...]] = []
@@ -279,10 +269,7 @@ def sync_papers_to_sqlite(papers: list[Paper], path: str, *, force: bool = False
 def load_papers_from_sqlite(path: str) -> list[Paper]:
     conn = _connect(path)
     try:
-        tables = {
-            row[0]
-            for row in conn.execute("SELECT name FROM sqlite_master WHERE type = 'table'")
-        }
+        tables = {row[0] for row in conn.execute("SELECT name FROM sqlite_master WHERE type = 'table'")}
         if "papers" not in tables:
             return []
 
@@ -319,10 +306,7 @@ def get_sqlite_status(path: str) -> dict[str, Any]:
         last_upserted_count = 0
         last_deleted_count = 0
 
-        tables = {
-            row[0]
-            for row in conn.execute("SELECT name FROM sqlite_master WHERE type = 'table'")
-        }
+        tables = {row[0] for row in conn.execute("SELECT name FROM sqlite_master WHERE type = 'table'")}
         if "papers" in tables:
             paper_count = int(conn.execute("SELECT COUNT(*) FROM papers").fetchone()[0])
             index_count = int(

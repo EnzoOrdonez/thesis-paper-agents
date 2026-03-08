@@ -12,17 +12,17 @@ Usage:
 import argparse
 import json
 import sys
-from collections import Counter, defaultdict
+from collections import defaultdict
 from datetime import date
 from pathlib import Path
-from typing import Any
 
 sys.path.insert(0, str(Path(__file__).parent))
 
 import yaml
 from rich.console import Console
 
-from src.agents.paper_compiler import load_config, load_database as load_papers_database
+from src.agents.paper_compiler import load_config
+from src.agents.paper_compiler import load_database as load_papers_database
 from src.models.paper import Paper, PaperStatus, RelevanceLevel
 from src.utils.reference_formatter import format_apa7
 
@@ -35,7 +35,6 @@ OUTPUT_DIR = Path("output/thesis")
 
 def load_database() -> list[Paper]:
     return load_papers_database(DB_PATH)
-
 
 
 def load_categories() -> list[str]:
@@ -121,6 +120,7 @@ def _infer_relevance_to_thesis(paper: Paper) -> str:
 
 # Exporters
 
+
 def export_estado_del_arte_tabla(papers: list[Paper], category_filter: str | None = None) -> None:
     """Generate state-of-the-art table in Markdown."""
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -135,7 +135,7 @@ def export_estado_del_arte_tabla(papers: list[Paper], category_filter: str | Non
             by_category[cat].append(p)
 
     lines = [
-        f"# Tabla de Estado del Arte",
+        "# Tabla de Estado del Arte",
         f"_Generado: {today}_",
         "",
     ]
@@ -194,7 +194,6 @@ def export_literature_map(papers: list[Paper]) -> None:
     for i, cat in enumerate(sorted(by_category.keys())):
         cat_id = f"CAT{i}"
         cat_ids[cat] = cat_id
-        safe_cat = cat.replace("/", "_").replace(" ", "_")
         lines.append(f'    {cat_id}["{cat}<br/>({len(by_category[cat])} papers)"]')
 
     lines.append("")
@@ -246,7 +245,7 @@ def export_estado_del_arte_borrador(papers: list[Paper], category_filter: str | 
             by_category[cat].append(p)
 
     lines = [
-        f"# Borrador de Estado del Arte",
+        "# Borrador de Estado del Arte",
         f"_Generado: {today} - BORRADOR para revision del autor_",
         "",
         "> **Nota:** Este es un borrador generado automaticamente. ",
@@ -260,7 +259,7 @@ def export_estado_del_arte_borrador(papers: list[Paper], category_filter: str | 
             continue
 
         cat_papers = by_category[cat]
-        cat_papers.sort(key=lambda p: (p.year or 0), reverse=True)
+        cat_papers.sort(key=lambda p: p.year or 0, reverse=True)
 
         lines.append(f"## {cat}")
         lines.append("")
@@ -285,8 +284,7 @@ def export_estado_del_arte_borrador(papers: list[Paper], category_filter: str | 
                 cite = _author_cite(p)
                 approach = _infer_approach(p)
                 para_parts.append(
-                    f"{cite} presenta un enfoque de {approach.lower()} "
-                    f"que contribuye al entendimiento actual del tema."
+                    f"{cite} presenta un enfoque de {approach.lower()} que contribuye al entendimiento actual del tema."
                 )
 
             # Closing
@@ -352,7 +350,8 @@ def export_for_rag(papers: list[Paper]) -> None:
 
     # Include accepted and high-relevance new papers
     eligible = [
-        p for p in papers
+        p
+        for p in papers
         if p.status == PaperStatus.ACCEPTED
         or (p.status == PaperStatus.NEW and p.relevance_level == RelevanceLevel.HIGH)
     ]
@@ -398,7 +397,7 @@ def main() -> None:
     if args.only_accepted:
         papers = [p for p in papers if p.status == PaperStatus.ACCEPTED]
 
-    console.print(f"\n[bold cyan]===== Exportacion para Tesis =====[/bold cyan]")
+    console.print("\n[bold cyan]===== Exportacion para Tesis =====[/bold cyan]")
     console.print(f"Papers en seleccion: {len(papers)}\n")
 
     if args.for_rag:

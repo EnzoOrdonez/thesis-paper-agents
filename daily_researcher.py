@@ -62,8 +62,9 @@ def main() -> None:
 
     if args.schedule:
         try:
-            import schedule
             import time
+
+            import schedule
             from rich.console import Console
 
             console = Console()

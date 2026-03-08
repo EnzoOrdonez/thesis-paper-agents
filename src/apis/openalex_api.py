@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import os
 import time
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from typing import Any
 
 import requests
@@ -61,7 +61,7 @@ class OpenAlexAPI:
     def _disabled_until_iso(self) -> str | None:
         if not self._disabled_until or time.time() >= self._disabled_until:
             return None
-        return datetime.fromtimestamp(self._disabled_until, tz=timezone.utc).isoformat()
+        return datetime.fromtimestamp(self._disabled_until, tz=UTC).isoformat()
 
     def restore_runtime_state(self, state: dict[str, Any]) -> None:
         """Restore persisted cooldown metadata from a previous run."""
@@ -221,7 +221,7 @@ class OpenAlexAPI:
         """Fetch a single paper by DOI."""
         clean_doi = doi.strip()
         if clean_doi.startswith("https://doi.org/"):
-            clean_doi = clean_doi[len("https://doi.org/"):]
+            clean_doi = clean_doi[len("https://doi.org/") :]
 
         params: dict[str, Any] = {"filter": f"doi:{clean_doi}"}
         data = self._get("/works", params)
@@ -244,7 +244,7 @@ class OpenAlexAPI:
 
         doi = data.get("doi")
         if doi and doi.startswith("https://doi.org/"):
-            doi = doi[len("https://doi.org/"):]
+            doi = doi[len("https://doi.org/") :]
 
         primary = data.get("primary_location") or {}
         source = primary.get("source") or {}

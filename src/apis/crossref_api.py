@@ -3,8 +3,9 @@
 from __future__ import annotations
 
 import os
+import re
 import time
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from typing import Any
 
 import requests
@@ -61,7 +62,7 @@ class CrossRefAPI:
     def _disabled_until_iso(self) -> str | None:
         if not self._disabled_until or time.time() >= self._disabled_until:
             return None
-        return datetime.fromtimestamp(self._disabled_until, tz=timezone.utc).isoformat()
+        return datetime.fromtimestamp(self._disabled_until, tz=UTC).isoformat()
 
     def restore_runtime_state(self, state: dict[str, Any]) -> None:
         """Restore persisted cooldown metadata from a previous run."""
@@ -154,9 +155,9 @@ class CrossRefAPI:
         """Verify that a DOI is valid and resolves in CrossRef."""
         clean_doi = doi.strip()
         if clean_doi.startswith("https://doi.org/"):
-            clean_doi = clean_doi[len("https://doi.org/"):]
+            clean_doi = clean_doi[len("https://doi.org/") :]
         elif clean_doi.startswith("http://doi.org/"):
-            clean_doi = clean_doi[len("http://doi.org/"):]
+            clean_doi = clean_doi[len("http://doi.org/") :]
 
         url = f"{self.base_url}/works/{clean_doi}"
         data = self._get(url)
@@ -166,9 +167,9 @@ class CrossRefAPI:
         """Fetch paper metadata from CrossRef by DOI."""
         clean_doi = doi.strip()
         if clean_doi.startswith("https://doi.org/"):
-            clean_doi = clean_doi[len("https://doi.org/"):]
+            clean_doi = clean_doi[len("https://doi.org/") :]
         elif clean_doi.startswith("http://doi.org/"):
-            clean_doi = clean_doi[len("http://doi.org/"):]
+            clean_doi = clean_doi[len("http://doi.org/") :]
 
         url = f"{self.base_url}/works/{clean_doi}"
         data = self._get(url)
@@ -251,7 +252,6 @@ class CrossRefAPI:
 
         abstract = data.get("abstract")
         if abstract:
-            import re
             abstract = re.sub(r"<[^>]+>", "", abstract).strip()
 
         return Paper(

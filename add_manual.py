@@ -7,7 +7,6 @@ Usage:
 """
 
 import argparse
-import json
 import sys
 from pathlib import Path
 
@@ -15,6 +14,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 
 from rich.console import Console
 
+from src.agents.paper_compiler import load_config, load_database, save_database
 from src.apis.crossref_api import CrossRefAPI
 from src.apis.openalex_api import OpenAlexAPI
 from src.apis.semantic_scholar import SemanticScholarAPI
@@ -23,7 +23,6 @@ from src.utils.duplicate_detector import is_duplicate_by_doi, is_duplicate_by_ti
 from src.utils.logger import setup_logger
 from src.utils.reference_formatter import format_apa7, format_bibtex
 from src.utils.relevance_scorer import check_gap_coverage, score_paper, suggest_categories
-from src.agents.paper_compiler import load_config, load_database, save_database
 
 logger = setup_logger("add_manual")
 console = Console()
@@ -145,7 +144,7 @@ def main() -> None:
     papers.append(paper)
     save_database(papers, db_path)
 
-    console.print(f"\n[bold green]Paper added successfully![/bold green]")
+    console.print("\n[bold green]Paper added successfully![/bold green]")
     console.print(f"Title: {paper.title}")
     console.print(f"Authors: {', '.join(paper.authors[:5])}")
     console.print(f"Year: {paper.year}")

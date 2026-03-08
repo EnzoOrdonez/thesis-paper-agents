@@ -10,7 +10,6 @@ from typing import Any
 
 from src.models.paper import Paper, PaperStatus
 
-
 JOB_AND_LOCK_SCHEMA = [
     """
     CREATE TABLE IF NOT EXISTS job_runs (
@@ -218,6 +217,7 @@ def _write_single_paper(conn: sqlite3.Connection, paper: Paper, config: dict[str
         ),
     )
 
+
 def _parse_bool_filter(value: str | bool | None) -> int | None:
     if value is None or value == "":
         return None
@@ -420,8 +420,12 @@ def get_dashboard_metrics(path: str) -> dict[str, Any]:
     try:
         total_papers = int(conn.execute("SELECT COUNT(*) FROM papers").fetchone()[0])
         status_rows = conn.execute("SELECT status, COUNT(*) AS count FROM papers GROUP BY status").fetchall()
-        relevance_rows = conn.execute("SELECT relevance_level, COUNT(*) AS count FROM papers GROUP BY relevance_level").fetchall()
-        source_rows = conn.execute("SELECT source_api, COUNT(*) AS count FROM papers WHERE source_api IS NOT NULL GROUP BY source_api").fetchall()
+        relevance_rows = conn.execute(
+            "SELECT relevance_level, COUNT(*) AS count FROM papers GROUP BY relevance_level"
+        ).fetchall()
+        source_rows = conn.execute(
+            "SELECT source_api, COUNT(*) AS count FROM papers WHERE source_api IS NOT NULL GROUP BY source_api"
+        ).fetchall()
         trust_rows = conn.execute(
             "SELECT COALESCE(source_trusted, 0) AS trusted, COUNT(*) AS count FROM papers GROUP BY COALESCE(source_trusted, 0)"
         ).fetchall()
@@ -452,8 +456,7 @@ def get_dashboard_metrics(path: str) -> dict[str, Any]:
         "relevance_counts": {str(row["relevance_level"]): int(row["count"]) for row in relevance_rows},
         "source_counts": {str(row["source_api"]): int(row["count"]) for row in source_rows if row["source_api"]},
         "trust_counts": {
-            ("trusted" if int(row["trusted"] or 0) else "provisional"): int(row["count"])
-            for row in trust_rows
+            ("trusted" if int(row["trusted"] or 0) else "provisional"): int(row["count"]) for row in trust_rows
         },
         "year_counts": {int(row["year"]): int(row["count"]) for row in year_rows if row["year"] is not None},
         "category_counts": dict(sorted(category_counts.items(), key=lambda item: item[1], reverse=True)),
@@ -495,7 +498,9 @@ def update_paper_notes(path: str, paper_id: str, notes: str | None, config: dict
         conn.close()
 
 
-def update_paper_categories(path: str, paper_id: str, categories: list[str], config: dict[str, Any]) -> dict[str, Any] | None:
+def update_paper_categories(
+    path: str, paper_id: str, categories: list[str], config: dict[str, Any]
+) -> dict[str, Any] | None:
     conn = _connect(path)
     try:
         row = conn.execute("SELECT raw_json FROM papers WHERE id = ?", (paper_id,)).fetchone()
@@ -509,6 +514,7 @@ def update_paper_categories(path: str, paper_id: str, categories: list[str], con
         return get_paper_by_id(path, paper_id, config)
     finally:
         conn.close()
+
 
 def create_job_run(
     path: str,

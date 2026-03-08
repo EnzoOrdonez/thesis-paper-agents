@@ -1,19 +1,19 @@
-﻿"""Duplicate detection for academic papers using DOI and fuzzy title matching."""
+"""Duplicate detection for academic papers using DOI and fuzzy title matching."""
 
 from __future__ import annotations
 
 import json
 import re
 from collections import defaultdict
+from collections.abc import Iterable, Mapping
 from dataclasses import dataclass, field
 from itertools import combinations
 from pathlib import Path
-from typing import Any, Iterable, Mapping
+from typing import Any
 
 from rapidfuzz import fuzz
 
 from src.models.paper import Paper
-
 
 TITLE_SIMILARITY_THRESHOLD = 90
 TITLE_BLOCK_PREFIX_LENGTH = 18

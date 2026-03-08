@@ -17,12 +17,17 @@ from rich.table import Table
 from src.apis.crossref_api import CrossRefAPI
 from src.apis.openalex_api import OpenAlexAPI
 from src.models.paper import Paper, PaperStatus, RelevanceLevel
-from src.utils.duplicate_detector import add_to_dedup_index, build_dedup_index, find_duplicates_in_list, has_duplicate_in_index
+from src.utils.api_runtime import APIRuntimeTracker
+from src.utils.duplicate_detector import (
+    add_to_dedup_index,
+    build_dedup_index,
+    find_duplicates_in_list,
+    has_duplicate_in_index,
+)
 from src.utils.gap_analyzer import generate_gap_report
 from src.utils.logger import setup_logger
 from src.utils.reference_formatter import format_apa7, format_bibtex
 from src.utils.relevance_scorer import check_gap_coverage, is_from_trusted_source, ranking_score, suggest_categories
-from src.utils.api_runtime import APIRuntimeTracker
 from src.utils.sqlite_store import get_sqlite_status, load_papers_from_sqlite, sync_papers_to_sqlite
 
 logger = setup_logger("paper_compiler")
@@ -35,7 +40,6 @@ OPENALEX_SCOPUS_RUNTIME_KEY = "openalex_scopus"
 def load_config(path: str = "config/config.yaml") -> dict[str, Any]:
     with open(path, encoding="utf-8") as f:
         return yaml.safe_load(f)
-
 
 
 def get_api_runtime_tracker(config: dict | None = None) -> APIRuntimeTracker:
@@ -134,6 +138,7 @@ def show_metadata_status(config: dict) -> None:
         )
 
     console.print(table)
+
 
 def load_database(path: str, config: dict[str, Any] | None = None) -> list[Paper]:
     """Load papers from the configured persistence layer, preferring SQLite when available."""
@@ -295,6 +300,7 @@ def show_sqlite_status(config: dict) -> None:
     console.print(f"Last changes: {status['last_upserted_count']} upserted, {status['last_deleted_count']} deleted")
     console.print(f"Size: {size_mb:.2f} MB")
 
+
 def load_import_manifest(path: str) -> dict[str, dict[str, int]]:
     """Load the incremental import manifest for daily reports."""
     manifest_path = Path(path)
@@ -354,6 +360,7 @@ def _report_fingerprint(report_file: Path) -> dict[str, int]:
         "size": int(stat.st_size),
         "mtime_ns": int(stat.st_mtime_ns),
     }
+
 
 def ensure_source_trust(papers: list[Paper], db_path: str | None = None) -> int:
     """Backfill source trust metadata for older records when missing."""
@@ -638,7 +645,9 @@ def validate_dois(config: dict) -> dict[str, int | bool]:
         save_database(papers, db_path)
 
     remaining = max(0, len(pending) - processed)
-    console.print(f"[green]Processed DOI batch: {processed}/{len(to_verify)}[/green] (pending after batch: {remaining})")
+    console.print(
+        f"[green]Processed DOI batch: {processed}/{len(to_verify)}[/green] (pending after batch: {remaining})"
+    )
     console.print(f"[green]Verified: {verified}[/green], [red]Failed: {failed}[/red]")
     return {
         "doi_processed": processed,
@@ -691,7 +700,9 @@ def check_scopus_indexing(config: dict) -> dict[str, int | bool]:
 
     for paper in to_check:
         if openalex.is_temporarily_disabled():
-            console.print("[yellow]OpenAlex entered cooldown during the batch. Remaining Scopus checks stay pending.[/yellow]")
+            console.print(
+                "[yellow]OpenAlex entered cooldown during the batch. Remaining Scopus checks stay pending.[/yellow]"
+            )
             break
 
         try:
@@ -717,7 +728,9 @@ def check_scopus_indexing(config: dict) -> dict[str, int | bool]:
 
     remaining = max(0, len(pending) - processed)
     denominator = processed
-    console.print(f"[green]Processed Scopus batch: {processed}/{len(to_check)}[/green] (pending after batch: {remaining})")
+    console.print(
+        f"[green]Processed Scopus batch: {processed}/{len(to_check)}[/green] (pending after batch: {remaining})"
+    )
     console.print(f"[green]Scopus indexed: {indexed}/{denominator}[/green]")
     return {
         "scopus_processed": processed,
@@ -726,6 +739,7 @@ def check_scopus_indexing(config: dict) -> dict[str, int | bool]:
         "pending_after": remaining,
         "skipped": False,
     }
+
 
 def generate_references(config: dict) -> int:
     """Generate APA7 and BibTeX references for all papers."""
@@ -798,8 +812,18 @@ def remove_duplicates(config: dict) -> int:
     for i, j, _score in duplicates:
         left = papers[i]
         right = papers[j]
-        left_quality = (int(bool(left.doi)), int(bool(left.source_trusted)), left.citation_count, len(left.abstract or ""))
-        right_quality = (int(bool(right.doi)), int(bool(right.source_trusted)), right.citation_count, len(right.abstract or ""))
+        left_quality = (
+            int(bool(left.doi)),
+            int(bool(left.source_trusted)),
+            left.citation_count,
+            len(left.abstract or ""),
+        )
+        right_quality = (
+            int(bool(right.doi)),
+            int(bool(right.source_trusted)),
+            right.citation_count,
+            len(right.abstract or ""),
+        )
         if left_quality >= right_quality:
             indices_to_remove.add(j)
         else:
@@ -1226,4 +1250,3 @@ def compile_all(config: dict) -> None:
     )
 
     console.print("\n[bold green]Compilation complete![/bold green]")
-

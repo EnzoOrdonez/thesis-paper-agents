@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import time
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from typing import Any
 
 import feedparser
@@ -59,7 +59,7 @@ class ArxivAPI:
     def _disabled_until_iso(self) -> str | None:
         if not self._disabled_until or time.time() >= self._disabled_until:
             return None
-        return datetime.fromtimestamp(self._disabled_until, tz=timezone.utc).isoformat()
+        return datetime.fromtimestamp(self._disabled_until, tz=UTC).isoformat()
 
     def restore_runtime_state(self, state: dict[str, Any]) -> None:
         """Restore persisted cooldown metadata from a previous run."""
@@ -198,7 +198,7 @@ class ArxivAPI:
         arxiv_id = None
         for link in entry.get("links", []):
             href = link.get("href", "")
-            if "doi.org" in href:
+            if not doi and "doi.org" in href:
                 doi = href.replace("https://doi.org/", "").replace("http://doi.org/", "")
             if "arxiv.org/abs/" in href:
                 arxiv_id = href.split("/abs/")[-1]

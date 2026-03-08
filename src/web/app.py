@@ -64,7 +64,7 @@ def _write_proxy_override(proxy_config: dict[str, Any]) -> None:
     WEB_PROXY_SETTINGS_PATH.parent.mkdir(parents=True, exist_ok=True)
     payload = {"web": {"proxy": proxy_config}}
     with open(WEB_PROXY_SETTINGS_PATH, "w", encoding="utf-8") as f:
-        yaml.safe_dump(payload, f, sort_keys=False, allow_unicode=False)
+        yaml.safe_dump(payload, f, sort_keys=False, allow_unicode=True)
 
 
 def _reset_proxy_override() -> None:
@@ -74,7 +74,10 @@ def _reset_proxy_override() -> None:
 
 def _storage_paths(config: dict[str, Any]) -> tuple[str, str]:
     output = config.get("output", {})
-    sqlite_path = str(output.get("sqlite_database_path") or Path(output.get("database_path", "data/papers_database.json")).with_suffix(".sqlite"))
+    sqlite_path = str(
+        output.get("sqlite_database_path")
+        or Path(output.get("database_path", "data/papers_database.json")).with_suffix(".sqlite")
+    )
     json_path = str(output.get("database_path", "data/papers_database.json"))
     return sqlite_path, json_path
 
@@ -98,7 +101,10 @@ def _runtime_status_rows(config: dict[str, Any]) -> dict[str, list[dict[str, Any
         )
 
     metadata_rows: list[dict[str, Any]] = []
-    for label, key in (("CrossRef DOI validation", CROSSREF_RUNTIME_KEY), ("OpenAlex Scopus check", OPENALEX_SCOPUS_RUNTIME_KEY)):
+    for label, key in (
+        ("CrossRef DOI validation", CROSSREF_RUNTIME_KEY),
+        ("OpenAlex Scopus check", OPENALEX_SCOPUS_RUNTIME_KEY),
+    ):
         provider = tracker.get_provider(key)
         metadata_rows.append(
             {
@@ -212,7 +218,15 @@ def _build_proxy_rules_from_form(form: Any) -> list[dict[str, Any]]:
     target_templates = [str(item) for item in form.getlist("rule_target_template")]
     encode_targets = [str(item) for item in form.getlist("rule_encode_target")]
 
-    row_count = max(len(names), len(strategies), len(domains_blocks), len(provider_hosts), len(prefix_urls), len(target_templates), len(encode_targets))
+    row_count = max(
+        len(names),
+        len(strategies),
+        len(domains_blocks),
+        len(provider_hosts),
+        len(prefix_urls),
+        len(target_templates),
+        len(encode_targets),
+    )
     rules: list[dict[str, Any]] = []
 
     for index in range(row_count):
@@ -276,10 +290,15 @@ def create_app() -> FastAPI:
     @app.get("/", response_class=HTMLResponse)
     def dashboard(request: Request) -> HTMLResponse:
         metrics = get_dashboard_metrics(app.state.sqlite_path)
-        high_papers = [_paper_view_model(item, app.state.config) for item in list_recent_high_papers(app.state.sqlite_path, app.state.config, limit=5)]
+        high_papers = [
+            _paper_view_model(item, app.state.config)
+            for item in list_recent_high_papers(app.state.sqlite_path, app.state.config, limit=5)
+        ]
         jobs = list_job_runs(app.state.sqlite_path, limit=10)
         lock_info = get_runtime_lock(app.state.sqlite_path, PIPELINE_LOCK_KEY)
-        gap_status = analyze_gap_coverage(load_database(app.state.config["output"]["database_path"], config=app.state.config))
+        gap_status = analyze_gap_coverage(
+            load_database(app.state.config["output"]["database_path"], config=app.state.config)
+        )
         covered_gaps = sum(1 for gap in gap_status if gap["covered"])
         total_gaps = len(load_pending_gaps())
         return _render(

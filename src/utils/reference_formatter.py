@@ -3,8 +3,6 @@
 from __future__ import annotations
 
 import re
-import unicodedata
-from typing import Optional
 
 from src.models.paper import Paper
 
@@ -133,9 +131,9 @@ def format_bibtex(paper: Paper) -> str:
     if paper.doi:
         doi_val = paper.doi
         if doi_val.startswith("https://doi.org/"):
-            doi_val = doi_val[len("https://doi.org/"):]
+            doi_val = doi_val[len("https://doi.org/") :]
         elif doi_val.startswith("http://doi.org/"):
-            doi_val = doi_val[len("http://doi.org/"):]
+            doi_val = doi_val[len("http://doi.org/") :]
         lines.append(f"  doi = {{{doi_val}}},")
     if paper.url:
         lines.append(f"  url = {{{paper.url}}},")

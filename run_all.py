@@ -140,9 +140,7 @@ def log_auto_execution(
             f"[{now}] {'OK' if success else 'ERROR'} | "
             f"Phases: {','.join(phases)} | "
             f"Papers: {len(papers) if papers else 0} | "
-            f"Alta relevancia: {high_count}"
-            + (f" | Error: {error_msg}" if error_msg else "")
-            + "\n"
+            f"Alta relevancia: {high_count}" + (f" | Error: {error_msg}" if error_msg else "") + "\n"
         )
 
 
@@ -340,7 +338,9 @@ def main() -> None:
     parser.add_argument("--days", type=int, default=7, help="Days back to search (default: 7)")
     parser.add_argument("--dry-run", action="store_true", help="Run search without writing and skip write phases")
     parser.add_argument("--phase", action="append", choices=PHASE_ORDER, help="Pipeline phase to run. Can be repeated.")
-    parser.add_argument("--api", action="append", choices=get_enabled_search_apis(), help="Restrict search phase to one or more APIs")
+    parser.add_argument(
+        "--api", action="append", choices=get_enabled_search_apis(), help="Restrict search phase to one or more APIs"
+    )
     parser.add_argument("--search-only", action="store_true", help="Legacy alias for --phase search")
     parser.add_argument("--compile-only", action="store_true", help="Legacy alias for --phase compile --phase metadata")
     parser.add_argument("--metadata-only", action="store_true", help="Only run the metadata validation phase")

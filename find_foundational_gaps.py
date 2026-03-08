@@ -9,7 +9,6 @@ Usage:
     python find_foundational_gaps.py
 """
 
-import json
 import sys
 from datetime import date
 from pathlib import Path
@@ -19,14 +18,16 @@ sys.path.insert(0, str(Path(__file__).parent))
 from rich.console import Console
 from rich.table import Table
 
-from src.agents.paper_compiler import load_config, load_database as load_papers_database, save_database as save_papers_database
+from src.agents.paper_compiler import load_config
+from src.agents.paper_compiler import load_database as load_papers_database
+from src.agents.paper_compiler import save_database as save_papers_database
 from src.apis.crossref_api import CrossRefAPI
 from src.apis.semantic_scholar import SemanticScholarAPI
 from src.models.paper import Paper, RelevanceLevel
 from src.utils.duplicate_detector import is_duplicate_by_doi, is_duplicate_by_title
 from src.utils.logger import setup_logger
 from src.utils.reference_formatter import format_apa7, format_bibtex
-from src.utils.relevance_scorer import score_paper, suggest_categories
+from src.utils.relevance_scorer import score_paper
 
 logger = setup_logger("find_foundational_gaps")
 console = Console()
@@ -103,10 +104,8 @@ def load_database(path: str) -> list[Paper]:
     return load_papers_database(path)
 
 
-
 def save_database(papers: list[Paper], path: str) -> None:
     save_papers_database(papers, path)
-
 
 
 def fetch_by_doi(doi: str, ss: SemanticScholarAPI, cr: CrossRefAPI) -> Paper | None:
@@ -115,15 +114,15 @@ def fetch_by_doi(doi: str, ss: SemanticScholarAPI, cr: CrossRefAPI) -> Paper | N
 
     paper = ss.get_paper_by_doi(doi)
     if paper:
-        console.print(f"    [green]Encontrado en Semantic Scholar[/green]")
+        console.print("    [green]Encontrado en Semantic Scholar[/green]")
         return paper
 
     paper = cr.get_paper_by_doi(doi)
     if paper:
-        console.print(f"    [green]Encontrado en CrossRef[/green]")
+        console.print("    [green]Encontrado en CrossRef[/green]")
         return paper
 
-    console.print(f"    [yellow]No encontrado por DOI[/yellow]")
+    console.print("    [yellow]No encontrado por DOI[/yellow]")
     return None
 
 
@@ -133,7 +132,7 @@ def fetch_by_title(title: str, ss: SemanticScholarAPI, cr: CrossRefAPI) -> Paper
 
     paper = ss.get_paper_by_title(title)
     if paper:
-        console.print(f"    [green]Encontrado en Semantic Scholar[/green]")
+        console.print("    [green]Encontrado en Semantic Scholar[/green]")
         return paper
 
     results = cr.search(title, limit=5)
@@ -141,13 +140,13 @@ def fetch_by_title(title: str, ss: SemanticScholarAPI, cr: CrossRefAPI) -> Paper
         title_lower = title.lower().strip()
         for r in results:
             if r.title.lower().strip() == title_lower:
-                console.print(f"    [green]Encontrado en CrossRef (titulo exacto)[/green]")
+                console.print("    [green]Encontrado en CrossRef (titulo exacto)[/green]")
                 return r
         # Fallback: best match
-        console.print(f"    [green]Encontrado en CrossRef (mejor match)[/green]")
+        console.print("    [green]Encontrado en CrossRef (mejor match)[/green]")
         return results[0]
 
-    console.print(f"    [yellow]No encontrado por titulo[/yellow]")
+    console.print("    [yellow]No encontrado por titulo[/yellow]")
     return None
 
 
@@ -201,7 +200,7 @@ def main() -> None:
 
         # Check if already in DB
         if entry["doi"] and is_duplicate_by_doi(entry["doi"], papers):
-            console.print(f"  [dim]Ya existe en la base de datos (DOI match)[/dim]")
+            console.print("  [dim]Ya existe en la base de datos (DOI match)[/dim]")
             # Update gap coverage on existing paper
             for p in papers:
                 if p.doi and p.doi.lower() == entry["doi"].lower():
@@ -213,7 +212,7 @@ def main() -> None:
             continue
 
         if is_duplicate_by_title(entry["title"], papers):
-            console.print(f"  [dim]Ya existe en la base de datos (titulo match)[/dim]")
+            console.print("  [dim]Ya existe en la base de datos (titulo match)[/dim]")
             skipped.append(entry["name"])
             continue
 
@@ -247,7 +246,7 @@ def main() -> None:
             console.print(f"  [green]Agregado a la base de datos (score: {paper.relevance_score})[/green]")
         else:
             failed.append(entry["name"])
-            console.print(f"  [red]No se pudo encontrar[/red]")
+            console.print("  [red]No se pudo encontrar[/red]")
 
         console.print()
 

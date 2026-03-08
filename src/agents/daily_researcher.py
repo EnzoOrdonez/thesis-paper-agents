@@ -19,19 +19,51 @@ from src.apis.arxiv_api import ArxivAPI
 from src.apis.openalex_api import OpenAlexAPI
 from src.apis.semantic_scholar import SemanticScholarAPI
 from src.models.paper import Paper
-from src.utils.duplicate_detector import DedupIndex, add_to_dedup_index, has_duplicate_in_index, load_existing_dedup_index
-from src.utils.logger import setup_logger
 from src.utils.api_runtime import APIRuntimeTracker
-from src.utils.relevance_scorer import check_gap_coverage, is_from_trusted_source, ranking_score, score_paper, suggest_categories
+from src.utils.duplicate_detector import (
+    DedupIndex,
+    add_to_dedup_index,
+    has_duplicate_in_index,
+    load_existing_dedup_index,
+)
+from src.utils.logger import setup_logger
+from src.utils.relevance_scorer import (
+    check_gap_coverage,
+    is_from_trusted_source,
+    ranking_score,
+    score_paper,
+    suggest_categories,
+)
 
 logger = setup_logger("daily_researcher")
 console = Console()
 
 QUERY_GENERIC_TERMS = {
-    "and", "the", "for", "with", "without", "using", "based", "from", "into",
-    "system", "systems", "model", "models", "method", "methods", "framework",
-    "analysis", "approach", "approaches", "study", "studies", "comparison",
-    "strategy", "strategies", "pipeline",
+    "and",
+    "the",
+    "for",
+    "with",
+    "without",
+    "using",
+    "based",
+    "from",
+    "into",
+    "system",
+    "systems",
+    "model",
+    "models",
+    "method",
+    "methods",
+    "framework",
+    "analysis",
+    "approach",
+    "approaches",
+    "study",
+    "studies",
+    "comparison",
+    "strategy",
+    "strategies",
+    "pipeline",
 }
 
 QUERY_CONCEPT_ALIASES = {
@@ -45,7 +77,13 @@ QUERY_CONCEPT_ALIASES = {
     "reranking": ["reranking", "re-ranking", "re ranking", "cross encoder", "cross-encoder"],
     "chunking": ["chunking", "chunk", "segmentation", "text segmentation"],
     "hallucination": ["hallucination", "faithfulness", "groundedness"],
-    "documentation": ["documentation", "technical documentation", "api documentation", "developer documentation", "knowledge base"],
+    "documentation": [
+        "documentation",
+        "technical documentation",
+        "api documentation",
+        "developer documentation",
+        "knowledge base",
+    ],
     "cloud": ["cloud", "aws", "azure", "gcp", "google cloud"],
     "vector_db": ["vector database", "faiss", "chromadb", "pinecone"],
     "ann": ["approximate nearest neighbor", "nearest neighbor", "ann", "hnsw"],
@@ -410,7 +448,9 @@ def show_api_status() -> None:
     console.print(table)
 
 
-def run_daily_search(days: int = 7, dry_run: bool = False, api_names: list[str] | None = None) -> tuple[list[Paper], dict[str, Any]]:
+def run_daily_search(
+    days: int = 7, dry_run: bool = False, api_names: list[str] | None = None
+) -> tuple[list[Paper], dict[str, Any]]:
     """Execute the full daily search across the selected APIs and keyword groups."""
     config = load_config()
     keywords = load_keywords()
@@ -443,10 +483,14 @@ def run_daily_search(days: int = 7, dry_run: bool = False, api_names: list[str] 
     if "semantic_scholar" in clients:
         if clients["semantic_scholar"].is_temporarily_disabled():
             cooldown_skipped_apis.append("semantic_scholar")
-            runtime_tracker.mark_skipped("semantic_scholar", clients["semantic_scholar"], total_keyword_queries, reason="cooldown")
+            runtime_tracker.mark_skipped(
+                "semantic_scholar", clients["semantic_scholar"], total_keyword_queries, reason="cooldown"
+            )
         else:
             runtime_tracker.mark_started("semantic_scholar", total_keyword_queries)
-            search_plan.append(("Semantic Scholar", "semantic_scholar_results", search_semantic_scholar, "semantic_scholar"))
+            search_plan.append(
+                ("Semantic Scholar", "semantic_scholar_results", search_semantic_scholar, "semantic_scholar")
+            )
     if "arxiv" in clients:
         if clients["arxiv"].is_temporarily_disabled():
             cooldown_skipped_apis.append("arxiv")
@@ -512,7 +556,9 @@ def run_daily_search(days: int = 7, dry_run: bool = False, api_names: list[str] 
                     progress.update(task, description=f"[cyan]{group_name}[/cyan] {query[:60]}")
                     future_map = {}
                     for label, metric_key, search_fn, client_key in search_plan:
-                        future = executor.submit(search_fn, query, clients[client_key], cache_dir, date_from, max_results)
+                        future = executor.submit(
+                            search_fn, query, clients[client_key], cache_dir, date_from, max_results
+                        )
                         future_map[future] = (label, metric_key)
 
                     for future in as_completed(future_map):
@@ -537,7 +583,9 @@ def run_daily_search(days: int = 7, dry_run: bool = False, api_names: list[str] 
 
     console.print(f"\n[bold]Raw results:[/bold] {len(all_papers)} papers")
 
-    existing_index = load_existing_dedup_index(config.get("output", {}).get("existing_papers_path", "data/existing_papers.json"))
+    existing_index = load_existing_dedup_index(
+        config.get("output", {}).get("existing_papers_path", "data/existing_papers.json")
+    )
     batch_index = DedupIndex()
     unique_papers: list[Paper] = []
 
@@ -681,7 +729,9 @@ def write_daily_report(
     lines.append(f"- Papers de baja relevancia: {len(low)}")
     lines.append(f"- Papers de fuente confiable: {stats.get('trusted_kept', 0)}")
     lines.append(f"- Papers provisionales conservados: {stats.get('provisional_kept', 0)}")
-    lines.append(f"- Resultados descartados por no parecer responder a la query: {stats.get('query_mismatch_removed', 0)}")
+    lines.append(
+        f"- Resultados descartados por no parecer responder a la query: {stats.get('query_mismatch_removed', 0)}"
+    )
     lines.append(f"- Papers descartados por score demasiado bajo: {stats.get('low_score_removed', 0)}")
     lines.append(f"- APIs saltadas por cooldown: {stats.get('apis_cooldown_skipped', 0)}")
     lines.append(f"- APIs consultadas: {stats.get('total_queries', 0)}/{stats.get('expected_queries', 0)} llamadas")
@@ -698,7 +748,9 @@ def write_daily_report(
     lines.append("## Top 5 Papers del dia")
     for index, paper in enumerate(papers[:5], 1):
         trust_flag = "confiable" if paper.source_trusted else "provisional"
-        lines.append(f"{index}. [{paper.relevance_level.value}] {paper.title} (Score: {paper.relevance_score}/100, prioridad: {ranking_score(paper, config)}, fuente: {trust_flag})")
+        lines.append(
+            f"{index}. [{paper.relevance_level.value}] {paper.title} (Score: {paper.relevance_score}/100, prioridad: {ranking_score(paper, config)}, fuente: {trust_flag})"
+        )
     lines.append("")
     lines.append("---")
     lines.append("")

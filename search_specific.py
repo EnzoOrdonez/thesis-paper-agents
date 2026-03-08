@@ -14,14 +14,13 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 
 from rich.console import Console
-from rich.table import Table
 
 from src.apis.crossref_api import CrossRefAPI
 from src.apis.openalex_api import OpenAlexAPI
 from src.apis.semantic_scholar import SemanticScholarAPI
 from src.models.paper import Paper
+from src.utils.reference_formatter import format_apa7
 from src.utils.relevance_scorer import check_gap_coverage, score_paper, suggest_categories
-from src.utils.reference_formatter import format_apa7, format_bibtex
 
 console = Console()
 

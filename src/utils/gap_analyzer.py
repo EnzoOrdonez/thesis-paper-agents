@@ -81,12 +81,14 @@ def analyze_gap_coverage(papers: list[Paper]) -> list[dict]:
                 covered = True
                 covered_by = p.title
                 break
-        results.append({
-            "name": gap["name"],
-            "description": gap.get("description", ""),
-            "covered": covered,
-            "covered_by": covered_by,
-        })
+        results.append(
+            {
+                "name": gap["name"],
+                "description": gap.get("description", ""),
+                "covered": covered,
+                "covered_by": covered_by,
+            }
+        )
 
     return results
 
@@ -124,10 +126,12 @@ def generate_gap_report(papers: list[Paper]) -> str:
 
     covered_count = sum(1 for g in gap_results if g["covered"])
     total = len(gap_results)
-    lines.extend([
-        "",
-        f"## Resumen: {covered_count}/{total} gaps fundacionales cubiertos",
-        "",
-    ])
+    lines.extend(
+        [
+            "",
+            f"## Resumen: {covered_count}/{total} gaps fundacionales cubiertos",
+            "",
+        ]
+    )
 
     return "\n".join(lines)

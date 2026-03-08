@@ -9,23 +9,20 @@ Usage:
 """
 
 import argparse
-import json
 import sys
-from collections import Counter
-from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 
-import yaml
 from rich.console import Console
 from rich.panel import Panel
 from rich.prompt import Prompt
 from rich.rule import Rule
 from rich.table import Table
-from rich.text import Text
 
-from src.agents.paper_compiler import load_config, load_database as load_papers_database, save_database as save_papers_database
+from src.agents.paper_compiler import load_config
+from src.agents.paper_compiler import load_database as load_papers_database
+from src.agents.paper_compiler import save_database as save_papers_database
 from src.models.paper import Paper, PaperStatus, RelevanceLevel
 
 console = Console()
@@ -49,7 +46,6 @@ THESIS_CATEGORIES = [
 
 def load_database() -> list[Paper]:
     return load_papers_database(DB_PATH)
-
 
 
 def save_database(papers: list[Paper]) -> None:
@@ -116,7 +112,7 @@ def ask_category_assignment() -> list[str] | None:
     console.print("\n  [bold]En que seccion(es) de la tesis lo usarias?[/bold]")
     for i, cat in enumerate(THESIS_CATEGORIES, 1):
         console.print(f"    {i:2d}. {cat}")
-    console.print(f"     0. Mantener categorias actuales")
+    console.print("     0. Mantener categorias actuales")
 
     choice = Prompt.ask("  Secciones (numeros separados por coma, 0=skip)", default="0")
     if choice.strip() == "0":
@@ -161,10 +157,7 @@ def main() -> None:
 
     if args.category:
         cat_filter = args.category.lower()
-        to_review = [
-            p for p in to_review
-            if any(cat_filter in c.lower() for c in p.categories)
-        ]
+        to_review = [p for p in to_review if any(cat_filter in c.lower() for c in p.categories)]
 
     # Sort: high relevance first, then by score descending
     to_review.sort(key=lambda p: p.relevance_score, reverse=True)
@@ -173,10 +166,12 @@ def main() -> None:
         console.print("[green]No hay papers pendientes de revision con los filtros aplicados.[/green]")
         return
 
-    console.print(Panel.fit(
-        f"[bold cyan]Revision de Papers - {len(to_review)} pendientes[/bold cyan]",
-        border_style="cyan",
-    ))
+    console.print(
+        Panel.fit(
+            f"[bold cyan]Revision de Papers - {len(to_review)} pendientes[/bold cyan]",
+            border_style="cyan",
+        )
+    )
 
     # Session stats
     accepted = 0
@@ -187,11 +182,13 @@ def main() -> None:
         display_paper(paper, i, len(to_review))
 
         # Action prompt
-        console.print("  [bold][a][/bold] Aceptar  "
-                       "[bold][r][/bold] Rechazar  "
-                       "[bold][s][/bold] Skip  "
-                       "[bold][n][/bold] Notas  "
-                       "[bold][q][/bold] Quit")
+        console.print(
+            "  [bold][a][/bold] Aceptar  "
+            "[bold][r][/bold] Rechazar  "
+            "[bold][s][/bold] Skip  "
+            "[bold][n][/bold] Notas  "
+            "[bold][q][/bold] Quit"
+        )
 
         choice = Prompt.ask("  Accion", choices=["a", "r", "s", "n", "q"], default="s")
 

@@ -3,10 +3,9 @@
 from __future__ import annotations
 
 import json
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
-
 
 DEFAULT_PROVIDER_STATE = {
     "disabled_until": None,
@@ -26,7 +25,7 @@ DEFAULT_PROVIDER_STATE = {
 
 
 def _utcnow_iso() -> str:
-    return datetime.now(timezone.utc).isoformat()
+    return datetime.now(UTC).isoformat()
 
 
 class APIRuntimeTracker:
@@ -84,7 +83,9 @@ class APIRuntimeTracker:
         provider["disabled_until"] = exported.get("disabled_until")
         provider["consecutive_failures"] = exported.get("consecutive_failures", provider["consecutive_failures"])
         provider["last_error"] = exported.get("last_error", provider["last_error"])
-        provider["last_status"] = "cooldown" if provider.get("disabled_until") else ("failed" if provider.get("last_error") else "ok")
+        provider["last_status"] = (
+            "cooldown" if provider.get("disabled_until") else ("failed" if provider.get("last_error") else "ok")
+        )
         provider["last_run_finished_at"] = _utcnow_iso()
         provider["last_queries_submitted"] = query_count
         provider["last_results_returned"] = results_count
