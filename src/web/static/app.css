@@ -686,4 +686,91 @@ button.primary:hover,
         width: 100%;
         justify-content: space-between;
     }
+
+    .data-table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .table-panel {
+        overflow-x: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .shell {
+        padding: 16px 12px 48px;
+    }
+
+    .topbar {
+        padding: 16px;
+        border-radius: 18px;
+        gap: 16px;
+    }
+
+    .panel {
+        border-radius: 16px;
+        padding: 14px;
+    }
+
+    .stat-panel h2 {
+        font-size: 1.6rem;
+    }
+
+    .meta-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .batch-bar {
+        flex-direction: column;
+        gap: 10px;
+        border-radius: 12px;
+        padding: 10px 14px;
+    }
+
+    .batch-actions {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .topbar h1 {
+        font-size: 1.4rem;
+    }
+
+    .nav {
+        grid-template-columns: 1fr;
+    }
+
+    .shell {
+        padding: 10px 8px 36px;
+    }
+
+    .topbar {
+        padding: 12px;
+        border-radius: 14px;
+    }
+
+    .panel {
+        border-radius: 12px;
+        padding: 10px;
+    }
+
+    .data-table th,
+    .data-table td {
+        padding: 8px 6px;
+        font-size: .85rem;
+    }
+
+    .access-actions {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .batch-btn {
+        padding: 6px 10px;
+        font-size: .8rem;
+    }
 }

@@ -101,7 +101,7 @@ flowchart LR
 - Idempotent report generation and reduced file churn.
 - SQLite as primary storage with incremental upsert sync.
 - Structured `job_runs` and `runtime_locks` stored in SQLite.
-- Web monitor with dashboard, sortable paper table, batch accept/reject operations, paper detail, manual run controls and light/dark theme toggle.
+- Responsive web monitor with dashboard, sortable paper table, batch accept/reject operations, paper detail, manual run controls and light/dark theme toggle.
 - Proxy-aware links for restricted academic sources.
 
 ## Quick Start
