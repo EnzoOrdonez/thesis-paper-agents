@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "thesis-paper-agents"
+version = "3.1.0"
+description = "Discovery, ranking, curation and monitoring pipeline for a hybrid RAG thesis focused on cloud documentation"
+readme = "README.md"
+license = "GPL-3.0-only"
+requires-python = ">=3.11"
+authors = [{ name = "enziz" }]
+keywords = ["rag", "retrieval-augmented-generation", "academic-papers", "literature-review", "thesis"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Topic :: Text Processing :: General",
+]
+
+dependencies = [
+    "requests>=2.31.0",
+    "pydantic>=2.0.0",
+    "pyyaml>=6.0",
+    "python-dotenv>=1.0.0",
+    "feedparser>=6.0.0",
+    "rapidfuzz>=3.0.0",
+    "rich>=13.0.0",
+    "schedule>=1.2.0",
+    "python-telegram-bot>=20.0",
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.30.0",
+    "jinja2>=3.1.0",
+    "python-multipart>=0.0.9",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "ruff>=0.4.0",
+    "mypy>=1.10",
+]
+
+[project.scripts]
+tpa-search = "daily_researcher:main"
+tpa-compile = "paper_compiler:main"
+tpa-run = "run_all:main"
+tpa-web = "web_monitor:main"
+tpa-summary = "summary:main"
+
+[project.urls]
+Repository = "https://github.com/enziz/thesis-paper-agents"

@@ -6,7 +6,8 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3.14-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python 3.14">
+  <img src="https://img.shields.io/badge/Version-3.1.0-blue?style=for-the-badge" alt="Version 3.1.0">
+  <img src="https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python 3.11+">
   <img src="https://img.shields.io/badge/FastAPI-Web_UI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI Web UI">
   <img src="https://img.shields.io/badge/SQLite-Primary_Storage-003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite Primary Storage">
   <img src="https://img.shields.io/badge/HTMX-Server_Rendered-3366CC?style=for-the-badge&logo=htmx&logoColor=white" alt="HTMX Server Rendered">
@@ -64,7 +65,7 @@ This project turns that curation problem into a reproducible workflow with trace
 
 | Layer | Tools |
 |---|---|
-| Language | Python 3.14 |
+| Language | Python 3.11+ |
 | Storage | SQLite primary storage + JSON compatibility export |
 | APIs | Semantic Scholar, arXiv, OpenAlex, CrossRef |
 | Web | FastAPI, Jinja2, HTMX, Uvicorn |
@@ -116,15 +117,20 @@ flowchart LR
 ```bash
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
-python -m pip install -r requirements.txt
+pip install -e .
 copy .env.example .env
 ```
 
-If `pip` is not available on Windows:
+For development (includes linting and testing tools):
 
 ```bash
-python -m ensurepip --upgrade
-python -m pip install -r requirements.txt
+pip install -e ".[dev]"
+```
+
+Legacy alternative using `requirements.txt`:
+
+```bash
+pip install -r requirements.txt
 ```
 
 ### Daily Search
