@@ -6,6 +6,7 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/EnzoOrdonez/thesis-paper-agents/actions/workflows/ci.yml"><img src="https://github.com/EnzoOrdonez/thesis-paper-agents/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
   <img src="https://img.shields.io/badge/Version-3.1.0-blue?style=for-the-badge" alt="Version 3.1.0">
   <img src="https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python 3.11+">
   <img src="https://img.shields.io/badge/FastAPI-Web_UI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI Web UI">
