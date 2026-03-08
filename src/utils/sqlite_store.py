@@ -58,6 +58,39 @@ SCHEMA_STATEMENTS = [
     "CREATE INDEX IF NOT EXISTS idx_papers_date_found ON papers(date_found)",
 ]
 
+FTS_SCHEMA_STATEMENTS = [
+    """
+    CREATE VIRTUAL TABLE IF NOT EXISTS papers_fts USING fts5(
+        title,
+        abstract,
+        authors_json,
+        keywords_matched_json,
+        content='papers',
+        content_rowid='rowid'
+    )
+    """,
+    """
+    CREATE TRIGGER IF NOT EXISTS papers_fts_insert AFTER INSERT ON papers BEGIN
+        INSERT INTO papers_fts(rowid, title, abstract, authors_json, keywords_matched_json)
+        VALUES (new.rowid, new.title, COALESCE(new.abstract, ''), COALESCE(new.authors_json, ''), COALESCE(new.keywords_matched_json, ''));
+    END
+    """,
+    """
+    CREATE TRIGGER IF NOT EXISTS papers_fts_delete AFTER DELETE ON papers BEGIN
+        INSERT INTO papers_fts(papers_fts, rowid, title, abstract, authors_json, keywords_matched_json)
+        VALUES ('delete', old.rowid, old.title, COALESCE(old.abstract, ''), COALESCE(old.authors_json, ''), COALESCE(old.keywords_matched_json, ''));
+    END
+    """,
+    """
+    CREATE TRIGGER IF NOT EXISTS papers_fts_update AFTER UPDATE ON papers BEGIN
+        INSERT INTO papers_fts(papers_fts, rowid, title, abstract, authors_json, keywords_matched_json)
+        VALUES ('delete', old.rowid, old.title, COALESCE(old.abstract, ''), COALESCE(old.authors_json, ''), COALESCE(old.keywords_matched_json, ''));
+        INSERT INTO papers_fts(rowid, title, abstract, authors_json, keywords_matched_json)
+        VALUES (new.rowid, new.title, COALESCE(new.abstract, ''), COALESCE(new.authors_json, ''), COALESCE(new.keywords_matched_json, ''));
+    END
+    """,
+]
+
 REQUIRED_PAPERS_COLUMNS = {
     "row_hash": "TEXT NOT NULL DEFAULT ''",
 }
@@ -153,6 +186,12 @@ def _ensure_papers_columns(conn: sqlite3.Connection) -> None:
             conn.execute(f"ALTER TABLE papers ADD COLUMN {column_name} {ddl}")
 
 
+def _ensure_fts(conn: sqlite3.Connection) -> None:
+    """Create FTS5 virtual table and sync triggers if they don't exist."""
+    for statement in FTS_SCHEMA_STATEMENTS:
+        conn.execute(statement)
+
+
 def ensure_schema(path: str) -> None:
     conn = _connect(path)
     try:
@@ -160,6 +199,7 @@ def ensure_schema(path: str) -> None:
             for statement in SCHEMA_STATEMENTS:
                 conn.execute(statement)
             _ensure_papers_columns(conn)
+            _ensure_fts(conn)
     finally:
         conn.close()
 
@@ -173,6 +213,7 @@ def sync_papers_to_sqlite(papers: list[Paper], path: str, *, force: bool = False
             for statement in SCHEMA_STATEMENTS:
                 conn.execute(statement)
             _ensure_papers_columns(conn)
+            _ensure_fts(conn)
 
         existing_rows = {str(row[0]): str(row[1] or "") for row in conn.execute("SELECT id, row_hash FROM papers")}
 
@@ -343,3 +384,51 @@ def get_sqlite_status(path: str) -> dict[str, Any]:
         "last_upserted_count": last_upserted_count,
         "last_deleted_count": last_deleted_count,
     }
+
+
+def search_papers_fts(path: str, query: str, *, limit: int = 50) -> list[str]:
+    """Search papers using FTS5 full-text search. Returns matching paper IDs."""
+    db_path = Path(path)
+    if not db_path.exists():
+        return []
+
+    conn = _connect(path)
+    try:
+        tables = {row[0] for row in conn.execute("SELECT name FROM sqlite_master WHERE type IN ('table', 'view')")}
+        if "papers_fts" not in tables:
+            return []
+
+        # Escape FTS5 special characters for safe queries
+        safe_query = query.replace('"', '""')
+        fts_query = f'"{safe_query}"'
+
+        rows = conn.execute(
+            """
+            SELECT p.id
+            FROM papers_fts fts
+            JOIN papers p ON p.rowid = fts.rowid
+            WHERE papers_fts MATCH ?
+            ORDER BY rank
+            LIMIT ?
+            """,
+            (fts_query, limit),
+        ).fetchall()
+        return [str(row[0]) for row in rows]
+    except Exception:
+        return []
+    finally:
+        conn.close()
+
+
+def rebuild_fts_index(path: str) -> int:
+    """Rebuild the FTS5 index from scratch. Returns number of rows indexed."""
+    conn = _connect(path)
+    try:
+        with conn:
+            _ensure_fts(conn)
+            # Drop and recreate content
+            conn.execute("INSERT INTO papers_fts(papers_fts) VALUES('rebuild')")
+            count = conn.execute("SELECT COUNT(*) FROM papers_fts").fetchone()[0]
+        return int(count)
+    finally:
+        conn.close()

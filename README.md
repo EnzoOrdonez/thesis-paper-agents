@@ -66,7 +66,7 @@ This project turns that curation problem into a reproducible workflow with trace
 | Layer | Tools |
 |---|---|
 | Language | Python 3.11+ |
-| Storage | SQLite primary storage + JSON compatibility export |
+| Storage | SQLite with FTS5 full-text search + JSON compatibility export |
 | APIs | Semantic Scholar, arXiv, OpenAlex, CrossRef |
 | Web | FastAPI, Jinja2, HTMX, Uvicorn |
 | Reporting | Markdown, BibTeX, APA 7, Mermaid |

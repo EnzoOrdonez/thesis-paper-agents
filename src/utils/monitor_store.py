@@ -247,6 +247,19 @@ def get_paper_by_id(path: str, paper_id: str, config: dict[str, Any]) -> dict[st
         conn.close()
 
 
+def _fts_search_ids(path: str, query: str, limit: int = 500) -> list[str] | None:
+    """Search papers using FTS5. Returns IDs or None if FTS is unavailable."""
+    try:
+        from src.utils.sqlite_store import search_papers_fts
+
+        ids = search_papers_fts(path, query, limit=limit)
+        if ids is not None:
+            return ids
+    except Exception:
+        pass
+    return None
+
+
 def list_papers_paginated(
     path: str,
     config: dict[str, Any],
@@ -270,11 +283,18 @@ def list_papers_paginated(
 
     query_text = str(filters.get("q") or "").strip().lower()
     if query_text:
-        like_value = f"%{query_text}%"
-        where_clauses.append(
-            "(LOWER(title) LIKE ? OR LOWER(COALESCE(abstract, '')) LIKE ? OR LOWER(COALESCE(doi, '')) LIKE ? OR LOWER(COALESCE(authors_json, '')) LIKE ?)"
-        )
-        params.extend([like_value, like_value, like_value, like_value])
+        # Try FTS5 first, fall back to LIKE
+        fts_ids = _fts_search_ids(path, query_text)
+        if fts_ids is not None:
+            placeholders = ",".join("?" for _ in fts_ids)
+            where_clauses.append(f"id IN ({placeholders})")
+            params.extend(fts_ids)
+        else:
+            like_value = f"%{query_text}%"
+            where_clauses.append(
+                "(LOWER(title) LIKE ? OR LOWER(COALESCE(abstract, '')) LIKE ? OR LOWER(COALESCE(doi, '')) LIKE ? OR LOWER(COALESCE(authors_json, '')) LIKE ?)"
+            )
+            params.extend([like_value, like_value, like_value, like_value])
 
     if filters.get("only_pending"):
         where_clauses.append("status = ?")

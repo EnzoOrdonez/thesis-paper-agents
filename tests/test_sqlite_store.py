@@ -13,6 +13,8 @@ from src.utils.sqlite_store import (
     ensure_schema,
     get_sqlite_status,
     load_papers_from_sqlite,
+    rebuild_fts_index,
+    search_papers_fts,
     sync_papers_to_sqlite,
 )
 
@@ -98,3 +100,32 @@ class TestGetStatus:
         status = get_sqlite_status(str(tmp_path / "nope.sqlite"))
         assert status["exists"] is False
         assert status["paper_count"] == 0
+
+
+class TestFTS5Search:
+    def test_search_by_title(self, db_path: str, paper_list: list[Paper]):
+        sync_papers_to_sqlite(paper_list, db_path)
+        rebuild_fts_index(db_path)
+        ids = search_papers_fts(db_path, "Hybrid Retrieval")
+        assert len(ids) >= 1
+
+    def test_search_by_abstract_keyword(self, db_path: str, paper_list: list[Paper]):
+        sync_papers_to_sqlite(paper_list, db_path)
+        rebuild_fts_index(db_path)
+        ids = search_papers_fts(db_path, "cloud documentation")
+        assert len(ids) >= 1
+
+    def test_no_results(self, db_path: str, paper_list: list[Paper]):
+        sync_papers_to_sqlite(paper_list, db_path)
+        rebuild_fts_index(db_path)
+        ids = search_papers_fts(db_path, "quantum entanglement")
+        assert ids == []
+
+    def test_nonexistent_db(self, tmp_path: Path):
+        ids = search_papers_fts(str(tmp_path / "nope.sqlite"), "test")
+        assert ids == []
+
+    def test_rebuild_returns_count(self, db_path: str, paper_list: list[Paper]):
+        sync_papers_to_sqlite(paper_list, db_path)
+        count = rebuild_fts_index(db_path)
+        assert count == 3
