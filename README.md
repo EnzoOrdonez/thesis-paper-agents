@@ -367,6 +367,14 @@ ruff format --check .
 mypy src/
 ```
 
+## Docker
+
+```bash
+docker compose up
+```
+
+The web UI will be available at `http://localhost:8000`. Volumes for `data/`, `config/` and `logs/` are mounted from the host so local changes persist.
+
 ## Important Note
 
 This project is an academic curation assistant, not a replacement for thesis judgment. Its purpose is to reduce repetitive manual work and improve consistency, not to eliminate critical evaluation.
