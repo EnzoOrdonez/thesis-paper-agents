@@ -350,6 +350,9 @@ thesis-paper-agents/
 ```bash
 pip install -e ".[dev]"
 
+# Run tests
+pytest -v
+
 # Linting
 ruff check .
 ruff check --fix .
