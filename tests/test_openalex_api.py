@@ -30,9 +30,7 @@ OPENALEX_SEARCH_RESPONSE = {
             ],
             "publication_year": 2024,
             "publication_date": "2024-06-15",
-            "primary_location": {
-                "source": {"display_name": "Test Journal"}
-            },
+            "primary_location": {"source": {"display_name": "Test Journal"}},
             "cited_by_count": 10,
             "abstract_inverted_index": {
                 "This": [0],
@@ -84,9 +82,7 @@ class TestOpenAlexSearch:
     def test_successful_search(self, _mock_sleep):
         client = OpenAlexAPI(rate_limit_per_second=9999)
         client.session = MagicMock()
-        client.session.get.return_value = _mock_response(
-            status_code=200, json_data=OPENALEX_SEARCH_RESPONSE
-        )
+        client.session.get.return_value = _mock_response(status_code=200, json_data=OPENALEX_SEARCH_RESPONSE)
 
         papers = client.search("information retrieval")
 
@@ -121,9 +117,7 @@ class TestOpenAlexScopus:
     def test_indexed(self, _mock_sleep):
         client = OpenAlexAPI(rate_limit_per_second=9999)
         client.session = MagicMock()
-        client.session.get.return_value = _mock_response(
-            status_code=200, json_data=OPENALEX_SCOPUS_INDEXED_RESPONSE
-        )
+        client.session.get.return_value = _mock_response(status_code=200, json_data=OPENALEX_SCOPUS_INDEXED_RESPONSE)
 
         result = client.check_scopus_indexed("10.1234/indexed")
 
@@ -133,9 +127,7 @@ class TestOpenAlexScopus:
     def test_not_indexed(self, _mock_sleep):
         client = OpenAlexAPI(rate_limit_per_second=9999)
         client.session = MagicMock()
-        client.session.get.return_value = _mock_response(
-            status_code=200, json_data=OPENALEX_NOT_INDEXED_RESPONSE
-        )
+        client.session.get.return_value = _mock_response(status_code=200, json_data=OPENALEX_NOT_INDEXED_RESPONSE)
 
         result = client.check_scopus_indexed("10.1234/notindexed")
 

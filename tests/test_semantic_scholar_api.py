@@ -55,9 +55,7 @@ class TestSemanticScholarSearch:
     def test_successful_search(self, _mock_sleep):
         client = SemanticScholarAPI(rate_limit=9999)
         client.session = MagicMock()
-        client.session.get.return_value = _mock_response(
-            status_code=200, json_data=SEMANTIC_SCHOLAR_SEARCH_RESPONSE
-        )
+        client.session.get.return_value = _mock_response(status_code=200, json_data=SEMANTIC_SCHOLAR_SEARCH_RESPONSE)
 
         papers = client.search("dense retrieval")
 
@@ -88,9 +86,7 @@ class TestSemanticScholarSearch:
     def test_search_with_year_range(self, _mock_sleep):
         client = SemanticScholarAPI(rate_limit=9999)
         client.session = MagicMock()
-        client.session.get.return_value = _mock_response(
-            status_code=200, json_data=SEMANTIC_SCHOLAR_SEARCH_RESPONSE
-        )
+        client.session.get.return_value = _mock_response(status_code=200, json_data=SEMANTIC_SCHOLAR_SEARCH_RESPONSE)
 
         papers = client.search("dense retrieval", year_range="2023-2024")
 
@@ -105,9 +101,7 @@ class TestSemanticScholarGetByDoi:
     def test_found(self, _mock_sleep):
         client = SemanticScholarAPI(rate_limit=9999)
         client.session = MagicMock()
-        client.session.get.return_value = _mock_response(
-            status_code=200, json_data=SEMANTIC_SCHOLAR_PAPER_RESPONSE
-        )
+        client.session.get.return_value = _mock_response(status_code=200, json_data=SEMANTIC_SCHOLAR_PAPER_RESPONSE)
 
         paper = client.get_paper_by_doi("10.5678/paper")
 

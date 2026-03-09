@@ -58,9 +58,7 @@ class TestCrossRefSearch:
     def test_successful_search(self, _mock_sleep):
         client = CrossRefAPI(rate_limit_per_second=9999)
         client.session = MagicMock()
-        client.session.get.return_value = _mock_response(
-            status_code=200, json_data=CROSSREF_SEARCH_RESPONSE
-        )
+        client.session.get.return_value = _mock_response(status_code=200, json_data=CROSSREF_SEARCH_RESPONSE)
 
         papers = client.search("retrieval augmented generation")
 
@@ -94,9 +92,7 @@ class TestCrossRefVerifyDoi:
     def test_valid_doi(self, _mock_sleep):
         client = CrossRefAPI(rate_limit_per_second=9999)
         client.session = MagicMock()
-        client.session.get.return_value = _mock_response(
-            status_code=200, json_data=CROSSREF_DOI_RESPONSE
-        )
+        client.session.get.return_value = _mock_response(status_code=200, json_data=CROSSREF_DOI_RESPONSE)
 
         result = client.verify_doi("10.1234/test")
 
@@ -118,9 +114,7 @@ class TestCrossRefGetByDoi:
     def test_found(self, _mock_sleep):
         client = CrossRefAPI(rate_limit_per_second=9999)
         client.session = MagicMock()
-        client.session.get.return_value = _mock_response(
-            status_code=200, json_data=CROSSREF_DOI_RESPONSE
-        )
+        client.session.get.return_value = _mock_response(status_code=200, json_data=CROSSREF_DOI_RESPONSE)
 
         paper = client.get_paper_by_doi("10.1234/test")
 

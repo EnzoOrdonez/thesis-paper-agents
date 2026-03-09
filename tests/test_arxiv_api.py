@@ -18,7 +18,7 @@ def _mock_response(status_code=200, json_data=None, text="", headers=None):
     return resp
 
 
-ARXIV_FEED = '''<?xml version="1.0" encoding="UTF-8"?>
+ARXIV_FEED = """<?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:arxiv="http://arxiv.org/schemas/atom">
   <entry>
     <title>Retrieval Augmented Generation for Cloud Docs</title>
@@ -29,11 +29,11 @@ ARXIV_FEED = '''<?xml version="1.0" encoding="UTF-8"?>
     <link href="http://arxiv.org/pdf/2406.12345" title="pdf" rel="related" type="application/pdf"/>
     <arxiv:primary_category term="cs.IR"/>
   </entry>
-</feed>'''
+</feed>"""
 
-ARXIV_EMPTY_FEED = '''<?xml version="1.0" encoding="UTF-8"?>
+ARXIV_EMPTY_FEED = """<?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-</feed>'''
+</feed>"""
 
 
 class TestArxivSearch:
