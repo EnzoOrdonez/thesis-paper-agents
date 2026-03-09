@@ -6,7 +6,10 @@
 # Install with dev dependencies
 pip install -e ".[dev]"
 
-# Run tests
+# Set up pre-commit hooks (one-time)
+pre-commit install
+
+# Run tests (115+ tests)
 pytest -v
 
 # Lint and format
@@ -14,8 +17,11 @@ ruff check .
 ruff check --fix .
 ruff format .
 
-# Type check
+# Type check (0 errors expected)
 mypy src/
+
+# Run all pre-commit hooks manually
+pre-commit run --all-files
 
 # Start web UI
 python web_monitor.py
@@ -52,7 +58,10 @@ tests/             # pytest test suite
 - JSON export maintained for compatibility
 - All file I/O uses `encoding="utf-8"`
 - Ruff for linting (line-length 120) and formatting
+- mypy strict mode with 0 errors (`ignore_missing_imports = false`)
+- Pre-commit hooks: ruff (lint + format) and mypy
 - Tests use pytest with fixtures in `tests/conftest.py`
+- Structured JSON logging via `TPA_LOG_FORMAT=json` env var (writes `.jsonl` files)
 
 ## Adding a New API Client
 

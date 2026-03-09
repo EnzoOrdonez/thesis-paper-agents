@@ -336,8 +336,11 @@ thesis-paper-agents/
 - SQLite-centered architecture with FTS5 full-text search
 - human-in-the-loop review preserved as a first-class part of the workflow
 - responsive web UI with batch operations, dark mode and accessibility features
-- modern Python packaging (`pyproject.toml`) with type hints throughout
-- automated CI pipeline (GitHub Actions) with linting, formatting and tests
+- modern Python packaging (`pyproject.toml`) with type hints and zero mypy errors
+- 115+ tests covering models, utilities, API clients and web routes
+- pre-commit hooks (ruff lint, ruff format, mypy) for consistent code quality
+- automated CI pipeline (GitHub Actions) with linting, formatting, type checking and tests
+- structured JSON logging support (`TPA_LOG_FORMAT=json`)
 - Docker support for reproducible deployment
 - cache auto-cleanup and resilient API rate limiting with exponential backoff
 
@@ -358,21 +361,23 @@ thesis-paper-agents/
 
 ```bash
 pip install -e ".[dev]"
+pre-commit install
 
-# Run tests
+# Run tests (115+ tests)
 pytest -v
 
-# Linting
+# Linting and formatting
 ruff check .
-ruff check --fix .
-
-# Formatting
-ruff format .
 ruff format --check .
 
-# Type checking
+# Type checking (0 errors)
 mypy src/
+
+# Run all pre-commit hooks
+pre-commit run --all-files
 ```
+
+Set `TPA_LOG_FORMAT=json` to enable structured JSON logging (writes `.jsonl` files instead of `.log`).
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for more details on project conventions and how to add new API clients.
 
